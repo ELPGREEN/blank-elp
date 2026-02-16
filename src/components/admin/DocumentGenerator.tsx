@@ -1142,7 +1142,7 @@ export function DocumentGenerator() {
       const requiredSignatures = enableMultipleSignatures && signersList.length > 0 ? signersList.length : 1;
       const firstSigner = enableMultipleSignatures && signersList.length > 0 ? signersList[0] : null;
 
-      const { data: insertedDoc, error } = await (supabase.from('generated_documents') as any).insert({
+      const { data: insertedDoc, error } = await supabase.from('generated_documents').insert({
         template_id: selectedTemplate.id,
         lead_id: leadIdToSave,
         lead_type: leads?.find(l => l.id === leadIdToSave)?.type || null,

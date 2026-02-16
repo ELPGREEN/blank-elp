@@ -140,7 +140,7 @@ export default function TemplateViewer() {
     queryKey: ['public-template', id],
     queryFn: async () => {
       if (!id) throw new Error('No template ID');
-      const { data, error } = await (supabase as any)
+      const { data, error } = await supabase
         .from('document_templates')
         .select('*')
         .eq('id', id)
@@ -153,7 +153,7 @@ export default function TemplateViewer() {
         if (typeof data.fields === 'string') {
           fields = JSON.parse(data.fields) || [];
         } else if (Array.isArray(data.fields)) {
-          fields = data.fields;
+          fields = data.fields as unknown as TemplateField[];
         }
       } catch (e) {
         console.error('Error parsing fields', e);

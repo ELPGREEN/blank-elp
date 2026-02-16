@@ -127,8 +127,7 @@ export function MeetingDocumentGenerator() {
   const { data: meetings = [], isLoading } = useQuery({
     queryKey: ['meetings', filterPlant, filterStatus],
     queryFn: async () => {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      let query = (supabase.from('meetings') as any)
+      let query = supabase.from('meetings')
         .select('id, title, meeting_type, plant_type, scheduled_at, duration_minutes, location, meeting_link, lead_id, lead_type, participants, agenda_content, summary_content, status, notes, created_at')
         .order('scheduled_at', { ascending: false });
       
@@ -201,8 +200,7 @@ export function MeetingDocumentGenerator() {
         notes: combinedNotes || null,
         participants: filteredParticipants,
       };
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const { data: result, error } = await (supabase.from('meetings') as any).insert(insertData).select().single();
+      const { data: result, error } = await supabase.from('meetings').insert([insertData as any]).select().single();
       
       if (error) throw error;
       return result;
