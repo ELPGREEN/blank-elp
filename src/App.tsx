@@ -43,7 +43,7 @@ import FAQ from "./pages/FAQ";
 import BusinessIndex from "./pages/BusinessIndex";
 import TemplateViewer from "./pages/TemplateViewer";
 import PublicSignature from "./pages/PublicSignature";
-import { WhatsAppButton } from "./components/WhatsAppButton";
+
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -108,7 +108,7 @@ const AppContent = () => {
         <Route path="/sign/:docId" element={<PublicSignature />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <WhatsAppButton />
+      
       <ScrollToTopButton />
       <CookieConsent />
     </BrowserRouter>
