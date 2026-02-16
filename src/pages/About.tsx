@@ -181,44 +181,44 @@ function Globe3D({ withStars = false, withSun = false }: { withStars?: boolean; 
           )}
           
           {/* Location markers with glow */}
-          {/* Italy - Valenza (green) */}
+          {/* Italy - Valenza */}
           <mesh position={[0.6, 0.75, 0.85]}>
             <sphereGeometry args={[0.05, 16, 16]} />
-            <meshBasicMaterial color="#22c55e" />
+            <meshBasicMaterial color="#3b5998" />
           </mesh>
           <mesh position={[0.6, 0.75, 0.85]}>
             <sphereGeometry args={[0.08, 16, 16]} />
-            <meshBasicMaterial color="#22c55e" transparent opacity={0.4} />
+            <meshBasicMaterial color="#3b5998" transparent opacity={0.4} />
           </mesh>
           
-          {/* Brazil - Medianeira (yellow) */}
+          {/* Brazil - Medianeira */}
           <mesh position={[-0.75, -0.35, 0.95]}>
             <sphereGeometry args={[0.05, 16, 16]} />
-            <meshBasicMaterial color="#eab308" />
+            <meshBasicMaterial color="#4a7ab5" />
           </mesh>
           <mesh position={[-0.75, -0.35, 0.95]}>
             <sphereGeometry args={[0.08, 16, 16]} />
-            <meshBasicMaterial color="#eab308" transparent opacity={0.4} />
+            <meshBasicMaterial color="#4a7ab5" transparent opacity={0.4} />
           </mesh>
           
-          {/* Germany - Frankfurt (red) */}
+          {/* Germany - Frankfurt */}
           <mesh position={[0.45, 0.85, 0.75]}>
             <sphereGeometry args={[0.05, 16, 16]} />
-            <meshBasicMaterial color="#ef4444" />
+            <meshBasicMaterial color="#2c4a7c" />
           </mesh>
           <mesh position={[0.45, 0.85, 0.75]}>
             <sphereGeometry args={[0.08, 16, 16]} />
-            <meshBasicMaterial color="#ef4444" transparent opacity={0.4} />
+            <meshBasicMaterial color="#2c4a7c" transparent opacity={0.4} />
           </mesh>
           
-          {/* China - Zhangjiagang (orange) */}
+          {/* China - Zhangjiagang */}
           <mesh position={[1.0, 0.5, -0.6]}>
             <sphereGeometry args={[0.05, 16, 16]} />
-            <meshBasicMaterial color="#f97316" />
+            <meshBasicMaterial color="#5b7faa" />
           </mesh>
           <mesh position={[1.0, 0.5, -0.6]}>
             <sphereGeometry args={[0.08, 16, 16]} />
-            <meshBasicMaterial color="#f97316" transparent opacity={0.4} />
+            <meshBasicMaterial color="#5b7faa" transparent opacity={0.4} />
           </mesh>
         </group>
       </Float>
@@ -262,7 +262,7 @@ const getCertificates = (t: (key: string) => string) => [
 const values = [
   { key: 'innovation', icon: Lightbulb, color: 'from-secondary to-primary' },
   { key: 'sustainability', icon: Globe, color: 'from-primary to-secondary' },
-  { key: 'transparency', icon: Eye, color: 'from-elp-teal to-cyan-400' },
+  { key: 'transparency', icon: Eye, color: 'from-primary to-accent' },
   { key: 'excellence', icon: Award, color: 'from-secondary to-primary' },
 ];
 
@@ -298,25 +298,25 @@ const getLeadershipTeam = (t: (key: string) => string) => [
 const getHeadquarters = (t: (key: string) => string) => [
   {
     key: 'italy',
-    color: 'from-green-500 to-red-500',
+    color: 'from-primary to-secondary',
     icon: Building2,
     flagColors: ['#009246', '#FFFFFF', '#CE2B37'],
   },
   {
     key: 'brazil',
-    color: 'from-green-500 to-yellow-500',
+    color: 'from-secondary to-accent',
     icon: Factory,
     flagColors: ['#009C3B', '#FFDF00'],
   },
   {
     key: 'germany',
-    color: 'from-gray-800 to-red-500',
+    color: 'from-accent to-primary',
     icon: Building2,
     flagColors: ['#000000', '#DD0000', '#FFCE00'],
   },
   {
     key: 'china',
-    color: 'from-red-500 to-yellow-500',
+    color: 'from-primary to-accent',
     icon: Factory,
     flagColors: ['#DE2910', '#FFDE00'],
   },
@@ -435,7 +435,7 @@ export default function About() {
               transition={{ delay: 0.4 }}
               className="flex flex-wrap gap-4 mt-8"
             >
-              <Button size="lg" variant="elp-white" asChild className="shadow-xl">
+              <Button size="lg" variant="elp-white" asChild className="shadow-2xl border-white/30">
                 <Link to="/otr-sources">
                   <Handshake className="h-5 w-5 mr-2" />
                   {t('hero.cta.partner')}
