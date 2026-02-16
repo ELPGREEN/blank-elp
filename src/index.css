@@ -986,3 +986,34 @@ canvas {
   height: 1px;
   background: var(--gradient-gold-subtle);
 }
+
+/* Logo Metal Sweep - reflexo animado no logo */
+.logo-metal-sweep {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.logo-metal-sweep::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    hsl(0 0% 100% / 0.15) 48%,
+    hsl(0 0% 100% / 0.2) 50%,
+    hsl(0 0% 100% / 0.15) 52%,
+    transparent 100%
+  );
+  transform: skewX(-15deg);
+  animation: light-sweep 5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.logo-metal-sweep:hover::after {
+  animation-duration: 2s;
+}
