@@ -1,185 +1,123 @@
 
 
-# Plano de Auditoria e Atualização Completa do Projeto ELP Green Technology
+# Redesign Completo: Metal Escovado Profissional
 
-## Resumo do Estado Atual
+## Resumo
 
-O projeto possui **30 paginas**, **30 edge functions**, **38 tabelas no banco**, **13 hooks**, **16 libs**, **60+ componentes admin**, e **5 idiomas (i18n)**. A auditoria identificou **42 alertas de segurança** no linter do Supabase e o arquivo `config.toml` foi removido das configuracoes das edge functions.
-
----
-
-## Fase 1: Restauracao da Infraestrutura (Prioridade Critica)
-
-### 1.1 Restaurar `supabase/config.toml`
-O arquivo foi reduzido a apenas 1 linha, perdendo todas as configuracoes de `verify_jwt` das 30 edge functions. Restaurar todas as entradas:
-- ai-hub, aml-screening, analisar-com-claude, analisar-com-gemini, analisar-com-groq, analyze-feasibility, coletar-dados-concorrentes, complementar-com-gemini, discover-company-urls, fetch-youtube-videos, firecrawl-map, firecrawl-scrape, generate-collaborative-document, generate-document-ai, generate-meeting-document, get-vapid-key, notify-next-signer, notify-otr-approval, notify-template-submission, send-contact-email, send-document-signature-link, send-marketplace-email, send-meeting-convocation, send-push-notification, send-reply-email, send-signature-confirmation, send-signature-reminder, send-webhook-notification, send-weekly-report, serpapi-about
-
-### 1.2 Verificar e re-deploy de todas as edge functions
-- Validar que cada funcao esta funcional apos restauracao do config
-- Testar endpoints criticos: `send-contact-email`, `ai-hub`, `aml-screening`
+Aplicar duas texturas metalicas de referencia (azul metalico escovado + metal escuro/grafite) em todo o site, garantindo legibilidade total, removendo emojis/desenhos, e corrigindo espacamentos e contrastes.
 
 ---
 
-## Fase 2: Seguranca do Banco de Dados (42 alertas)
+## Regras de Design
 
-### 2.1 Corrigir RLS Policies permissivas
-- **2 politicas "always true"** (INSERT/UPDATE/DELETE com `USING(true)` ou `WITH CHECK(true)`) - identificar e restringir
-- **39 tabelas com acesso anonimo** - revisar cada politica para garantir que apenas dados publicos estejam acessiveis sem autenticacao
-- Tabelas criticas a revisar: `user_roles`, `profiles`, `admin_emails`, `contacts`, `feasibility_studies`, `generated_documents`
-
-### 2.2 Habilitar protecao contra senhas vazadas
-- Ativar "Leaked Password Protection" nas configuracoes de Auth do Supabase
-
-### 2.3 Revisar politicas por tabela
-Agrupar em 3 categorias:
-- **Publicas** (ok com acesso anon): `articles`, `press_releases`, `impact_stats`, `youtube_cache`
-- **Autenticadas** (remover acesso anon): `admin_emails`, `contacts`, `feasibility_studies`, `meetings`, `lead_documents`, `lead_notes`
-- **Sensíveis** (restringir apenas admin): `user_roles`, `audit_log`, `aml_screening_*`, `notification_webhooks`
-
----
-
-## Fase 3: Auditoria das 30 Paginas
-
-### 3.1 Paginas Publicas (verificar i18n, SEO, responsividade)
-| Pagina | Arquivo | Linhas | Verificar |
-|--------|---------|--------|-----------|
-| Home | Index.tsx | 863 | Restaurar conteudo (foi apagada anteriormente) |
-| About | About.tsx | 1415 | i18n, imagens, 3D globe |
-| Solutions | Solutions.tsx | - | i18n, links |
-| ESG | ESG.tsx | - | Conteudo, dados |
-| Investors | Investors.tsx | - | Dados financeiros |
-| Media | Media.tsx | - | Videos, artigos |
-| Contact | Contact.tsx | - | Formulario, edge function |
-| FAQ | FAQ.tsx | - | Traducoes |
-| Certificates | Certificates.tsx | - | PDFs acessiveis |
-| Privacy/Terms/Cookies | 3 paginas | - | Conformidade legal |
-
-### 3.2 Paginas de Plantas Industriais
-- TireRecyclingPlant, PyrolysisPlant, OTRPlant - verificar dados tecnicos, imagens, traducoes
-
-### 3.3 Paginas de Negocios
-- OTRPartnership, OTRSources, BrazilLatam, GlobalExpansion, Marketplace, BusinessIndex, RequestQuote
-
-### 3.4 Paginas de Admin (protegidas)
-- Admin.tsx (1169 linhas) - verificar todas as abas e funcionalidades
-- Login/Signup - verificar fluxo de autenticacao
-
-### 3.5 Paginas de Documentos
-- LOIViewer, TemplateViewer, PublicSignature - verificar acesso publico via token
-
----
-
-## Fase 4: Verificacao dos 30 Edge Functions
-
-Cada funcao sera verificada quanto a:
-- Codigo funcional e sem erros
-- CORS headers corretos
-- Tratamento de erros
-- Secrets necessarios configurados
-
-| Grupo | Functions | Secrets Necessarios |
-|-------|-----------|-------------------|
-| AI/Analise | ai-hub, analisar-com-claude, analisar-com-gemini, analisar-com-groq, analyze-feasibility, complementar-com-gemini | ANTHROPIC_API_KEY, GEMINI_API_KEY, GROQ_API_KEY |
-| Email | send-contact-email, send-reply-email, send-marketplace-email, send-meeting-convocation, send-signature-*, send-weekly-report | RESEND_API_KEY |
-| Scraping | firecrawl-map, firecrawl-scrape, coletar-dados-concorrentes, serpapi-about, discover-company-urls | FIRECRAWL_API_KEY, SERPAPI_API_KEY |
-| Documentos | generate-document-ai, generate-collaborative-document, generate-meeting-document | ANTHROPIC_API_KEY |
-| Notificacoes | notify-next-signer, notify-otr-approval, notify-template-submission, send-push-notification, send-webhook-notification, get-vapid-key | VAPID_PUBLIC_KEY, VAPID_PRIVATE_KEY, RESEND_API_KEY |
-| Midia | fetch-youtube-videos | YOUTUBE_API_KEY |
-| AML | aml-screening | GEMINI_API_KEY |
-
----
-
-## Fase 5: Verificacao das 38 Tabelas
-
-### 5.1 Tabelas Core
-- `profiles`, `user_roles`, `contacts`, `newsletter_subscribers`
-
-### 5.2 Tabelas de Negocios
-- `analises`, `company_intelligence`, `feasibility_studies`, `loi_documents`, `marketplace_registrations`, `otr_conversion_goals`, `partner_profiles`
-
-### 5.3 Tabelas de Documentos
-- `generated_documents`, `document_templates`, `signature_log`, `report_verifications`
-
-### 5.4 Tabelas de Email
-- `admin_emails`, `email_templates`, `email_signature_settings`
-
-### 5.5 Tabelas de AML/Compliance
-- `aml_screening_reports`, `aml_screening_matches`, `aml_screened_lists`, `aml_screening_history`
-
-### 5.6 Tabelas de Cache
-- `cnpj_cache`, `cpf_cache`, `cgu_sanctions_cache`, `serpapi_cache`, `youtube_cache`
-
-### 5.7 Tabelas de Sistema
-- `audit_log`, `push_notifications`, `push_subscriptions`, `notification_webhooks`, `meetings`, `lead_documents`, `lead_notes`, `impact_stats`, `todos`, `press_releases`, `articles`
-
----
-
-## Fase 6: Hooks e Libs
-
-### 6.1 Hooks (13 arquivos)
-- `useAuth` - verificar fluxo de autenticacao
-- `useSupabaseCRUD` - verificar operacoes CRUD
-- `useContactForm` - verificar envio de email
-- `useLeadAI` - verificar integracao AI
-- `usePushNotifications` - verificar push notifications
-- `useAntiCopy` - verificar protecao de conteudo
-- Demais: useParallax, useImpactStats, useNewsletter, useI18nDebug, useTranslationFallback, use-mobile, use-toast
-
-### 6.2 Libs (16 arquivos)
-- 7 geradores de PDF (feasibility, LOI, intelligence, reports, templates, professional)
-- emailTemplates, incotermsAndTaxes, industrialCostsByCountry
-- pdfBranding, pdfCjkFontLoader, pdfTableSystem
-- siteConfig, utils, openExternal
-
----
-
-## Fase 7: i18n (5 idiomas)
-
-- Rodar validacao de traducoes (en, pt, es, zh, it)
-- Corrigir chaves ausentes ou vazias
-- Garantir cobertura 100% para todos os idiomas
-
----
-
-## Fase 8: Componentes Admin (60+ componentes)
-
-Verificar cada componente em `src/components/admin/`:
-- AIAutomationHub, AMLScreeningHub, BatchLeadAnalysis, BulkDocumentGenerator
-- CRMPipeline, CompanyIntelligenceManager, ContentEditorWithAI
-- DocumentGenerator, DocumentAICorrector, DuoIntelligenceHub
-- ELPReportGenerator, ELPSignaturePortal, EmailInbox, EmailSignatureSettings
-- ExportPriceCalculator, FeasibilityStudyCalculator (+ 6 sub-componentes)
-- GlobalLeadMap, InfrastructureCostCalculator, LeadAIAnalysis
-- MeetingDocumentGenerator, MultipleSignersManager, NotificationCenter
-- OTRCompositionTable, OTRLeadManagement, PartnerDocumentFolders, PartnerLevels
-- SemanticDocumentSearch, SignaturePad, SignedDocumentsManager
-- TireModelSelector, UserManagement, WorkflowStatus
-
----
-
-## Ordem de Execucao Recomendada
-
-1. **Fase 1** - Restaurar config.toml (5 min) - URGENTE
-2. **Fase 2** - Seguranca RLS (30-60 min por batch)
-3. **Fase 4** - Edge functions verificacao (por grupo)
-4. **Fase 7** - i18n validacao (automatizado com testes)
-5. **Fase 3** - Paginas (por grupo de prioridade)
-6. **Fase 5** - Tabelas (junto com Fase 2)
-7. **Fase 6** - Hooks e Libs
-8. **Fase 8** - Componentes Admin
+| Elemento | Tratamento |
+|---|---|
+| Fundos brancos existentes | NAO alterar |
+| Areas azul claro (bg-primary/10, etc.) | Substituir por gradiente metalico azul sutil |
+| Botoes escuros | Textura metal azul escovado, texto BRANCO |
+| Botoes brancos | Textura "metal branco" (gradiente prata sutil), texto ESCURO navy |
+| Botoes outline | Borda metalica escura, texto escuro, hover com fundo metalico sutil |
+| Linhas divisorias | Metal escuro (grafite da 2a esfera), nao dourado |
+| Detalhes especiais (hover, brilho) | Ouro sutil apenas em efeitos de hover e acentos |
+| Emojis | Remover TODOS (cadeado, warning, bandeiras decorativas em texto) |
+| Icones Lucide | Manter - sao vetoriais profissionais |
 
 ---
 
 ## Detalhes Tecnicos
 
-- **Framework**: React 18 + Vite + TypeScript + Tailwind CSS
-- **Backend**: Supabase (38 tabelas, 30 edge functions, 10 DB functions)
-- **Auth**: Supabase Auth com Google OAuth + email/password
-- **i18n**: i18next com 5 idiomas
-- **3D**: React Three Fiber (globe, particles)
-- **PDFs**: jsPDF com suporte CJK
-- **Estado**: TanStack Query + React state local
-- **Testes**: Vitest + Playwright
+### 1. CSS - Tokens e Classes (`src/index.css`)
 
-Cada fase sera executada sequencialmente, com verificacao de funcionamento apos cada alteracao.
+**Novos gradientes baseados nas esferas de referencia:**
+
+- `--gradient-metal-blue`: Gradiente que replica a esfera azul metalica (tons HSL 205-215, saturacao 50-65%, luminosidade 10-40% com highlight central em 55%)
+- `--gradient-metal-dark`: Gradiente que replica a esfera grafite/escura (tons HSL 0-220, saturacao 5-15%, luminosidade 8-35% com reflexos brancos)
+- `--gradient-metal-white`: Metal branco/prata escovado (luminosidade 85-98%, saturacao muito baixa, com micro-reflexos)
+
+**Classes de botao:**
+- `.btn-metal-blue` - fundo metal azul, texto branco, textura ranhuras, gold-sweep no hover
+- `.btn-metal-dark` - fundo metal grafite, texto branco
+- `.btn-metal-white` - fundo prata escovado, texto navy escuro
+- Todas com `tracking-wide` e `font-semibold`
+
+**Correcao de linhas divisorias:**
+- Trocar linhas douradas por linhas metalicas escuras (grafite) - usar `--gradient-metal-dark` nas bordas e separadores
+
+### 2. Botoes (`src/components/ui/button.tsx`)
+
+Atualizar TODAS as variantes:
+
+- `default` / `elp-solid` / `elp-metal`: Metal azul escovado (da 1a esfera), texto branco, borda gold/15 sutil
+- `elp-white`: Gradiente prata/branco escovado, texto navy escuro, borda metalica escura
+- `elp-white-outline`: Borda branca, texto branco (para uso sobre fundos escuros)
+- `elp-gold`: Gradiente dourado, texto navy escuro
+- `elp-gold-outline`: Borda dourada, texto dourado
+- `outline`: Borda metal escuro, texto navy, hover metal sutil
+- `secondary`: Metal escuro (2a esfera), texto branco
+- `destructive`: Manter vermelho
+- `ghost` / `link`: Manter sem textura
+
+Adicionar `tracking-wide` globalmente a todos os botoes.
+
+### 3. Pagina Principal (`src/pages/Index.tsx`)
+
+- **Linha 296**: Remover emoji `⚠️` - usar apenas texto em negrito
+- **Linha 819**: Remover emoji `🔒` - usar apenas texto
+- **Linha 231**: Banner `bg-gradient-to-r from-primary to-secondary` -> classe `brushed-metal` (metal azul)
+- **Linha 826**: CTA Section `bg-gradient-to-r from-primary to-secondary` -> classe `brushed-metal` (metal azul)
+- **Linhas 543-564**: Step numbers (`bg-primary`) -> gradiente metal azul
+- **Badges** (`bg-primary/10`): Manter, sao sutis
+- Verificar todos os textos: garantir contraste (branco sobre escuro, escuro sobre claro)
+
+### 4. Header (`src/components/layout/Header.tsx`)
+
+- Botao CTA: aplicar variante metal azul
+- Remover emojis de bandeiras se aparecerem no header (linhas 18-22 tem emojis de bandeiras nos idiomas)
+
+### 5. Footer (`src/components/layout/Footer.tsx`)
+
+- Linha divisoria superior: trocar de dourado para metal escuro/grafite
+- Botao newsletter: aplicar textura metal azul
+- Bordas: metal escuro em vez de dourado
+
+### 6. Outras Paginas (busca global)
+
+Arquivos com `from-primary to-secondary` que precisam de `brushed-metal`:
+- `src/pages/Solutions.tsx` (linha 741): Circular Economy section
+- `src/pages/OTRPartnership.tsx`: Verificar CTAs
+- `src/pages/Contact.tsx`: Verificar fundos azuis
+- `src/pages/About.tsx`: Verificar secoes
+
+### 7. Correcoes de Legibilidade (auditoria CSS global)
+
+- Buscar todas as combinacoes de `text-primary` sobre `bg-primary` (invisivel)
+- Buscar `text-white` sobre fundos claros
+- Buscar `text-muted-foreground` sobre fundos escuros
+- Corrigir cada ocorrencia garantindo contraste minimo
+
+### 8. Espacamento de Caixas
+
+- Verificar cards dentro de cards (GlassCard aninhados)
+- Garantir padding consistente: cards externos `p-6` ou `p-8`, internos `p-3` ou `p-4`
+- Verificar margens entre secoes (todas `py-20` consistente)
+
+### 9. Glass Card e Card (`src/components/ui/glass-card.tsx`, `card.tsx`)
+
+- Bordas: trocar `gold/10` por metal escuro `hsl(220 15% 25% / 0.2)` como padrao
+- Hover: borda pode ter toque dourado sutil `gold/20`
+- Sombras: manter profundidade metalica
+
+---
+
+## Arquivos a Modificar
+
+1. `src/index.css` - Novos gradientes metal azul/escuro/branco, classes btn-metal-*, linhas escuras
+2. `src/components/ui/button.tsx` - Todas as variantes com texturas metalicas + tracking
+3. `src/pages/Index.tsx` - Remover emojis, aplicar metal nos CTAs e banners
+4. `src/components/layout/Header.tsx` - Botao CTA metalico, remover emojis bandeiras
+5. `src/components/layout/Footer.tsx` - Linhas e botoes metalicos escuros
+6. `src/components/ui/glass-card.tsx` - Bordas metalicas escuras
+7. `src/components/ui/card.tsx` - Consistencia de bordas
+8. `src/pages/Solutions.tsx` - Secoes com fundo azul -> metal escovado
+9. Demais paginas com `from-primary to-secondary` - Substituir por metal escovado
 
