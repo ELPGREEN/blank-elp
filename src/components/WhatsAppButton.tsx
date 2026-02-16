@@ -73,9 +73,9 @@ export function WhatsAppButton() {
     }} transition={{
       delay: 1
     }}>
-        <Link to="/otr-sources" className="w-14 h-14 bg-primary hover:bg-primary/90 text-primary-foreground rounded-full shadow-2xl flex items-center justify-center transition-colors group">
-          <Mountain className="h-6 w-6 group-hover:scale-110 transition-transform" />
-        </Link>
+        
+
+
       </motion.div>
     </>;
 }
