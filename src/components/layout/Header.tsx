@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -27,6 +27,8 @@ export function Header() {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const lastScrollY = useRef(0);
   const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
   const [isInstallable, setIsInstallable] = useState(false);
 
@@ -62,11 +64,22 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      const currentScrollY = window.scrollY;
+      setScrolled(currentScrollY > 20);
+
+      if (!mobileMenuOpen) {
+        if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
+          setHidden(true);
+        } else if (currentScrollY < lastScrollY.current) {
+          setHidden(false);
+        }
+      }
+
+      lastScrollY.current = currentScrollY;
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [mobileMenuOpen]);
 
   const navItems = [
     { href: '/', label: t('nav.home') },
@@ -97,7 +110,8 @@ export function Header() {
     <>
       <header 
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+          hidden && !mobileMenuOpen ? "-translate-y-full" : "translate-y-0",
           scrolled 
             ? "bg-gradient-to-b from-background/98 via-background/95 to-background/90 backdrop-blur-xl border-b border-gold/10 shadow-lg shadow-black/5" 
             : "bg-gradient-to-b from-black/40 to-transparent"
@@ -107,11 +121,13 @@ export function Header() {
           <div className="flex items-center justify-between h-16 lg:h-18">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3 flex-shrink-0">
-              <img 
-                src={logoElp} 
-                alt="ELP Green Technology" 
-                className="h-12 lg:h-14 w-auto" 
-              />
+              <span className="logo-metal-sweep">
+                <img 
+                  src={logoElp} 
+                  alt="ELP Green Technology" 
+                  className="h-12 lg:h-14 w-auto" 
+                />
+              </span>
             </Link>
 
             {/* Right Actions */}
