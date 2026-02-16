@@ -86,6 +86,11 @@
     --gradient-gold: linear-gradient(135deg, hsl(38 80% 42%) 0%, hsl(42 78% 55%) 30%, hsl(45 72% 68%) 50%, hsl(42 78% 55%) 70%, hsl(38 80% 42%) 100%);
     --gradient-gold-subtle: linear-gradient(90deg, hsl(38 60% 45% / 0.6) 0%, hsl(42 70% 60% / 0.8) 50%, hsl(38 60% 45% / 0.6) 100%);
 
+    /* Metal Texture Gradients - Based on reference spheres */
+    --gradient-metal-blue: linear-gradient(135deg, hsl(210 60% 12%) 0%, hsl(210 55% 20%) 15%, hsl(208 50% 30%) 30%, hsl(205 45% 42%) 45%, hsl(200 40% 55%) 50%, hsl(205 45% 42%) 55%, hsl(208 50% 30%) 70%, hsl(210 55% 20%) 85%, hsl(210 60% 12%) 100%);
+    --gradient-metal-dark: linear-gradient(135deg, hsl(220 10% 8%) 0%, hsl(220 8% 15%) 15%, hsl(215 6% 22%) 30%, hsl(210 5% 32%) 45%, hsl(200 4% 42%) 50%, hsl(210 5% 32%) 55%, hsl(215 6% 22%) 70%, hsl(220 8% 15%) 85%, hsl(220 10% 8%) 100%);
+    --gradient-metal-white: linear-gradient(135deg, hsl(220 5% 88%) 0%, hsl(215 4% 92%) 20%, hsl(210 3% 96%) 40%, hsl(0 0% 98%) 50%, hsl(210 3% 96%) 60%, hsl(215 4% 92%) 80%, hsl(220 5% 88%) 100%);
+
     /* Shadows - Metallic depth with gold accents */
     --shadow-sm: 0 1px 2px hsl(220 30% 10% / 0.08);
     --shadow-md: 0 4px 8px -1px hsl(220 30% 10% / 0.12), 0 2px 4px -2px hsl(220 30% 10% / 0.06);
@@ -301,10 +306,10 @@
     box-shadow: var(--shadow-xl);
   }
 
-  /* Section divider - gold metallic */
+  /* Section divider - metal dark */
   .section-divider {
     @apply w-20 h-1 rounded-full;
-    background: var(--gradient-gold);
+    background: var(--gradient-metal-dark);
   }
 
   /* Animated underline - gold */
@@ -770,6 +775,86 @@ canvas {
   background: hsl(42 60% 50% / 0.08);
   border-color: hsl(42 70% 55% / 0.7);
   box-shadow: 0 0 15px hsl(42 60% 50% / 0.1);
+}
+
+/* ===== METAL TEXTURE BUTTON CLASSES ===== */
+
+.btn-metal-blue {
+  background: var(--gradient-metal-blue);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid hsl(200 40% 45% / 0.3);
+  text-shadow: 0 1px 2px hsl(0 0% 0% / 0.3);
+}
+
+.btn-metal-blue::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    hsl(0 0% 100% / 0.015) 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+}
+
+.btn-metal-blue:hover {
+  border-color: hsl(42 60% 55% / 0.4);
+  box-shadow: 0 4px 15px hsl(210 50% 15% / 0.3), 0 0 10px hsl(42 55% 50% / 0.08);
+}
+
+.btn-metal-dark {
+  background: var(--gradient-metal-dark);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid hsl(220 8% 25% / 0.4);
+  text-shadow: 0 1px 2px hsl(0 0% 0% / 0.4);
+}
+
+.btn-metal-dark::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    hsl(0 0% 100% / 0.01) 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+}
+
+.btn-metal-dark:hover {
+  border-color: hsl(42 50% 50% / 0.3);
+  box-shadow: 0 4px 15px hsl(0 0% 0% / 0.3), 0 0 8px hsl(42 50% 50% / 0.06);
+}
+
+.btn-metal-white {
+  background: var(--gradient-metal-white);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid hsl(220 10% 75% / 0.5);
+  color: hsl(230 40% 17%);
+}
+
+.btn-metal-white::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    hsl(0 0% 0% / 0.008) 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+}
+
+.btn-metal-white:hover {
+  border-color: hsl(220 10% 65% / 0.6);
+  box-shadow: 0 4px 12px hsl(220 15% 20% / 0.1);
 }
 
 /* ===== PREMIUM SECTION BACKGROUNDS ===== */

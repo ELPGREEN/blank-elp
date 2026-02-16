@@ -15,11 +15,11 @@ import logoElp from '@/assets/logo-elp-new.png';
 import { PushNotificationButton } from '@/components/PushNotificationButton';
 
 const languages = [
-  { code: 'en', name: 'English', shortName: 'EN', flag: '🇬🇧', country: 'UK/AU' },
-  { code: 'it', name: 'Italiano', shortName: 'IT', flag: '🇮🇹', country: 'Italia' },
-  { code: 'pt', name: 'Português', shortName: 'PT', flag: '🇧🇷', country: 'Brasil' },
-  { code: 'es', name: 'Español', shortName: 'ES', flag: '🇪🇸', country: 'España' },
-  { code: 'zh', name: '中文', shortName: 'ZH', flag: '🇨🇳', country: '中国' },
+  { code: 'en', name: 'English', shortName: 'EN', country: 'UK/AU' },
+  { code: 'it', name: 'Italiano', shortName: 'IT', country: 'Italia' },
+  { code: 'pt', name: 'Português', shortName: 'PT', country: 'Brasil' },
+  { code: 'es', name: 'Español', shortName: 'ES', country: 'España' },
+  { code: 'zh', name: '中文', shortName: 'ZH', country: '中国' },
 ];
 
 export function Header() {
@@ -124,8 +124,7 @@ export function Header() {
                     size="sm" 
                     className="gap-1.5 px-3 h-10 text-foreground/70 hover:text-foreground hover:bg-muted"
                   >
-                    <span className="text-lg">{currentLang.flag}</span>
-                    <span className="text-sm font-medium">{currentLang.shortName}</span>
+                    <span className="text-sm font-semibold">{currentLang.shortName}</span>
                     <ChevronDown className="h-3.5 w-3.5 opacity-50" />
                   </Button>
                 </DropdownMenuTrigger>
@@ -142,7 +141,6 @@ export function Header() {
                         i18n.language === lang.code && "bg-muted"
                       )}
                     >
-                      <span className="text-xl">{lang.flag}</span>
                       <div className="flex-1">
                         <div className="text-sm font-medium">{lang.name}</div>
                       </div>
@@ -158,7 +156,8 @@ export function Header() {
               <Button 
                 asChild 
                 size="sm"
-                className="hidden md:flex h-10 px-5 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold shadow-md border border-gold/20 hover:border-gold/40 hover:shadow-[0_4px_15px_hsl(42_60%_50%/0.1)] transition-all duration-300"
+                variant="elp-metal"
+                className="hidden md:flex h-10 px-5"
               >
                 <Link to="/otr-sources" className="flex items-center gap-2">
                   <span>{t('hero.cta.partner')}</span>
@@ -253,7 +252,8 @@ export function Header() {
                   <Button 
                     asChild 
                     size="lg"
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold shadow-md"
+                    variant="elp-metal"
+                    className="w-full"
                   >
                     <Link 
                       to="/otr-sources" 
