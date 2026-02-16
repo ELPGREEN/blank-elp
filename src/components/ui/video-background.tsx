@@ -29,10 +29,9 @@ export function VideoBackground({
         muted
         loop
         playsInline
+        src={src}
         className={`absolute inset-0 w-full h-full object-cover ${className}`}
-      >
-        <source src={src} type="video/mp4" />
-      </video>
+      />
       <div className={`absolute inset-0 ${overlayClassName}`} />
     </>
   );
