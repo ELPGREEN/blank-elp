@@ -12,13 +12,13 @@
   :root {
     /* Core Brand Colors - Navy Blue Palette (from ELP Logo) */
     --background: 220 15% 98%;
-    --foreground: 215 55% 18%;
+    --foreground: 210 65% 16%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 55% 18%;
+    --card-foreground: 210 65% 16%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 55% 18%;
+    --popover-foreground: 210 65% 16%;
 
     /* Primary - Deep Navy Blue (from logo #1a1f3d) */
     --primary: 230 40% 17%;
