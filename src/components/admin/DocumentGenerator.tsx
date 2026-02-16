@@ -228,7 +228,7 @@ export function DocumentGenerator() {
   const { data: templates, isLoading: templatesLoading } = useQuery({
     queryKey: ['document-templates'],
     queryFn: async () => {
-      const { data, error } = await (supabase as any).from('document_templates').select('*').order('name');
+      const { data, error } = await supabase.from('document_templates').select('*').order('name');
       if (error) throw error;
       return (data || []).map((t: any) => ({
         ...t,
