@@ -99,7 +99,7 @@ export function Header() {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
           scrolled 
-            ? "glass-nav gold-line-decoration border-b border-gold/15 shadow-lg" 
+            ? "bg-background/95 backdrop-blur-xl border-b border-border shadow-md" 
             : "bg-gradient-to-b from-black/40 to-transparent"
         )}
       >
@@ -158,7 +158,7 @@ export function Header() {
               <Button 
                 asChild 
                 size="sm"
-                className="hidden md:flex h-10 px-5 btn-metal font-semibold rounded-md gold-sweep"
+                className="hidden md:flex h-10 px-5 font-semibold rounded-md"
               >
                 <Link to="/otr-sources" className="flex items-center gap-2">
                   <span>{t('hero.cta.partner')}</span>
@@ -204,11 +204,11 @@ export function Header() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 100 }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-16 right-0 bottom-0 z-50 w-full max-w-sm section-metal border-l border-gold/15 shadow-2xl overflow-y-auto text-white"
+              className="fixed top-16 right-0 bottom-0 z-50 w-full max-w-sm bg-background border-l border-border shadow-2xl overflow-y-auto"
             >
               <div className="p-6 space-y-2">
                 {/* Logo in Menu */}
-                <div className="flex items-center gap-3 pb-6 mb-6 border-b border-border">
+                <div className="flex items-center gap-3 pb-6 mb-6 border-b border-border/50">
                   <img 
                     src={logoElp} 
                     alt="ELP Green Technology" 
@@ -253,7 +253,7 @@ export function Header() {
                   <Button 
                     asChild 
                     size="lg"
-                    className="w-full btn-metal font-semibold gold-sweep"
+                    className="w-full font-semibold"
                   >
                     <Link 
                       to="/otr-sources" 

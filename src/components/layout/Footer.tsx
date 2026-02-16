@@ -107,7 +107,8 @@ export function Footer() {
               />
               <Button 
                 type="submit"
-                className="btn-metal whitespace-nowrap gold-sweep rounded-md"
+                variant="elp-gold"
+                className="whitespace-nowrap rounded-md"
                 disabled={newsletterMutation.isPending}
               >
                 {newsletterMutation.isPending ? '...' : t('newsletter.subscribe')}

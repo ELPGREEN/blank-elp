@@ -621,12 +621,12 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <div className="inline-flex items-center gap-2 bg-primary/20 border border-primary/30 rounded-full px-4 py-2 mb-4">
-              <Factory className="h-5 w-5 text-primary" />
-              <span className="text-primary font-medium">{t('aboutPage.otrFocus.badge')}</span>
+            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 mb-4">
+              <Factory className="h-5 w-5 text-gold" />
+              <span className="text-gold font-medium">{t('aboutPage.otrFocus.badge')}</span>
             </div>
             <h2 className="text-3xl font-bold mb-4">{t('aboutPage.otrFocus.title')}</h2>
-            <p className="text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-white/70 max-w-3xl mx-auto">
               {t('aboutPage.otrFocus.description')}
             </p>
           </motion.div>
@@ -670,7 +670,7 @@ export default function About() {
                   <Eye className="h-8 w-8 text-white" />
                 </div>
                 <h2 className="text-2xl font-bold mb-4">{t('aboutPage.vision.title')}</h2>
-                <p className="text-muted-foreground text-lg leading-relaxed">
+                <p className="text-white/70 text-lg leading-relaxed">
                   {t('aboutPage.vision.description')}
                 </p>
               </GlassCard>
@@ -686,7 +686,7 @@ export default function About() {
                   <Target className="h-8 w-8 text-white" />
                 </div>
                 <h2 className="text-2xl font-bold mb-4">{t('aboutPage.mission.title')}</h2>
-                <p className="text-muted-foreground text-lg leading-relaxed">
+                <p className="text-white/70 text-lg leading-relaxed">
                   {t('aboutPage.mission.description')}
                 </p>
               </GlassCard>
@@ -750,13 +750,13 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <div className="inline-flex items-center gap-2 bg-secondary/10 border border-secondary/30 rounded-full px-4 py-2 mb-6">
-              <Users className="h-5 w-5 text-secondary" />
-              <span className="text-secondary font-medium">{t('about.leadership.title')}</span>
+            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 mb-6">
+              <Users className="h-5 w-5 text-gold" />
+              <span className="text-gold font-medium">{t('about.leadership.title')}</span>
             </div>
             <h2 className="text-4xl font-bold mb-4">{t('about.leadership.title')}</h2>
             <div className="section-divider mx-auto mb-6" />
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-xl text-white/70 max-w-2xl mx-auto">
               {t('about.leadership.subtitle')}
             </p>
           </motion.div>

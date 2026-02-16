@@ -265,13 +265,13 @@ export default function Index() {
             duration: 0.6
           }}>
               <div className="flex flex-wrap gap-2 mb-4">
-                <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-2">
-                  <Bot className="h-4 w-4 text-primary" />
-                  <span className="text-primary text-sm font-medium">{t('smartOtr.badge')}</span>
+                <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-2">
+                  <Bot className="h-4 w-4 text-gold" />
+                  <span className="text-gold text-sm font-medium">{t('smartOtr.badge')}</span>
                 </div>
-                <div className="inline-flex items-center gap-2 bg-secondary/10 rounded-full px-4 py-2">
-                  <Factory className="h-4 w-4 text-secondary" />
-                  <span className="text-secondary text-sm font-medium">{t('smartOtr.poweredByTops', 'Technology by TOPS Recycling')}</span>
+                <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-2">
+                  <Factory className="h-4 w-4 text-white/70" />
+                  <span className="text-white/70 text-sm font-medium">{t('smartOtr.poweredByTops', 'Technology by TOPS Recycling')}</span>
                 </div>
               </div>
               
@@ -279,20 +279,20 @@ export default function Index() {
                 {t('smartOtr.title')}
               </h2>
               
-              <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
-                {t('smartOtr.description')} <strong className="text-primary">{t('smartOtr.demoLocation')}</strong>. {t('smartOtr.globalGoal')}
+              <p className="text-lg text-white/70 mb-4 leading-relaxed">
+                {t('smartOtr.description')} <strong className="text-gold">{t('smartOtr.demoLocation')}</strong>. {t('smartOtr.globalGoal')}
               </p>
 
               {/* TOPS Technology Credit */}
-              <div className="bg-secondary/10 border border-secondary/30 rounded-xl p-4 mb-4">
-                <p className="text-sm text-muted-foreground">
-                  <strong className="text-secondary">{t('smartOtr.topsCredit', 'TOPS Recycling Group:')}</strong>{' '}
+              <div className="bg-white/5 border border-white/15 rounded-xl p-4 mb-4">
+                <p className="text-sm text-white/70">
+                  <strong className="text-white/90">{t('smartOtr.topsCredit', 'TOPS Recycling Group:')}</strong>{' '}
                   {t('smartOtr.topsCreditDesc', 'All Smart Line equipment is designed and manufactured by our strategic technology partner TOPS, with 15+ years of experience in tire recycling solutions across 60+ countries.')}
                 </p>
               </div>
 
-              <div className="bg-primary/10 border border-primary/30 rounded-xl p-4 mb-6">
-                <p className="text-primary font-medium">
+              <div className="bg-gold/10 border border-gold/30 rounded-xl p-4 mb-6">
+                <p className="text-gold font-medium">
                   ⚠️ <strong>{t('smartOtr.disclaimer')}</strong> – {t('smartOtr.disclaimerDesc')}
                 </p>
               </div>
@@ -309,7 +309,7 @@ export default function Index() {
               }} transition={{
                 delay: 0.1
               }} className="flex items-center gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-primary" />
+                   <CheckCircle2 className="h-5 w-5 text-gold" />
                   <span className="text-sm">{t('smartOtr.features.autoPosition')}</span>
                 </motion.div>
                 <motion.div initial={{
@@ -323,7 +323,7 @@ export default function Index() {
               }} transition={{
                 delay: 0.2
               }} className="flex items-center gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-primary" />
+                   <CheckCircle2 className="h-5 w-5 text-gold" />
                   <span className="text-sm">{t('smartOtr.features.roboticCutting')}</span>
                 </motion.div>
                 <motion.div initial={{
@@ -337,7 +337,7 @@ export default function Index() {
               }} transition={{
                 delay: 0.3
               }} className="flex items-center gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-primary" />
+                   <CheckCircle2 className="h-5 w-5 text-gold" />
                   <span className="text-sm">{t('smartOtr.features.tonsPerPlant')}</span>
                 </motion.div>
                 <motion.div initial={{
@@ -351,12 +351,12 @@ export default function Index() {
               }} transition={{
                 delay: 0.4
               }} className="flex items-center gap-2">
-                  <CheckCircle2 className="h-5 w-5 text-primary" />
+                  <CheckCircle2 className="h-5 w-5 text-gold" />
                   <span className="text-sm">{t('smartOtr.features.globalCapacity')}</span>
                 </motion.div>
               </div>
 
-              <Button asChild size="lg" variant="elp-solid">
+              <Button asChild size="lg" variant="elp-gold">
                 <Link to="/otr-sources">
                   {t('smartOtr.indicateSource')}
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -469,12 +469,12 @@ export default function Index() {
         }} transition={{
           duration: 0.6
         }} className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-2 mb-4">
-              <Globe className="w-4 h-4 text-primary" />
-              <span className="text-primary text-sm font-medium">{t('globalPresence.badge')}</span>
+            <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 mb-4">
+              <Globe className="w-4 h-4 text-gold" />
+              <span className="text-gold text-sm font-medium">{t('globalPresence.badge')}</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('globalPresence.title')}</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-white/70 max-w-2xl mx-auto">
               {t('globalPresence.subtitle')}
             </p>
           </motion.div>
@@ -529,12 +529,12 @@ export default function Index() {
           }} viewport={{
             once: true
           }}>
-              <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-2 mb-4">
-                <Handshake className="w-4 h-4 text-primary" />
-                <span className="text-primary text-sm font-medium">{t('indexPage.partnershipModel.badge')}</span>
+              <div className="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-2 mb-4">
+                <Handshake className="w-4 h-4 text-gold" />
+                <span className="text-gold text-sm font-medium">{t('indexPage.partnershipModel.badge')}</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">{t('indexPage.partnershipModel.title')}</h2>
-              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-lg text-white/70 mb-6 leading-relaxed">
                 {t('indexPage.partnershipModel.description')}
               </p>
               
@@ -542,41 +542,41 @@ export default function Index() {
                 <div className="flex items-start gap-3">
                   <div className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm">1</div>
                   <div>
-                    <p className="font-medium">{t('indexPage.partnershipModel.step1.title')}</p>
-                    <p className="text-sm text-muted-foreground">{t('indexPage.partnershipModel.step1.desc')}</p>
+                    <p className="font-medium text-white">{t('indexPage.partnershipModel.step1.title')}</p>
+                    <p className="text-sm text-white/60">{t('indexPage.partnershipModel.step1.desc')}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm">2</div>
                   <div>
-                    <p className="font-medium">{t('indexPage.partnershipModel.step2.title')}</p>
-                    <p className="text-sm text-muted-foreground">{t('indexPage.partnershipModel.step2.desc')}</p>
+                    <p className="font-medium text-white">{t('indexPage.partnershipModel.step2.title')}</p>
+                    <p className="text-sm text-white/60">{t('indexPage.partnershipModel.step2.desc')}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm">3</div>
                   <div>
-                    <p className="font-medium">{t('indexPage.partnershipModel.step3.title')}</p>
-                    <p className="text-sm text-muted-foreground">{t('indexPage.partnershipModel.step3.desc')}</p>
+                    <p className="font-medium text-white">{t('indexPage.partnershipModel.step3.title')}</p>
+                    <p className="text-sm text-white/60">{t('indexPage.partnershipModel.step3.desc')}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm">4</div>
                   <div>
-                    <p className="font-medium">{t('indexPage.partnershipModel.step4.title')}</p>
-                    <p className="text-sm text-muted-foreground">{t('indexPage.partnershipModel.step4.desc')}</p>
+                    <p className="font-medium text-white">{t('indexPage.partnershipModel.step4.title')}</p>
+                    <p className="text-sm text-white/60">{t('indexPage.partnershipModel.step4.desc')}</p>
                   </div>
                 </div>
               </div>
               
               <div className="flex flex-wrap gap-4">
-                <Button asChild variant="elp-solid">
+                <Button asChild variant="elp-gold">
                   <Link to="/otr-sources">
                     {t('indexPage.partnershipModel.indicateSource')}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
-                <Button asChild variant="outline">
+                <Button asChild variant="elp-white-outline">
                   <Link to="/partnership/otr">
                     {t('indexPage.partnershipModel.fullDetails')}
                   </Link>
@@ -634,18 +634,18 @@ export default function Index() {
           }} viewport={{
             once: true
           }}>
-              <GlassCard className="p-8 bg-gradient-to-br from-green-500/5 to-emerald-500/5 border-green-500/20">
+              <GlassCard className="p-8 bg-white/5 border-green-500/20">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center">
                     <Leaf className="h-6 w-6 text-green-500" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold">{t('indexPage.esgSection.title')}</h3>
-                    <p className="text-sm text-muted-foreground">{t('indexPage.esgSection.subtitle')}</p>
+                    <p className="text-sm text-white/60">{t('indexPage.esgSection.subtitle')}</p>
                   </div>
                 </div>
                 
-                <p className="text-sm text-muted-foreground mb-4">
+                <p className="text-sm text-white/70 mb-4">
                   {t('indexPage.esgSection.description')}
                 </p>
                 
@@ -668,7 +668,7 @@ export default function Index() {
                   </div>
                 </div>
 
-                <Button asChild variant="outline" className="w-full border-green-500/30 text-green-600 hover:bg-green-500/10">
+                <Button asChild variant="elp-white-outline" className="w-full">
                   <Link to="/esg">
                     {t('indexPage.esgSection.learnMore')}
                     <ArrowRight className="ml-2 h-4 w-4" />
@@ -687,18 +687,18 @@ export default function Index() {
           }} viewport={{
             once: true
           }}>
-              <GlassCard className="p-8 border-primary/20">
+              <GlassCard className="p-8 bg-white/5 border-white/15">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                     <Briefcase className="h-6 w-6 text-primary" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold">{t('indexPage.investorsSection.title')}</h3>
-                    <p className="text-sm text-muted-foreground">{t('indexPage.investorsSection.subtitle')}</p>
+                    <p className="text-sm text-white/60">{t('indexPage.investorsSection.subtitle')}</p>
                   </div>
                 </div>
 
-                <p className="text-sm text-muted-foreground mb-4">
+                <p className="text-sm text-white/70 mb-4">
                   {t('indexPage.investorsSection.description')}
                 </p>
 
@@ -710,13 +710,13 @@ export default function Index() {
                 </div>
 
                 <div className="flex gap-3">
-                  <Button asChild variant="outline" className="flex-1">
+                  <Button asChild variant="elp-white-outline" className="flex-1">
                     <Link to="/investors">
                       {t('indexPage.investorsSection.dataRoom')}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
-                  <Button asChild variant="outline" className="flex-1">
+                  <Button asChild variant="elp-white-outline" className="flex-1">
                     <Link to="/certificates">
                       {t('indexPage.investorsSection.certificates')}
                     </Link>
