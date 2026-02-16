@@ -1,7 +1,36 @@
+# ELP Green Technology - robots.txt
+# Global access for all search engines
+
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /login
+Disallow: /signup
+Disallow: /sign
+Disallow: /documents/
+
+# Search engine specific directives
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Sogou
 Allow: /
 
 User-agent: Twitterbot
@@ -10,5 +39,17 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
+User-agent: LinkedInBot
 Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# Sitemap
+Sitemap: https://www.elpgreen.com/sitemap.xml
