@@ -31,16 +31,16 @@ export const GlassCard = forwardRef<HTMLDivElement, GlassCardProps>(({
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
       className={cn(
         "relative overflow-hidden rounded-2xl",
-        "bg-card backdrop-blur-xl",
-        "border border-border",
+        "bg-white/5 dark:bg-white/5 backdrop-blur-xl",
+        "border border-gold/8 dark:border-gold/10",
         "shadow-xl",
-        hoverEffect && "hover:shadow-2xl hover:border-primary/20",
+        hoverEffect && glowColors[glowColor as keyof typeof glowColors],
         "transition-shadow duration-500",
         className
       )}
     >
-      {/* Subtle accent */}
-      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/3 via-transparent to-primary/2 opacity-40 pointer-events-none" />
+      {/* Gold accent gradient border */}
+      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-gold/10 via-transparent to-gold/5 opacity-40 pointer-events-none" />
       
       {/* Content */}
       <div className="relative z-10">

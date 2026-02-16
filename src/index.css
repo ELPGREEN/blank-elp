@@ -76,56 +76,15 @@
     --gold-dark: 38 80% 42%;
     --gold-muted: 40 40% 50%;
 
-    /* Gradients - Realistic Brushed Metal (inspired by real metal sphere textures)
-       Uses radial highlights + linear base for specular realism */
-    --gradient-primary: linear-gradient(
-      145deg,
-      hsl(215 45% 8%) 0%,
-      hsl(212 40% 16%) 18%,
-      hsl(208 35% 28%) 38%,
-      hsl(205 30% 40%) 52%,
-      hsl(208 35% 28%) 68%,
-      hsl(212 40% 16%) 85%,
-      hsl(215 45% 8%) 100%
-    );
-    --gradient-hero: linear-gradient(180deg, hsl(215 42% 7% / 0.98) 0%, hsl(212 38% 14% / 0.97) 35%, hsl(208 30% 22% / 0.95) 100%);
+    /* Gradients - Brushed Metal Effect with Gold */
+    --gradient-primary: linear-gradient(135deg, hsl(220 35% 15%) 0%, hsl(218 30% 25%) 30%, hsl(215 22% 38%) 50%, hsl(218 30% 25%) 70%, hsl(220 35% 15%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(220 35% 10% / 0.97) 0%, hsl(218 30% 18% / 0.95) 40%, hsl(215 25% 25% / 0.92) 100%);
     --gradient-card: linear-gradient(180deg, hsl(215 8% 98%) 0%, hsl(215 10% 95%) 100%);
-    --gradient-accent: linear-gradient(145deg, hsl(212 38% 18%) 0%, hsl(208 30% 36%) 40%, hsl(205 25% 45%) 55%, hsl(208 30% 36%) 70%, hsl(212 38% 18%) 100%);
-    --gradient-metal: linear-gradient(
-      155deg,
-      hsl(215 48% 7%) 0%,
-      hsl(212 42% 14%) 12%,
-      hsl(210 38% 24%) 28%,
-      hsl(208 32% 38%) 42%,
-      hsl(205 25% 52%) 52%,
-      hsl(208 32% 38%) 62%,
-      hsl(210 38% 24%) 75%,
-      hsl(212 42% 14%) 88%,
-      hsl(215 48% 7%) 100%
-    );
-    --gradient-metal-horizontal: linear-gradient(
-      90deg,
-      hsl(215 45% 9%) 0%,
-      hsl(212 40% 18%) 10%,
-      hsl(210 35% 30%) 25%,
-      hsl(208 28% 44%) 40%,
-      hsl(205 22% 56%) 50%,
-      hsl(208 28% 44%) 60%,
-      hsl(210 35% 30%) 75%,
-      hsl(212 40% 18%) 90%,
-      hsl(215 45% 9%) 100%
-    );
-    --gradient-gold: linear-gradient(
-      145deg,
-      hsl(35 65% 25%) 0%,
-      hsl(38 72% 38%) 18%,
-      hsl(42 78% 52%) 38%,
-      hsl(45 75% 65%) 52%,
-      hsl(42 78% 52%) 68%,
-      hsl(38 72% 38%) 85%,
-      hsl(35 65% 25%) 100%
-    );
-    --gradient-gold-subtle: linear-gradient(90deg, hsl(38 55% 40% / 0.4) 0%, hsl(42 68% 55% / 0.7) 50%, hsl(38 55% 40% / 0.4) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(218 28% 28%) 0%, hsl(215 22% 42%) 40%, hsl(218 28% 28%) 100%);
+    --gradient-metal: linear-gradient(135deg, hsl(220 32% 14%) 0%, hsl(218 26% 28%) 20%, hsl(215 20% 42%) 40%, hsl(210 16% 52%) 50%, hsl(215 20% 42%) 60%, hsl(218 26% 28%) 80%, hsl(220 32% 14%) 100%);
+    --gradient-metal-horizontal: linear-gradient(90deg, hsl(220 30% 18%) 0%, hsl(218 24% 32%) 15%, hsl(215 18% 46%) 35%, hsl(210 14% 55%) 50%, hsl(215 18% 46%) 65%, hsl(218 24% 32%) 85%, hsl(220 30% 18%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(38 80% 42%) 0%, hsl(42 78% 55%) 30%, hsl(45 72% 68%) 50%, hsl(42 78% 55%) 70%, hsl(38 80% 42%) 100%);
+    --gradient-gold-subtle: linear-gradient(90deg, hsl(38 60% 45% / 0.6) 0%, hsl(42 70% 60% / 0.8) 50%, hsl(38 60% 45% / 0.6) 100%);
 
     /* Shadows - Metallic depth with gold accents */
     --shadow-sm: 0 1px 2px hsl(220 30% 10% / 0.08);
@@ -198,47 +157,13 @@
     --gold-dark: 38 75% 45%;
     --gold-muted: 40 35% 55%;
 
-    --gradient-primary: linear-gradient(
-      145deg,
-      hsl(215 40% 20%) 0%,
-      hsl(212 35% 30%) 25%,
-      hsl(208 28% 44%) 50%,
-      hsl(212 35% 30%) 75%,
-      hsl(215 40% 20%) 100%
-    );
-    --gradient-hero: linear-gradient(180deg, hsl(215 38% 5% / 0.98) 0%, hsl(212 32% 10% / 0.97) 35%, hsl(208 25% 16% / 0.95) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(220 30% 28%) 0%, hsl(218 25% 38%) 30%, hsl(215 18% 50%) 50%, hsl(218 25% 38%) 70%, hsl(220 30% 28%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(220 30% 6% / 0.98) 0%, hsl(218 25% 12% / 0.97) 40%, hsl(215 20% 18% / 0.95) 100%);
     --gradient-card: linear-gradient(180deg, hsl(220 18% 11%) 0%, hsl(220 20% 13%) 100%);
-    --gradient-metal: linear-gradient(
-      155deg,
-      hsl(215 42% 15%) 0%,
-      hsl(212 36% 22%) 15%,
-      hsl(210 30% 34%) 32%,
-      hsl(208 25% 48%) 50%,
-      hsl(210 30% 34%) 68%,
-      hsl(212 36% 22%) 85%,
-      hsl(215 42% 15%) 100%
-    );
-    --gradient-metal-horizontal: linear-gradient(
-      90deg,
-      hsl(215 38% 16%) 0%,
-      hsl(212 32% 26%) 12%,
-      hsl(210 26% 40%) 35%,
-      hsl(208 20% 52%) 50%,
-      hsl(210 26% 40%) 65%,
-      hsl(212 32% 26%) 88%,
-      hsl(215 38% 16%) 100%
-    );
-    --gradient-gold: linear-gradient(
-      145deg,
-      hsl(35 60% 28%) 0%,
-      hsl(38 68% 42%) 22%,
-      hsl(42 72% 58%) 48%,
-      hsl(45 65% 70%) 55%,
-      hsl(42 72% 58%) 68%,
-      hsl(38 68% 42%) 82%,
-      hsl(35 60% 28%) 100%
-    );
-    --gradient-gold-subtle: linear-gradient(90deg, hsl(38 50% 42% / 0.4) 0%, hsl(42 60% 55% / 0.6) 50%, hsl(38 50% 42% / 0.4) 100%);
+    --gradient-metal: linear-gradient(135deg, hsl(220 25% 22%) 0%, hsl(218 20% 34%) 20%, hsl(215 15% 46%) 40%, hsl(210 12% 55%) 50%, hsl(215 15% 46%) 60%, hsl(218 20% 34%) 80%, hsl(220 25% 22%) 100%);
+    --gradient-metal-horizontal: linear-gradient(90deg, hsl(220 22% 24%) 0%, hsl(218 18% 36%) 15%, hsl(215 14% 48%) 35%, hsl(210 10% 58%) 50%, hsl(215 14% 48%) 65%, hsl(218 18% 36%) 85%, hsl(220 22% 24%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(38 75% 45%) 0%, hsl(42 72% 58%) 30%, hsl(45 65% 70%) 50%, hsl(42 72% 58%) 70%, hsl(38 75% 45%) 100%);
+    --gradient-gold-subtle: linear-gradient(90deg, hsl(38 55% 48% / 0.5) 0%, hsl(42 65% 62% / 0.7) 50%, hsl(38 55% 48% / 0.5) 100%);
 
     --shadow-glow: 0 0 25px hsl(215 25% 45% / 0.18), 0 0 50px hsl(42 55% 50% / 0.05);
     --shadow-gold: 0 0 20px hsl(42 65% 55% / 0.12), 0 4px 12px hsl(42 55% 50% / 0.08);
@@ -300,29 +225,15 @@
     @apply bg-black/40 backdrop-blur-lg border border-white/10;
   }
 
-  /* Gradient text - Brushed Metal with specular highlight */
+  /* Gradient text - Brushed Metal */
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(
-      90deg,
-      hsl(212 35% 30%) 0%,
-      hsl(208 28% 45%) 25%,
-      hsl(42 55% 58%) 50%,
-      hsl(208 28% 45%) 75%,
-      hsl(212 35% 30%) 100%
-    );
+    background-image: linear-gradient(90deg, hsl(215 20% 40%), hsl(210 15% 55%), hsl(42 60% 58%), hsl(210 15% 55%), hsl(215 20% 40%));
   }
 
   .text-gradient-accent {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(
-      90deg,
-      hsl(208 30% 38%) 0%,
-      hsl(42 50% 48%) 30%,
-      hsl(45 65% 62%) 50%,
-      hsl(42 50% 48%) 70%,
-      hsl(208 30% 38%) 100%
-    );
+    background-image: linear-gradient(90deg, hsl(210 18% 45%), hsl(42 55% 52%), hsl(45 65% 62%), hsl(42 55% 52%), hsl(210 18% 42%));
   }
 
   /* Gold gradient text */
@@ -331,39 +242,26 @@
     background-image: var(--gradient-gold);
   }
 
-  /* Brushed metal surface - with specular radial highlights like real metal */
+  /* Brushed metal surface */
   .brushed-metal {
     background: var(--gradient-metal);
     position: relative;
     overflow: hidden;
   }
 
-  .brushed-metal::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(ellipse 60% 50% at 30% 25%, hsl(200 30% 75% / 0.18), transparent 60%),
-      radial-gradient(ellipse 40% 35% at 70% 35%, hsl(200 25% 70% / 0.12), transparent 55%);
-    pointer-events: none;
-    z-index: 1;
-  }
-
   .brushed-metal::after {
     content: '';
     position: absolute;
     inset: 0;
-    background:
+    background: 
       repeating-linear-gradient(
-        92deg,
+        90deg,
         transparent,
-        hsl(0 0% 100% / 0.025) 1px,
+        hsl(0 0% 100% / 0.018) 1px,
         transparent 2px,
-        hsl(0 0% 0% / 0.015) 3px,
-        transparent 4px
+        hsl(0 0% 0% / 0.008) 3px
       );
     pointer-events: none;
-    z-index: 2;
   }
 
   /* Brushed metal horizontal */
@@ -373,32 +271,19 @@
     overflow: hidden;
   }
 
-  .brushed-metal-h::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(ellipse 50% 60% at 25% 40%, hsl(200 30% 75% / 0.15), transparent 55%),
-      radial-gradient(ellipse 35% 40% at 75% 30%, hsl(200 25% 70% / 0.1), transparent 50%);
-    pointer-events: none;
-    z-index: 1;
-  }
-
   .brushed-metal-h::after {
     content: '';
     position: absolute;
     inset: 0;
-    background:
+    background: 
       repeating-linear-gradient(
-        2deg,
+        0deg,
         transparent,
-        hsl(0 0% 100% / 0.018) 1px,
+        hsl(0 0% 100% / 0.012) 1px,
         transparent 2px,
-        hsl(0 0% 0% / 0.012) 3px,
-        transparent 4px
+        hsl(0 0% 0% / 0.008) 3px
       );
     pointer-events: none;
-    z-index: 2;
   }
 
   /* Hero gradient overlay */
@@ -570,49 +455,40 @@ canvas {
   touch-action: none;
 }
 
-/* ===== PREMIUM GLASS EFFECTS - with metallic specular ===== */
+/* ===== PREMIUM GLASS EFFECTS ===== */
 
 .glass-premium {
   @apply backdrop-blur-xl;
-  background: hsl(215 20% 98% / 0.08);
+  background: hsl(220 20% 98% / 0.08);
   border: 1px solid hsl(42 50% 55% / 0.12);
-  box-shadow:
-    0 8px 32px hsl(215 40% 8% / 0.15),
-    0 1px 0 hsl(0 0% 100% / 0.06) inset,
-    0 -1px 0 hsl(0 0% 0% / 0.08) inset;
+  box-shadow: 
+    0 8px 32px hsl(220 30% 10% / 0.12),
+    inset 0 1px 0 hsl(42 60% 60% / 0.08),
+    inset 0 -1px 0 hsl(0 0% 0% / 0.06);
 }
 
 .dark .glass-premium {
   @apply backdrop-blur-xl;
-  background: hsl(215 30% 5% / 0.2);
+  background: hsl(0 0% 0% / 0.15);
   border: 1px solid hsl(42 45% 50% / 0.1);
-  box-shadow:
-    0 8px 32px hsl(0 0% 0% / 0.4),
-    0 1px 0 hsl(42 50% 55% / 0.05) inset,
-    0 -1px 0 hsl(0 0% 0% / 0.15) inset;
+  box-shadow: 
+    0 8px 32px hsl(0 0% 0% / 0.35),
+    inset 0 1px 0 hsl(42 55% 55% / 0.06),
+    inset 0 -1px 0 hsl(0 0% 0% / 0.12);
 }
 
 /* ===== METAL & GOLD TEXT EFFECTS ===== */
 
 .text-neon {
-  text-shadow:
-    0 1px 4px hsl(0 0% 0% / 0.3),
-    0 0 20px hsl(205 30% 55% / 0.1),
-    0 0 40px hsl(42 55% 50% / 0.04);
+  text-shadow: 
+    0 1px 3px hsl(0 0% 0% / 0.2),
+    0 0 15px hsl(42 60% 55% / 0.12),
+    0 0 30px hsl(215 20% 50% / 0.06);
 }
 
-/* Gold text shimmer - brushed gold animation */
+/* Gold text shimmer */
 .text-gold-shimmer {
-  background: linear-gradient(
-    90deg,
-    hsl(35 65% 32%) 0%,
-    hsl(38 72% 42%) 15%,
-    hsl(42 78% 58%) 35%,
-    hsl(46 72% 72%) 50%,
-    hsl(42 78% 58%) 65%,
-    hsl(38 72% 42%) 85%,
-    hsl(35 65% 32%) 100%
-  );
+  background: linear-gradient(90deg, hsl(38 75% 45%), hsl(42 78% 58%), hsl(46 70% 72%), hsl(42 78% 58%), hsl(38 75% 45%));
   background-size: 300% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -622,10 +498,9 @@ canvas {
 
 /* Premium text shadow for headers */
 .text-shadow-premium {
-  text-shadow:
-    0 2px 12px hsl(0 0% 0% / 0.2),
-    0 0 40px hsl(205 25% 45% / 0.06),
-    0 0 60px hsl(42 45% 50% / 0.03);
+  text-shadow: 
+    0 2px 10px hsl(0 0% 0% / 0.15),
+    0 0 30px hsl(42 50% 50% / 0.06);
 }
 
 /* ===== PATTERN OVERLAYS ===== */
@@ -787,17 +662,15 @@ canvas {
 
 .glass-nav {
   background: linear-gradient(
-    145deg,
-    hsl(215 42% 8% / 0.9) 0%,
-    hsl(212 35% 14% / 0.88) 40%,
-    hsl(210 28% 20% / 0.85) 100%
+    135deg,
+    hsl(220 25% 12% / 0.85) 0%,
+    hsl(218 20% 18% / 0.8) 100%
   );
-  backdrop-filter: blur(24px) saturate(200%);
-  border: 1px solid hsl(42 45% 50% / 0.08);
-  box-shadow:
-    0 4px 24px hsl(215 40% 6% / 0.25),
-    0 1px 0 hsl(200 25% 55% / 0.04) inset,
-    0 -1px 0 hsl(0 0% 0% / 0.1) inset;
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid hsl(42 50% 50% / 0.1);
+  box-shadow: 
+    0 4px 20px hsl(220 30% 8% / 0.2),
+    inset 0 1px 0 hsl(42 50% 60% / 0.05);
 }
 
 /* ===== SHIMMER ACCENTS ===== */
@@ -852,32 +725,21 @@ canvas {
 .btn-metal {
   background: var(--gradient-metal);
   color: hsl(0 0% 100%);
-  border: 1px solid hsl(42 45% 48% / 0.2);
+  border: 1px solid hsl(42 50% 50% / 0.2);
   position: relative;
   overflow: hidden;
-  box-shadow:
-    0 2px 10px hsl(215 40% 8% / 0.2),
-    0 1px 0 hsl(200 25% 65% / 0.1) inset,
-    0 -1px 0 hsl(0 0% 0% / 0.15) inset;
+  box-shadow: 
+    0 2px 8px hsl(220 30% 10% / 0.15),
+    inset 0 1px 0 hsl(0 0% 100% / 0.08);
   transition: all 0.3s ease;
 }
 
-.btn-metal::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 80% 60% at 35% 20%, hsl(200 28% 70% / 0.12), transparent 50%);
-  pointer-events: none;
-  z-index: 1;
-}
-
 .btn-metal:hover {
-  border-color: hsl(42 58% 52% / 0.4);
-  box-shadow:
-    0 6px 20px hsl(215 40% 8% / 0.25),
-    0 0 18px hsl(42 50% 50% / 0.08),
-    0 1px 0 hsl(200 25% 65% / 0.12) inset;
+  border-color: hsl(42 60% 55% / 0.4);
+  box-shadow: 
+    0 4px 15px hsl(220 30% 10% / 0.2),
+    0 0 15px hsl(42 55% 50% / 0.08),
+    inset 0 1px 0 hsl(0 0% 100% / 0.1);
 }
 
 .btn-metal::after {
@@ -887,9 +749,8 @@ canvas {
   left: -40%;
   width: 30%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, hsl(42 60% 58% / 0.15), hsl(0 0% 100% / 0.06), transparent);
+  background: linear-gradient(90deg, transparent, hsl(42 65% 60% / 0.12), transparent);
   transform: skewX(-15deg);
-  z-index: 2;
 }
 
 .btn-metal:hover::after {
@@ -923,16 +784,13 @@ canvas {
   content: '';
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(ellipse 70% 50% at 20% 30%, hsl(200 30% 70% / 0.08), transparent 60%),
-    radial-gradient(ellipse 50% 40% at 80% 60%, hsl(200 25% 65% / 0.05), transparent 55%),
+  background: 
     repeating-linear-gradient(
-      91deg,
+      90deg,
       transparent,
-      hsl(0 0% 100% / 0.02) 1px,
+      hsl(0 0% 100% / 0.012) 1px,
       transparent 2px,
-      hsl(0 0% 0% / 0.01) 3px,
-      transparent 4px
+      hsl(0 0% 0% / 0.006) 3px
     );
   pointer-events: none;
 }
@@ -945,91 +803,4 @@ canvas {
   right: 0;
   height: 1px;
   background: var(--gradient-gold-subtle);
-}
-
-/* ===== METAL SPECULAR HIGHLIGHT LAYER ===== */
-/* Add to any dark section for photorealistic metal look */
-
-.metal-specular {
-  position: relative;
-}
-
-.metal-specular::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 55% 45% at 25% 30%, hsl(200 30% 75% / 0.1), transparent 55%),
-    radial-gradient(ellipse 40% 30% at 72% 25%, hsl(200 25% 70% / 0.07), transparent 50%),
-    radial-gradient(ellipse 30% 25% at 85% 70%, hsl(200 20% 60% / 0.04), transparent 45%);
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* Gold specular for gold-themed sections */
-.gold-specular {
-  position: relative;
-}
-
-.gold-specular::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 50% 40% at 30% 25%, hsl(45 70% 72% / 0.12), transparent 55%),
-    radial-gradient(ellipse 35% 30% at 70% 40%, hsl(42 65% 65% / 0.08), transparent 50%);
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* ===== DARK METAL (from black sphere reference) ===== */
-
-.metal-dark {
-  background: linear-gradient(
-    155deg,
-    hsl(220 15% 4%) 0%,
-    hsl(218 12% 10%) 15%,
-    hsl(215 8% 18%) 35%,
-    hsl(210 5% 28%) 50%,
-    hsl(215 8% 18%) 65%,
-    hsl(218 12% 10%) 85%,
-    hsl(220 15% 4%) 100%
-  );
-  position: relative;
-}
-
-.metal-dark::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 50% 40% at 28% 25%, hsl(0 0% 90% / 0.12), transparent 50%),
-    radial-gradient(ellipse 35% 30% at 72% 35%, hsl(0 0% 85% / 0.08), transparent 45%);
-  pointer-events: none;
-}
-
-/* ===== DEEP BLUE METAL (from dark blue sphere reference) ===== */
-
-.metal-deep-blue {
-  background: linear-gradient(
-    155deg,
-    hsl(215 50% 5%) 0%,
-    hsl(212 48% 9%) 15%,
-    hsl(210 45% 15%) 35%,
-    hsl(208 40% 22%) 50%,
-    hsl(210 45% 15%) 65%,
-    hsl(212 48% 9%) 85%,
-    hsl(215 50% 5%) 100%
-  );
-  position: relative;
-}
-
-.metal-deep-blue::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 55% 45% at 22% 28%, hsl(195 40% 70% / 0.2), transparent 55%),
-    radial-gradient(ellipse 40% 35% at 68% 32%, hsl(195 35% 65% / 0.14), transparent 50%);
-  pointer-events: none;
 }

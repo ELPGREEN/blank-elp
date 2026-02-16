@@ -99,7 +99,7 @@ export function Header() {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
           scrolled 
-            ? "bg-background/95 backdrop-blur-xl border-b border-border shadow-md" 
+            ? "bg-gradient-to-b from-background/98 via-background/95 to-background/90 backdrop-blur-xl border-b border-gold/10 shadow-lg shadow-black/5" 
             : "bg-gradient-to-b from-black/40 to-transparent"
         )}
       >
@@ -158,7 +158,7 @@ export function Header() {
               <Button 
                 asChild 
                 size="sm"
-                className="hidden md:flex h-10 px-5 font-semibold rounded-md"
+                className="hidden md:flex h-10 px-5 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold shadow-md border border-gold/20 hover:border-gold/40 hover:shadow-[0_4px_15px_hsl(42_60%_50%/0.1)] transition-all duration-300"
               >
                 <Link to="/otr-sources" className="flex items-center gap-2">
                   <span>{t('hero.cta.partner')}</span>
@@ -208,7 +208,7 @@ export function Header() {
             >
               <div className="p-6 space-y-2">
                 {/* Logo in Menu */}
-                <div className="flex items-center gap-3 pb-6 mb-6 border-b border-border/50">
+                <div className="flex items-center gap-3 pb-6 mb-6 border-b border-border">
                   <img 
                     src={logoElp} 
                     alt="ELP Green Technology" 
@@ -253,7 +253,7 @@ export function Header() {
                   <Button 
                     asChild 
                     size="lg"
-                    className="w-full font-semibold"
+                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold shadow-md"
                   >
                     <Link 
                       to="/otr-sources" 
