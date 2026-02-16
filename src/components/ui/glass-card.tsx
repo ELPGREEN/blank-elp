@@ -35,6 +35,7 @@ export const GlassCard = forwardRef<HTMLDivElement, GlassCardProps>(({
         "border border-border/60 dark:border-border/40",
         "shadow-xl",
         hoverEffect && glowColors[glowColor as keyof typeof glowColors],
+        hoverEffect && "hover:animate-[border-glow-pulse_2s_ease-in-out_infinite]",
         "transition-shadow duration-500",
         className
       )}
