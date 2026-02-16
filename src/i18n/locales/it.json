@@ -1,31 +1,4 @@
 {
-  "admin": {
-    "nav": {
-      "meetings": "Riunioni",
-      "reportGenerator": "Generatore di Report",
-      "aiHub": "Centro IA",
-      "duoIntelligence": "Duo Intelligence BI",
-      "signedDocuments": "Documenti Firmati",
-      "passwordSettings": "Cambia Password"
-    },
-    "password": {
-      "title": "Cambia Password",
-      "description": "Aggiorna la password di accesso al pannello admin.",
-      "new": "Nuova password",
-      "confirm": "Conferma nuova password",
-      "requirements": "Requisiti password:",
-      "minLength": "Minimo 6 caratteri",
-      "match": "Le password corrispondono",
-      "invalidForm": "Form non valido",
-      "checkRequirements": "Controlla i requisiti della password.",
-      "success": "Password cambiata!",
-      "successDesc": "La tua password è stata aggiornata con successo.",
-      "error": "Errore nel cambio password",
-      "errorDesc": "Impossibile cambiare la password.",
-      "updating": "Aggiornamento...",
-      "update": "Aggiorna Password"
-    }
-  },
   "pwa": {
     "installApp": "Installa App",
     "enableNotifications": "Abilita Notifiche",
@@ -2717,7 +2690,32 @@
       "articles": "Articoli",
       "press": "Comunicati Stampa",
       "counters": "Contatori",
-      "analytics": "Analytics"
+      "analytics": "Analytics",
+      "reportGenerator": "Generatore di Report",
+      "aiHub": "Centro IA",
+      "duoIntelligence": "Duo Intelligence BI",
+      "intelligenceDb": "Database Intelligence",
+      "amlScreening": "Screening AML",
+      "emailSettings": "Impostazioni Email",
+      "passwordSettings": "Cambia Password",
+      "users": "Utenti"
+    },
+    "password": {
+      "title": "Cambia Password",
+      "description": "Aggiorna la password di accesso al pannello admin.",
+      "new": "Nuova password",
+      "confirm": "Conferma nuova password",
+      "requirements": "Requisiti password:",
+      "minLength": "Minimo 6 caratteri",
+      "match": "Le password corrispondono",
+      "invalidForm": "Form non valido",
+      "checkRequirements": "Controlla i requisiti della password.",
+      "success": "Password cambiata!",
+      "successDesc": "La tua password è stata aggiornata con successo.",
+      "error": "Errore nel cambio password",
+      "errorDesc": "Impossibile cambiare la password.",
+      "updating": "Aggiornamento...",
+      "update": "Aggiorna Password"
     },
     "feasibility": {
       "title": "Studio di Fattibilità",
