@@ -389,16 +389,20 @@ export default function About() {
         {/* 3D Globe Background with Space */}
         <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[700px] h-[700px] opacity-50 pointer-events-none">
           <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-primary/50 rounded-full" />
-          <Canvas 
-            camera={{ position: [0, 0, 4], fov: 50 }}
-            style={{ background: 'transparent' }}
-          >
-            <directionalLight position={[10, 5, 8]} intensity={2} color="#fff5e6" />
-            <ambientLight intensity={0.2} color="#4466aa" />
-            <Suspense fallback={null}>
-              <Globe3D />
-            </Suspense>
-          </Canvas>
+          <Suspense fallback={null}>
+            <Canvas 
+              camera={{ position: [0, 0, 4], fov: 50 }}
+              style={{ background: 'transparent' }}
+              onError={() => null}
+              gl={{ powerPreference: 'low-power', alpha: true, stencil: false, depth: true, antialias: false }}
+            >
+              <directionalLight position={[10, 5, 8]} intensity={2} color="#fff5e6" />
+              <ambientLight intensity={0.2} color="#4466aa" />
+              <Suspense fallback={null}>
+                <Globe3D />
+              </Suspense>
+            </Canvas>
+          </Suspense>
         </div>
 
         <div className="container-wide relative z-10">
