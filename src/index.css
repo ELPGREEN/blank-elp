@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ELP Green Technology - Design System
-   A premium, corporate aesthetic with navy blue as primary color
+/* ELP Green Technology - Premium Design System
+   Brushed metal navy blue with gold accents
+   Inspired by luxury corporate aesthetics
    All colors MUST be HSL.
 */
 
@@ -69,20 +70,29 @@
     --elp-blue: 225 50% 45%;
     --elp-blue-light: 225 45% 60%;
 
-    /* Gradients - Brushed Metal Effect */
-    --gradient-primary: linear-gradient(135deg, hsl(215 30% 22%) 0%, hsl(215 25% 35%) 35%, hsl(210 20% 50%) 50%, hsl(215 25% 35%) 65%, hsl(215 30% 22%) 100%);
-    --gradient-hero: linear-gradient(180deg, hsl(215 30% 12% / 0.97) 0%, hsl(215 25% 22% / 0.92) 40%, hsl(210 20% 30% / 0.88) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(215 8% 98%) 0%, hsl(215 10% 95%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(215 25% 35%) 0%, hsl(210 20% 48%) 40%, hsl(215 25% 35%) 100%);
-    --gradient-metal: linear-gradient(135deg, hsl(215 25% 20%) 0%, hsl(210 18% 35%) 25%, hsl(205 15% 52%) 45%, hsl(210 18% 40%) 55%, hsl(215 25% 25%) 75%, hsl(215 30% 18%) 100%);
-    --gradient-metal-horizontal: linear-gradient(90deg, hsl(215 25% 25%) 0%, hsl(210 18% 40%) 20%, hsl(205 12% 55%) 40%, hsl(210 18% 42%) 60%, hsl(215 22% 30%) 80%, hsl(215 25% 22%) 100%);
+    /* Gold Accent Tokens */
+    --gold: 42 78% 55%;
+    --gold-light: 42 70% 65%;
+    --gold-dark: 38 80% 42%;
+    --gold-muted: 40 40% 50%;
 
-    /* Shadows - Metallic depth */
-    --shadow-sm: 0 1px 2px hsl(215 30% 10% / 0.08);
-    --shadow-md: 0 4px 8px -1px hsl(215 30% 10% / 0.12), 0 2px 4px -2px hsl(215 30% 10% / 0.06);
-    --shadow-lg: 0 10px 20px -3px hsl(215 30% 10% / 0.15), 0 4px 8px -4px hsl(215 30% 10% / 0.08);
-    --shadow-xl: 0 20px 30px -5px hsl(215 30% 10% / 0.18), 0 8px 12px -6px hsl(215 30% 10% / 0.08);
-    --shadow-glow: 0 0 30px hsl(210 25% 45% / 0.25), 0 0 60px hsl(210 20% 50% / 0.1);
+    /* Gradients - Brushed Metal Effect with Gold */
+    --gradient-primary: linear-gradient(135deg, hsl(220 35% 15%) 0%, hsl(218 30% 25%) 30%, hsl(215 22% 38%) 50%, hsl(218 30% 25%) 70%, hsl(220 35% 15%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(220 35% 10% / 0.97) 0%, hsl(218 30% 18% / 0.95) 40%, hsl(215 25% 25% / 0.92) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(215 8% 98%) 0%, hsl(215 10% 95%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(218 28% 28%) 0%, hsl(215 22% 42%) 40%, hsl(218 28% 28%) 100%);
+    --gradient-metal: linear-gradient(135deg, hsl(220 32% 14%) 0%, hsl(218 26% 28%) 20%, hsl(215 20% 42%) 40%, hsl(210 16% 52%) 50%, hsl(215 20% 42%) 60%, hsl(218 26% 28%) 80%, hsl(220 32% 14%) 100%);
+    --gradient-metal-horizontal: linear-gradient(90deg, hsl(220 30% 18%) 0%, hsl(218 24% 32%) 15%, hsl(215 18% 46%) 35%, hsl(210 14% 55%) 50%, hsl(215 18% 46%) 65%, hsl(218 24% 32%) 85%, hsl(220 30% 18%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(38 80% 42%) 0%, hsl(42 78% 55%) 30%, hsl(45 72% 68%) 50%, hsl(42 78% 55%) 70%, hsl(38 80% 42%) 100%);
+    --gradient-gold-subtle: linear-gradient(90deg, hsl(38 60% 45% / 0.6) 0%, hsl(42 70% 60% / 0.8) 50%, hsl(38 60% 45% / 0.6) 100%);
+
+    /* Shadows - Metallic depth with gold accents */
+    --shadow-sm: 0 1px 2px hsl(220 30% 10% / 0.08);
+    --shadow-md: 0 4px 8px -1px hsl(220 30% 10% / 0.12), 0 2px 4px -2px hsl(220 30% 10% / 0.06);
+    --shadow-lg: 0 10px 20px -3px hsl(220 30% 10% / 0.15), 0 4px 8px -4px hsl(220 30% 10% / 0.08);
+    --shadow-xl: 0 20px 30px -5px hsl(220 30% 10% / 0.18), 0 8px 12px -6px hsl(220 30% 10% / 0.08);
+    --shadow-glow: 0 0 25px hsl(215 25% 40% / 0.2), 0 0 50px hsl(42 60% 50% / 0.06);
+    --shadow-gold: 0 0 20px hsl(42 70% 50% / 0.15), 0 4px 12px hsl(42 60% 45% / 0.1);
 
     /* Sidebar */
     --sidebar-background: 230 40% 8%;
@@ -142,13 +152,21 @@
     --elp-navy-800: 220 40% 75%;
     --elp-navy-900: 220 35% 85%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(215 25% 35%) 0%, hsl(210 20% 48%) 35%, hsl(205 15% 58%) 50%, hsl(210 20% 48%) 65%, hsl(215 25% 35%) 100%);
-    --gradient-hero: linear-gradient(180deg, hsl(215 25% 6% / 0.98) 0%, hsl(215 20% 14% / 0.96) 40%, hsl(210 18% 20% / 0.94) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(215 15% 12%) 0%, hsl(215 18% 14%) 100%);
-    --gradient-metal: linear-gradient(135deg, hsl(215 20% 30%) 0%, hsl(210 16% 42%) 25%, hsl(205 12% 55%) 45%, hsl(210 16% 45%) 55%, hsl(215 20% 32%) 75%, hsl(215 22% 25%) 100%);
-    --gradient-metal-horizontal: linear-gradient(90deg, hsl(215 20% 30%) 0%, hsl(210 16% 45%) 20%, hsl(205 10% 58%) 40%, hsl(210 16% 47%) 60%, hsl(215 18% 35%) 80%, hsl(215 20% 28%) 100%);
+    --gold: 42 78% 55%;
+    --gold-light: 42 70% 65%;
+    --gold-dark: 38 75% 45%;
+    --gold-muted: 40 35% 55%;
 
-    --shadow-glow: 0 0 30px hsl(210 25% 50% / 0.2), 0 0 60px hsl(210 20% 55% / 0.08);
+    --gradient-primary: linear-gradient(135deg, hsl(220 30% 28%) 0%, hsl(218 25% 38%) 30%, hsl(215 18% 50%) 50%, hsl(218 25% 38%) 70%, hsl(220 30% 28%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(220 30% 6% / 0.98) 0%, hsl(218 25% 12% / 0.97) 40%, hsl(215 20% 18% / 0.95) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(220 18% 11%) 0%, hsl(220 20% 13%) 100%);
+    --gradient-metal: linear-gradient(135deg, hsl(220 25% 22%) 0%, hsl(218 20% 34%) 20%, hsl(215 15% 46%) 40%, hsl(210 12% 55%) 50%, hsl(215 15% 46%) 60%, hsl(218 20% 34%) 80%, hsl(220 25% 22%) 100%);
+    --gradient-metal-horizontal: linear-gradient(90deg, hsl(220 22% 24%) 0%, hsl(218 18% 36%) 15%, hsl(215 14% 48%) 35%, hsl(210 10% 58%) 50%, hsl(215 14% 48%) 65%, hsl(218 18% 36%) 85%, hsl(220 22% 24%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(38 75% 45%) 0%, hsl(42 72% 58%) 30%, hsl(45 65% 70%) 50%, hsl(42 72% 58%) 70%, hsl(38 75% 45%) 100%);
+    --gradient-gold-subtle: linear-gradient(90deg, hsl(38 55% 48% / 0.5) 0%, hsl(42 65% 62% / 0.7) 50%, hsl(38 55% 48% / 0.5) 100%);
+
+    --shadow-glow: 0 0 25px hsl(215 25% 45% / 0.18), 0 0 50px hsl(42 55% 50% / 0.05);
+    --shadow-gold: 0 0 20px hsl(42 65% 55% / 0.12), 0 4px 12px hsl(42 55% 50% / 0.08);
 
     --sidebar-background: 230 25% 4%;
     --sidebar-foreground: 0 0% 95%;
@@ -210,31 +228,39 @@
   /* Gradient text - Brushed Metal */
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(90deg, hsl(215 20% 40%), hsl(210 15% 58%), hsl(205 10% 68%), hsl(210 15% 55%), hsl(215 20% 40%));
+    background-image: linear-gradient(90deg, hsl(215 20% 40%), hsl(210 15% 55%), hsl(42 60% 58%), hsl(210 15% 55%), hsl(215 20% 40%));
   }
 
   .text-gradient-accent {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(90deg, hsl(210 18% 45%), hsl(205 12% 60%), hsl(200 8% 72%), hsl(205 12% 58%), hsl(210 18% 42%));
+    background-image: linear-gradient(90deg, hsl(210 18% 45%), hsl(42 55% 52%), hsl(45 65% 62%), hsl(42 55% 52%), hsl(210 18% 42%));
+  }
+
+  /* Gold gradient text */
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-gold);
   }
 
   /* Brushed metal surface */
   .brushed-metal {
     background: var(--gradient-metal);
     position: relative;
+    overflow: hidden;
   }
 
   .brushed-metal::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: repeating-linear-gradient(
-      90deg,
-      transparent,
-      hsl(0 0% 100% / 0.02) 1px,
-      transparent 2px,
-      hsl(0 0% 0% / 0.01) 3px
-    );
+    background: 
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        hsl(0 0% 100% / 0.018) 1px,
+        transparent 2px,
+        hsl(0 0% 0% / 0.008) 3px
+      );
     pointer-events: none;
   }
 
@@ -242,19 +268,21 @@
   .brushed-metal-h {
     background: var(--gradient-metal-horizontal);
     position: relative;
+    overflow: hidden;
   }
 
   .brushed-metal-h::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: repeating-linear-gradient(
-      0deg,
-      transparent,
-      hsl(0 0% 100% / 0.015) 1px,
-      transparent 2px,
-      hsl(0 0% 0% / 0.01) 3px
-    );
+    background: 
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        hsl(0 0% 100% / 0.012) 1px,
+        transparent 2px,
+        hsl(0 0% 0% / 0.008) 3px
+      );
     pointer-events: none;
   }
 
@@ -273,20 +301,21 @@
     box-shadow: var(--shadow-xl);
   }
 
-  /* Section divider - metallic */
+  /* Section divider - gold metallic */
   .section-divider {
     @apply w-20 h-1 rounded-full;
-    background: linear-gradient(90deg, hsl(215 25% 30%), hsl(210 15% 55%), hsl(205 10% 65%), hsl(210 15% 55%), hsl(215 25% 30%));
+    background: var(--gradient-gold);
   }
 
-  /* Animated underline */
+  /* Animated underline - gold */
   .animated-underline {
     @apply relative;
   }
 
   .animated-underline::after {
     content: '';
-    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300;
+    @apply absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300;
+    background: var(--gradient-gold);
   }
 
   .animated-underline:hover::after {
@@ -301,18 +330,7 @@
   .container-wide {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
-
-  /* Hide scrollbar */
-  .scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
-  }
 }
-
 
 /* Hide scrollbar */
 .scrollbar-hide {
@@ -324,22 +342,28 @@
   display: none;
 }
 
-/* Custom animations */
+/* ===== ANIMATIONS ===== */
+
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 15px hsl(210 20% 45% / 0.2), 0 0 30px hsl(210 15% 50% / 0.08);
+    box-shadow: 0 0 15px hsl(215 22% 40% / 0.2), 0 0 30px hsl(42 55% 50% / 0.05);
   }
   50% {
-    box-shadow: 0 0 25px hsl(210 20% 50% / 0.35), 0 0 50px hsl(210 15% 55% / 0.15);
+    box-shadow: 0 0 25px hsl(215 22% 45% / 0.3), 0 0 50px hsl(42 55% 50% / 0.1);
+  }
+}
+
+@keyframes pulse-gold {
+  0%, 100% {
+    box-shadow: 0 0 12px hsl(42 70% 50% / 0.15);
+  }
+  50% {
+    box-shadow: 0 0 25px hsl(42 70% 55% / 0.3), 0 0 50px hsl(42 60% 50% / 0.1);
   }
 }
 
@@ -360,12 +384,12 @@
 
 @keyframes border-glow {
   0%, 100% {
-    border-color: hsl(210 20% 45% / 0.4);
-    box-shadow: 0 0 8px hsl(210 20% 50% / 0.15);
+    border-color: hsl(42 60% 50% / 0.3);
+    box-shadow: 0 0 8px hsl(42 60% 50% / 0.1);
   }
   50% {
-    border-color: hsl(210 18% 55% / 0.6);
-    box-shadow: 0 0 20px hsl(210 15% 55% / 0.3);
+    border-color: hsl(42 70% 55% / 0.5);
+    box-shadow: 0 0 18px hsl(42 65% 55% / 0.2);
   }
 }
 
@@ -374,10 +398,21 @@
   50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
 }
 
-/* Brushed metal shimmer animation */
 @keyframes metal-shimmer {
   0% { background-position: -300% 0; }
   100% { background-position: 300% 0; }
+}
+
+@keyframes gold-sweep {
+  0% { left: -40%; opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { left: 140%; opacity: 0; }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: 1; transform: scale(1); }
 }
 
 .animate-float {
@@ -388,13 +423,17 @@
   animation: pulse-glow 3s ease-in-out infinite;
 }
 
+.animate-pulse-gold {
+  animation: pulse-gold 3s ease-in-out infinite;
+}
+
 .animate-count-up {
   animation: count-up 0.6s ease-out forwards;
 }
 
 .animate-shimmer {
   animation: metal-shimmer 3s linear infinite;
-  background: linear-gradient(90deg, transparent, hsl(210 15% 60% / 0.15), hsl(0 0% 100% / 0.08), hsl(210 15% 60% / 0.15), transparent);
+  background: linear-gradient(90deg, transparent, hsl(42 60% 55% / 0.08), hsl(0 0% 100% / 0.06), hsl(42 60% 55% / 0.08), transparent);
   background-size: 300% 100%;
 }
 
@@ -416,36 +455,56 @@ canvas {
   touch-action: none;
 }
 
-/* Glassmorphism enhanced - Metallic */
+/* ===== PREMIUM GLASS EFFECTS ===== */
+
 .glass-premium {
   @apply backdrop-blur-xl;
-  background: hsl(0 0% 100% / 0.08);
-  border: 1px solid hsl(210 15% 60% / 0.15);
+  background: hsl(220 20% 98% / 0.08);
+  border: 1px solid hsl(42 50% 55% / 0.12);
   box-shadow: 
-    0 8px 32px hsl(215 25% 10% / 0.12),
-    inset 0 1px 0 hsl(0 0% 100% / 0.15),
-    inset 0 -1px 0 hsl(0 0% 0% / 0.08);
+    0 8px 32px hsl(220 30% 10% / 0.12),
+    inset 0 1px 0 hsl(42 60% 60% / 0.08),
+    inset 0 -1px 0 hsl(0 0% 0% / 0.06);
 }
 
 .dark .glass-premium {
   @apply backdrop-blur-xl;
   background: hsl(0 0% 0% / 0.15);
-  border: 1px solid hsl(210 15% 40% / 0.12);
+  border: 1px solid hsl(42 45% 50% / 0.1);
   box-shadow: 
     0 8px 32px hsl(0 0% 0% / 0.35),
-    inset 0 1px 0 hsl(210 15% 60% / 0.06),
-    inset 0 -1px 0 hsl(0 0% 0% / 0.15);
+    inset 0 1px 0 hsl(42 55% 55% / 0.06),
+    inset 0 -1px 0 hsl(0 0% 0% / 0.12);
 }
 
-/* Metal text highlight */
+/* ===== METAL & GOLD TEXT EFFECTS ===== */
+
 .text-neon {
   text-shadow: 
-    0 1px 2px hsl(0 0% 0% / 0.15),
-    0 0 15px hsl(210 20% 50% / 0.2),
-    0 0 30px hsl(210 15% 55% / 0.08);
+    0 1px 3px hsl(0 0% 0% / 0.2),
+    0 0 15px hsl(42 60% 55% / 0.12),
+    0 0 30px hsl(215 20% 50% / 0.06);
 }
 
-/* Grid pattern overlay */
+/* Gold text shimmer */
+.text-gold-shimmer {
+  background: linear-gradient(90deg, hsl(38 75% 45%), hsl(42 78% 58%), hsl(46 70% 72%), hsl(42 78% 58%), hsl(38 75% 45%));
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: metal-shimmer 4s linear infinite;
+}
+
+/* Premium text shadow for headers */
+.text-shadow-premium {
+  text-shadow: 
+    0 2px 10px hsl(0 0% 0% / 0.15),
+    0 0 30px hsl(42 50% 50% / 0.06);
+}
+
+/* ===== PATTERN OVERLAYS ===== */
+
 .bg-grid-pattern {
   background-image: 
     linear-gradient(hsl(210 15% 45% / 0.04) 1px, transparent 1px),
@@ -453,27 +512,30 @@ canvas {
   background-size: 50px 50px;
 }
 
-/* Dot pattern */
 .bg-dot-pattern {
-  background-image: radial-gradient(hsl(210 15% 45% / 0.12) 1px, transparent 1px);
+  background-image: radial-gradient(hsl(42 50% 55% / 0.08) 1px, transparent 1px);
   background-size: 20px 20px;
 }
 
-/* Interactive hover states - Metal */
+/* ===== INTERACTIVE CARD EFFECTS ===== */
+
 .interactive-card {
   @apply transition-all duration-500 ease-out;
   transform-style: preserve-3d;
   perspective: 1000px;
+  border: 1px solid hsl(42 40% 50% / 0.08);
 }
 
 .interactive-card:hover {
   transform: translateY(-8px) rotateX(2deg);
+  border-color: hsl(42 55% 55% / 0.2);
   box-shadow: 
-    0 25px 50px -12px hsl(215 25% 10% / 0.2),
-    0 0 30px hsl(210 20% 50% / 0.08);
+    0 25px 50px -12px hsl(220 30% 10% / 0.2),
+    0 0 25px hsl(42 55% 50% / 0.06);
 }
 
-/* Glow border effect - Metallic */
+/* ===== GLOW BORDER - GOLD METALLIC ===== */
+
 .glow-border {
   position: relative;
 }
@@ -484,7 +546,7 @@ canvas {
   inset: -2px;
   border-radius: inherit;
   padding: 2px;
-  background: linear-gradient(135deg, hsl(215 20% 30%), hsl(210 15% 50%), hsl(205 10% 62%), hsl(210 15% 50%), hsl(215 20% 30%));
+  background: linear-gradient(135deg, hsl(220 25% 25%), hsl(42 65% 50%), hsl(45 60% 65%), hsl(42 65% 50%), hsl(220 25% 25%));
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box, 
     linear-gradient(#fff 0 0);
@@ -501,9 +563,10 @@ canvas {
   opacity: 1;
 }
 
-/* Accent utilities (dark steel blue) */
+/* ===== GOLD ACCENT UTILITIES ===== */
+
 .accent-glow {
-  box-shadow: 0 0 30px hsl(220 25% 35% / 0.3);
+  box-shadow: 0 0 25px hsl(42 60% 50% / 0.2), 0 0 50px hsl(220 25% 35% / 0.1);
 }
 
 .accent-border-glow {
@@ -512,16 +575,68 @@ canvas {
 
 @keyframes accent-pulse {
   0%, 100% {
-    border-color: hsl(220 25% 35% / 0.3);
-    box-shadow: 0 0 10px hsl(220 25% 35% / 0.1);
+    border-color: hsl(42 55% 50% / 0.25);
+    box-shadow: 0 0 8px hsl(42 55% 50% / 0.08);
   }
   50% {
-    border-color: hsl(220 25% 45% / 0.6);
-    box-shadow: 0 0 25px hsl(220 25% 45% / 0.3);
+    border-color: hsl(42 65% 55% / 0.45);
+    box-shadow: 0 0 20px hsl(42 60% 55% / 0.2);
   }
 }
 
-/* Premium navbar styles */
+/* Gold line decoration (wave-like from reference) */
+.gold-line-decoration {
+  position: relative;
+  overflow: hidden;
+}
+
+.gold-line-decoration::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--gradient-gold);
+  opacity: 0.6;
+}
+
+.gold-line-decoration::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, hsl(42 70% 65% / 0.5), transparent);
+  filter: blur(2px);
+}
+
+/* Gold sweep effect on hover */
+.gold-sweep {
+  position: relative;
+  overflow: hidden;
+}
+
+.gold-sweep::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, hsl(42 65% 60% / 0.15), transparent);
+  transform: skewX(-15deg);
+  opacity: 0;
+  transition: none;
+}
+
+.gold-sweep:hover::after {
+  animation: gold-sweep 0.8s ease forwards;
+}
+
+/* ===== PREMIUM NAVBAR ===== */
+
 .nav-3d {
   transform-style: preserve-3d;
   perspective: 1000px;
@@ -536,47 +651,156 @@ canvas {
   transform: translateZ(10px) scale(1.02);
 }
 
-/* Floating animation for navbar elements */
 @keyframes nav-float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-2px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
 }
 
 .nav-float {
   animation: nav-float 3s ease-in-out infinite;
 }
 
-/* Glass navbar */
 .glass-nav {
   background: linear-gradient(
     135deg,
-    hsl(0 0% 100% / 0.1) 0%,
-    hsl(0 0% 100% / 0.05) 100%
+    hsl(220 25% 12% / 0.85) 0%,
+    hsl(218 20% 18% / 0.8) 100%
   );
   backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid hsl(42 90% 55% / 0.1);
+  border: 1px solid hsl(42 50% 50% / 0.1);
+  box-shadow: 
+    0 4px 20px hsl(220 30% 8% / 0.2),
+    inset 0 1px 0 hsl(42 50% 60% / 0.05);
 }
 
-/* Premium text shadow for headers */
-.text-shadow-premium {
-  text-shadow: 
-    0 2px 10px hsl(0 0% 0% / 0.1),
-    0 0 40px hsl(220 25% 35% / 0.1);
-}
+/* ===== SHIMMER ACCENTS ===== */
 
-/* Shimmer accent effect */
 .shimmer-accent {
   background: linear-gradient(
     90deg,
     transparent 0%,
-    hsl(220 25% 45% / 0.3) 50%,
+    hsl(42 60% 55% / 0.2) 50%,
     transparent 100%
   );
   background-size: 200% 100%;
   animation: shimmer 2s linear infinite;
 }
 
+/* Gold sparkle dots */
+.sparkle-overlay {
+  position: relative;
+}
+
+.sparkle-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(1px 1px at 10% 20%, hsl(42 70% 65% / 0.4), transparent),
+    radial-gradient(1px 1px at 30% 70%, hsl(42 65% 60% / 0.3), transparent),
+    radial-gradient(1.5px 1.5px at 60% 15%, hsl(42 75% 70% / 0.5), transparent),
+    radial-gradient(1px 1px at 80% 60%, hsl(42 65% 60% / 0.3), transparent),
+    radial-gradient(1.5px 1.5px at 90% 30%, hsl(42 70% 65% / 0.4), transparent),
+    radial-gradient(1px 1px at 50% 90%, hsl(42 65% 60% / 0.3), transparent);
+  pointer-events: none;
+  animation: sparkle 3s ease-in-out infinite alternate;
+}
+
+/* ===== CARD GOLD BORDER ===== */
+
+.card-gold-border {
+  border: 1px solid hsl(42 40% 50% / 0.15);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-gold-border:hover {
+  border-color: hsl(42 60% 55% / 0.3);
+  box-shadow: 
+    0 8px 25px hsl(220 25% 10% / 0.12),
+    0 0 15px hsl(42 55% 50% / 0.06);
+}
+
+/* ===== BUTTON GOLD ACCENTS ===== */
+
+.btn-metal {
+  background: var(--gradient-metal);
+  color: hsl(0 0% 100%);
+  border: 1px solid hsl(42 50% 50% / 0.2);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    0 2px 8px hsl(220 30% 10% / 0.15),
+    inset 0 1px 0 hsl(0 0% 100% / 0.08);
+  transition: all 0.3s ease;
+}
+
+.btn-metal:hover {
+  border-color: hsl(42 60% 55% / 0.4);
+  box-shadow: 
+    0 4px 15px hsl(220 30% 10% / 0.2),
+    0 0 15px hsl(42 55% 50% / 0.08),
+    inset 0 1px 0 hsl(0 0% 100% / 0.1);
+}
+
+.btn-metal::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, hsl(42 65% 60% / 0.12), transparent);
+  transform: skewX(-15deg);
+}
+
+.btn-metal:hover::after {
+  animation: gold-sweep 0.6s ease forwards;
+}
+
+.btn-gold-outline {
+  background: transparent;
+  border: 1.5px solid hsl(42 60% 50% / 0.5);
+  color: hsl(42 70% 55%);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-gold-outline:hover {
+  background: hsl(42 60% 50% / 0.08);
+  border-color: hsl(42 70% 55% / 0.7);
+  box-shadow: 0 0 15px hsl(42 60% 50% / 0.1);
+}
+
+/* ===== PREMIUM SECTION BACKGROUNDS ===== */
+
+.section-metal {
+  background: var(--gradient-metal);
+  position: relative;
+  overflow: hidden;
+}
+
+.section-metal::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      hsl(0 0% 100% / 0.012) 1px,
+      transparent 2px,
+      hsl(0 0% 0% / 0.006) 3px
+    );
+  pointer-events: none;
+}
+
+.section-metal::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--gradient-gold-subtle);
+}

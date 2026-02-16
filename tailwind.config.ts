@@ -79,6 +79,13 @@ export default {
           blue: "hsl(var(--elp-blue))",
           "blue-light": "hsl(var(--elp-blue-light))",
         },
+        // Gold Accent Colors
+        gold: {
+          DEFAULT: "hsl(var(--gold))",
+          light: "hsl(var(--gold-light))",
+          dark: "hsl(var(--gold-dark))",
+          muted: "hsl(var(--gold-muted))",
+        },
         chart: {
           1: "hsl(var(--chart-1))",
           2: "hsl(var(--chart-2))",
