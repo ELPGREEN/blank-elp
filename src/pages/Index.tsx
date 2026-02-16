@@ -250,7 +250,7 @@ export default function Index() {
       </section>
 
       {/* Smart OTR Line Section - Translated */}
-      <section className="py-20 bg-gradient-to-br from-primary/10 via-background to-background">
+      <section className="py-20 section-metal text-white metal-specular">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <motion.div initial={{
@@ -456,7 +456,7 @@ export default function Index() {
       </section>
 
       {/* Global Presence Section - Translated */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20 brushed-metal text-white">
         <div className="container mx-auto px-4">
           <motion.div initial={{
           opacity: 0,
@@ -517,7 +517,7 @@ export default function Index() {
       </section>
 
       {/* Partnership Model Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 metal-deep-blue text-white metal-specular">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <motion.div initial={{
@@ -621,7 +621,7 @@ export default function Index() {
       </section>
 
       {/* ESG & Certifications Section */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20 brushed-metal-h text-white">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             {/* ESG Card */}

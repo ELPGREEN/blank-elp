@@ -613,7 +613,7 @@ export default function About() {
       </section>
 
       {/* OTR Focus Section - NEW */}
-      <section className="py-16 bg-gradient-to-r from-primary/10 via-secondary/5 to-primary/10 border-y border-primary/20">
+      <section className="py-16 section-metal text-white border-y border-gold/15">
         <div className="container-wide">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -657,7 +657,7 @@ export default function About() {
       </section>
 
       {/* Vision & Mission with 3D effects */}
-      <section className="py-24 bg-muted/30">
+      <section className="py-24 brushed-metal-h text-white">
         <div className="container-wide">
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
@@ -742,7 +742,7 @@ export default function About() {
       </section>
 
       {/* Leadership Team */}
-      <section className="py-24 bg-muted/30">
+      <section className="py-24 metal-deep-blue text-white">
         <div className="container-wide">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -85,7 +85,7 @@ export function Footer() {
   ];
 
   return (
-    <footer className="bg-sidebar text-sidebar-foreground relative">
+    <footer className="section-metal text-white relative">
       {/* Gold top line */}
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
       {/* Newsletter Section */}
@@ -107,7 +107,7 @@ export function Footer() {
               />
               <Button 
                 type="submit"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground whitespace-nowrap border border-gold/15 hover:border-gold/30"
+                className="btn-metal whitespace-nowrap gold-sweep rounded-md"
                 disabled={newsletterMutation.isPending}
               >
                 {newsletterMutation.isPending ? '...' : t('newsletter.subscribe')}
