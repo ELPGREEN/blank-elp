@@ -14,6 +14,7 @@ import { WatermarkImage } from '@/components/ui/watermark-image';
 import { Button } from '@/components/ui/button';
 import { openExternal } from '@/lib/openExternal';
 import factoryBg from '@/assets/hero/factory-background.jpg';
+import logoElp from '@/assets/logo-elp-new.png';
 import { ParticleField } from '@/components/3d/ParticleField';
 import {
   Dialog,
@@ -486,77 +487,16 @@ export default function About() {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="h-[400px] relative rounded-2xl overflow-hidden"
+              className="h-[400px] relative rounded-2xl overflow-hidden btn-metal-white flex items-center justify-center"
+              style={{ backgroundImage: `url('/textures/metal-white.png')`, backgroundSize: 'cover' }}
             >
-              {/* Space background container */}
-              <div className="absolute inset-0 bg-gradient-to-b from-[#000011] via-[#0a0a1a] to-[#0f0f2a] rounded-2xl" />
-              
-              <Canvas 
-                camera={{ position: [0, 0, 4.5], fov: 45 }}
-                style={{ background: 'transparent' }}
-              >
-                {/* Sun light - bright and warm */}
-                <directionalLight position={[10, 5, 8]} intensity={2} color="#fff5e6" castShadow />
-                {/* Ambient space light - very dim */}
-                <ambientLight intensity={0.15} color="#4466aa" />
-                {/* Rim light for atmosphere effect */}
-                <pointLight position={[-5, 0, -10]} intensity={0.5} color="#4da6ff" />
-                
-                <Suspense fallback={null}>
-                  <Globe3D withStars withSun />
-                </Suspense>
-                <OrbitControls 
-                  enableZoom={false} 
-                  enablePan={false}
-                  autoRotate
-                  autoRotateSpeed={0.5}
-                  minPolarAngle={Math.PI / 3}
-                  maxPolarAngle={Math.PI / 1.5}
+              <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/60 to-white/80 backdrop-blur-sm" />
+              <div className="relative z-10 logo-metal-sweep">
+                <img 
+                  src={logoElp} 
+                  alt="ELP Green Technology" 
+                  className="h-48 lg:h-56 w-auto drop-shadow-2xl" 
                 />
-              </Canvas>
-              
-              {/* Floating labels */}
-              <div className="absolute inset-0 pointer-events-none">
-                <motion.div
-                  animate={{ y: [0, -5, 0] }}
-                  transition={{ duration: 3, repeat: Infinity }}
-                  className="absolute top-[20%] left-[60%] bg-background/90 backdrop-blur-sm border border-primary/30 rounded-lg px-3 py-1.5 shadow-lg"
-                >
-                  <span className="text-xs font-medium flex items-center gap-1">
-                    <span className="w-3 h-2 rounded-sm" style={{ background: 'linear-gradient(to right, #009246 33%, #FFFFFF 33%, #FFFFFF 66%, #CE2B37 66%)' }} />
-                    Valenza
-                  </span>
-                </motion.div>
-                <motion.div
-                  animate={{ y: [0, -5, 0] }}
-                  transition={{ duration: 3, repeat: Infinity, delay: 0.5 }}
-                  className="absolute top-[55%] left-[15%] bg-background/90 backdrop-blur-sm border border-primary/30 rounded-lg px-3 py-1.5 shadow-lg"
-                >
-                  <span className="text-xs font-medium flex items-center gap-1">
-                    <span className="w-3 h-2 rounded-sm" style={{ background: 'linear-gradient(135deg, #009C3B 50%, #FFDF00 50%)' }} />
-                    Medianeira
-                  </span>
-                </motion.div>
-                <motion.div
-                  animate={{ y: [0, -5, 0] }}
-                  transition={{ duration: 3, repeat: Infinity, delay: 1 }}
-                  className="absolute top-[25%] left-[35%] bg-background/90 backdrop-blur-sm border border-primary/30 rounded-lg px-3 py-1.5 shadow-lg"
-                >
-                  <span className="text-xs font-medium flex items-center gap-1">
-                    <span className="w-3 h-2 rounded-sm" style={{ background: 'linear-gradient(to bottom, #000000 33%, #DD0000 33%, #DD0000 66%, #FFCE00 66%)' }} />
-                    Frankfurt
-                  </span>
-                </motion.div>
-                <motion.div
-                  animate={{ y: [0, -5, 0] }}
-                  transition={{ duration: 3, repeat: Infinity, delay: 1.5 }}
-                  className="absolute top-[40%] right-[10%] bg-background/90 backdrop-blur-sm border border-primary/30 rounded-lg px-3 py-1.5 shadow-lg"
-                >
-                  <span className="text-xs font-medium flex items-center gap-1">
-                    <span className="w-3 h-2 rounded-sm" style={{ background: 'linear-gradient(135deg, #DE2910 80%, #FFDE00 80%)' }} />
-                    Zhangjiagang
-                  </span>
-                </motion.div>
               </div>
             </motion.div>
 
