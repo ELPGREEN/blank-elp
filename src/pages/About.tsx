@@ -449,26 +449,8 @@ export default function About() {
               </Button>
             </motion.div>
             
-            {/* Quick headquarters badges */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
-              className="flex flex-wrap gap-3 mt-10"
-            >
-              {headquarters.map((hq, i) => (
-                <motion.div
-                  key={hq.country}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.7 + i * 0.1 }}
-                  className="flex items-center gap-2 bg-white/15 backdrop-blur-md border border-white/25 rounded-full px-4 py-2 hover:bg-white/25 transition-colors"
-                >
-                  <div className={`w-5 h-4 rounded-sm bg-gradient-to-br ${hq.color}`} />
-                  <span className="text-white/95 text-sm font-medium">{hq.city}</span>
-                </motion.div>
-              ))}
-            </motion.div>
+
+
           </motion.div>
         </div>
         
