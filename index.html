@@ -1,26 +1,84 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- TODO: Set the document title to the name of your application -->
-    <title>Lovable App</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/pwa-192x192.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="ELP Green" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#0a192f" />
+    <meta name="msapplication-TileColor" content="#0a192f" />
+    <title>ELP Green Technology</title>
+    <meta name="description" content="ELP Green Technology - Liderando a revolução da economia circular através de tecnologia avançada de pirólise e reciclagem sustentável." />
+    <meta name="author" content="ELP Green Technology" />
 
-    <!-- TODO: Update og:title to match your application name -->
-    <meta property="og:title" content="Lovable App" />
-    <meta property="og:description" content="Lovable Generated Project" />
+    <meta property="og:title" content="ELP Green Technology" />
+    <meta property="og:description" content="Liderando a revolução da economia circular através de tecnologia avançada de pirólise e reciclagem sustentável." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta property="og:image" content="https://www.elpgreen.com/og-image.jpg" />
+    <meta property="og:image:secure_url" content="https://www.elpgreen.com/og-image.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="ELP Green Technology - Circular Economy & Sustainable Solutions" />
+    <meta property="og:url" content="https://www.elpgreen.com" />
+    <meta property="og:site_name" content="ELP Green Technology" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Lovable" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta name="twitter:site" content="@elpgreen" />
+    <meta name="twitter:title" content="ELP Green Technology" />
+    <meta name="twitter:description" content="Liderando a revolução da economia circular através de tecnologia avançada de pirólise e reciclagem sustentável." />
+    <meta name="twitter:image" content="https://www.elpgreen.com/og-image.jpg" />
+
+    <!-- Initial loading styles to prevent white flash -->
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #0a192f;
+      }
+      #root:empty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: #0a192f;
+      }
+      #root:empty::before {
+        content: '';
+        width: 48px;
+        height: 48px;
+        border: 4px solid rgba(34, 197, 94, 0.2);
+        border-top-color: #22c55e;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+      /* Hide spinner once content loads */
+      #root:not(:empty)::before {
+        display: none;
+      }
+    </style>
   </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Fallback for script loading errors -->
+    <noscript>
+      <div style="display:flex;align-items:center;justify-content:center;height:100vh;font-family:system-ui;background:#0a192f;color:white;text-align:center;padding:20px;">
+        <div>
+          <h1>ELP Green Technology</h1>
+          <p>JavaScript é necessário para visualizar este site.</p>
+          <p>Please enable JavaScript to view this website.</p>
+        </div>
+      </div>
+    </noscript>
   </body>
 </html>

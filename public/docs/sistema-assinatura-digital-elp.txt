@@ -1,0 +1,607 @@
+DOCUMENTACAO COMPLETA - SISTEMA DE ASSINATURA DIGITAL ELP GREEN TECHNOLOGY
+===========================================================================
+Versao: 1.0 | Data: 14/02/2026
+Empresa: ELP Alliance S/A - ELP Green Technology
+===========================================================================
+
+INDICE
+------
+1. Visao Geral
+2. Arquitetura do Sistema
+3. Fluxo Completo de Assinatura
+4. Componentes do Sistema
+5. Tipos de Assinatura
+6. Multiplos Signatarios
+7. Seguranca e Criptografia
+8. Certificado Digital ELP
+9. Trilha de Auditoria (Audit Trail)
+10. Armazenamento e PDF
+11. Notificacoes por E-mail
+12. Edge Functions (Backend)
+13. Banco de Dados (Tabelas)
+14. URLs e Rotas
+15. Internacionalizacao (i18n)
+16. Conformidade Legal
+
+===========================================================================
+1. VISAO GERAL
+===========================================================================
+
+O Sistema de Assinatura Digital da ELP Green Technology e uma solucao completa
+de assinatura eletronica que permite a assinatura de documentos com validade
+juridica, conforme a Lei no 14.063/2020 (Brasil) e o Regulamento eIDAS (UE).
+
+O sistema opera de forma independente de infraestruturas governamentais
+(gov.br/ITI), gerando certificados internos proprios da ELP Green Technology
+para cada signatario.
+
+Principais caracteristicas:
+- Assinatura eletronica simples com validade juridica
+- Suporte a multiplos signatarios com ordem sequencial
+- 4 modalidades de assinatura (desenho, digitacao, iniciais, upload)
+- Hash SHA-256 para integridade do documento
+- Certificado digital interno ELP com validade de 3 anos
+- Trilha de auditoria completa
+- Geracao automatica de PDF assinado
+- Upload automatico para armazenamento em nuvem (Supabase Storage)
+- Notificacoes por e-mail (confirmacao, lembretes, proximo signatario)
+- Suporte a 5 idiomas: PT, EN, ES, IT, ZH
+
+===========================================================================
+2. ARQUITETURA DO SISTEMA
+===========================================================================
+
+Frontend (React + TypeScript + Vite):
+  - src/pages/PublicSignature.tsx            > Pagina publica de assinatura
+  - src/components/admin/ELPSignaturePortal.tsx > Portal interno (admin)
+  - src/components/admin/SignedDocumentsManager.tsx > Gestao de documentos
+  - src/components/admin/MultipleSignersManager.tsx > Config. multiplos signatarios
+  - src/components/admin/SignaturePad.tsx     > Componente de pad de assinatura
+  - src/lib/siteConfig.ts                    > URLs de producao
+
+Backend (Supabase Edge Functions - Deno):
+  - send-signature-confirmation/             > E-mail de confirmacao pos-assinatura
+  - send-signature-reminder/                 > E-mail de lembrete para pendentes
+  - send-document-signature-link/            > Envio do link de assinatura
+  - notify-next-signer/                      > Notifica proximo signatario
+  - notify-template-submission/              > Notifica submissao de template
+
+Banco de Dados (Supabase PostgreSQL):
+  - generated_documents                      > Documentos gerados
+  - signature_log                            > Log de todas as assinaturas
+  - report_verifications                     > Verificacao de relatorios
+  - document_templates                       > Templates de documentos
+
+Armazenamento (Supabase Storage):
+  - lead-documents/                          > Bucket para PDFs assinados
+    - partners/{nome}/{tipo}/{arquivo}.pdf
+
+===========================================================================
+3. FLUXO COMPLETO DE ASSINATURA
+===========================================================================
+
+FLUXO PUBLICO (Signatario externo via link):
+---------------------------------------------
+
+1. ACESSO AO DOCUMENTO
+   > O signatario recebe um link: https://www.elpgreen.com/sign?doc={documentId}
+   > Ou acessa via QR Code impresso no documento
+   > A pagina PublicSignature.tsx carrega automaticamente o documento
+
+2. VERIFICACAO INICIAL
+   > Sistema verifica se o documento existe no banco (generated_documents)
+   > Verifica se ja esta totalmente assinado (signature_status = 'complete')
+   > Se ja assinado: exibe o documento com as assinaturas existentes (step 5)
+   > Se pendente: inicia fluxo de assinatura
+
+3. STEP 1 - IDENTIFICACAO
+   > Signatario preenche: Nome Completo, E-mail, CPF/CNPJ, Empresa (opcional)
+   > Campos podem ser pre-preenchidos com dados do documento (field_values)
+   > Validacao de campos obrigatorios
+
+4. STEP 2 - REVISAO DO DOCUMENTO
+   > Exibe o nome e tipo do documento
+   > Mostra preview dos dados/campos do documento
+   > Signatario pode ler o conteudo antes de assinar
+
+5. STEP 3 - ASSINATURA
+   > Signatario escolhe modalidade: Desenhar / Digitar / Iniciais / Upload
+   > Desenha ou insere sua assinatura
+   > Aceita os termos legais (checkbox obrigatorio)
+   > Clica em "Assinar Documento"
+
+6. PROCESSAMENTO DA ASSINATURA (handleSign)
+   > Captura a imagem da assinatura (dataUrl em PNG)
+   > Gera timestamp ISO 8601
+   > Cria hash SHA-256: {documentId}|{nome}|{email}|{timestamp}|{assinatura}
+   > Atualiza o documento no banco (generated_documents):
+     - is_signed, signed_at, signer_name, signer_email
+     - signature_type, signature_hash, signature_data
+     - current_signatures (incrementa)
+     - all_signatures_data (adiciona ao array)
+     - signature_status: 'complete' ou 'partial'
+   > Registra na tabela signature_log (trilha de auditoria)
+   > Se totalmente assinado:
+     - Gera PDF assinado com jsPDF
+     - Upload para Supabase Storage (lead-documents)
+     - Salva referencia na tabela lead_documents
+     - Atualiza file_url no generated_documents
+   > Envia e-mail de confirmacao (send-signature-confirmation)
+   > Se ha proximo signatario: notifica (notify-next-signer)
+
+7. STEP 4 - CONFIRMACAO
+   > Exibe icone de sucesso com animacao
+   > Mostra preview da assinatura registrada
+   > Exibe trilha de auditoria (hash, timestamp, tipo)
+   > Opcao de download do PDF assinado
+
+FLUXO ADMIN (Portal interno):
+------------------------------
+
+1. GERACAO DO DOCUMENTO
+   > Admin cria documento via DocumentGenerator ou BulkDocumentGenerator
+   > Preenche campos do template
+   > Configura signatarios (unico ou multiplos)
+   > Documento e salvo em generated_documents
+
+2. ENVIO PARA ASSINATURA
+   > Admin clica em "Enviar para Assinatura"
+   > Sistema gera link: https://www.elpgreen.com/sign?doc={id}
+   > Envia e-mail com o link (send-document-signature-link)
+   > Ou copia o link manualmente
+
+3. ACOMPANHAMENTO
+   > SignedDocumentsManager exibe todos os documentos
+   > Filtros: Todos / Assinados / Pendentes
+   > Busca por nome, email ou documento
+   > Acoes: Ver detalhes, Download PDF, Copiar link, Enviar lembrete, Excluir
+
+4. LEMBRETES
+   > Admin pode reenviar lembrete (send-signature-reminder)
+   > E-mail com botao "Assinar Documento Agora"
+
+===========================================================================
+4. COMPONENTES DO SISTEMA
+===========================================================================
+
+4.1 PublicSignature.tsx (src/pages/)
+------------------------------------
+- Pagina publica acessivel sem autenticacao
+- Rota: /sign ou /sign/:docId
+- 5 steps: Identificacao > Documento > Assinatura > Confirmacao > Visualizacao
+- Suporte a parametros de URL: ?doc={id}&lang={pt|en|es|it|zh}
+- Canvas HTML5 com biblioteca signature_pad para desenho
+- Geracao de PDF com jsPDF
+- Upload automatico para Supabase Storage
+
+4.2 ELPSignaturePortal.tsx (src/components/admin/)
+---------------------------------------------------
+- Componente modal usado internamente no admin
+- 4 steps: Revisar > Dados > Assinatura > Confirmacao
+- Gera certificado digital interno ELP
+- Retorna objeto ICPSignatureData completo
+- Usado em fluxos de assinatura dentro do painel admin
+
+4.3 SignedDocumentsManager.tsx (src/components/admin/)
+------------------------------------------------------
+- Dashboard de gestao de documentos assinados
+- Cards de estatisticas: Total, Assinados, Pendentes
+- Tabela com filtros e busca
+- Modal de detalhes com logs de assinatura
+- Acoes: visualizar, download, copiar link, lembrete, excluir
+- Exclusao em cascata (verification > logs > documento)
+
+4.4 MultipleSignersManager.tsx (src/components/admin/)
+------------------------------------------------------
+- Configuracao de multiplos signatarios
+- Toggle para habilitar/desabilitar multiplas assinaturas
+- Formulario para adicionar signatarios (nome, email, cargo)
+- Lista ordenavel com drag & drop (ordem de assinatura)
+- Status por signatario: Pendente / Notificado / Assinado
+- Signatarios sao notificados sequencialmente
+
+===========================================================================
+5. TIPOS DE ASSINATURA
+===========================================================================
+
+O sistema suporta 4 modalidades de assinatura:
+
+1. DESENHO (drawn)
+   - Canvas HTML5 interativo
+   - Biblioteca: signature_pad
+   - Cor da caneta: #003366 (Navy Blue ELP)
+   - Espessura: min 1.5px, max 3.5px
+   - Fundo branco
+   - Suporte a mouse e toque (touch)
+   - Exportacao em PNG (base64 dataUrl)
+
+2. DIGITACAO (typed)
+   - Input de texto para o nome
+   - Renderizado com fonte cursiva: "Brush Script MT", cursive, serif
+   - Tamanho: 36px, italico
+   - Cor: #003366
+   - Gerado como imagem PNG via Canvas
+
+3. INICIAIS (initials)
+   - Input para 2-3 caracteres
+   - Renderizado em fonte bold serif, 48px
+   - Convertido para maiusculas automaticamente
+   - Canvas menor: 150x100px
+
+4. UPLOAD (upload)
+   - Upload de imagem (PNG, JPG, etc.)
+   - Validacao: aceita apenas arquivos de imagem
+   - Leitura via FileReader API (base64)
+   - Exibicao com preview antes da assinatura
+
+===========================================================================
+6. MULTIPLOS SIGNATARIOS
+===========================================================================
+
+O sistema suporta documentos que requerem multiplas assinaturas:
+
+Configuracao:
+- Habilitado via toggle no MultipleSignersManager
+- Cada signatario tem: nome, email, cargo (opcional), ordem
+- Ordem define a sequencia de notificacao
+
+Fluxo:
+1. Admin adiciona signatarios na ordem desejada
+2. Primeiro signatario recebe link por e-mail
+3. Apos assinar, sistema notifica proximo signatario automaticamente
+4. Campos no banco de dados:
+   - required_signatures: numero total de assinaturas necessarias
+   - current_signatures: numero atual de assinaturas coletadas
+   - all_signatures_data: array JSON com todas as assinaturas
+   - pending_signer_email/name: dados do signatario atual pendente
+   - signature_status: 'pending' | 'partial' | 'complete'
+
+Logica de conclusao:
+- is_signed = true quando current_signatures >= required_signatures
+- signature_status muda para 'complete'
+- PDF final e gerado e armazenado
+
+===========================================================================
+7. SEGURANCA E CRIPTOGRAFIA
+===========================================================================
+
+7.1 Hash SHA-256
+----------------
+- Cada assinatura gera um hash SHA-256 unico
+- Dados incluidos no hash:
+  {documentId}|{signerName}|{signerEmail}|{timestamp}|{signatureData[0:100]}
+- Algoritmo: Web Crypto API (crypto.subtle.digest)
+- Formato: hexadecimal (64 caracteres)
+
+7.2 Integridade do Documento
+-----------------------------
+- Hash e armazenado no banco (signature_hash)
+- Qualquer alteracao nos dados invalida o hash
+- Verificacao possivel via report_verifications
+
+7.3 Metadados Capturados
+--------------------------
+- Timestamp ISO 8601 (data/hora exata)
+- User-Agent do navegador
+- Idioma utilizado
+- Tipo de assinatura
+- Dados do signatario (nome, email, empresa, CPF/CNPJ)
+
+7.4 Protecao contra Dupla Assinatura
+--------------------------------------
+- Verificacao antes de assinar se documento ja esta completo
+- Campos cleared apos assinatura (pending_signer_email = null)
+- Toast de erro se tentativa de re-assinar documento completo
+
+===========================================================================
+8. CERTIFICADO DIGITAL ELP
+===========================================================================
+
+O sistema gera certificados digitais internos para cada assinatura:
+
+Estrutura do Certificado (ICPSignatureData.certificateInfo):
+{
+  issuer: "ELP Green Technology - Autoridade Certificadora Propria",
+  serialNumber: "ELP-XXXX-XXXX-XXXX-XXXX" (16 chars hex aleatorios),
+  validFrom: [data da assinatura],
+  validTo: [data + 3 anos],
+  algorithm: "SHA-256 with RSA Encryption"
+}
+
+Observacoes:
+- NAO e um certificado ICP-Brasil oficial
+- E um certificado interno da ELP para registro e rastreabilidade
+- O numero serial e gerado aleatoriamente no formato ELP-XXXX-XXXX-XXXX-XXXX
+- Validade padrao: 3 anos a partir da data de assinatura
+- Referenciado como "Certificado Digital ELP" na interface
+
+===========================================================================
+9. TRILHA DE AUDITORIA (AUDIT TRAIL)
+===========================================================================
+
+Cada assinatura gera um registro detalhado na tabela signature_log:
+
+Dados registrados:
+- document_id: ID do documento assinado
+- signer_name: Nome do signatario
+- signer_email: E-mail do signatario
+- signature_type: 'drawn' | 'typed' | 'initials' | 'upload'
+- signature_hash: Hash SHA-256 da assinatura
+- ip_address: (quando disponivel via backend)
+- user_agent: Navegador e OS do signatario
+- timestamp: Data/hora exata (ISO 8601)
+- metadata: JSON com dados adicionais (empresa, CPF/CNPJ, idioma)
+
+Visualizacao:
+- Admin pode ver logs por documento no SignedDocumentsManager
+- Dialog de detalhes mostra toda a trilha de auditoria
+- Inclui IP, User-Agent, tipo de assinatura, hash
+
+===========================================================================
+10. ARMAZENAMENTO E PDF
+===========================================================================
+
+10.1 Geracao de PDF (jsPDF)
+----------------------------
+- Gerado automaticamente quando documento e totalmente assinado
+- Inclui: dados do documento, assinatura visual, hash, timestamp
+- Formato: A4, orientacao retrato
+- Branding ELP no header e footer
+
+10.2 Upload para Storage
+-------------------------
+- Bucket: lead-documents (privado)
+- Estrutura de pastas:
+  partners/{nome_sanitizado}/{tipo_documento}/{nome_arquivo}_SIGNED_{timestamp}.pdf
+- Fallback: signed_documents/{document_id}/{nome_arquivo}.pdf
+- Content-Type: application/pdf
+- Upsert habilitado (sobrescreve se existir)
+
+10.3 Referencias no Banco
+---------------------------
+- file_url atualizado em generated_documents
+- Registro criado em lead_documents com:
+  - lead_id: ID do documento
+  - lead_type: 'signed_documents'
+  - file_name, file_url, document_type, file_size
+  - notes: descricao com nome, email e data da assinatura
+
+===========================================================================
+11. NOTIFICACOES POR E-MAIL
+===========================================================================
+
+O sistema utiliza o servico Resend para envio de e-mails transacionais.
+
+11.1 send-signature-confirmation
+---------------------------------
+- Disparado: apos assinatura bem-sucedida
+- Destinatario: signatario
+- Conteudo: confirmacao com nome do documento, data, hash
+- Idioma: baseado no idioma da sessao
+
+11.2 send-signature-reminder
+------------------------------
+- Disparado: manualmente pelo admin
+- Destinatario: signatario pendente
+- Conteudo: lembrete com botao "Assinar Documento Agora"
+- Template HTML responsivo com branding ELP
+
+11.3 send-document-signature-link
+----------------------------------
+- Disparado: quando admin envia documento para assinatura
+- Destinatario: primeiro signatario
+- Conteudo: link direto para assinatura
+
+11.4 notify-next-signer
+-------------------------
+- Disparado: automaticamente apos assinatura parcial
+- Destinatario: proximo signatario na fila
+- Conteudo: notificacao de que e sua vez de assinar
+- Atualiza pending_signer_email/name no banco
+
+11.5 Configuracao de E-mail
+-----------------------------
+- Remetente: "ELP Alliance <onboarding@resend.dev>"
+- Logo: https://www.elpgreen.com/logo-elp-email.png
+- Cores: Navy Blue (#1a2b3c), Green (#1a5c3a)
+- Footer: "ELP Alliance S/A - ELP Green Technology"
+
+===========================================================================
+12. EDGE FUNCTIONS (BACKEND)
+===========================================================================
+
+Todas as Edge Functions sao hospedadas no Supabase (Deno runtime):
+
+send-signature-reminder/index.ts
+---------------------------------
+- Metodo: POST
+- Body: { documentId, documentName, recipientEmail, recipientName, signatureLink }
+- Retorno: { success: true, emailResponse }
+- CORS habilitado para todas as origens
+
+send-signature-confirmation/index.ts
+--------------------------------------
+- Metodo: POST
+- Body: { documentName, signerName, signerEmail, signedAt, signatureType,
+          signatureHash, documentId, language }
+- Envia confirmacao com dados da assinatura
+
+notify-next-signer/index.ts
+-----------------------------
+- Metodo: POST
+- Notifica proximo signatario na fila
+- Atualiza status do signatario no banco
+
+send-document-signature-link/index.ts
+--------------------------------------
+- Metodo: POST
+- Envia link de assinatura por e-mail
+- Gera URL: https://www.elpgreen.com/sign?doc={documentId}
+
+===========================================================================
+13. BANCO DE DADOS (TABELAS)
+===========================================================================
+
+13.1 generated_documents
+-------------------------
+Campos principais:
+- id (UUID, PK)
+- document_name (TEXT)
+- document_type (TEXT)
+- field_values (JSONB) - dados preenchidos do template
+- template_id (UUID, FK > document_templates)
+- language (TEXT)
+- generated_by (UUID)
+- created_at (TIMESTAMPTZ)
+
+Campos de assinatura:
+- is_signed (BOOLEAN)
+- signed_at (TIMESTAMPTZ)
+- signer_name (TEXT)
+- signer_email (TEXT)
+- signature_type (TEXT) - 'drawn' | 'typed' | 'initials' | 'upload'
+- signature_hash (TEXT) - SHA-256
+- signature_data (JSONB) - { dataUrl, timestamp, signerName, signerEmail, type }
+- signature_status (TEXT) - 'pending' | 'partial' | 'complete'
+
+Campos de multiplas assinaturas:
+- required_signatures (INTEGER)
+- current_signatures (INTEGER)
+- all_signatures_data (JSONB) - array de SignatureData
+- pending_signer_email (TEXT)
+- pending_signer_name (TEXT)
+
+Campos de envio:
+- sent_at (TIMESTAMPTZ)
+- sent_to_email (TEXT)
+- file_url (TEXT) - URL do PDF assinado no Storage
+- lead_id (TEXT)
+- lead_type (TEXT)
+
+13.2 signature_log
+-------------------
+- id (UUID, PK)
+- document_id (UUID, FK > generated_documents)
+- signer_name (TEXT)
+- signer_email (TEXT)
+- signature_type (TEXT)
+- signature_hash (TEXT)
+- ip_address (TEXT)
+- user_agent (TEXT)
+- timestamp (TIMESTAMPTZ)
+- metadata (JSONB)
+- created_at (TIMESTAMPTZ)
+
+13.3 report_verifications
+--------------------------
+- id (UUID, PK)
+- verification_hash (TEXT)
+- document_number (TEXT)
+- document_date (TEXT)
+- title (TEXT)
+- signatory_name (TEXT)
+- signatory_position (TEXT)
+- generated_document_id (UUID, FK > generated_documents)
+- is_signed (BOOLEAN)
+- language (TEXT)
+- views_count (INTEGER)
+- last_viewed_at (TIMESTAMPTZ)
+
+13.4 document_templates
+------------------------
+- id (UUID, PK)
+- name (TEXT)
+- type (TEXT)
+- fields (JSONB) - definicao de campos do template
+- content_pt, content_en, content_es, content_it, content_zh (TEXT)
+- is_active (BOOLEAN)
+- created_by (UUID)
+
+===========================================================================
+14. URLS E ROTAS
+===========================================================================
+
+Producao: https://www.elpgreen.com
+
+Rotas publicas:
+- /sign                    > Pagina de assinatura (sem doc pre-carregado)
+- /sign?doc={documentId}   > Assinatura com documento especifico
+- /sign/:docId             > Assinatura via rota dinamica
+- /sign?doc={id}&lang=en   > Assinatura em ingles
+
+Geracao de URLs (siteConfig.ts):
+- SITE_URLS.sign           > https://www.elpgreen.com/sign
+- SITE_URLS.signDocument(id) > https://www.elpgreen.com/sign?doc={id}
+
+Rotas admin (protegidas):
+- /admin > Painel administrativo
+  - Tab "Documentos Assinados" > SignedDocumentsManager
+  - Tab "Gerador de Documentos" > DocumentGenerator + MultipleSignersManager
+
+===========================================================================
+15. INTERNACIONALIZACAO (i18n)
+===========================================================================
+
+O sistema suporta 5 idiomas em todas as interfaces:
+
+- Portugues (pt) - padrao
+- English (en)
+- Espanol (es)
+- Italiano (it)
+- Chines (zh)
+
+Deteccao de idioma:
+1. Parametro de URL: ?lang=en
+2. Idioma do navegador via i18next
+3. Fallback: Portugues (pt)
+
+Textos traduzidos:
+- Titulos e subtitulos de cada step
+- Labels de formularios
+- Mensagens de erro e sucesso
+- Avisos legais
+- Botoes de acao
+- Textos de certificado e auditoria
+
+===========================================================================
+16. CONFORMIDADE LEGAL
+===========================================================================
+
+Base Legal:
+- Lei no 14.063/2020 (Brasil) - Marco legal das assinaturas eletronicas
+  - Classifica assinaturas em: simples, avancada e qualificada
+  - O sistema implementa assinatura eletronica SIMPLES
+  
+- Medida Provisoria no 2.200-2/2001 (ICP-Brasil)
+  - Estabelece a infraestrutura de chaves publicas brasileira
+  - Referenciada nos termos legais do sistema
+
+- Regulamento eIDAS (UE - no 910/2014)
+  - Regulamento europeu sobre identificacao eletronica
+  - Mencionado para conformidade internacional
+
+Termos aceitos pelo signatario:
+"Declaro que li e concordo com os termos do documento. Esta assinatura
+eletronica e legalmente valida conforme a Lei 14.063/2020 e regulacao
+eIDAS (UE)."
+
+Elementos de validade juridica:
+[x] Identificacao do signatario (nome, email, CPF/CNPJ)
+[x] Manifestacao de vontade (checkbox de aceite)
+[x] Hash de integridade SHA-256
+[x] Timestamp com data/hora exata
+[x] Trilha de auditoria completa
+[x] Certificado digital (interno ELP)
+[x] Armazenamento seguro do documento assinado
+
+IMPORTANTE: O certificado emitido e INTERNO da ELP Green Technology.
+Nao substitui certificados ICP-Brasil qualificados para atos que
+exijam assinatura qualificada (como escrituras publicas, por exemplo).
+Para a maioria dos contratos comerciais e documentos empresariais,
+a assinatura eletronica simples possui plena validade juridica.
+
+===========================================================================
+  FIM DO DOCUMENTO
+  ELP Alliance S/A - ELP Green Technology
+  (c) 2026 Todos os direitos reservados
+===========================================================================

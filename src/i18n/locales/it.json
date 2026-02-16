@@ -1,0 +1,3803 @@
+{
+  "admin": {
+    "nav": {
+      "meetings": "Riunioni",
+      "reportGenerator": "Generatore di Report",
+      "aiHub": "Centro IA",
+      "duoIntelligence": "Duo Intelligence BI",
+      "signedDocuments": "Documenti Firmati",
+      "passwordSettings": "Cambia Password"
+    },
+    "password": {
+      "title": "Cambia Password",
+      "description": "Aggiorna la password di accesso al pannello admin.",
+      "new": "Nuova password",
+      "confirm": "Conferma nuova password",
+      "requirements": "Requisiti password:",
+      "minLength": "Minimo 6 caratteri",
+      "match": "Le password corrispondono",
+      "invalidForm": "Form non valido",
+      "checkRequirements": "Controlla i requisiti della password.",
+      "success": "Password cambiata!",
+      "successDesc": "La tua password è stata aggiornata con successo.",
+      "error": "Errore nel cambio password",
+      "errorDesc": "Impossibile cambiare la password.",
+      "updating": "Aggiornamento...",
+      "update": "Aggiorna Password"
+    }
+  },
+  "pwa": {
+    "installApp": "Installa App",
+    "enableNotifications": "Abilita Notifiche",
+    "disableNotifications": "Disabilita Notifiche"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "Chi Siamo",
+    "solutions": "Soluzioni",
+    "saas": "Piattaforma SaaS",
+    "investors": "Investitori",
+    "esg": "ESG",
+    "media": "Media Center",
+    "contact": "Contatti",
+    "marketplace": "Marketplace",
+    "quote": "Preventivo",
+    "certificates": "Certificati",
+    "smartOtr": "Smart OTR",
+    "otrSources": "Segnala Fonte OTR",
+    "brazilLatam": "Brasile / LATAM",
+    "globalExpansion": "Espansione Globale"
+  },
+  "hero": {
+    "badge": "Programma Partnership Globale",
+    "title": "Partnership Globale nel Riciclaggio Intelligente di Pneumatici OTR – Investiamo in Stabilimenti all'Estero",
+    "subtitle": "Cerchiamo fonti affidabili di pneumatici OTR usati (miniere, rivenditori, porti). Linea Smart Robotica con robot automatici.",
+    "noSellMachines": "Non vendiamo macchinari",
+    "investDirectly": "creiamo joint venture e investiamo direttamente in stabilimenti (Europa, Brasile, Australia).",
+    "whatsappContact": "Contatto WhatsApp dopo revisione interna",
+    "scrollDown": "Scorri",
+    "cta": {
+      "partner": "Segnala Fonte OTR Ora",
+      "invest": "Diventa Nostro Partner",
+      "learnPartnership": "Scopri la Partnership",
+      "technology": "Scopri la Tecnologia"
+    }
+  },
+  "topBanner": {
+    "lookingFor": "🔍 Cerchiamo fonti di pneumatici OTR in Italia, Brasile o Australia –",
+    "indicateHere": "Segnala qui per la partnership!"
+  },
+  "smartOtr": {
+    "badge": "Linea Smart Robotica",
+    "title": "Linea Smart OTR – Tecnologia Robotica Avanzata",
+    "description": "Upgrade intelligente: Posiziona il pneumatico sulla piattaforma → il robot posiziona e taglia automaticamente. Prima dimostrazione in",
+    "demoLocation": "Australia (Aprile/Maggio 2025)",
+    "globalGoal": "Obiettivo globale: 1 milione di tonnellate/anno in 17-18 stabilimenti all'estero.",
+    "disclaimer": "Non vendiamo la Linea Smart",
+    "disclaimerDesc": "cerchiamo partner per fonti OTR e operazioni congiunte.",
+    "features": {
+      "autoPosition": "Posizionamento automatico",
+      "roboticCutting": "Taglio robotico",
+      "tonsPerPlant": "~10 tonnellate/ora per stabilimento",
+      "globalCapacity": "175 tonnellate/ora globale"
+    },
+    "indicateSource": "Segnala Fonte OTR",
+    "roadmapTitle": "Roadmap Espansione 2025-2030",
+    "roadmap": {
+      "2025": "Australia – Prima Linea Smart",
+      "2026": "Sud America & Europa (3-4 stabilimenti)",
+      "2027": "Africa & Medio Oriente (8-10 stabilimenti)",
+      "2030": "Obiettivo Globale: 17-18 stabilimenti"
+    }
+  },
+  "stats": {
+    "co2Avoided": "CO₂ Evitata",
+    "wasteProcessed": "Rifiuti Trattati",
+    "globalPlants": "Stabilimenti Globali",
+    "countries": "Paesi",
+    "tons": "tonnellate",
+    "unit": "unità"
+  },
+  "globalPresence": {
+    "badge": "Presenza Globale Strategica",
+    "title": "Operativi nei Principali Assi Economici",
+    "subtitle": "Investimento diretto in stabilimenti all'estero per il riciclaggio OTR su larga scala. Equilibrio tra Europa (Milano/Italia) + America Latina (Brasile/São Paulo) + Australia.",
+    "europe": {
+      "title": "Europa",
+      "city": "Milano, Italia",
+      "focus": "Partnership Locale"
+    },
+    "germany": {
+      "city": "Francoforte, Germania",
+      "focus": "Capitale & Regolamentazione"
+    },
+    "asia": {
+      "title": "Asia",
+      "city": "Shenzhen, Cina",
+      "focus": "R&S & Produzione"
+    },
+    "latam": {
+      "title": "America Latina",
+      "city": "São Paulo, Brasile",
+      "focus": "Operazioni & Asset",
+      "miningFocus": "Focus Minerario Pesante"
+    },
+    "oceania": {
+      "title": "Oceania",
+      "city": "Australia",
+      "focus": "Installazione Stabilimento OTR 2025"
+    }
+  },
+  "indexPage": {
+    "partnershipModel": {
+      "badge": "Modello di Partnership",
+      "title": "Come Funziona la Partnership",
+      "description": "Trovi fonti di pneumatici OTR. Una volta che hai buone fonti OTR, veniamo da te e insieme negoziamo con il proprietario della risorsa OTR (aziende minerarie, produttori, rivenditori).",
+      "step1": { "title": "Tu Indichi le Fonti", "desc": "Aziende minerarie, rivenditori di pneumatici, porti, produttori" },
+      "step2": { "title": "Veniamo da Te", "desc": "Viaggiamo per incontrare le tue fonti e valutare l'opportunità" },
+      "step3": { "title": "Negoziazione Congiunta", "desc": "Insieme negoziamo con il proprietario della risorsa" },
+      "step4": { "title": "Investiamo nello Stabilimento", "desc": "Investimento diretto nella costruzione della fabbrica" },
+      "indicateSource": "Indica Fonte OTR",
+      "fullDetails": "Dettagli Completi della Partnership",
+      "stats": {
+        "partnerCountries": "Paesi Partner",
+        "tonsYearGoal": "Tons/Anno Obiettivo",
+        "factoriesBy2030": "Stabilimenti entro 2030",
+        "yourInvestment": "Il Tuo Investimento"
+      }
+    },
+    "esgSection": {
+      "title": "Impegno ESG",
+      "subtitle": "Sostenibilità Reale",
+      "description": "Allineati con gli obiettivi ESG per il riciclaggio OTR sostenibile in Europa, Brasile e Australia.",
+      "netZero": "Net Zero 2040",
+      "zeroWaste": "Zero Rifiuti",
+      "bCorp": "Allineato B-Corp",
+      "euTaxonomy": "Tassonomia UE",
+      "learnMore": "Scopri di Più"
+    },
+    "investorsSection": {
+      "title": "Per Investitori",
+      "subtitle": "Opportunità Unica",
+      "description": "Opportunità unica in joint venture all'estero per il riciclaggio OTR – accedi al Data Room.",
+      "class": "Classe",
+      "dataRoom": "Data Room",
+      "certificates": "Certificati"
+    },
+    "news": {
+      "badge": "Notizie",
+      "title": "Ultimi Aggiornamenti",
+      "subtitle": "Segui le ultime notizie sulla tecnologia verde e l'economia circolare.",
+      "noNews": "Nessuna notizia disponibile al momento.",
+      "viewAll": "Vedi Tutte le Notizie"
+    },
+    "privacyNote": "I dati delle fonti OTR vengono elaborati internamente prima di qualsiasi condivisione esterna. Conforme al GDPR.",
+    "ctaSection": {
+      "title": "Hai Fonti di Pneumatici OTR? Facciamo Partnership!",
+      "description": "Investiamo direttamente in stabilimenti all'estero. Tu porti le fonti, noi portiamo la tecnologia e il capitale.",
+      "indicateNow": "Indica Fonte OTR Ora",
+      "partnershipDetails": "Dettagli Partnership"
+    },
+    "globalPresence": {
+      "europe": { "region": "Europa", "city": "Milano, Italia", "role": "Partnership Locale" },
+      "germany": { "city": "Francoforte, Germania", "role": "Capitale & Regolamentazione" },
+      "southAmerica": { "region": "Sud America", "city": "São Paulo, Brasile", "role": "Operazioni & Asset", "focus": "Focus Minerario Pesante" },
+      "asia": { "region": "Asia", "city": "Shenzhen, Cina", "role": "R&S & Produzione" },
+      "oceania": { "region": "Oceania", "city": "Australia", "role": "Installazione Stabilimento OTR 2025" }
+    },
+    "certifications": {
+      "class1": "Prodotti Chimici",
+      "class7": "Macchine Industriali",
+      "class35": "Commercio",
+      "class40": "Trattamento Materiali",
+      "class42": "Ricerca e Tecnologia"
+    }
+  },
+  "solutionsPage": {
+    "galleryImages": {
+      "topsTeam": { "title": "Team TOPS Recycling", "description": "Partnership strategica con il team di TOPS Recycling a Zhangjiagang" },
+      "partnershipHandshake": { "title": "Accordo di Partnership", "description": "Ericson Piccoli e partner sulla linea di produzione" },
+      "partnershipTeam": { "title": "Visita Tecnica", "description": "Incontro d'affari presso le strutture industriali" },
+      "pyrolysisPipes": { "title": "Attrezzatura per Pirolisi", "description": "Tubazioni e reattori in fase di assemblaggio" },
+      "factoryFloor": { "title": "Linea di Produzione", "description": "Area di lavorazione industriale con nastri automatizzati" },
+      "factoryInspection": { "title": "Ispezione Qualità", "description": "Supervisione delle attrezzature di lavorazione" },
+      "rubberPowderBags": { "title": "Polvere di Gomma", "description": "Prodotto finale: polvere di gomma riciclata pronta per la commercializzazione" },
+      "productionBags": { "title": "Area di Stoccaggio", "description": "Materiale lavorato in attesa di spedizione" }
+    }
+  },
+  "contactPage": {
+    "offices": {
+      "italy": { "city": "Valenza", "country": "Italia" },
+      "brazil": { "city": "Medianeira", "country": "Brasile" },
+      "germany": { "city": "Francoforte", "country": "Germania" },
+      "china": { "city": "Zhangjiagang", "country": "Cina" },
+      "australia": { "city": "Sydney", "country": "Australia" }
+    },
+    "leadership": {
+      "ericson": { "role": "Presidente del Consiglio & Fondatore" },
+      "samuel": { "role": "Membro Affiliato & Direttore Generale - Cina" }
+    }
+  },
+  "about": {
+    "title": "Chi è ELP Green Technology",
+    "heroSubtitle": "Leader globale nelle soluzioni di economia circolare, collegando tecnologia verde al capitale sostenibile attraverso una rete internazionale di uffici e partnership strategiche.",
+    "noSellEquipment": "Non vendiamo attrezzature – creiamo joint venture.",
+    "globalPresence": "Presenza Globale in 4 Continenti",
+    "headquarters": {
+      "title": "Sedi Internazionali",
+      "subtitle": "Posizionati strategicamente nei principali mercati globali per massimizzare impatto ed efficienza"
+    },
+    "leadership": {
+      "title": "Leadership Globale",
+      "subtitle": "Un team internazionale con esperienza in tecnologia, sostenibilità e mercati globali",
+      "partnership": "Partnership Strategica Ufficiale",
+      "partnershipDate": "Stabilita il 22 Febbraio 2023",
+      "trademarks": "Marchi Registrati INPI",
+      "trademarksDesc": "Il marchio ELP è registrato in 6 classi presso l'Istituto Nazionale della Proprietà Industriale del Brasile",
+      "validity": "Validità: 07/11/2023 - 07/11/2033",
+      "viewCertificates": "Vedi certificati ufficiali"
+    },
+    "factories": "Stabilimenti di Produzione",
+    "factoryLine": "Linea di produzione dei reattori di pirolisi",
+    "factoryVisit": "Visita tecnica agli stabilimenti Tops Recycling",
+    "factoryDesc": "Le nostre unità modulari sono prodotte in stabilimenti all'avanguardia a Zhangjiagang, Cina, seguendo rigorosi standard internazionali di qualità e sicurezza.",
+    "ourPillars": "I Nostri Pilastri",
+    "gallery": "Galleria Partnership",
+    "gallerySubtitle": "Documenti visivi delle nostre partnership strategiche e operazioni globali",
+    "documents": {
+      "title": "Documenti Ufficiali",
+      "subtitle": "Certificati e registrazioni di marchio dell'Istituto Nazionale della Proprietà Industriale (INPI)"
+    },
+    "vision": {
+      "title": "La Nostra Visione",
+      "description": "Guidare la trasformazione globale dei rifiuti in risorse, collegando tecnologia all'avanguardia al capitale sostenibile."
+    },
+    "mission": {
+      "title": "La Nostra Missione",
+      "description": "Sviluppare e implementare soluzioni tecnologiche che trasformano passività ambientali in asset economici di alto valore."
+    },
+    "values": {
+      "title": "I Nostri Valori",
+      "innovation": "Innovazione",
+      "innovationDesc": "Ricerca costante di soluzioni innovative",
+      "sustainability": "Sostenibilità",
+      "sustainabilityDesc": "Impegno per il futuro del pianeta",
+      "transparency": "Trasparenza",
+      "transparencyDesc": "Relazioni aperte e oneste",
+      "excellence": "Eccellenza",
+      "excellenceDesc": "Standard qualitativi superiori"
+    },
+    "offices": {
+      "italy": { "country": "Italia", "city": "Valenza, Strada per Solero", "role": "Sede Europea", "description": "Centro strategico per operazioni UE, compliance e relazioni con investitori.", "phone": "+39 350 1021359", "email": "info@elpgreen.com", "website": "www.elpgreen.com" },
+      "brazil": { "country": "Brasile", "city": "Medianeira, PR", "role": "Sede Americhe", "description": "Linha Saude S/N, CAP 85884-000. Sede amministrativa per l'America Latina.", "phone": "+39 350 1021359", "email": "info@elpgreen.com", "website": "www.elpgreen.com" },
+      "germany": { "country": "Germania", "city": "Francoforte", "role": "Hub Finanziario", "description": "Centro finanziario europeo, gestione investimenti e relazioni bancarie.", "phone": "+39 350 1021359", "email": "info@elpgreen.com", "website": "www.elpgreen.com" },
+      "china": { "country": "Cina", "city": "Zhangjiagang", "role": "Centro Produzione", "description": "Hub manifatturiero industriale, produzione attrezzature e partnership con TOPS Recycling.", "phone": "+86 159 6237 8058", "email": "info@topsindustry.com", "website": "www.topsrecycling.com" },
+      "australia": { "country": "Australia", "city": "Sydney", "role": "Operazioni Oceania", "description": "Ufficio regionale per partnership minerarie in Oceania.", "phone": "+39 350 1021359", "email": "info@elpgreen.com", "website": "www.elpgreen.com" }
+    },
+    "galleryItems": {
+      "topsFactory": { "title": "Fabbrica TOPS - Panoramica", "description": "Centro di produzione attrezzature Smart Line OTR a Zhangjiagang, Cina" },
+      "otrShredder": { "title": "Trituratore OTR in Funzione", "description": "Attrezzatura ad alta capacità per lavorazione pneumatici giganti OTR" },
+      "otrProcessing": { "title": "Area Lavorazione OTR", "description": "Linea completa di riciclaggio pneumatici Off-The-Road" },
+      "shreddingLine": { "title": "Linea di Triturazione", "description": "Interno dell'impianto Smart Line con sistema automatizzato" },
+      "beadRings": { "title": "Anelli Tallone Recuperati", "description": "Acciaio di alta qualità estratto da pneumatici OTR - pronto per fusione" },
+      "otrPartnership": { "title": "Partnership OTR", "description": "Collaborazione strategica per riciclaggio pneumatici minerari" },
+      "topsTeam": { "title": "Team TOPS Recycling", "description": "Partnership strategica con il team TOPS Recycling a Zhangjiagang" },
+      "partnershipAgreement": { "title": "Accordo di Partnership", "description": "Ericson Piccoli e partner sulla linea di produzione" }
+    },
+    "certificates": {
+      "class1": { "name": "Certificato Classe 1", "description": "Prodotti Chimici Industriali" },
+      "class7": { "name": "Certificato Classe 7", "description": "Macchine Industriali e Agricole" },
+      "class35": { "name": "Certificato Classe 35", "description": "Commercio e Intermediazione" },
+      "class40": { "name": "Certificato Classe 40", "description": "Trattamento Materiali" },
+      "class40_1": { "name": "Certificato Classe 40-1", "description": "Trattamento Materiali (Aggiuntivo)" },
+      "class42": { "name": "Certificato Classe 42", "description": "Ricerca e Tecnologia" }
+    },
+    "trademarkClasses": {
+      "class1": { "class": "Classe 1", "description": "Prodotti Chimici Industriali", "details": "Acidi minerali, carbone attivo, plastiche non lavorate, sostanze chimiche industriali" },
+      "class7": { "class": "Classe 7", "description": "Macchine Industriali e Agricole", "details": "Macchine agricole, trituratori, compressori, mulini, spruzzatori" },
+      "class35": { "class": "Classe 35", "description": "Commercio e Intermediazione", "details": "Commercio di materie plastiche, gomma, energia elettrica, macchinari industriali" },
+      "class40": { "class": "Classe 40", "description": "Trattamento Materiali", "details": "Lavorazione materiali, riciclaggio, trattamento rifiuti" },
+      "class42": { "class": "Classe 42", "description": "Ricerca e Tecnologia", "details": "Sviluppo software, ricerca scientifica, automazione industriale, controllo ambientale" }
+    },
+    "leadershipBios": {
+      "ericson": {
+        "role": "Presidente del Consiglio & Fondatore",
+        "location": "Medianeira, PR - Brasile / Valenza, Italia",
+        "bio": "Fondatore e Presidente del Consiglio di ELP Green Technology ed ELP Global S.A. Visionario e imprenditore, guida l'espansione globale dell'azienda stabilendo partnership strategiche per il riciclaggio di pneumatici OTR in Europa, Asia e America Latina. Responsabile del marchio ELP registrato in 6 classi presso INPI. Focus attuale: Joint Ventures per Smart Line OTR."
+      },
+      "xuShihe": {
+        "role": "Membro Affiliato & Direttore Generale - Operazioni Cina",
+        "location": "Zhangjiagang City, Jiangsu Province, Cina",
+        "bio": "Direttore Generale di TOPS RECYCLING ZHANGJIAGANG SHILONG MACHINERY CO. LTD, partner ufficiale di ELP Green Technology dal 22 Febbraio 2023. Specialista in attrezzature Smart Line per riciclaggio pneumatici OTR giganti. Responsabile operazioni di produzione e tecnologia di taglio robotico."
+      }
+    },
+    "partnershipDesc": "ELP Green Technology ha stabilito una partnership ufficiale con TOPS RECYCLING ZHANGJIAGANG SHILONG MACHINERY CO. LTD, leader cinese nelle attrezzature di riciclaggio e processamento industriale.",
+    "governance": {
+      "title": "Governance e Compliance",
+      "description": "ELP Green Technology mantiene i più alti standard di governance aziendale, con audit indipendenti da società Big Four e pieno allineamento con le normative internazionali.",
+      "items": ["Comitato Etico Indipendente", "Audit Big Four annuale", "Compliance GDPR/LGPD", "Tassonomia UE allineata"],
+      "internationalBoard": "Consiglio Internazionale",
+      "boardDesc": "Il nostro consiglio è composto da professionisti di fama internazionale, garantendo visione strategica globale e accesso ai principali mercati mondiali."
+    },
+    "quote": "Insieme, possiamo costruire un mondo sostenibile e trasformare le sfide in opportunità per un futuro migliore.",
+    "companyDesc1": "ELP GREEN TECHNOLOGY è un'azienda impegnata nella promozione di soluzioni innovative e sostenibili per le sfide globali. Basandoci su sostenibilità, tecnologie avanzate e partnership strategiche, la nostra azienda cerca di trasformare i problemi ambientali in opportunità di business.",
+    "companyDesc2": "Il nostro obiettivo è creare un futuro in cui la sostenibilità sia la base di tutte le nostre azioni. Cerchiamo di implementare tecnologie avanzate, pratiche efficienti di gestione dei rifiuti e fonti di energia rinnovabile per ridurre le emissioni di carbonio e combattere il cambiamento climatico."
+  },
+  "solutions": {
+    "title": "Soluzioni e Tecnologie",
+    "subtitle": "Tecnologia proprietaria all'avanguardia per l'economia circolare",
+    "industrialTech": "Tecnologia Industriale",
+    "requestQuote": "Richiedi Preventivo",
+    "viewEquipment": "Vedi Attrezzature",
+    "proprietaryTech": "Tecnologia Proprietaria",
+    "processTitle": "Processo di Trasformazione",
+    "processSubtitle": "Dal rifiuto alla commodity: un processo efficiente e sostenibile",
+    "scalability": "Scalabilità",
+    "techSpecs": "Specifiche Tecniche",
+    "capacity": "Capacità",
+    "area": "Area richiesta",
+    "installTime": "Tempo di installazione",
+    "lifespan": "Durata",
+    "payback": "Payback",
+    "pyrolysis": {
+      "title": "Pirolisi Avanzata",
+      "description": "Processo tecnico a circuito chiuso che trasforma pneumatici e plastiche in commodity di alto valore: Carbon Black recuperato (rCB), Olio Pirolitico e Acciaio Verde."
+    },
+    "modular": {
+      "title": "Unità Modulari",
+      "description": "Impianti Skid-Mounted con implementazione rapida e scalabile, con capacità di processamento flessibile."
+    },
+    "circular": {
+      "title": "Economia Circolare 360°",
+      "description": "Trasformiamo passività ambientali in asset economici, chiudendo il ciclo della sostenibilità."
+    },
+    "industrialPlantsTitle": "Impianti Industriali Completi",
+    "industrialPlantsSubtitle": "Soluzioni Chiavi in Mano per il Riciclaggio",
+    "industrialPlantsDesc": "Impianti industriali completi con tecnologia all'avanguardia, dall'installazione all'operatività. Progetti dimensionati secondo la domanda regionale.",
+    "productsGenerated": "Prodotti Generati",
+    "technicalSpecs": "Specifiche Tecniche",
+    "viewDetails": "Vedi Dettagli",
+    "getQuote": "Preventivo",
+    "investment": "Investimento",
+    "profitability": "Redditività",
+    "plants": {
+      "tireRecycling": {
+        "title": "Impianto Riciclaggio Pneumatici",
+        "subtitle": "Sistema di Processamento Completo",
+        "description": "Sistema completamente automatico per il riciclaggio di pneumatici usati, producendo granuli e polvere di gomma di alta qualità, acciaio e fibre tessili."
+      },
+      "pyrolysis": {
+        "title": "Impianto di Pirolisi Continua",
+        "subtitle": "Conversione Termochimica Avanzata",
+        "description": "Tecnologia di pirolisi a circuito chiuso per convertire pneumatici e plastiche in olio combustibile, carbon black recuperato e syngas."
+      },
+      "msw": {
+        "title": "Impianto Trattamento RSU",
+        "subtitle": "Rifiuti Solidi Urbani",
+        "description": "Sistema integrato per separazione e valorizzazione dei rifiuti municipali, producendo RDF, materiali riciclabili, biogas e compost organico."
+      },
+      "otr": {
+        "title": "Riciclaggio Pneumatici OTR",
+        "subtitle": "Pneumatici Giganti da Miniera",
+        "description": "Sistema specializzato per il riciclaggio di pneumatici giganti da miniera, porto, agricoltura e costruzione. Processa pneumatici fino a 4,5 tonnellate."
+      }
+    }
+  },
+  "saas": {
+    "title": "Piattaforma SaaS",
+    "subtitle": "Ecosistema digitale completo per la gestione dell'economia circolare",
+    "digitalPlatform": "Piattaforma Digitale",
+    "requestDemo": "Richiedi Demo",
+    "platformModules": "Moduli della Piattaforma",
+    "completeSolution": "Soluzione Completa per l'Economia Circolare",
+    "valueFlow": "Flusso di Valore",
+    "valueFlowTitle": "Dal Rifiuto alla Risorsa",
+    "valueFlowSubtitle": "Tracciabilità completa dalla raccolta alla generazione di crediti carbonio",
+    "blockchain": {
+      "title": "Tracciabilità Blockchain",
+      "description": "Garanzia di origine e passaporto digitale del rifiuto con tecnologia blockchain."
+    },
+    "dashboard": {
+      "title": "Dashboard ESG",
+      "description": "Interfaccia C-Level con monitoraggio in tempo reale dei KPI di sostenibilità."
+    },
+    "marketplace": {
+      "title": "Marketplace B2B",
+      "description": "Connessione diretta tra offerta di rifiuti e domanda industriale."
+    }
+  },
+  "investors": {
+    "title": "Per Investitori",
+    "subtitle": "Un'opportunità unica di investimento nell'economia circolare ad alta crescita",
+    "investmentOpportunities": "Opportunità di Investimento",
+    "highlightsTitle": "Punti Salienti",
+    "accessDataRoom": "Accedi al Data Room",
+    "viewEsg": "Vedi ESG",
+    "revenueStreams": "Fonti di Ricavo",
+    "thesis": {
+      "title": "Tesi di Investimento",
+      "description": "Mercato dell'economia circolare stimato in 4,5 trilioni di dollari. Il CBAM europeo sta guidando la domanda globale.",
+      "cbam": "CBAM Europeo",
+      "cbamDesc": "La tassa sul carbonio alla frontiera europea sta accelerando la domanda globale di soluzioni sostenibili.",
+      "rcbDemand": "Domanda rCB",
+      "rcbDemandDesc": "I produttori di pneumatici e gomma cercano attivamente carbon black recuperato per raggiungere gli obiettivi ESG.",
+      "carbonCredits": "Crediti Carbonio",
+      "carbonCreditsDesc": "Mercato in espansione esponenziale con prezzi previsti triplicare entro il 2030."
+    },
+    "spv": {
+      "title": "Struttura SPV",
+      "description": "Totale trasparenza su come i progetti vengono finanziati e gestiti.",
+      "details": "Ogni progetto è strutturato come una SPV (Special Purpose Vehicle) indipendente, consentendo investimenti mirati, gestione del rischio isolata e massima trasparenza per gli investitori. Report mensili e audit trimestrali garantiscono piena visibilità."
+    },
+    "reports": {
+      "title": "Report di Impatto",
+      "description": "Documenti ESG annuali con audit Big Four.",
+      "esg": "Report ESG",
+      "financialAudit": "Audit Finanziario",
+      "impactReport": "Report di Impatto"
+    },
+    "cta": "Accedi al Data Room",
+    "ctaDesc": "Richiedi accesso al nostro Data Room esclusivo con informazioni dettagliate su opportunità di investimento, proiezioni finanziarie e documentazione completa.",
+    "revenue": {
+      "gateFees": "Gate Fees",
+      "gateFeesDesc": "Tariffa per tonnellata di rifiuto processato",
+      "commodities": "Vendita Commodity",
+      "commoditiesDesc": "rCB, Olio Pirolitico, Acciaio Verde",
+      "carbonCredits": "Crediti di Carbonio",
+      "carbonCreditsDesc": "Certificati di riduzione CO₂",
+      "saas": "Licenze SaaS",
+      "saasDesc": "Piattaforma di tracciabilità"
+    },
+    "highlights": {
+      "totalMarket": "Mercato Totale",
+      "totalMarketDesc": "Economia circolare globale",
+      "cagr": "CAGR Previsto",
+      "cagrDesc": "Crescita annuale fino al 2030",
+      "ebitda": "Margine EBITDA",
+      "ebitdaDesc": "Operazioni mature",
+      "payback": "Payback",
+      "paybackDesc": "Per unità installata",
+      "months": "mesi"
+    }
+  },
+  "esg": {
+    "title": "ESG e Impatto Sociale",
+    "subtitle": "Impegno reale verso persone, pianeta e prosperità",
+    "sustainableCommitment": "Impegno Sostenibile",
+    "contactUs": "Contattaci",
+    "certificates": "Certificati",
+    "measurableImpact": "Impatto Misurabile",
+    "netZeroGoals": "Obiettivi Net Zero",
+    "sdgsTitle": "Obiettivi di Sviluppo Sostenibile",
+    "sdgsSubtitle": "Il nostro impegno verso gli SDG ONU",
+    "environmental": {
+      "title": "Impegno Ambientale",
+      "description": "Obiettivi Net Zero e preservazione della biodiversità in tutte le operazioni.",
+      "items": ["Impegno Net Zero entro il 2040", "Operazioni con energia 100% rinnovabile", "Zero rifiuti in discarica", "Preservazione della biodiversità locale"]
+    },
+    "social": {
+      "title": "Sviluppo Umano",
+      "description": "Programmi di formazione locali e sicurezza sul lavoro di classe mondiale.",
+      "items": ["Programmi di formazione per comunità locali", "Sicurezza sul lavoro con zero incidenti", "Diversità e inclusione a tutti i livelli", "Progetti sociali nelle aree operative"]
+    },
+    "certifications": {
+      "title": "Certificazioni",
+      "description": "B-Corp, Tassonomia UE e allineamento SDG ONU."
+    },
+    "scopes": {
+      "scope12": "Ambito 1 & 2",
+      "scope3": "Ambito 3"
+    }
+  },
+  "media": {
+    "seo": {
+      "title": "Media & Notizie | ELP Green Technology",
+      "description": "Segui le ultime notizie, articoli, video e comunicati stampa di ELP Green Technology. Innovazione nel riciclaggio pneumatici ed economia circolare."
+    },
+    "title": "Media Center",
+    "subtitle": "Notizie, soluzioni tecnologiche e galleria partnership industriali",
+    "mediaResources": "Media & Risorse",
+    "youtubeChannel": "Canale YouTube",
+    "requestMedia": "Richiedi Media",
+    "machineSolutions": "Soluzioni Macchinari",
+    "topsEquipment": "Attrezzature TOPS Recycling",
+    "topsDesc": "Portafoglio completo di attrezzature per il riciclaggio di pneumatici e gomma, fornite dal nostro partner strategico TOPS Recycling Group",
+    "all": "Tutti",
+    "videoGallery": "Galleria Video",
+    "videoGalleryDesc": "Segui i nostri video tecnici e istituzionali sul canale ufficiale @elpgreen su YouTube",
+    "subscribeChannel": "Iscriviti al canale @elpgreen",
+    "viewAllVideos": "Vedi tutti i video su YouTube",
+    "gallery": "Galleria",
+    "partnershipsGallery": "Partnership e Stabilimenti",
+    "partnershipsDesc": "Documenti delle nostre visite tecniche e partnership strategiche",
+    "photoCredits": "Foto: ELP Green Technology & TOPS Recycling Group - Zhangjiagang, Cina",
+    "articlesInsights": "Approfondimenti e analisi sull'economia circolare",
+    "pressDesc": "Comunicati ufficiali e notizie",
+    "eventsDesc": "La nostra presenza in forum ed eventi globali",
+    "blog": "Blog & Articoli",
+    "press": "Comunicati Stampa",
+    "events": "Eventi",
+    "latestContent": "Ultime Pubblicazioni",
+    "latestContentDesc": "Segui i nostri articoli, analisi e comunicati ufficiali su tecnologia verde, economia circolare e innovazioni nel riciclaggio.",
+    "articlesTitle": "Articoli",
+    "pressContact": "Contatto Stampa",
+    "pressContactDesc": "Per richieste media, interviste e informazioni aziendali.",
+    "pressEmail": "Email",
+    "contactPress": "Contatta Ufficio Stampa",
+    "searchVideos": "Cerca video...",
+    "clearFilters": "Cancella filtri",
+    "watchOnYoutube": "Guarda su YouTube",
+    "noVideosFound": "Nessun video trovato con i filtri selezionati.",
+    "noArticles": "Nessun articolo ancora pubblicato.",
+    "noPressReleases": "Nessun comunicato stampa ancora pubblicato.",
+    "source": "Fonte",
+    "videosOf": "di",
+    "videos": "video",
+    "live": "live",
+    "cache": "cache",
+    "fallback": "fallback",
+    "otrSolutions": "Soluzioni OTR",
+    "otrTitle": "Riciclaggio Pneumatici Giganti OTR",
+    "otrDesc": "Soluzioni specializzate per la lavorazione di pneumatici giganti da miniera, agricoltura e costruzione. Attrezzature ad alta capacità per i pneumatici più grandi del mondo.",
+    "otrSpecs": "Specifiche Tecniche",
+    "otrApplications": "Applicazioni",
+    "otrCapacity": "Capacità",
+    "otrCta": "Interessato alle Soluzioni OTR?",
+    "otrCtaDesc": "Contattaci per conoscere la nostra linea completa di attrezzature per il riciclaggio di pneumatici giganti OTR.",
+    "strategicPartner": "Partner Strategico: TOPS Recycling",
+    "partnerDesc": "Fondata nel 2001 dal Sig. Samuel Xu, TOPS Recycling è leader mondiale nella tecnologia di triturazione e riciclaggio pneumatici, con presenza in oltre 60 paesi.",
+    "visitPartner": "Visita Sito Partner",
+    "tags": {
+      "mining": "Miniere",
+      "recycling": "Riciclaggio",
+      "pyrolysis": "Pirolisi",
+      "partnership": "Partnership",
+      "equipment": "Attrezzature",
+      "sustainability": "Sostenibilità"
+    },
+    "videoDescriptions": {
+      "conveyorBelt": "Sistemi di Nastri Trasportatori per Flusso Minerario Senza Interruzioni",
+      "crushers": "Trituratori ad Alta Capacità – Costruiti per Condizioni Difficili",
+      "compactMining": "Unità Minerarie Compatte per Operazioni su Piccola Scala",
+      "fullMiningPlant": "ELP | Green Technology – Impianto Minerario Completo",
+      "customMachinery": "Soluzioni di Macchinari Minerari Personalizzati",
+      "ecoMining": "Miniera Ecologica – Attrezzature a Basse Emissioni",
+      "heavyDuty": "Attrezzature Minerarie Pesanti in Azione",
+      "mineralSeparation": "Tecnologia Avanzata di Separazione Minerale",
+      "ecoMining2": "Miniera Ecologica – Attrezzature a Basse Emissioni",
+      "miningAutomation": "Automazione Mineraria – Il Futuro dell'Estrazione",
+      "mobileCrushing": "Impianti Mobili di Triturazione e Vagliatura",
+      "smartRecycling": "Innovazione in Azione – Riciclaggio Intelligente per un Futuro Verde",
+      "pyrolysisTech": "Tecnologia di Pirolisi – Trasformare i Rifiuti in Energia",
+      "globalSupplyChain": "Dentro la Nostra Catena di Approvvigionamento Globale – Materiali in Gomma per il Mondo",
+      "completeSolutions": "Soluzioni di Riciclaggio Complete – Dalle Macchine al Mercato",
+      "devulcanized": "Gomma Devulcanizzata – Economia Circolare in Azione",
+      "builtToLast": "Costruito per Durare – Come Produciamo le Nostre Macchine di Riciclaggio",
+      "tireRevolution": "Da Scarto a Risorsa – La Rivoluzione del Riciclaggio Pneumatici",
+      "websiteElp": "Sito Web ELP Green",
+      "partnershipAnnouncement": "Annuncio Emozionante di Nuova Partnership!",
+      "wasteToResources": "Trasformare i rifiuti in risorse preziose!",
+      "otrRecycler": "Riciclatore Pneumatici OTR: Soluzioni Innovative per il Riciclaggio Sostenibile della Gomma",
+      "revolutionizeTire": "Rivoluziona con il Riciclaggio Pneumatici: ELP Green & Tops Recycling",
+      "tireSlicePro": "TireSlicePro™ - Macchina Efficiente di Taglio Pneumatici per il Riciclaggio",
+      "samuelXu": "Samuel Xu Presenta Ericson Piccoli al Gruppo Produttori di Macchinari di Riciclaggio",
+      "chinaBrazil": "Partnership Cina-Brasile per la Sostenibilità",
+      "topsCollaboration": "Collaborazione tra Top Recycling Group ed ELP GREEN TECHNOLOGY",
+      "strategicAlliance": "Un'Alleanza Strategica: Il Viaggio di ELP verso il Successo con i Partner Cinesi"
+    }
+  },
+  "contact": {
+    "title": "Contattaci",
+    "subtitle": "Siamo pronti a discutere come possiamo collaborare",
+    "sendMessage": "Invia un Messaggio",
+    "ourOffices": "I Nostri Uffici",
+    "leadership": "Leadership",
+    "strategicPartner": "Partner Strategico",
+    "generalContact": "Contatto Generale",
+    "mapTitle": "Le Nostre Sedi Globali",
+    "mapSubtitle": "Presenza strategica su 4 continenti per servire clienti in tutto il mondo",
+    "partnership": {
+      "title": "Partnership Industriali",
+      "description": "Interessato a diventare un partner strategico?"
+    },
+    "investor": {
+      "title": "Canale Investitori",
+      "description": "Informazioni per investitori attuali e potenziali."
+    },
+    "compliance": {
+      "title": "Etica e Compliance",
+      "description": "Canale di segnalazione anonimo e questioni etiche."
+    },
+    "form": {
+      "name": "Nome",
+      "email": "Email",
+      "company": "Azienda",
+      "subject": "Oggetto",
+      "message": "Messaggio",
+      "send": "Invia Messaggio",
+      "sending": "Invio in corso...",
+      "success": "Messaggio inviato con successo!",
+      "successDesc": "Vi contatteremo presto.",
+      "error": "Errore nell'invio. Riprova.",
+      "subjects": {
+        "partnership": "Partnership Industriale",
+        "investment": "Investimento",
+        "technology": "Tecnologia",
+        "media": "Stampa",
+        "other": "Altro"
+      }
+    }
+  },
+  "marketplace": {
+    "title": "Marketplace B2B",
+    "subtitle": "Connessione diretta tra offerta di rifiuti e domanda industriale globale",
+    "products": {
+      "rcb": {
+        "title": "Carbon Black Recuperato (rCB)",
+        "description": "Sostituto sostenibile del carbon black vergine per l'industria della gomma e plastica."
+      },
+      "pyrolyticOil": {
+        "title": "Olio Pirolitico",
+        "description": "Combustibile alternativo derivato dalla decomposizione termica dei polimeri."
+      },
+      "greenSteel": {
+        "title": "Acciaio Verde Riciclato",
+        "description": "Filo d'acciaio di alta qualità recuperato dai pneumatici, pronto per la rifusione."
+      }
+    },
+    "form": {
+      "title": "Pre-Registrati Ora",
+      "subtitle": "Sii tra i primi ad accedere al marketplace e ricevi condizioni esclusive di lancio.",
+      "companyName": "Nome Azienda",
+      "contactName": "Nome Contatto",
+      "email": "Email Aziendale",
+      "phone": "Telefono",
+      "country": "Paese",
+      "companyType": "Tipo Azienda",
+      "buyer": "Acquirente",
+      "seller": "Venditore",
+      "both": "Entrambi",
+      "productsInterest": "Prodotti di Interesse",
+      "submit": "Invia Pre-Registrazione",
+      "success": "Pre-registrazione completata!",
+      "successDesc": "Vi contatteremo presto per completare la registrazione."
+    }
+  },
+  "newsletter": {
+    "title": "Newsletter Strategica",
+    "subtitle": "Ricevi approfondimenti su economia circolare e tendenze di mercato",
+    "placeholder": "La tua migliore email",
+    "subscribe": "Iscriviti",
+    "success": "Iscrizione completata!",
+    "successDesc": "Riceverai presto i nostri aggiornamenti.",
+    "error": "Errore durante l'iscrizione.",
+    "errorDesc": "Per favore, riprova."
+  },
+  "footer": {
+    "company": "ELP Green Technology",
+    "description": "Collegando tecnologia verde al capitale sostenibile per un futuro migliore.",
+    "quickLinks": "Link Rapidi",
+    "legal": "Legale",
+    "privacy": "Privacy Policy",
+    "terms": "Termini di Utilizzo",
+    "cookies": "Cookie Policy",
+    "rights": "Tutti i diritti riservati.",
+    "social": "Social Media",
+    "restrictedArea": "Area Riservata",
+    "globalHQ": "Sedi Globali",
+    "email": "Email",
+    "otrIndications": "Segnalazioni OTR",
+    "contactAfterReview": "Contatto dopo revisione interna",
+    "indicateSource": "Segnala una Fonte OTR"
+  },
+  "common": {
+    "learnMore": "Scopri di Più",
+    "getStarted": "Inizia",
+    "viewMore": "Vedi Altro",
+    "scroll": "Scorri",
+    "globalImpact": "Impatto Globale",
+    "globalPresenceBadge": "Presenza Globale",
+    "advancedTech": "Tecnologia Avanzata",
+    "digitalPlatform": "Piattaforma Digitale",
+    "explorePlatform": "Esplora Piattaforma",
+    "greenTechGlobal": "Tecnologia Verde Globale",
+    "zeroEmissions": "Zero emissioni",
+    "closedLoop": "Circuito chiuso",
+    "recovery": "Recupero 95%",
+    "pyrolysis": "Pirolisi",
+    "recycling": "Riciclaggio",
+    "iot": "IoT",
+    "efficiency": "Efficienza",
+    "reduction": "Riduzione",
+    "continents": "Continenti",
+    "viewDetails": "Vedi Dettagli",
+    "loading": "Caricamento...",
+    "error": "Errore",
+    "success": "Successo",
+    "close": "Chiudi",
+    "viewAll": "Vedi Tutto",
+    "back": "Indietro",
+    "next": "Avanti",
+    "previous": "Precedente",
+    "send": "Invia",
+    "cancel": "Annulla"
+  },
+  "machines": {
+    "tireShredder": "Trituratore Pneumatici",
+    "tireShredderDesc": "Capacità fino a 10 ton/ora",
+    "debeader": "Estrattore Tallone",
+    "debeaderDesc": "Rimozione cerchi in acciaio",
+    "otrCutter": "Tagliatrice OTR",
+    "otrCutterDesc": "Per pneumatici giganti da miniera",
+    "granulator": "Granulatore",
+    "granulatorDesc": "Produzione granuli 0,5-4mm",
+    "crackerMill": "Cracker Mill",
+    "crackerMillDesc": "Produzione polvere superfine",
+    "powderLine": "Linea Polvere",
+    "powderLineDesc": "Sistema di polverizzazione completo",
+    "reclaimedLine": "Linea Rigenerazione",
+    "reclaimedLineDesc": "Gomma devulcanizzata",
+    "pyrolysisPlant": "Impianto Pirolisi",
+    "pyrolysisPlantDesc": "Sistemi continui e batch"
+  },
+  "process": {
+    "step1": "Raccolta e Classificazione",
+    "step1Desc": "I rifiuti vengono raccolti e classificati per il processamento.",
+    "step2": "Preparazione",
+    "step2Desc": "Il materiale viene preparato e frammentato per l'ingresso nel reattore.",
+    "step3": "Pirolisi",
+    "step3Desc": "Decomposizione termica in ambiente controllato senza ossigeno.",
+    "step4": "Separazione",
+    "step4Desc": "I prodotti vengono separati: olio, gas, carbon black e metalli.",
+    "step5": "Raffinazione",
+    "step5Desc": "Ogni prodotto viene raffinato per soddisfare le specifiche di mercato.",
+    "step6": "Commercializzazione",
+    "step6Desc": "Le commodity certificate vengono vendute sul mercato globale."
+  },
+  "products": {
+    "rcb": "rCB (Carbon Black Recuperato)",
+    "rcbDesc": "Sostituto sostenibile del carbon black vergine per industria della gomma e plastiche.",
+    "pyrolyticOil": "Olio Pirolitico",
+    "pyrolyticOilDesc": "Combustibile alternativo o materia prima per raffinerie e industria chimica.",
+    "greenSteel": "Acciaio Verde",
+    "greenSteelDesc": "Acciaio recuperato dal processo di riciclaggio pneumatici, pronto per il riutilizzo industriale.",
+    "syngas": "Gas di Sintesi",
+    "syngasDesc": "Energia per alimentare il processo stesso, rendendo l'operazione autosufficiente."
+  },
+  "gallery": {
+    "topsTeam": "Team TOPS Recycling",
+    "topsTeamDesc": "Partnership strategica con il team TOPS Recycling a Zhangjiagang",
+    "partnershipAgreement": "Accordo di Partnership",
+    "partnershipAgreementDesc": "Ericson Piccoli e partner sulla linea di produzione",
+    "technicalVisit": "Visita Tecnica",
+    "technicalVisitDesc": "Incontro d'affari presso gli stabilimenti industriali",
+    "pyrolysisEquipment": "Attrezzature di Pirolisi",
+    "pyrolysisEquipmentDesc": "Tubazioni e reattori in fase di assemblaggio",
+    "productionLine": "Linea di Produzione",
+    "productionLineDesc": "Area di processamento industriale con nastri automatizzati",
+    "qualityInspection": "Ispezione Qualità",
+    "qualityInspectionDesc": "Supervisione delle attrezzature di processamento",
+    "rubberPowder": "Polvere di Gomma",
+    "rubberPowderDesc": "Prodotto finale: polvere di gomma riciclata pronta per la commercializzazione",
+    "storageArea": "Area di Stoccaggio",
+    "storageAreaDesc": "Materiale processato in attesa di spedizione",
+    "reactorFactory": "Fabbrica di Reattori",
+    "reactorFactoryDesc": "Linea di assemblaggio reattori di pirolisi",
+    "facilityVisit": "Visita agli Stabilimenti",
+    "facilityVisitDesc": "Tour tecnico degli impianti di produzione",
+    "chinaBrazil": "Partnership Cina-Brasile",
+    "chinaBrazilDesc": "Rafforzamento delle relazioni commerciali internazionali"
+  },
+  "saasModules": {
+    "traceability": "Tracciabilità Blockchain",
+    "traceabilityDesc": "Passaporto digitale del rifiuto con tracciabilità immutabile in tutta la catena del valore.",
+    "autoCertification": "Certificazione automatica",
+    "realTimeAudit": "Audit in tempo reale",
+    "immutability": "Immutabilità garantita",
+    "fullHistory": "Storico completo",
+    "analytics": "Dashboard ESG Analytics",
+    "analyticsDesc": "Metriche e report di sostenibilità per compliance e processi decisionali.",
+    "sustainabilityKpis": "KPI di sostenibilità",
+    "autoReports": "Report automatici",
+    "benchmarking": "Benchmarking di settore",
+    "smartAlerts": "Avvisi intelligenti",
+    "marketplaceModule": "Marketplace B2B",
+    "marketplaceModuleDesc": "Piattaforma di connessione tra generatori di rifiuti e processatori industriali.",
+    "supplyDemand": "Connessione domanda-offerta",
+    "dynamicPricing": "Prezzi dinamici",
+    "smartContracts": "Smart contract",
+    "integratedLogistics": "Logistica integrata"
+  },
+  "valueFlow": {
+    "collection": "Raccolta",
+    "collectionDesc": "Pneumatici e rifiuti raccolti",
+    "registration": "Registrazione",
+    "registrationDesc": "Inserimento su blockchain",
+    "processing": "Processamento",
+    "processingDesc": "Trasformazione industriale",
+    "certification": "Certificazione",
+    "certificationDesc": "Certificato ESG emesso",
+    "commercialization": "Commercializzazione",
+    "commercializationDesc": "Vendita su marketplace",
+    "impact": "Impatto",
+    "impactDesc": "Crediti di carbonio"
+  },
+  "techArch": {
+    "dataCollection": "Raccolta Dati",
+    "iotSensors": "Sensori IoT",
+    "monitoring247": "Monitoraggio 24/7",
+    "externalApis": "API Esterne",
+    "erpIntegrations": "Integrazioni ERP",
+    "mobileApps": "App Mobile",
+    "manualInput": "Input manuale",
+    "processing": "Processamento",
+    "aiMlEngine": "Motore AI/ML",
+    "predictionsOptimization": "Previsioni e ottimizzazione",
+    "blockchain": "Blockchain",
+    "validationRegistry": "Validazione e registrazione",
+    "realtimeAnalytics": "Analytics Real-time",
+    "streamProcessing": "Elaborazione streaming",
+    "applications": "Applicazioni",
+    "webDashboard": "Dashboard Web",
+    "visualizationManagement": "Visualizzazione e gestione",
+    "marketplace": "Marketplace",
+    "b2bNegotiation": "Negoziazione B2B",
+    "reportsApi": "Reports API",
+    "dataExport": "Esportazione dati"
+  },
+  "security": {
+    "encryption": "Crittografia AES-256",
+    "encryptionDesc": "Dati protetti end-to-end",
+    "soc2": "SOC 2 Type II",
+    "soc2Desc": "Conformità di sicurezza",
+    "gdpr": "GDPR & LGPD",
+    "gdprDesc": "Protezione dei dati personali",
+    "sla": "SLA 99,9%",
+    "slaDesc": "Disponibilità garantita"
+  },
+  "esgImpact": {
+    "co2Avoided": "CO₂ evitata annualmente",
+    "wasteProcessed": "Rifiuti processati",
+    "jobsGenerated": "Posti di lavoro generati",
+    "cleanEnergy": "Energia pulita nelle operazioni"
+  },
+  "sdgs": {
+    "sdg7": "Energia Pulita e Accessibile",
+    "sdg7Desc": "Garantire l'accesso a un'energia economica, affidabile, sostenibile e moderna per tutti",
+    "sdg9": "Industria, Innovazione e Infrastrutture",
+    "sdg9Desc": "Costruire infrastrutture resilienti, promuovere un'industrializzazione inclusiva e sostenibile",
+    "sdg11": "Città e Comunità Sostenibili",
+    "sdg11Desc": "Rendere le città e gli insediamenti umani inclusivi, sicuri, resilienti e sostenibili",
+    "sdg12": "Consumo e Produzione Responsabili",
+    "sdg12Desc": "Garantire modelli sostenibili di consumo e produzione",
+    "sdg13": "Lotta contro il Cambiamento Climatico",
+    "sdg13Desc": "Adottare misure urgenti per combattere il cambiamento climatico e i suoi impatti"
+  },
+  "esgCerts": {
+    "bcorp": "Certificazione azienda a impatto positivo",
+    "euTaxonomy": "Tassonomia UE",
+    "euTaxonomyDesc": "Allineamento con la regolamentazione europea sulla sostenibilità",
+    "iso14001": "Sistema di gestione ambientale",
+    "iso45001": "Salute e sicurezza sul lavoro"
+  },
+  "esgSocial": {
+    "directJobs": "Posti di lavoro diretti",
+    "indirectJobs": "Posti di lavoro indiretti",
+    "trainings": "Formazioni/anno",
+    "communities": "Comunità impattate"
+  },
+  "plants": {
+    "processVideo": "Video del Processo",
+    "backToSolutions": "Torna alle Soluzioni",
+    "requestQuote": "Richiedi Preventivo",
+    "talkEngineer": "Parla con un Ingegnere",
+    "talkSpecialist": "Parla con uno Specialista",
+    "systemEquipment": "Attrezzature del Sistema",
+    "commercializableProducts": "Prodotti Commercializzabili",
+    "generatedCommodities": "Commodities Generate",
+    "technicalData": "Dati Tecnici",
+    "plantSpecs": "Specifiche Impianto",
+    "equipmentList": "Lista Attrezzature",
+    "requestYourQuote": "Richiedi il Tuo Preventivo",
+    "quoteFormDesc": "Compila il modulo e il nostro team di ingegneria ti contatterà con una proposta personalizzata",
+    "capacity": "Capacità",
+    "investment": "Investimento",
+    "profitability": "Redditività",
+    "months": "mesi",
+    "day": "giorno",
+    "perLine": "Per linea",
+    "lines": "linee",
+    "recovery": "Recupero",
+    "weight": "Peso",
+    "power": "Potenza",
+    "applications": "Applicazioni",
+    "ofTire": "del pneumatico",
+    "productsGenerated": "Prodotti Generati",
+    "marketableProducts": "Prodotti Commercializzabili",
+    "quoteFormDescription": "Compila il modulo e il nostro team di ingegneria ti contatterà con una proposta personalizzata",
+    "roi": {
+      "title": "Calcolatore ROI",
+      "subtitle": "Stima il ritorno del tuo investimento",
+      "dailyCapacity": "Capacità Giornaliera",
+      "dailyCapacityTooltip": "Tonnellate processate per giorno operativo",
+      "tonsDay": "ton/giorno",
+      "operatingDays": "Giorni Operativi",
+      "operatingDaysTooltip": "Giorni operativi annui (considerando manutenzione e festivi)",
+      "daysYear": "giorni/anno",
+      "utilizationRate": "Tasso di Utilizzo",
+      "utilizationRateTooltip": "Percentuale della capacità nominale effettivamente utilizzata",
+      "investment": "Investimento",
+      "annualRevenue": "Ricavo Annuale",
+      "annualProfit": "Profitto Annuale",
+      "payback": "Payback",
+      "months": "mesi",
+      "roiLabel": "ROI Annuale",
+      "ebitdaMargin": "Margine EBITDA",
+      "summary": "Riepilogo",
+      "summaryText": "Con {{tonnage}} tonnellate processate all'anno, il ricavo stimato è di {{revenue}} e il profitto netto di {{profit}}.",
+      "disclaimer": "* Valori stimati basati sulle condizioni di mercato attuali. Consulta il nostro team per un'analisi personalizzata.",
+      "getQuote": "Richiedi Preventivo Personalizzato"
+    },
+    "tireRecycling": {
+      "badge": "Sistema di Processamento Completo",
+      "title": "Impianto Riciclaggio Pneumatici",
+      "subtitle": "Sistema di Processamento Completo",
+      "description": "Sistema completamente automatico per il riciclaggio di pneumatici usati, producendo granuli e polvere di gomma di alta qualità, acciaio recuperato e fibre tessili.",
+      "capacity": "Capacità",
+      "payback": "Payback",
+      "investment": "Investimento",
+      "profitability": "Redditività",
+      "equipmentTitle": "Attrezzature del Sistema",
+      "equipmentSubtitle": "Linea completa di macchinari per il processamento di pneumatici di auto, camion e OTR",
+      "productsTitle": "Commodities Generate",
+      "productsSubtitle": "Tre prodotti di alto valore commerciale con domanda crescente nel mercato globale",
+      "specs": {
+        "capacity": "Capacità",
+        "dailyProduction": "Produzione Giornaliera",
+        "operation": "Operazione",
+        "requiredArea": "Area Richiesta",
+        "automation": "Automazione",
+        "automationValue": "Semi-automatico/Automatico",
+        "operators": "Operatori",
+        "operatorsValue": "5-8 per turno",
+        "lifespan": "Durata",
+        "certifications": "Certificazioni"
+      },
+      "products": {
+        "rubberGranules": "Granuli di Gomma",
+        "rubberGranulesApps": ["Asfalto ecologico", "Prati sintetici", "Pavimenti industriali", "Parchi giochi"],
+        "textileFibers": "Fibre Tessili (Nylon)",
+        "textileFibersApps": ["Isolamento termico", "Caschi", "Materiali compositi", "Imbottiture"],
+        "steelFragments": "Frammenti di Acciaio",
+        "steelFragmentsApps": ["Acciaierie", "Fonderie", "Produzione acciaio", "Costruzione"]
+      },
+      "equipment": {
+        "tyreSlitting": "Macchina Taglio Circonferenziale",
+        "tyreSlittingCap": "50-100 pneumatici/h",
+        "stripCutting": "Tagliatrice Strisce",
+        "blockCutting": "Tagliatrice Blocchi",
+        "beadWire": "Estrattore Tallone",
+        "beadWireCap": "40-60 pneumatici/h",
+        "dualShredder": "Trituratore Doppio Albero",
+        "crackerMill": "Cracker Mill"
+      },
+      "gallery": {
+        "industrialShredder": "Trituratore Industriale",
+        "industrialShredderDesc": "Trituratore rosso ad alta capacità",
+        "shreddingLine": "Linea di Triturazione",
+        "shreddingLineDesc": "Vista interna del sistema di processamento",
+        "topsFactory": "Stabilimento TOPS Recycling",
+        "topsFactoryDesc": "Impianti industriali a Zhangjiagang",
+        "tyreSlitting": "Macchina Taglio Circonferenziale",
+        "tyreSlittingDesc": "Divide il pneumatico in due metà",
+        "stripCutter": "Tagliatrice Strisce",
+        "stripCutterDesc": "Trasforma le metà in strisce di gomma",
+        "blockCutter": "Tagliatrice Blocchi",
+        "blockCutterDesc": "Produce blocchi da 75-150mm",
+        "debeader": "Estrattore Tallone",
+        "debeaderDesc": "Estrazione del filo del tallone"
+      }
+    },
+    "pyrolysis": {
+      "badge": "Conversione Termochimica Avanzata",
+      "title": "Impianto di Pirolisi Continua",
+      "subtitle": "Conversione Termochimica Avanzata",
+      "description": "Tecnologia di pirolisi a circuito chiuso per convertire pneumatici e plastiche in olio combustibile, carbon black recuperato (rCB) e gas di sintesi autosufficiente.",
+      "perLine": "Per linea",
+      "lines7": "7 linee",
+      "recovery": "Recupero",
+      "videoTitle": "Processo di Pirolisi in Operazione",
+      "videoDesc": "Guarda il funzionamento del nostro impianto di pirolisi continua, convertendo rifiuti in commodities di alto valore",
+      "productsTitle": "Prodotti della Pirolisi",
+      "productsSubtitle": "Conversione completa di rifiuti in commodities di alto valore",
+      "systemComponents": "Componenti del Sistema",
+      "investment7Lines": "Investimento - Progetto 7 Linee",
+      "equipmentCost": "Costo Attrezzature",
+      "revenueProjection": "Proiezione Ricavi",
+      "dailyCapacity": "Capacità giornaliera totale",
+      "monthlyRevenue": "Fatturato mensile stimato",
+      "yearlyRevenue": "Fatturato annuale",
+      "advantages": {
+        "zeroEmissions": "Zero Emissioni",
+        "zeroEmissionsDesc": "Circuito chiuso con desolforazione",
+        "selfSufficient": "Autosufficiente",
+        "selfSufficientDesc": "Il gas di sintesi alimenta il processo",
+        "operation247": "Operazione 24/7",
+        "operation247Desc": "Sistema continuo senza fermi",
+        "plcControl": "Controllo PLC",
+        "plcControlDesc": "Automazione intelligente opzionale"
+      },
+      "specs": {
+        "model": "Modello",
+        "capacityLine": "Capacità/Linea",
+        "feedstock": "Materia prima",
+        "feedstockValue": "Pneumatici, Plastiche",
+        "processing": "Processamento",
+        "reactorSize": "Dimensione Reattore",
+        "heatingMethod": "Metodo Riscaldamento",
+        "heatingMethodValue": "Gas/Olio/Elettrico",
+        "powerConsumption": "Consumo Elettrico",
+        "areaPerLine": "Area per Linea",
+        "operators": "Operatori",
+        "operatorsValue": "2-3 per turno",
+        "lifespan": "Durata",
+        "sealing": "Sigillatura",
+        "sealingValue": "Sistema a tenuta stagna",
+        "certifications": "Certificazioni"
+      },
+      "products": {
+        "pyrolysisOil": "Olio di Pirolisi",
+        "pyrolysisOilApps": ["Combustibile industriale", "Raffinerie", "Navi e imbarcazioni", "Generatori"],
+        "carbonBlack": "Carbon Black (rCB)",
+        "carbonBlackApps": ["Industria della gomma", "Vernici e pigmenti", "Plastiche", "Asfalto"],
+        "synGas": "Gas di Sintesi",
+        "synGasApps": ["Alimentazione reattore", "Riscaldamento", "Generazione energia", "Autosufficienza"],
+        "recoveredSteel": "Acciaio Recuperato",
+        "recoveredSteelApps": ["Acciaierie", "Fonderie", "Costruzione", "Riciclaggio"],
+        "selfConsumption": "Autoconsumo"
+      },
+      "components": {
+        "pyrolysisReactor": "Reattore di Pirolisi",
+        "condensationTank": "Serbatoio Condensazione",
+        "verticalCondenser": "Condensatore Verticale",
+        "screwFeeder": "Alimentatore a Vite",
+        "desulfurizationTower": "Torre Desolforazione",
+        "odorRemoval": "Sistema Rimozione Odori",
+        "perLine": "per linea"
+      },
+      "gallery": {
+        "reactor": "Reattore di Pirolisi DY-50",
+        "reactorDesc": "Camera di riscaldamento con mattoni refrattari",
+        "completeLine": "Linea Completa di Pirolisi",
+        "completeLineDesc": "Sistema continuo di conversione termochimica",
+        "motor": "Motore e Trasmissione",
+        "motorDesc": "Sistema di azionamento del reattore rotativo",
+        "condensation": "Sistema di Condensazione",
+        "condensationDesc": "Recupero di olio e gas"
+      }
+    },
+    "otr": {
+      "badge": "Soluzioni Pneumatici Giganti",
+      "title": "Riciclaggio Pneumatici OTR",
+      "description": "Sistema specializzato per il riciclaggio di pneumatici giganti da miniera, porto, agricoltura e costruzione. Processa pneumatici fino a 4,5 tonnellate con diametri fino a 4500mm.",
+      "maxSize": "Dimensione Massima",
+      "applicationsTitle": "Applicazioni",
+      "applicationsDesc": "La nostra linea OTR processa pneumatici giganti di diverse industrie",
+      "galleryTitle": "Galleria Attrezzature OTR",
+      "galleryDesc": "Scopri le attrezzature specializzate per il riciclaggio di pneumatici giganti",
+      "equipmentTitle": "Specifiche Tecniche",
+      "equipmentDesc": "Dettagli tecnici di ogni attrezzatura della linea OTR",
+      "specsTitle": "Specifiche Generali",
+      "productsTitle": "Prodotti Recuperati",
+      "productsDesc": "Materiali di alto valore estratti dai pneumatici OTR",
+      "partnerTitle": "Partner Strategico",
+      "partnerDesc": "Attrezzature fornite dal nostro partner esclusivo in Cina",
+      "becomePartner": "Diventa Nostro Partner",
+      "smartLine": "Linea Smart",
+      "viewEquipment": "Vedi Attrezzature",
+      "applications": {
+        "mining": "Miniere",
+        "miningDesc": "Pneumatici di camion fuoristrada e pale caricatrici",
+        "ports": "Porti",
+        "portsDesc": "Pneumatici di carrelli elevatori e reach stacker",
+        "agriculture": "Agricoltura",
+        "agricultureDesc": "Pneumatici di trattori e mietitrebbie giganti",
+        "construction": "Costruzione",
+        "constructionDesc": "Pneumatici di livellatrici e scraper"
+      },
+      "specs": {
+        "lineCapacity": "Capacità Linea",
+        "maxDiameter": "Diametro Massimo",
+        "maxTireWeight": "Peso Max Pneumatico",
+        "cutTime": "Tempo di Taglio",
+        "totalPower": "Potenza Totale",
+        "bladeLife": "Durata Lame",
+        "operators": "Operatori",
+        "certifications": "Certificazioni"
+      },
+      "machines": {
+        "sidewallCutter": "Tagliatrice Laterale OTR",
+        "sidewallCutterDesc": "Taglia laterali di pneumatici fino a 59/80R63 - Opera in fossa sotterranea",
+        "stripCutter": "Tagliatrice Corona OTR",
+        "stripCutterDesc": "Processa la corona del pneumatico (parte più spessa >300mm)",
+        "blockCutter": "Tagliatrice Blocchi OTR",
+        "blockCutterDesc": "Converte strisce e laterali in chip pronti per granulazione",
+        "tireCutter": "Tagliatrice Pneumatici OTR in Operazione",
+        "tireCutterDesc": "Sistema idraulico che taglia pneumatico gigante da miniera",
+        "completeLine": "Linea Completa OTR",
+        "completeLineDesc": "Sistema integrato di processamento pneumatici OTR",
+        "partnership": "Partnership Strategica",
+        "partnershipDesc": "Visita tecnica agli stabilimenti TOPS Recycling in Cina",
+        "shredder": "Trituratore Industriale",
+        "shredderDesc": "Trituratore ad alta capacità per processamento OTR",
+        "beadRings": "Anelli Tallone Estratti",
+        "beadRingsDesc": "Acciaio di alta qualità recuperato - pronto per fonderia"
+      },
+      "products": {
+        "rubberBlocks": "Blocchi di Gomma",
+        "rubberBlocksApps": "TDF (Combustibile), Pirolisi, Granulazione, Co-processamento",
+        "steel": "Acciaio Alta Qualità",
+        "steelApps": "Acciaierie, Fonderie, Raffinazione, Riciclaggio",
+        "textileFibers": "Fibre Tessili",
+        "textileFibersApps": "Isolamento, Assorbenti, Geotessili, Compositi"
+      }
+    },
+    "msw": {
+      "badge": "Rifiuti Solidi Urbani",
+      "title": "Impianto Trattamento RSU",
+      "subtitle": "Rifiuti Solidi Urbani",
+      "description": "Sistema integrato per separazione e valorizzazione dei rifiuti municipali, producendo RDF, materiali riciclabili, biogas e compost organico. Soluzione completa per comuni.",
+      "requestQuote": "Richiedi Proposta",
+      "talkSpecialist": "Parla con uno Specialista",
+      "capacity": "Capacità",
+      "payback": "Payback",
+      "tonDay": "ton/giorno",
+      "landfillReduction": "Riduzione discarica",
+      "profitability": "Redditività",
+      "productsTitle": "Prodotti Recuperati",
+      "productsDesc": "Valorizzazione completa dei rifiuti urbani in molteplici flussi commercializzabili",
+      "phasesTitle": "Fasi di Implementazione",
+      "phasesDesc": "Metodologia strutturata per un'implementazione sicura e scalabile",
+      "techSpecs": "Specifiche Tecniche",
+      "quoteTitle": "Richiedi il Tuo Preventivo",
+      "quoteDesc": "Compila il modulo e il nostro team di ingegneria ti contatterà con una proposta personalizzata",
+      "benefits": {
+        "reducesLandfills": "Riduce le Discariche",
+        "reducesLandfillsDesc": "Diminuisce 80%+ del volume inviato in discarica",
+        "circularEconomy": "Economia Circolare",
+        "circularEconomyDesc": "Trasforma i rifiuti in risorse",
+        "envImpact": "Impatto Ambientale",
+        "envImpactDesc": "Allineato con SDG e politiche ambientali",
+        "municipalRevenue": "Entrate Municipali",
+        "municipalRevenueDesc": "Genera entrate dalla vendita di commodity"
+      },
+      "specs": {
+        "capacity": "Capacità",
+        "landfillReduction": "Riduzione Discarica",
+        "process": "Processo",
+        "metalSeparation": "Separazione Metalli",
+        "technology": "Tecnologia",
+        "organicTreatment": "Trattamento Organico",
+        "requiredArea": "Area Richiesta",
+        "lifespan": "Durata"
+      },
+      "products": {
+        "rdf": "RDF (Combustibile)",
+        "rdfApps": "Cementifici, Centrali elettriche, Caldaie industriali, Co-processamento",
+        "ferrousMetals": "Metalli Ferrosi",
+        "ferrousMetalsApps": "Acciaierie, Fonderie, Riciclaggio, Esportazione",
+        "plastics": "Plastiche Riciclabili",
+        "plasticsApps": "Industria del riciclaggio, Pellet, Nuovi prodotti, Esportazione",
+        "recyclablePlastics": "Plastiche Riciclabili",
+        "recyclablePlasticsApps": "Industria del riciclaggio, Pellet, Nuovi prodotti, Esportazione",
+        "biogas": "Biogas",
+        "biogasApps": "Generazione elettrica, Riscaldamento, Veicoli, Rete gas",
+        "compost": "Compost Organico",
+        "compostApps": "Agricoltura, Giardinaggio, Recupero suoli, Fertilizzanti",
+        "organicCompost": "Compost Organico",
+        "organicCompostApps": "Agricoltura, Giardinaggio, Recupero suoli, Fertilizzanti"
+      },
+      "phases": {
+        "research": "Ricerca e Sviluppo",
+        "researchDesc": "Studi e test di tecnologie verdi per la gestione dei rifiuti",
+        "researchDuration": "6-12 mesi",
+        "pilot": "Implementazione Pilota",
+        "pilotDesc": "Dispiegamento in comuni selezionati per validare le soluzioni",
+        "pilotDuration": "12-18 mesi",
+        "expansion": "Espansione Regionale",
+        "expansionDesc": "Replica in altri comuni e regioni",
+        "expansionDuration": "24-36 mesi",
+        "monitoring": "Monitoraggio Continuo",
+        "monitoringDesc": "Valutazione delle prestazioni e ottimizzazione permanente",
+        "monitoringDuration": "Continuo"
+      },
+      "gallery": {
+        "autoSorting": "Linea di Selezione Automatica",
+        "autoSortingDesc": "Separazione meccanica ad alta capacità",
+        "treatmentStation": "Stazione Trattamento RSU",
+        "treatmentStationDesc": "Separazione meccanica automatizzata",
+        "recyclingLine": "Linea di Riciclaggio",
+        "recyclingLineDesc": "Recupero materiali riciclabili",
+        "projectPhases": "Fasi del Progetto",
+        "projectPhasesDesc": "Implementazione graduale"
+      }
+    },
+    "quoteForm": {
+      "title": "Modulo Preventivo",
+      "plantType": "Tipo Impianto",
+      "name": "Nome Completo",
+      "email": "Email",
+      "phone": "Telefono",
+      "company": "Azienda",
+      "country": "Paese",
+      "capacity": "Capacità Desiderata",
+      "message": "Messaggio Aggiuntivo",
+      "submit": "Invia Richiesta",
+      "sending": "Invio in corso...",
+      "success": "Richiesta inviata con successo!",
+      "successDesc": "Il nostro team ti contatterà presto.",
+      "error": "Errore nell'invio. Riprova."
+    }
+  },
+  "certificates": {
+    "title": "Certificati e Registrazioni",
+    "subtitle": "Registrazioni ufficiali di marchio INPI e certificazioni che garantiscono l'autenticità e qualità dei servizi e prodotti ELP Green Technology.",
+    "badge": "Proprietà Intellettuale",
+    "registeredMarks": "Registrazioni Marchio",
+    "clickToView": "Clicca su qualsiasi certificato per visualizzare i dettagli e accedere al documento ufficiale",
+    "holder": "Titolare",
+    "validity": "Validità",
+    "registrations": "Registrazioni",
+    "classes": "Classi INPI",
+    "view": "Vedi Certificato",
+    "processNumber": "Numero Processo",
+    "pdfNotSupported": "Il tuo browser non supporta la visualizzazione diretta di PDF.",
+    "openPdf": "Apri PDF in Nuova Scheda",
+    "inpiNote": "Documento ufficiale INPI - Istituto Nazionale della Proprietà Industriale del Brasile"
+  },
+  "globe": {
+    "contactInfo": "Informazioni di Contatto",
+    "team": "Team",
+    "keyOperations": "Operazioni Chiave",
+    "clickMarker": "Clicca su un marcatore per vedere i dettagli",
+    "scrollZoom": "Scorri per zoomare",
+    "dragRotate": "Trascina per ruotare",
+    "zoomIn": "Zoom in",
+    "zoomOut": "Zoom out",
+    "resetView": "Reimposta vista",
+    "dayMode": "Modalità Giorno",
+    "nightMode": "Modalità Notte",
+    "flyingTo": "Volo verso",
+    "backToCenter": "Torna al centro",
+    "openOSM": "Apri in OpenStreetMap",
+    "copyAddress": "Copia",
+    "copied": "Copiato!"
+  },
+  "quote": {
+    "badge": "LOI Automatica",
+    "title": "Richiedi un Preventivo",
+    "subtitle": "Compila il modulo sottostante e ricevi automaticamente la tua Lettera di Intenti (LOI) professionale.",
+    "companyInfo": "Informazioni Aziendali",
+    "productsTitle": "Prodotti/Attrezzature di Interesse",
+    "form": {
+      "companyName": "Nome Azienda",
+      "companyNamePlaceholder": "Il nome della tua azienda",
+      "contactName": "Nome Contatto",
+      "contactNamePlaceholder": "Il tuo nome completo",
+      "email": "Email Aziendale",
+      "emailPlaceholder": "tu@azienda.com",
+      "phone": "Telefono",
+      "country": "Paese",
+      "countryPlaceholder": "Seleziona il paese",
+      "companyType": "Tipo di Azienda",
+      "companyTypePlaceholder": "Seleziona tipo",
+      "buyer": "Acquirente",
+      "seller": "Venditore/Fornitore",
+      "both": "Acquirente e Venditore",
+      "investor": "Investitore",
+      "partner": "Partner Strategico",
+      "volume": "Volume/Quantità Stimata",
+      "volumePlaceholder": "Es.: 100 ton/mese o 2 unità",
+      "message": "Messaggio/Specifiche",
+      "messagePlaceholder": "Descrivi le tue esigenze, specifiche tecniche o domande...",
+      "submit": "Invia e Genera LOI",
+      "submitting": "Generazione in corso...",
+      "success": "LOI generata con successo!",
+      "successDesc": "La tua Lettera di Intenti è stata creata. Controlla la tua email o accedi tramite il link sottostante.",
+      "error": "Errore durante la generazione",
+      "errorDesc": "Riprova o contattaci direttamente.",
+      "viewLoi": "Visualizza LOI",
+      "downloadPdf": "Scarica PDF",
+      "terms": "Inviando, accetti i nostri",
+      "and": "e la",
+      "selectProductError": "Seleziona almeno un prodotto",
+      "selectProductErrorDesc": "Seleziona i prodotti o le attrezzature di tuo interesse."
+    },
+    "products": {
+      "recyclingPlant": "Impianto Riciclaggio Pneumatici",
+      "pyrolysisPlant": "Impianto di Pirolisi",
+      "mswPlant": "Impianto Trattamento RSU",
+      "otrLine": "Linea Riciclaggio OTR",
+      "rcb": "Carbon Black Recuperato (rCB)",
+      "pyrolyticOil": "Olio Pirolitico",
+      "greenSteel": "Acciaio Verde",
+      "rubberPowder": "Polvere di Gomma",
+      "other": "Altro (specificare nel messaggio)"
+    }
+  },
+  "legal": {
+    "backToHome": "Torna alla home",
+    "lastUpdate": "Ultimo aggiornamento: Gennaio 2025",
+    "privacy": {
+      "title": "Informativa sulla Privacy",
+      "subtitle": "Come proteggiamo i tuoi dati personali",
+      "intro": {
+        "title": "1. Introduzione",
+        "text": "ELP Green Technology si impegna a proteggere la privacy dei suoi utenti. Questa Informativa sulla Privacy descrive come raccogliamo, utilizziamo, archiviamo e proteggiamo le tue informazioni personali in conformità con il Regolamento Generale sulla Protezione dei Dati (GDPR) e la Legge Generale sulla Protezione dei Dati (LGPD)."
+      },
+      "dataCollected": {
+        "title": "2. Dati Raccolti",
+        "text": "Raccogliamo i seguenti tipi di dati:",
+        "items": {
+          "identification": "Dati identificativi: nome, email, telefono, azienda",
+          "navigation": "Dati di navigazione: cookie, indirizzo IP, dati di utilizzo",
+          "communication": "Dati di comunicazione: messaggi inviati tramite moduli"
+        }
+      },
+      "purpose": {
+        "title": "3. Finalità del Trattamento",
+        "text": "Utilizziamo i tuoi dati per:",
+        "items": {
+          "respond": "Rispondere alle richieste e fornire informazioni sui nostri servizi",
+          "newsletter": "Inviare newsletter e comunicazioni rilevanti (con consenso)",
+          "improve": "Migliorare i nostri prodotti e servizi",
+          "legal": "Rispettare gli obblighi legali e normativi"
+        }
+      },
+      "rights": {
+        "title": "4. I Tuoi Diritti",
+        "text": "Hai il diritto di accedere, rettificare, cancellare o portare i tuoi dati personali. Per esercitare questi diritti, contattaci via email"
+      },
+      "contact": {
+        "title": "5. Contatto",
+        "text": "Per domande su questa informativa o sul trattamento dei tuoi dati, contatta:",
+        "email": "Email",
+        "address": "Indirizzo"
+      }
+    },
+    "terms": {
+      "title": "Termini di Utilizzo",
+      "subtitle": "Condizioni generali per l'utilizzo del sito",
+      "acceptance": {
+        "title": "1. Accettazione dei Termini",
+        "text": "Accedendo e utilizzando questo sito, accetti e ti impegni ad essere vincolato dai termini e condizioni di utilizzo qui stabiliti. Se non sei d'accordo con qualsiasi parte di questi termini, non dovresti utilizzare il nostro sito."
+      },
+      "siteUsage": {
+        "title": "2. Utilizzo del Sito",
+        "text": "Il contenuto di questo sito è fornito solo a scopo informativo generale. ELP Green Technology si riserva il diritto di modificare, sospendere o interrompere qualsiasi aspetto del sito in qualsiasi momento."
+      },
+      "intellectualProperty": {
+        "title": "3. Proprietà Intellettuale",
+        "text1": "Tutto il contenuto di questo sito, inclusi testi, grafici, loghi, icone, immagini, clip audio e software, è di proprietà di ELP Green Technology o dei suoi fornitori di contenuti ed è protetto dalle leggi nazionali e internazionali sul diritto d'autore.",
+        "text2": "Il marchio ELP è registrato presso l'INPI (Istituto Nazionale della Proprietà Industriale) nelle classi 1, 7, 35, 40 e 42, valido fino al 07/11/2033."
+      },
+      "liability": {
+        "title": "4. Limitazione di Responsabilità",
+        "text": "ELP Green Technology non sarà responsabile per danni diretti, indiretti, incidentali, speciali o consequenziali derivanti dall'uso o dall'impossibilità di utilizzare questo sito o i suoi servizi."
+      },
+      "externalLinks": {
+        "title": "5. Link Esterni",
+        "text": "Questo sito può contenere link a siti di terze parti. Questi link sono forniti solo per comodità e non implicano approvazione o responsabilità per il contenuto di tali siti."
+      },
+      "applicableLaw": {
+        "title": "6. Legge Applicabile",
+        "text": "Questi termini saranno regolati e interpretati in conformità con le leggi del Brasile, senza conflitto con disposizioni legali."
+      },
+      "contact": {
+        "title": "7. Contatto",
+        "text": "Per domande su questi termini, contatta:",
+        "email": "Email",
+        "website": "Sito Web"
+      }
+    },
+    "cookies": {
+      "title": "Cookie Policy",
+      "subtitle": "Come utilizziamo i cookie sul nostro sito",
+      "what": {
+        "title": "Cosa sono i Cookie?",
+        "text": "I cookie sono piccoli file di testo che vengono memorizzati sul tuo dispositivo quando visiti un sito web. Sono ampiamente utilizzati per far funzionare i siti web in modo più efficiente e fornire informazioni ai proprietari del sito."
+      },
+      "types": {
+        "title": "Tipi di Cookie che Utilizziamo",
+        "essential": {
+          "title": "Cookie Essenziali",
+          "text": "Necessari per il funzionamento di base del sito. Senza di essi, il sito non funzionerebbe correttamente."
+        },
+        "performance": {
+          "title": "Cookie di Prestazione",
+          "text": "Raccolgono informazioni su come i visitatori utilizzano il sito, permettendoci di migliorare l'esperienza utente."
+        },
+        "functionality": {
+          "title": "Cookie di Funzionalità",
+          "text": "Permettono al sito di ricordare le scelte che fai (come la lingua preferita) e fornire funzionalità avanzate."
+        }
+      },
+      "manage": {
+        "title": "Come Gestire i Cookie",
+        "text": "Puoi controllare e/o eliminare i cookie come desideri. Puoi eliminare tutti i cookie già presenti sul tuo computer e impostare la maggior parte dei browser per impedire che vengano inseriti. Tuttavia, se lo fai, potresti dover regolare manualmente alcune preferenze ogni volta che visiti un sito."
+      },
+      "thirdParty": {
+        "title": "Cookie di Terze Parti",
+        "text": "In alcuni casi, utilizziamo cookie di terze parti affidabili. La sezione seguente dettaglia quali cookie di terze parti potresti trovare su questo sito:",
+        "googleAnalytics": "Google Analytics - per l'analisi dell'utilizzo del sito",
+        "youtube": "YouTube - per i video incorporati"
+      },
+      "moreInfo": {
+        "title": "Maggiori Informazioni",
+        "text": "Per maggiori informazioni su come utilizziamo i cookie e i tuoi dati personali, consulta la nostra",
+        "privacyPolicy": "Informativa sulla Privacy",
+        "email": "Email"
+      }
+    }
+  },
+  "index": {
+    "industrialPlants": "Impianti Industriali",
+    "plantsTitle": "Impianti Modulari Chiavi in Mano",
+    "plantsSubtitle": "Soluzioni complete di riciclaggio e valorizzazione rifiuti, dall'ingegneria all'operazione",
+    "plants": {
+      "tireRecycling": { "title": "Riciclaggio Pneumatici", "description": "Impianti completi per triturazione e processamento di pneumatici in polvere e granuli di gomma." },
+      "pyrolysis": { "title": "Pirolisi Continua", "description": "Conversione termica di pneumatici e plastiche in olio, carbon black e gas di sintesi." },
+      "msw": { "title": "Trattamento RSU", "description": "Sistema integrato di separazione e valorizzazione di rifiuti solidi urbani." },
+      "otr": { "title": "Riciclaggio OTR", "description": "Soluzioni specializzate per il riciclaggio di pneumatici giganti da miniera e costruzione." }
+    },
+  "plants": {
+    "otr": {
+      "machines": {
+        "sidewallCutter": "OTR Side Wall Cutter",
+        "sidewallCutterDesc": "Taglia i fianchi di pneumatici fino a 59/80R63 - Opera in fossa sotterranea",
+        "stripCutter": "OTR Crown Strip Cutter",
+        "stripCutterDesc": "Processa la corona del pneumatico (parte più spessa >300mm)",
+        "blockCutter": "OTR Block Cutter",
+        "blockCutterDesc": "Converte strisce e fianchi in chips pronti per granulazione",
+        "tireCutter": "OTR Tire Cutter in Funzione",
+        "tireCutterDesc": "Sistema idraulico che taglia pneumatici giganti da miniera",
+        "completeLine": "Linea Completa OTR",
+        "completeLineDesc": "Sistema integrato di lavorazione pneumatici OTR",
+        "partnership": "Partnership Strategica",
+        "partnershipDesc": "Visita tecnica agli stabilimenti TOPS Recycling in Cina",
+        "shredder": "Trituratore Industriale",
+        "shredderDesc": "Trituratore ad alta capacità per lavorazione OTR",
+        "beadRings": "Anelli di Tallone Estratti",
+        "beadRingsDesc": "Acciaio di alta qualità recuperato - pronto per fonderia"
+      },
+      "applications": {
+        "mining": "Miniere",
+        "miningDesc": "Pneumatici per camion fuoristrada e pale caricatrici",
+        "ports": "Porti",
+        "portsDesc": "Pneumatici per carrelli elevatori e reach stacker",
+        "agriculture": "Agricoltura",
+        "agricultureDesc": "Pneumatici per trattori e mietitrebbie giganti",
+        "construction": "Costruzione",
+        "constructionDesc": "Pneumatici per motorgrader e scraper"
+      },
+      "products": {
+        "rubberBlocks": "Blocchi di Gomma",
+        "rubberBlocksApps": "TDF (Combustibile), Pirolisi, Granulazione, Co-processing",
+        "steel": "Acciaio di Alta Qualità",
+        "steelApps": "Acciaierie, Fonderie, Raffinazione, Riciclaggio",
+        "textileFibers": "Fibre Tessili",
+        "textileFibersApps": "Isolamento, Assorbenti, Geotessili, Compositi"
+      },
+      "specs": {
+        "lineCapacity": "Capacità Linea",
+        "maxDiameter": "Diametro Massimo",
+        "maxTireWeight": "Peso Massimo Pneumatico",
+        "cutTime": "Tempo di Taglio",
+        "totalPower": "Potenza Totale",
+        "bladeLife": "Vita delle Lame",
+        "operators": "Operatori",
+        "certifications": "Certificazioni"
+      },
+      "equipmentSpecs": {
+        "sidewallCutter": {
+          "capacity": "2-4 pneumatici/ora",
+          "bladeLife": "15-20 pneumatici",
+          "features": ["Opera in fossa sotterranea", "Taglia entrambi i fianchi simultaneamente", "Caricamento con gru/carrello elevatore", "Tempo di taglio: 3-5 minuti"]
+        },
+        "stripCutter": {
+          "capacity": "2-3 corone/ora",
+          "bladeLife": "500-800 pneumatici",
+          "features": ["Processa corona >300mm di spessore", "I trituratori normali non possono", "Taglio preciso in strisce", "Alta resistenza e durabilità"]
+        },
+        "blockCutter": {
+          "capacity": "8-10 ton/ora",
+          "bladeLife": "1000-1500 tonnellate",
+          "features": ["Processa strisce e fianchi", "Output: chips per rasper/cracker", "Vita utile lame: 20-40 pneumatici", "Operazione continua 24/7"]
+        },
+        "completeLine": {
+          "capacity": "8-10 ton/ora",
+          "process": "3 fasi integrate",
+          "features": ["Sidewall + Strip + Block Cutter", "Installazione supervisionata inclusa", "Formazione operatori", "Supporto tecnico permanente"]
+        }
+      }
+    }
+  },
+    "comparison": {
+      "title": "Confronta le Nostre Soluzioni",
+      "subtitle": "Trova l'impianto ideale per le tue esigenze di riciclaggio",
+      "cardsView": "Card",
+      "tableView": "Tabella",
+      "capacity": "Capacità",
+      "investment": "Investimento",
+      "area": "Area Richiesta",
+      "products": "Prodotti",
+      "highlights": "Punti Salienti",
+      "viewDetails": "Vedi Dettagli",
+      "showMore": "Più dettagli",
+      "showLess": "Meno dettagli",
+      "metric": "Metrica",
+      "actions": "Azioni",
+      "details": "Dettagli"
+    },
+    "certifications": "Certificazioni",
+    "certificationsTitle": "Marchi Registrati INPI",
+    "certificationsSubtitle": "Proprietà intellettuale protetta in 6 classi diverse in Brasile",
+    "class": "Classe",
+    "viewAllCertificates": "Vedi Tutti i Certificati",
+    "esgTitle": "Impegno ESG Reale",
+    "esgDescription": "I nostri progetti seguono i più rigorosi standard ambientali, sociali e di governance, con audit Big Four e allineamento agli SDG ONU.",
+    "netZero2040": "Net Zero entro il 2040",
+    "zeroWaste": "Zero Rifiuti in Discarica",
+    "bCorpAligned": "Allineato B-Corp",
+    "euTaxonomy": "Tassonomia UE",
+    "impactTitle": "Impatto Positivo",
+    "co2Reduction": "Riduzione CO₂",
+    "renewableEnergy": "Energia Rinnovabile",
+    "sdgsAligned": "Allineato SDG",
+    "accidents": "Incidenti",
+    "aboutCompany": "Chi è l'Azienda",
+    "aboutTitle": "Leader Globale nell'Economia Circolare",
+    "aboutDescription": "ELP Green Technology collega tecnologia verde al capitale sostenibile attraverso una rete internazionale di uffici in Europa, Asia e America Latina.",
+    "aboutDescription2": "Con partnership strategica con TOPS Recycling dal 2023, offriamo soluzioni industriali complete di riciclaggio, pirolisi avanzata e trattamento rifiuti solidi urbani.",
+    "continents": "Continenti",
+    "offices": "Uffici",
+    "countries": "Paesi Partner",
+    "trademarks": "Marchi INPI",
+    "knowUs": "Conosci ELP",
+    "investmentBadge": "Investimento Sostenibile",
+    "pyrolysisDesc": "La nostra tecnologia di pirolisi all'avanguardia opera a circuito chiuso, garantendo zero emissioni e massima efficienza energetica.",
+    "modularDesc": "I nostri impianti Skid-Mounted sono prefabbricati e trasportati come moduli completi, riducendo drasticamente i tempi di installazione."
+  },
+  "otrBanner": {
+    "title": "Conosci fonti di pneumatici OTR?",
+    "subtitle": "Miniere, rivenditori, porti? Segnala ora!",
+    "cta": "Segnala una Fonte",
+    "note": "Revisioniamo internamente prima di qualsiasi contatto"
+  },
+  "whatsapp": {
+    "banner": "Fonti OTR in Brasile o Europa?",
+    "bannerCta": "Contattaci direttamente via WhatsApp!",
+    "title": "Contatto WhatsApp Diretto",
+    "subtitle": "Scegli il contatto più vicino",
+    "defaultMessage": "Ciao! Sono interessato alle partnership OTR.",
+    "otrNote": "Per partnership OTR: Europa e Brasile"
+  },
+"otrPartnership": {
+    "badge": "Partnership Globale OTR",
+    "title": "Riciclaggio Intelligente Pneumatici OTR",
+    "subtitle": "Cerchiamo fonti affidabili di pneumatici OTR usati (miniere, rivenditori, porti). Linea Smart Robotica: posizionamento e taglio automatico da robot.",
+    "smartLine": "Linea Smart Robotica",
+    "goal": "Obiettivo: 1M tonnellate/anno",
+    "cta": "Tu segnali la fonte – negoziamo insieme!",
+    "ctaButton": "Segnala Fonte OTR Ora",
+    "learnMore": "Scopri la Linea Smart",
+    "contactTitle": "Contatto Diretto",
+    "priorityNote": "Priorità: Brasile (SP/MG/PA) e Italia",
+    "hero": {
+      "badge": "Opportunità di Partnership Globale",
+      "title": "Linea Intelligente Smart OTR",
+      "subtitle": "Riciclaggio Robotico Avanzato",
+      "description": "Linea upgrade con robot automatici: Posiziona il pneumatico sulla piattaforma → il robot posiziona e taglia automaticamente.",
+      "firstDemo": "First demonstration: Australia (April/May 2025)",
+      "noSellWarning": "Non vendiamo la linea Smart",
+      "noSellDesc": "cerchiamo partner per fonti OTR e operazioni congiunte.",
+      "indicateNow": "Segnala Fonte OTR Ora",
+      "viewExpansion": "Vedi Piano di Espansione"
+    },
+    "technology": {
+      "badge": "Tecnologia Innovativa",
+      "title": "Smart Line – Riciclaggio Automatizzato Pneumatici OTR",
+      "description": "La nostra fabbrica è stata significativamente ampliata, aumentando la nostra capacità produttiva e innovazione. L'upgrade alla linea intelligente include robot per il posizionamento e taglio automatico dei pneumatici OTR.",
+      "simpleProcess": "Processo Semplice e Automatizzato",
+      "simpleProcessDesc": "Basta posizionare il pneumatico sulla piattaforma → Il robot posiziona e taglia automaticamente",
+      "firstInstall": "First Installation: Australia",
+      "firstInstallDesc": "Demonstration line being installed in April/May 2025",
+      "futureExpansion": "Espansione Globale Futura",
+      "futureExpansionDesc": "Più linee saranno installate in tutto il mondo nei prossimi anni",
+      "important": "Importante:",
+      "importantDesc": "Non vendiamo la linea intelligente – stiamo cercando partner per operare insieme nel riciclaggio di pneumatici OTR.",
+      "howItWorks": "Come Funziona la Smart Line",
+      "step1": "Caricamento Pneumatico",
+      "step1Desc": "Pneumatico OTR posizionato sulla piattaforma di ingresso",
+      "step2": "Posizionamento Robotico",
+      "step2Desc": "Robot industriale posiziona il pneumatico automaticamente",
+      "step3": "Taglio Preciso",
+      "step3Desc": "Sistema taglia laterali, corona e separa componenti",
+      "step4": "Materiali Recuperati",
+      "step4Desc": "Gomma, acciaio e fibre pronti per la commercializzazione"
+    },
+    "expansion": {
+      "badge": "Global Expansion Plan 2025-2030",
+      "title": "Obiettivo: 1 Milione di Tonnellate all'Anno",
+      "description": "Il nostro piano ambizioso prevede l'installazione di 17-18 fabbriche all'estero nei prossimi 5 anni, con capacità totale di ~175 tonnellate all'ora (~10 ton/ora per fabbrica).",
+      "factories": "Fabbriche",
+      "capacity": "Capacità",
+      "focusOverseas": "Focus sulle Installazioni Overseas",
+      "focusOverseasDesc": "Tutte le nuove fabbriche saranno installate fuori dalla Cina, dando priorità alle regioni con alta concentrazione di miniere e industria pesante."
+    },
+    "benefits": {
+      "title": "Perché Essere Nostro Partner?",
+      "description": "Offriamo un'opportunità unica di entrare nel mercato del riciclaggio pneumatici OTR con tecnologia all'avanguardia e supporto completo.",
+      "smartLine": "Tecnologia Smart Line",
+      "smartLineDesc": "Accesso alla linea di riciclaggio intelligente con robot automatizzati per posizionamento e taglio pneumatici OTR.",
+      "smartLineHighlight": "First installation: Australia (April/May 2025)",
+      "profitModel": "Modello di Business Redditizio",
+      "profitModelDesc": "Non vendiamo attrezzature – cerchiamo partner per operare insieme. Tu trovi le fonti di pneumatici OTR, noi portiamo la tecnologia.",
+      "profitModelHighlight": "Negoziamo direttamente con il proprietario delle risorse",
+      "globalExpansion": "Espansione Globale",
+      "globalExpansionDesc": "Piano ambizioso: 17-18 fabbriche all'estero nei prossimi 5 anni, con obiettivo di riciclare 1 milione di tonnellate all'anno.",
+      "globalExpansionHighlight": "~175 tonnellate/ora di capacità globale",
+      "partnership": "Partnership Strategica",
+      "partnershipDesc": "Viaggiamo da te per conoscere le tue fonti di pneumatici OTR e insieme negoziamo con miniere, produttori e rivenditori.",
+      "partnershipHighlight": "Costruzione congiunta del business"
+    },
+    "sources": {
+      "title": "Dove Trovare Pneumatici OTR?",
+      "description": "Se hai accesso a una qualsiasi di queste fonti di pneumatici OTR, puoi essere nostro partner!",
+      "mining": "Aziende Minerarie",
+      "miningDesc": "Camion fuoristrada, caricatori giganti",
+      "manufacturer": "Produttori di Pneumatici",
+      "manufacturerDesc": "Pneumatici difettosi, fine linea, richiami",
+      "dealer": "Rivenditori di Pneumatici",
+      "dealerDesc": "Pneumatici usati, sostituzione flotte",
+      "port": "Porti e Terminal",
+      "portDesc": "Reach stacker, carrelli elevatori portuali"
+    },
+    "form": {
+      "title": "Invia le Tue Potenziali Fonti",
+      "description": "Compila il modulo qui sotto con informazioni sulle tue potenziali fonti di pneumatici OTR. Ti contatteremo per discutere la partnership!",
+      "fullName": "Nome Completo",
+      "email": "Email",
+      "company": "Azienda",
+      "countryRegion": "Paese / Regione",
+      "countryPlaceholder": "Es: Australia, Cile, Brasile...",
+      "otrSources": "Fonti Pneumatici OTR",
+      "otrSourcesPlaceholder": "Descrivi le tue potenziali fonti di pneumatici OTR (es: contatto con miniera X, rivenditore Y, ecc.)",
+      "estimatedVolume": "Volume Stimato",
+      "volumePlaceholder": "Es: 100 pneumatici/mese, 500 tonnellate/anno, ecc.",
+      "additionalMessage": "Messaggio Aggiuntivo",
+      "messagePlaceholder": "Informazioni aggiuntive sulla tua proposta di partnership...",
+      "sending": "Invio in corso...",
+      "submit": "Invia Proposta di Partnership",
+      "awaitingNews": "Aspettiamo le tue buone notizie!"
+    },
+    "toast": {
+      "successTitle": "Messaggio inviato con successo!",
+      "successDesc": "Ti contatteremo presto per discutere la partnership.",
+      "errorTitle": "Errore nell'invio",
+      "errorDesc": "Per favore, riprova."
+    }
+  },
+  "otrSources": {
+    "badge": "Priorità: Brasile e Europa",
+    "title": "Segnala una Fonte di Pneumatici OTR Usati",
+    "subtitle": "Trova fonti di pneumatici OTR (miniere Vale/CSN Brasile, Pirelli/Prometeon Italia, porti, rivenditori). Invia i dati – Samuel viaggerà per negoziare direttamente con te!",
+    "formTitle": "Modulo di Segnalazione",
+    "yourInfo": "I Tuoi Dati",
+    "name": "Il Tuo Nome",
+    "company": "La Tua Azienda",
+    "email": "Email",
+    "phone": "Telefono",
+    "whatsapp": "WhatsApp (per contatto rapido)",
+    "sourceInfo": "Informazioni Fonte OTR",
+    "sourceName": "Nome Contatto alla Fonte",
+    "sourceCompany": "Azienda Generatrice",
+    "sourceType": "Tipo di Fonte",
+    "location": "Ubicazione",
+    "volumeAnnual": "Volume Annuale Stimato",
+    "tireSizes": "Dimensioni Pneumatici OTR",
+    "details": "Dettagli Aggiuntivi",
+    "consent": "Autorizzo il contatto e la condivisione delle informazioni fornite con il team commerciale di ELP Green Technology per scopi di negoziazione della partnership.",
+    "submit": "Invia Segnalazione – Aspettiamo Buone Notizie!",
+    "directContact": "Contatto Diretto",
+    "whatWeLookFor": "Cosa Cerchiamo",
+    "priorityRegions": "Regioni Prioritarie",
+    "learnMore": "Scopri di più sulla Linea Smart OTR",
+    "hero": {
+      "badge": "Programma Partnership OTR",
+      "title": "Segnala Fonti di Pneumatici OTR",
+      "subtitle": "Unisciti alla nostra rete globale di partner nel riciclaggio pneumatici OTR.",
+      "description": "Segnala fonti di pneumatici OTR da miniere, porti o rivenditori. Il nostro team valuterà ogni segnalazione e ti contatterà per la negoziazione diretta.",
+      "longTermPartnership": "Partnership a Lungo Termine",
+      "directNegotiation": "Negoziazione Diretta",
+      "sharedBenefits": "Benefici Condivisi",
+      "regions": {
+        "brazil": "Brasile (SP/MG/PA)",
+        "europe": "Europa (Italia/Germania)",
+        "partners": "+60 Paesi Partner"
+      }
+    },
+    "pdfWelcome": {
+      "title": "Benvenuto! Vieni dallo Studio di Fattibilità",
+      "description": "Compila il modulo qui sotto e il nostro team ti contatterà entro 24 ore.",
+      "priority": "Priorità"
+    },
+    "process": {
+      "title": "Come Funziona",
+      "subtitle": "Processo semplice e trasparente",
+      "step1": "Fase 1",
+      "step1Title": "Tu Segnali",
+      "step1Desc": "Compila il modulo con informazioni sulla fonte di pneumatici OTR",
+      "step2": "Fase 2",
+      "step2Title": "Valutazione Interna",
+      "step2Desc": "Il nostro team analizza e valida la segnalazione prima di procedere",
+      "step3": "Fase 3",
+      "step3Title": "Negoziazione Congiunta",
+      "step3Desc": "Viaggiamo da te per negoziare direttamente con la fonte"
+    },
+    "form": {
+      "title": "Modulo di Segnalazione",
+      "subtitle": "Compila i dati qui sotto per registrare la tua segnalazione",
+      "yourInfo": "I Tuoi Dati",
+      "yourName": "Il Tuo Nome",
+      "yourCompany": "La Tua Azienda",
+      "email": "Email",
+      "phone": "Telefono",
+      "whatsappOptional": "WhatsApp (opzionale)",
+      "sourceInfo": "Informazioni Fonte OTR",
+      "sourceContactName": "Nome Contatto alla Fonte",
+      "generatingCompany": "Azienda Generatrice",
+      "companyPlaceholder": "Es: Vale, CSN, Prometeon...",
+      "sourceType": "Tipo di Fonte",
+      "selectType": "Seleziona il tipo",
+      "location": "Ubicazione",
+      "selectRegion": "Seleziona la regione",
+      "latinAmerica": "America Latina",
+      "europe": "Europa",
+      "other": "Altri",
+      "annualVolume": "Volume Annuale Stimato",
+      "volumePlaceholder": "Es: 500 pneumatici/anno, 1000 tonnellate...",
+      "tireSizes": "Dimensioni Pneumatici OTR",
+      "selectSize": "Seleziona la dimensione",
+      "additionalDetails": "Dettagli Aggiuntivi",
+      "detailsPlaceholder": "Descrivi la situazione della fonte, la tua relazione con loro, frequenza di smaltimento, ecc...",
+      "consentText": "Autorizzo il contatto e la condivisione delle informazioni fornite con il team commerciale di ELP Green Technology per scopi di negoziazione della partnership. Dati elaborati in conformità LGPD/GDPR.",
+      "sending": "Invio in corso...",
+      "submitButton": "Invia Segnalazione",
+      "responseTime": "La tua segnalazione sarà analizzata e risponderemo entro 48 ore lavorative."
+    },
+    "sidebar": {
+      "approvalProcess": "Processo di Approvazione",
+      "receipt": "Ricezione",
+      "receiptDesc": "La tua segnalazione è registrata nel nostro sistema",
+      "internalAnalysis": "Analisi Interna",
+      "internalAnalysisDesc": "Il team valuta fattibilità e potenziale",
+      "contact": "Contatto",
+      "contactDesc": "Ti contattiamo per i prossimi passi",
+      "whatWeLookFor": "Cosa Cerchiamo",
+      "lookingFor1": "Miniere con smaltimento regolare di pneumatici OTR",
+      "lookingFor2": "Rivenditori con stock di pneumatici usati",
+      "lookingFor3": "Porti con carrelli elevatori e reach stacker",
+      "lookingFor4": "Cave e costruzioni pesanti",
+      "lookingFor5": "Produttori con pneumatici difettosi",
+      "priorityRegions": "Regioni Prioritarie",
+      "brazil": "Brasile",
+      "brazilRegions": "São Paulo, Minas Gerais, Pará",
+      "italy": "Italia",
+      "italyRegions": "Lombardia, Toscana, Milano",
+      "australia": "Australia",
+      "australiaRegions": "Regioni minerarie",
+      "commercialContact": "Contatto Commerciale",
+      "allSubmissionsNote": "Tutte le segnalazioni passano per approvazione interna prima del contatto commerciale.",
+      "learnMoreSmartLine": "Scopri di più sulla Linea Smart OTR"
+    },
+    "sourceTypes": {
+      "mining": "Miniera",
+      "dealer": "Rivenditore Pneumatici",
+      "port": "Porto / Terminal",
+      "quarry": "Cava",
+      "construction": "Costruzione",
+      "manufacturer": "Produttore Pneumatici",
+      "other": "Altro"
+    },
+    "locations": {
+      "italy-lombardia": "Italia - Lombardia/Milano",
+      "italy-tuscany": "Italia - Toscana",
+      "italy-other": "Italia - Altre regioni",
+      "germany": "Germania",
+      "spain": "Spagna",
+      "france": "Francia",
+      "europe-other": "Altri Europa",
+      "brazil-sp": "Brasile - São Paulo",
+      "brazil-mg": "Brasile - Minas Gerais",
+      "brazil-pa": "Brasile - Pará",
+      "brazil-mt": "Brasile - Mato Grosso",
+      "brazil-other": "Brasile - Altre regioni",
+      "chile": "Cile",
+      "peru": "Perù",
+      "colombia": "Colombia",
+      "latam-other": "Altri America Latina",
+      "australia": "Australia",
+      "africa": "Africa",
+      "asia": "Asia",
+      "other": "Altro"
+    },
+    "toast": {
+      "successTitle": "Segnalazione ricevuta con successo",
+      "successDesc": "Il nostro team esaminerà la tua segnalazione e ti contatterà presto.",
+      "errorTitle": "Errore nell'invio",
+      "errorDesc": "Per favore, riprova.",
+      "consentRequired": "Consenso richiesto",
+      "consentRequiredDesc": "Per favore, accetta i termini per inviare."
+    }
+  },
+  "globalExpansion": {
+    "badge": "Piano 2026-2031",
+    "title": "Espansione Globale",
+    "subtitle": "1 Milione di Tonnellate/Anno",
+    "heroDescription": "Il nostro piano ambizioso: 17-18 fabbriche in 5 anni, con focus su Europa, America Latina e Australia.",
+    "noSellEquipment": "Non vendiamo attrezzature – investiamo direttamente nelle operazioni.",
+    "indicateSource": "Indica Fonte OTR",
+    "knowSmartLine": "Scopri Smart Line",
+    "keyMetrics": {
+      "annualGoal": "Obiettivo Annuale",
+      "globalCapacity": "Capacità Globale",
+      "plannedFactories": "Fabbriche Pianificate",
+      "targetMarkets": "Paesi Target",
+      "tonYear": "ton/anno",
+      "tonHour": "ton/ora",
+      "units": "unità",
+      "markets": "mercati"
+    },
+    "roadmap": {
+      "badge": "Roadmap",
+      "title": "Cronologia Espansione",
+      "subtitle": "Piano di crescita strutturato con obiettivi chiari e posizioni strategiche",
+      "factories": "fabbriche",
+      "inProgress": "In corso"
+    },
+    "milestones": {
+      "2026": {
+        "title": "Prima Smart Line in Australia",
+        "description": "Dimostrazione della linea robotica intelligente con installazione completa"
+      },
+      "2027": {
+        "title": "Espansione Sud America ed Europa",
+        "description": "Brasile (São Paulo/Minas Gerais) e Italia (Milano/Lombardia)"
+      },
+      "2028": {
+        "title": "Africa e Medio Oriente",
+        "description": "Espansione verso mercati minerari emergenti"
+      },
+      "2029-2031": {
+        "title": "Obiettivo Globale Completo",
+        "description": "1 milione di tonnellate/anno di capacità di riciclaggio"
+      }
+    },
+    "regions": {
+      "badge": "Regioni Strategiche",
+      "title": "Focus Regionale",
+      "subtitle": "Mercati prioritari con alta concentrazione di pneumatici OTR e infrastruttura mineraria",
+      "europe": {
+        "name": "Europa",
+        "countries": "Italia (Milano), Germania, Spagna",
+        "advantages": ["Regolamentazione ESG rigorosa", "Partnership con Pirelli/Prometeon", "Infrastruttura logistica", "Finanziamento EU Green Deal"]
+      },
+      "latam": {
+        "name": "America Latina",
+        "countries": "Brasile (SP/MG/PA), Cile, Perù",
+        "advantages": ["Più grande mercato minerario", "Vale, CSN, Anglo American", "Brevetti INPI 6 classi", "Operazioni esistenti"]
+      },
+      "oceania": {
+        "name": "Oceania",
+        "countries": "Australia, Nuova Zelanda",
+        "advantages": ["Prima Smart Line 2026", "BHP, Rio Tinto, Fortescue", "Regolamentazione ambientale", "Mercato premium"]
+      },
+      "asia": {
+        "name": "Asia-Pacifico",
+        "countries": "Cina (HQ), Indonesia, India",
+        "advantages": ["Sede tecnologica", "Produzione attrezzature", "Mercato in crescita", "Catena di fornitura"]
+      }
+    },
+    "partnership": {
+      "badge": "Modello di Partnership",
+      "title": "Non Vendiamo Attrezzature",
+      "description": "La nostra proposta è diversa: investiamo direttamente nelle fabbriche in partnership con chi ha accesso a fonti di pneumatici OTR. Tu trovi le fonti (miniere, rivenditori, porti), noi portiamo la tecnologia Smart Line e operiamo insieme.",
+      "jointVentures": "Joint venture con investimento diretto",
+      "smartLineTech": "Tecnologia Smart Line robotica automatizzata",
+      "jointOperation": "Operazione congiunta con condivisione dei risultati",
+      "indicateOtr": "Indica una Fonte OTR"
+    },
+    "cta": {
+      "title": "Partecipa all'Espansione Globale",
+      "description": "Conosci fonti di pneumatici OTR nella tua regione? Miniere, rivenditori, porti? Indica ora e partecipa alla nostra crescita globale.",
+      "knowTech": "Scopri la Tecnologia Smart OTR"
+    }
+  },
+  "brazilLatam": {
+    "title": "Brasile e America Latina",
+    "subtitle": "Opportunità nel Riciclaggio Pneumatici OTR",
+    "heroDescription": "Regione con il maggior potenziale di estrazione mineraria pesante. Cerchiamo fonti di pneumatici OTR usati per partnership a lungo termine. Tecnologia Smart Line + conformità PNRS/Reciclanip.",
+    "indicateInBrazil": "Indica Fonte in Brasile",
+    "knowTech": "Scopri la Tecnologia Smart OTR",
+    "miningRegions": {
+      "title": "Regioni Minerarie Prioritarie",
+      "subtitle": "Focus su regioni con alta concentrazione di operazioni minerarie e grandi volumi di pneumatici OTR",
+      "norte": {
+        "name": "Nord",
+        "states": "Pará, Amazonas, Amapá",
+        "description": "Maggiore concentrazione di estrazione di ferro e bauxite del Brasile. Alto volume di pneumatici OTR in uso.",
+        "companies": "Vale (Carajás), Hydro Alunorte, MRN Mineração",
+        "volume": "Alto volume - migliaia di pneumatici/anno"
+      },
+      "sudeste": {
+        "name": "Sudest",
+        "states": "Minas Gerais, São Paulo, Rio de Janeiro",
+        "description": "Tradizione mineraria e industria pesante. Infrastruttura logistica sviluppata.",
+        "companies": "Vale, CSN, Usiminas, Gerdau",
+        "volume": "Volume molto alto - maggiore concentrazione industriale"
+      },
+      "centroOeste": {
+        "name": "Centro-Ovest",
+        "states": "Goiás, Mato Grosso",
+        "description": "Agribusiness e minerazione in espansione. Crescente domanda di riciclaggio.",
+        "companies": "Anglo American, Kinross, Yamana Gold",
+        "volume": "Volume medio-alto"
+      }
+    },
+    "map": {
+      "title": "Mappa Mineraria Interattiva",
+      "subtitle": "Clicca sulle miniere per vedere dettagli sul volume di pneumatici OTR, aziende operatrici e misure utilizzate. Dati basati su rapporti pubblici di ANM e aziende minerarie.",
+      "dataSource": "Fonte dati: Agenzia Nazionale Mineraria (ANM), rapporti annuali di Vale, CSN, Anglo American, Kinross e altre società minerarie. Volumi stimati di pneumatici OTR basati sulla flotta di attrezzature riportata."
+    },
+    "legislation": {
+      "title": "Allineamento con la Legislazione Brasiliana",
+      "subtitle": "La nostra tecnologia è al 100% allineata con PNRS e integrata con il sistema Reciclanip",
+      "pnrs": {
+        "title": "PNRS - Politica Nazionale Rifiuti Solidi",
+        "description": "La legge 12.305/2010 stabilisce la responsabilità condivisa per il ciclo di vita dei prodotti, inclusi i pneumatici."
+      },
+      "reciclanip": {
+        "title": "Reciclanip",
+        "description": "Programma ANIP che raccoglie e smaltisce pneumatici inutilizzabili. La nostra tecnologia completa questa catena con massima valorizzazione."
+      },
+      "conama": {
+        "title": "Risoluzione CONAMA 416/2009",
+        "description": "Regola lo smaltimento ambientalmente appropriato dei pneumatici inutilizzabili. Piena conformità con la nostra tecnologia."
+      },
+      "esg": {
+        "title": "ESG ed Economia Circolare",
+        "description": "Allineamento con gli obiettivi ESG aziendali e principi di economia circolare richiesti dagli investitori globali."
+      },
+      "destination": {
+        "title": "Smaltimento Ambientalmente Appropriato",
+        "description": "I pneumatici OTR processati con la nostra tecnologia Smart Line garantiscono tracciabilità completa, certificati di smaltimento e massima valorizzazione dei materiali recuperati (acciaio, gomma, nero di carbonio). Ideale per aziende che devono dimostrare conformità ambientale."
+      }
+    },
+    "advantages": {
+      "title": "Perché Essere Nostro Partner in Brasile?",
+      "subtitle": "Combinazione unica di tecnologia avanzata, presenza locale e focus su partnership a lungo termine",
+      "operations": {
+        "title": "Operazioni a São Paulo",
+        "description": "Base operativa consolidata con asset e registrazione INPI in 6 classi."
+      },
+      "technology": {
+        "title": "Tecnologia Smart Line",
+        "description": "Robot automatizzati per il taglio pneumatici OTR - maggiore efficienza e sicurezza."
+      },
+      "miningFocus": {
+        "title": "Focus Minerario",
+        "description": "Specializzazione in pneumatici giganti (OTR) usati nelle operazioni minerarie."
+      },
+      "logistics": {
+        "title": "Logistica Integrata",
+        "description": "Partnership per raccolta e lavorazione nelle regioni ad alto volume."
+      }
+    },
+    "cta": {
+      "title": "Hai Fonti di Pneumatici OTR in Brasile?",
+      "description": "Miniere, rivenditori, porti o cave? Contattaci ora. Negoziamo insieme e costruiamo partnership a lungo termine.",
+      "contactNote": "Contatto WhatsApp dopo revisione interna dell'indicazione"
+    },
+    "expansion": {
+      "title": "Espansione in Tutta l'America Latina",
+      "subtitle": "Oltre al Brasile, cerchiamo partnership in paesi con forte attività mineraria"
+    }
+  },
+  "aboutPage": {
+    "heroSubtitle": "Specialisti Riciclaggio OTR",
+    "heroTitle": "ELP Green Technology",
+    "heroDescription": "Leader globale nel riciclaggio di pneumatici OTR giganti. Investiamo direttamente in fabbriche overseas e cerchiamo partnership strategiche con fonti di pneumatici da miniere e costruzioni.",
+    "noSellEquipment": "Non vendiamo attrezzature – creiamo joint venture.",
+    "otrFocus": {
+      "badge": "Focus Esclusivo OTR",
+      "title": "Riciclaggio Pneumatici OTR Giganti",
+      "description": "Specializzati in pneumatici da miniera, costruzione e agricoli di grandi dimensioni. La nostra tecnologia Smart Line Robotica processa pneumatici da 57\" a 63\" con massima efficienza.",
+      "sizes": "Dimensioni OTR",
+      "sizesValue": "57\" - 63\"",
+      "sizesDesc": "Pneumatici giganti",
+      "capacity": "Capacità",
+      "capacityValue": "5.000+",
+      "capacityDesc": "tonnellate/anno",
+      "recovery": "Recupero",
+      "recoveryValue": "95%",
+      "recoveryDesc": "del materiale",
+      "model": "Modello",
+      "modelValue": "Joint Venture",
+      "modelDesc": "Nessuna vendita attrezzature"
+    },
+    "vision": {
+      "title": "La Nostra Visione",
+      "description": "Essere il riferimento globale nel riciclaggio di pneumatici OTR, trasformando rifiuti industriali in risorse preziose attraverso partnership strategiche e tecnologia all'avanguardia."
+    },
+    "mission": {
+      "title": "La Nostra Missione",
+      "description": "Collegare fonti di pneumatici OTR a soluzioni di riciclaggio sostenibile, investendo direttamente in fabbriche overseas e creando joint venture che beneficiano tutte le parti."
+    },
+    "ourPillars": "I Nostri Pilastri",
+    "gallery": {
+      "title": "Galleria Partnership",
+      "images": {
+        "topsFactory": { "title": "Fabbrica TOPS - Panoramica", "description": "Centro di produzione attrezzature Smart Line OTR a Zhangjiagang, Cina" },
+        "redShredder": { "title": "Trituratore OTR in Funzione", "description": "Attrezzatura ad alta capacità per la lavorazione di pneumatici giganti OTR" },
+        "processingArea": { "title": "Area Lavorazione OTR", "description": "Linea completa di riciclaggio pneumatici Off-The-Road" },
+        "shreddingLine": { "title": "Linea di Triturazione", "description": "Interno impianto Smart Line con sistema automatizzato" },
+        "beadRings": { "title": "Anelli Tallone Recuperati", "description": "Acciaio di alta qualità estratto da pneumatici OTR - pronto per fusione" },
+        "otrPartnership": { "title": "Partnership OTR", "description": "Collaborazione strategica per riciclaggio pneumatici da miniere" },
+        "topsTeam": { "title": "Team TOPS Recycling", "description": "Partnership strategica con il team TOPS Recycling a Zhangjiagang" },
+        "handshake": { "title": "Accordo di Partnership", "description": "Ericson Piccoli e partner sulla linea di produzione" }
+      }
+    }
+  },
+  "solutionsPage": {
+    "heroTag": "Focus: Pneumatici OTR Giganti",
+    "heroTitle": "Riciclaggio Intelligente Pneumatici OTR",
+    "heroDescription": "Tecnologia Smart Line con robot automatici per la lavorazione di pneumatici giganti.",
+    "noSellEquipment": "Non vendiamo attrezzature – investiamo direttamente.",
+    "tags": {
+      "smartLine": "Smart Line Robotica",
+      "tireWeight": "Pneumatici fino a 4,5 ton",
+      "zeroEmissions": "Zero Emissioni",
+      "globalPartnership": "Partnership Globale"
+    },
+    "indicateSource": "Indica Fonte OTR",
+    "knowSmartLine": "Scopri Smart Line",
+    "disclaimer": {
+      "important": "Importante:",
+      "description": "Per OTR su larga scala, il nostro focus è su partnership con fonti OTR – investiamo direttamente in fabbriche overseas (Europa, Brasile, Australia).",
+      "viewExpansion": "Vedi Piano Espansione"
+    },
+    "pyrolysis": {
+      "generatedProducts": "Prodotti Generati"
+    },
+    "process": {
+      "title": "Processo Riciclaggio OTR Smart Line",
+      "subtitle": "Tecnologia robotica automatica per la lavorazione di pneumatici giganti",
+      "steps": {
+        "1": { "title": "Raccolta Pneumatici OTR", "description": "Pneumatici giganti da miniere, porti e costruzioni." },
+        "2": { "title": "Taglio Robotico", "description": "Smart Line con robot automatico posiziona e taglia il pneumatico." },
+        "3": { "title": "Rimozione Talloni", "description": "Debeader estrae talloni in acciaio di alta qualità." },
+        "4": { "title": "Triturazione", "description": "Frammentazione in blocchi e successiva granulazione." },
+        "5": { "title": "Separazione Magnetica", "description": "Acciaio, gomma e fibre sono separati automaticamente." },
+        "6": { "title": "Prodotti Finali", "description": "Commodity pronte per la vendita sul mercato globale." }
+      }
+    },
+    "plants": {
+      "badge": "Focus: Pneumatici OTR Giganti",
+      "title": "Le Nostre Tecnologie",
+      "subtitle": "Specialisti in pneumatici OTR giganti (miniere, porti, costruzioni). Per OTR su larga scala: cerchiamo partner con fonti, non vendiamo attrezzature."
+    },
+    "equipment": {
+      "capacity": "Capacità:",
+      "power": "Potenza:"
+    },
+    "otrProducts": {
+      "rubberBlocks": { "name": "Blocchi di Gomma", "description": "Blocchi di gomma OTR per TDF, pirolisi secondaria o granulazione." },
+      "steel": { "name": "Acciaio di Alta Qualità", "description": "Acciaio recuperato dai cerchi di pneumatici giganti, pronto per le acciaierie." },
+      "fibers": { "name": "Fibre Tessili", "description": "Fibre recuperate per isolamento, geotessili e composti industriali." },
+      "powder": { "name": "Polvere di Gomma", "description": "Polvere superfine per asfalto modificato e applicazioni ad alte prestazioni." }
+    },
+    "industrialPlants": {
+      "otr": {
+        "title": "Smart OTR – Riciclaggio Pneumatici Giganti",
+        "subtitle": "Linea Robotica Automatica",
+        "description": "Sistema specializzato con robot automatico per il riciclaggio di pneumatici giganti da miniere, porti e costruzioni. Elabora pneumatici fino a 4,5 tonnellate. NON VENDIAMO – cerchiamo fonti OTR per partnership.",
+        "capacity": "10-20 ton/ora",
+        "investment": "Partnership/Joint Venture",
+        "payback": "34 mesi",
+        "products": {
+          "rubberBlocks": { "name": "Blocchi di Gomma", "applications": "TDF, pirolisi, granulazione" },
+          "steel": { "name": "Acciaio di Alta Qualità", "applications": "Acciaierie, fonderie" },
+          "fibers": { "name": "Fibre Tessili", "applications": "Isolamento, geotessili" }
+        },
+        "specs": {
+          "maxDiameter": { "label": "Diametro Massimo", "value": "4500mm" },
+          "maxWeight": { "label": "Peso Massimo", "value": "4,5 tonnellate" },
+          "automation": { "label": "Automazione", "value": "Smart Robot + PLC" },
+          "certification": { "label": "Certificazione", "value": "CE / ISO 12100" }
+        }
+      },
+      "pyrolysis": {
+        "title": "Impianto di Pirolisi Continua",
+        "subtitle": "Conversione Termochimica Avanzata",
+        "description": "Tecnologia di pirolisi a ciclo chiuso per la conversione di pneumatici e plastiche in olio combustibile, nero di carbonio recuperato e syngas.",
+        "capacity": "10-50 ton/giorno",
+        "investment": "Da USD 7.8M",
+        "payback": "36 mesi",
+        "products": {
+          "oil": { "name": "Olio di Pirolisi", "applications": "Combustibile industriale, raffinerie, navi" },
+          "rcb": { "name": "Nero di Carbonio (rCB)", "applications": "Industria della gomma, vernici, plastiche" },
+          "syngas": { "name": "Syngas", "applications": "Autoconsumo del processo" },
+          "steel": { "name": "Acciaio Recuperato", "applications": "Acciaierie" }
+        },
+        "specs": {
+          "reactor": { "label": "Reattore", "value": "Rotativo continuo" },
+          "process": { "label": "Processo", "value": "Ciclo chiuso" },
+          "emissions": { "label": "Emissioni", "value": "Zero (filtrato)" },
+          "output": { "label": "Olio di Pirolisi", "value": "45% output" }
+        }
+      },
+      "tireRecycling": {
+        "title": "Impianto Riciclaggio Pneumatici",
+        "subtitle": "Sistema di Lavorazione Completo",
+        "description": "Sistema completamente automatico per il riciclaggio di pneumatici usati, producendo granuli e polvere di gomma di alta qualità.",
+        "capacity": "10 ton/ora",
+        "investment": "Da USD 4.5M",
+        "payback": "40 mesi",
+        "products": {
+          "granules": { "name": "Granuli di Gomma", "applications": "Pavimenti sportivi, riempimento erba sintetica" },
+          "powder": { "name": "Polvere di Gomma", "applications": "Asfalto modificato, composti" },
+          "steel": { "name": "Filo di Acciaio", "applications": "Acciaierie" },
+          "fibers": { "name": "Fibre Tessili", "applications": "Isolamento, geotessili" }
+        },
+        "specs": {
+          "capacity": { "label": "Capacità", "value": "10 ton/ora" },
+          "output": { "label": "Dimensione Granulo", "value": "0.5mm - 6mm" },
+          "automation": { "label": "Automazione", "value": "Full PLC" },
+          "certification": { "label": "Certificazione", "value": "CE / ISO" }
+        }
+      }
+    }
+  },
+  "faq": {
+    "badge": "Centro Assistenza",
+    "title": "Domande Frequenti",
+    "description": "Trova risposte alle domande più comuni sui nostri impianti e processi di riciclaggio.",
+    "viewPlant": "Vedi Impianto",
+    "stillQuestions": "Hai ancora domande?",
+    "stillQuestionsDesc": "Il nostro team è pronto ad aiutarti. Contattaci e risponderemo alle tue domande.",
+    "contactUs": "Contattaci",
+    "viewSolutions": "Vedi Soluzioni",
+    "benefits": {
+      "quality": "Qualità Garantita",
+      "qualityDesc": "Attrezzature certificate CE/ISO",
+      "roi": "ROI Comprovato",
+      "roiDesc": "Rendimento annuo 25-40%",
+      "support": "Supporto 24/7",
+      "supportDesc": "Assistenza tecnica globale",
+      "eco": "Sostenibile",
+      "ecoDesc": "Processi eco-compatibili"
+    },
+    "contactMethods": {
+      "email": "Email",
+      "phone": "Telefono",
+      "hours": "Orari",
+      "hoursValue": "Lun-Ven: 8:00-18:00"
+    },
+    "categories": {
+      "tireRecycling": { "title": "Riciclaggio Pneumatici" },
+      "pyrolysis": { "title": "Pirolisi" },
+      "otr": { "title": "Pneumatici OTR (Giganti)" },
+      "quotation": { "title": "Processo di Preventivo" }
+    },
+    "tireRecycling": {
+      "q1": "Qual è la capacità di lavorazione di un impianto di riciclaggio pneumatici?",
+      "a1": "I nostri impianti di riciclaggio pneumatici hanno una capacità da 1 a 10 tonnellate all'ora, a seconda del modello scelto. Operando 24/7, un impianto medio può elaborare fino a 30.000 tonnellate di pneumatici all'anno.",
+      "q2": "Quali sono i prodotti finali del riciclaggio pneumatici?",
+      "a2": "I prodotti principali sono: gomma granulata (60-65%), acciaio di alta qualità (25-30%) e fibre tessili (10-15%). La gomma può essere venduta per pavimentazioni, asfalto modificato e nuovi prodotti in gomma.",
+      "q3": "Quanto tempo richiede l'installazione di un impianto completo?",
+      "a3": "L'installazione completa richiede da 3 a 6 mesi, inclusa la preparazione del sito, l'assemblaggio delle attrezzature, i test e la formazione del team. Offriamo supporto tecnico durante l'intero processo.",
+      "q4": "Qual è l'investimento iniziale richiesto?",
+      "a4": "L'investimento varia da $2 milioni a $10 milioni a seconda della capacità e configurazione. Offriamo diversi modelli di finanziamento e partnership per rendere il tuo progetto fattibile.",
+      "q5": "Quali certificazioni e licenze sono richieste?",
+      "a5": "Le nostre attrezzature hanno certificazione CE e ISO. Assistiamo nell'ottenimento delle licenze ambientali locali e forniamo documentazione completa per l'approvazione normativa."
+    },
+    "pyrolysis": {
+      "q1": "Cos'è la pirolisi e come funziona?",
+      "a1": "La pirolisi è un processo termochimico che decompone materiali organici in assenza di ossigeno a temperature di 400-600°C. Trasforma i pneumatici in olio pirolitico, nero di carbonio e acciaio recuperato.",
+      "q2": "Qual è la resa di un impianto di pirolisi?",
+      "a2": "Per ogni 10 tonnellate di pneumatici, otteniamo circa: 4-4,5 tonnellate di olio, 3-3,5 tonnellate di nero di carbonio, 1,5 tonnellate di acciaio e 1 tonnellata di gas (usato come combustibile).",
+      "q3": "Il processo di pirolisi è sicuro e rispettoso dell'ambiente?",
+      "a3": "Sì, i nostri impianti utilizzano sistemi avanzati di controllo delle emissioni e operano a ciclo chiuso. Il gas prodotto viene riutilizzato come combustibile, rendendo il processo altamente efficiente e sostenibile.",
+      "q4": "A cosa serve l'olio pirolitico?",
+      "a4": "L'olio pirolitico può essere usato come combustibile industriale, raffinato in diesel o venduto alle industrie chimiche. Ha un alto potere calorifico e un significativo valore di mercato.",
+      "q5": "Qual è la durata di vita di un impianto di pirolisi?",
+      "a5": "Con la corretta manutenzione, i nostri impianti hanno una durata di 15-20 anni. Offriamo contratti di manutenzione preventiva e ricambi per garantire un funzionamento continuo."
+    },
+    "otr": {
+      "q1": "Cosa sono i pneumatici OTR e da dove provengono?",
+      "a1": "OTR significa \"Off-The-Road\" – sono pneumatici giganti usati in miniere, porti, agricoltura e costruzioni. Possono pesare fino a 4,5 tonnellate e avere un diametro fino a 4,5 metri.",
+      "q2": "Perché i pneumatici OTR richiedono attrezzature speciali?",
+      "a2": "A causa delle loro dimensioni e peso estremi, i pneumatici OTR non possono essere lavorati in trituratori convenzionali. La nostra linea OTR è stata sviluppata specificamente per tagliare, separare e processare questi pneumatici giganti.",
+      "q3": "Qual è la capacità di lavorazione della linea OTR?",
+      "a3": "La nostra linea OTR completa elabora da 10 a 20 tonnellate all'ora, equivalenti a 3-5 pneumatici giganti da miniera all'ora, operando 24/7 con solo 2-3 operatori per turno.",
+      "q4": "Qual è il valore dei prodotti da pneumatici OTR riciclati?",
+      "a4": "I pneumatici OTR contengono gomma e acciaio di alta qualità. I blocchi di gomma si vendono a $0,35/kg, l'acciaio a $0,55/kg e le fibre a $0,20/kg, generando un eccellente ritorno sull'investimento.",
+      "q5": "Offrite formazione per l'operazione della linea OTR?",
+      "a5": "Sì, offriamo formazione completa di 2-4 settimane per il vostro team, inclusa operazione, manutenzione preventiva e sicurezza. Forniamo anche supporto tecnico remoto 24/7."
+    },
+    "quotation": {
+      "q1": "Come posso richiedere un preventivo?",
+      "a1": "Puoi richiedere un preventivo tramite il nostro sito compilando il modulo in ogni pagina impianto, oppure contattandoci direttamente via email o telefono. Risponderemo entro 48 ore lavorative.",
+      "q2": "Quali informazioni sono necessarie per un preventivo?",
+      "a2": "Abbiamo bisogno di sapere: tipo di materiale da elaborare, capacità desiderata (ton/ora o ton/giorno), ubicazione del progetto, infrastruttura disponibile (energia, acqua, spazio) e tempistiche di implementazione.",
+      "q3": "Quanto tempo ci vuole per ricevere una proposta commerciale?",
+      "a3": "Dopo l'analisi iniziale, inviamo una proposta preliminare in 5-7 giorni lavorativi. Una proposta tecnica dettagliata viene fornita dopo una visita tecnica o un'analisi approfondita del progetto, entro 15 giorni.",
+      "q4": "Offrite finanziamento o leasing?",
+      "a4": "Sì, collaboriamo con partner finanziari per offrire opzioni di finanziamento, leasing e partnership operative. Ogni caso viene analizzato individualmente per trovare la soluzione migliore.",
+      "q5": "Cosa è incluso nel prezzo delle attrezzature?",
+      "a5": "I nostri prezzi includono: attrezzature complete, documentazione tecnica, formazione iniziale, supervisione dell'installazione e garanzia di 12-24 mesi. Trasporto e installazione vengono quotati separatamente in base alla località.",
+      "q6": "Effettuate visite tecniche prima della vendita?",
+      "a6": "Sì, per progetti di grandi dimensioni, effettuiamo visite tecniche gratuite al sito di installazione. Invitiamo anche i clienti a visitare le nostre strutture e vedere le attrezzature in funzione."
+    }
+  },
+  "mediaPage": {
+    "machines": {
+      "tireShredder": {
+        "name": "Trituratore Pneumatici",
+        "model": "AMTS-3 / SMTS-5 / SMTS-10",
+        "category": "Triturazione",
+        "description": "Sistema di triturazione pneumatici a doppio albero, disponibile in versioni mobili e fisse. Progettato per triturazione in loco, riducendo i costi di trasporto.",
+        "specs": ["Capacità: 3-10 ton/ora", "Sistema a doppio albero", "Versione mobile con trailer e generatore", "Nastri trasportatori integrati"]
+      },
+      "rubberGranulator": {
+        "name": "Granulatore Gomma",
+        "model": "A-TRPR Rasper",
+        "category": "Granulazione",
+        "description": "Produce chips di gomma 25-12mm senza fili. Dotato di piastre di usura sostituibili e lame reversibili per massima efficienza.",
+        "specs": ["Capacità: fino a 6 ton/ora", "Output: 25-12mm (1\"-0.5\")", "Prodotto senza fili", "Lame reversibili"]
+      },
+      "crackerMill": {
+        "name": "Cracker Mill",
+        "model": "Serie CM",
+        "category": "Macinazione",
+        "description": "Converte chips di gomma in granuli e polvere. Usato come materia prima per pirolisi, erba sintetica o asfalto modificato.",
+        "specs": ["Sistema automatizzato ad alta efficienza", "Produce granuli e polvere fine", "Ideale per rCB e asfalto", "Basso consumo energetico"]
+      },
+      "debeader": {
+        "name": "Debeader",
+        "model": "DHK-1200 Doppio Gancio",
+        "category": "Preparazione",
+        "description": "Rimuove entrambi i talloni in acciaio simultaneamente in 10-15 secondi. Aumenta la capacità del trituratore e protegge le lame.",
+        "specs": ["Efficienza: 80-120 pneumatici/ora", "Forza di trazione: 15 ton per gancio", "Rimuove entrambi i talloni simultaneamente", "Operazione in 10-15 secondi"]
+      },
+      "otrTireCutter": {
+        "name": "Tagliapneumatici OTR",
+        "model": "TPS-OTRCL4500",
+        "category": "Taglio OTR",
+        "description": "Processa pneumatici giganti da miniera e agricoltura (fino a 59/80R63 da 4,5 ton). Processo a 3 fasi: taglio fianchi, strisce e blocchi.",
+        "specs": ["Capacità: 10-15 ton/ora", "Processa pneumatici fino a 4,5 ton", "Processo a 3 fasi", "Per pneumatici da miniera e agricoltura"]
+      },
+      "pyrolysisPlant": {
+        "name": "Impianto di Pirolisi",
+        "model": "Sistemi Continui e Batch",
+        "category": "Pirolisi",
+        "description": "Sistemi continui e batch per pirolisi di pneumatici e plastiche. Estrae olio industriale e carbon black recuperato (rCB).",
+        "specs": ["Sistemi continui e batch", "Estrazione olio e rCB", "Zero emissioni", "Recupero energia integrato"]
+      },
+      "rubberPowderLine": {
+        "name": "Linea Polvere di Gomma",
+        "model": "Serie RPL",
+        "category": "Macinazione Fine",
+        "description": "Produce polvere di gomma superfine per gomma rigenerata e asfalto modificato. Sistema completo di classificazione e vagliatura.",
+        "specs": ["Polvere superfine (mesh 30-80)", "Per gomma rigenerata", "Modifica asfalto", "Sistema classificazione integrato"]
+      },
+      "reclaimedRubberLine": {
+        "name": "Linea Gomma Rigenerata",
+        "model": "Serie RRL",
+        "category": "Rigenerazione",
+        "description": "Include devulcanizzatori, miscelatori e raffinatori. Trasforma la polvere di gomma in gomma rigenerata di alta qualità.",
+        "specs": ["Devulcanizzatori industriali", "Miscelatori", "Raffinatori di alta precisione", "Prodotto di alta qualità"]
+      }
+    },
+    "otr": {
+      "giantTire": { 
+        "name": "Pneumatico OTR Gigante", 
+        "model": "Fino a 59/80R63", 
+        "category": "Dimostrazione", 
+        "description": "Dimostrazione di scala dei pneumatici OTR che processiamo. I pneumatici da miniera possono pesare fino a 4,5 tonnellate e avere un diametro di 4,5m.",
+        "specs": ["Peso massimo: 4,5 tonnellate", "Diametro massimo: 4500mm", "Larghezza: fino a 1800mm", "Per camion da 400 tonnellate"],
+        "applications": ["Pneumatici da miniera", "Pneumatici agricoli", "Pneumatici da costruzione", "Pneumatici portuali"],
+        "capacity": "Fino a 10-15 pneumatici OTR/ora"
+      },
+      "shredder": { 
+        "name": "Trituratore Industriale OTR", 
+        "model": "TOPS Heavy Duty Series", 
+        "category": "Triturazione", 
+        "description": "Trituratore ad alta capacità per la lavorazione di pneumatici OTR tagliati. Sistema robusto per operazione continua 24/7.",
+        "specs": ["Capacità: 10-20 ton/ora", "Sistema multi-asse", "Protezione da sovraccarico", "Manutenzione ridotta"],
+        "applications": ["Pre-lavorazione per pirolisi", "Produzione TDF", "Granulazione", "Riciclaggio"],
+        "capacity": "10-20 ton/ora"
+      },
+      "processing": { 
+        "name": "Area Lavorazione OTR", 
+        "model": "TPS-OTRCL Series", 
+        "category": "Taglio OTR", 
+        "description": "Area di preparazione e lavorazione pneumatici OTR giganti prima della triturazione.",
+        "specs": ["Area ricevimento coperta", "Attrezzature di movimentazione", "Sistema di pesatura", "Classificazione per dimensione"],
+        "applications": ["Ricevimento pneumatici", "Classificazione", "Preparazione", "Taglio iniziale"],
+        "capacity": "Fino a 50 pneumatici/giorno"
+      },
+      "beadWire": { 
+        "name": "Anelli Tallone Recuperati", 
+        "model": "Acciaio di Alta Qualità", 
+        "category": "Prodotti", 
+        "description": "Anelli tallone estratti dai pneumatici OTR, pronti per la vendita ad acciaierie e fonderie.",
+        "specs": ["Acciaio di alta qualità", "25% del peso del pneumatico", "Prezzo: $0.55/kg", "Domanda garantita"],
+        "applications": ["Acciaierie", "Fonderie", "Raffinazione acciaio", "Costruzione"],
+        "capacity": "Produzione continua"
+      },
+      "factory": { 
+        "name": "Stabilimento TOPS Recycling", 
+        "model": "Zhangjiagang, Cina", 
+        "category": "Stabilimenti", 
+        "description": "Panoramica degli stabilimenti industriali TOPS Recycling a Zhangjiagang, dove vengono prodotte tutte le attrezzature.",
+        "specs": ["Area: 50.000+ m²", "Capacità produttiva: 100+ macchine/anno", "20+ anni esperienza", "Export in 50+ paesi"],
+        "applications": ["Produzione", "Assemblaggio", "Test", "Formazione"],
+        "capacity": "Centro produttivo completo"
+      },
+      "shreddingLine": { 
+        "name": "Linea Triturazione Interna", 
+        "model": "Sistema Integrato", 
+        "category": "Linea Completa", 
+        "description": "Vista interna della linea di triturazione con sistema nastri trasportatori e trituratori in sequenza.",
+        "specs": ["Nastri automatizzati", "Trituratori multipli", "Sistema separazione magnetica", "Controllo centralizzato"],
+        "applications": ["Triturazione sequenziale", "Separazione materiali", "Automazione", "Produzione continua"],
+        "capacity": "10-20 ton/ora"
+      }
+    },
+    "events": { "cop29": { "name": "COP29 - Padiglione Business", "location": "Dubai, EAU", "date": "Novembre 2024", "type": "Partecipazione" }, "circularSummit": { "name": "Circular Economy Summit", "location": "Francoforte, Germania", "date": "Marzo 2025", "type": "Keynote" }, "rubberConference": { "name": "China Rubber Conference", "location": "Shanghai, Cina", "date": "Giugno 2025", "type": "Espositore" } },
+    "galleryImages": {
+      "topsTeam": { "title": "Team TOPS Recycling", "description": "Partnership strategica con il team TOPS Recycling a Zhangjiagang" },
+      "partnershipHandshake": { "title": "Accordo di Partnership", "description": "Ericson Piccoli e partner sulla linea di produzione" },
+      "partnershipTeam": { "title": "Visita Tecnica", "description": "Incontro d'affari presso le strutture industriali" },
+      "pyrolysisPipes": { "title": "Attrezzatura Pirolisi", "description": "Tubazioni e reattori in processo di assemblaggio" },
+      "factoryFloor": { "title": "Linea di Produzione", "description": "Area di lavorazione industriale con nastri automatizzati" },
+      "factoryInspection": { "title": "Ispezione Qualità", "description": "Supervisione attrezzature di lavorazione" },
+      "rubberPowderBags": { "title": "Polvere di Gomma", "description": "Prodotto finale: polvere di gomma riciclata" },
+      "productionBags": { "title": "Area di Stoccaggio", "description": "Materiale lavorato in attesa di spedizione" },
+      "factory": { "title": "Fabbrica Reattori", "description": "Linea di assemblaggio reattori di pirolisi" },
+      "factoryVisit": { "title": "Visita Strutture", "description": "Tour tecnico degli stabilimenti produttivi" },
+      "partnershipChina": { "title": "Partnership Cina-Brasile", "description": "Rafforzamento dei legami commerciali internazionali" }
+    },
+    "videos": {
+      "conveyorBelt": "Nastro Trasportatore Minerario",
+      "crushers": "Frantumatori ad Alte Prestazioni",
+      "compactMining": "Impianto Minerario Compatto",
+      "fullMiningPlant": "Impianto Minerario Completo",
+      "customMachinery": "Macchinari Personalizzati",
+      "ecoMining": "Estrazione Ecologica",
+      "heavyDuty": "Attrezzatura per Servizio Pesante",
+      "mineralSeparation": "Separazione Minerali",
+      "ecoMining2": "Estrazione Ecologica 2.0",
+      "miningAutomation": "Automazione Mineraria",
+      "mobileCrushing": "Frantumazione Mobile",
+      "smartRecycling": "Riciclaggio Intelligente",
+      "pyrolysisTech": "Tecnologia di Pirolisi",
+      "globalSupplyChain": "Catena di Approvvigionamento Globale",
+      "completeSolutions": "Soluzioni Complete",
+      "devulcanized": "Gomma Devulcanizzata",
+      "builtToLast": "Costruito per Durare",
+      "tireRevolution": "Rivoluzione Pneumatici",
+      "websiteElp": "Sito Web ELP Green",
+      "partnershipAnnouncement": "Annuncio Partnership",
+      "wasteToResources": "Da Rifiuti a Risorse",
+      "otrRecycler": "Riciclatore Pneumatici OTR",
+      "revolutionizeTire": "Rivoluzionare il Riciclaggio",
+      "tireSlicePro": "Taglio Professionale Pneumatici",
+      "samuelXu": "Samuel Xu - TOPS Recycling",
+      "chinaBrazil": "Partnership Cina-Brasile",
+      "topsCollaboration": "Collaborazione TOPS",
+      "strategicAlliance": "Alleanza Strategica"
+    },
+    "tags": {
+      "mining": "Estrazione",
+      "recycling": "Riciclaggio",
+      "pyrolysis": "Pirolisi",
+      "partnership": "Partnership",
+      "equipment": "Attrezzature",
+      "sustainability": "Sostenibilità"
+    },
+    "sections": {
+      "machinesTitle": "Soluzioni Macchine",
+      "machinesSubtitle": "Attrezzature high-tech per riciclaggio pneumatici",
+      "otrTitle": "Soluzioni OTR Giganti",
+      "otrSubtitle": "Lavorazione pneumatici fuoristrada su larga scala",
+      "videosTitle": "Video del Canale",
+      "videosSubtitle": "Esplora la nostra tecnologia e partnership",
+      "galleryTitle": "Galleria Fotografica",
+      "gallerySubtitle": "Documentazione visiva delle nostre operazioni",
+      "articlesTitle": "Articoli Recenti",
+      "articlesSubtitle": "Contenuti tecnici e novità",
+      "pressTitle": "Comunicati Stampa",
+      "pressSubtitle": "Annunci ufficiali dell'azienda",
+      "eventsTitle": "Eventi e Conferenze",
+      "eventsSubtitle": "La nostra presenza agli eventi globali"
+    }
+  },
+  "globalExpansion": {
+    "badge": "Roadmap 2025-2031",
+    "title": "Espansione Globale",
+    "subtitle": "17-18 Stabilimenti nel Mondo",
+    "heroDescription": "Investiamo direttamente in stabilimenti di riciclaggio pneumatici OTR all'estero. Cerchiamo partnership con aziende minerarie, rivenditori e porti.",
+    "noSellEquipment": "Non vendiamo attrezzature.",
+    "indicateSource": "Indica Fonte OTR",
+    "knowSmartLine": "Scopri Smart Line",
+    "roadmap": {
+      "badge": "Piano Strategico",
+      "title": "Roadmap di Espansione 2025-2031",
+      "subtitle": "Dall'Australia alla presenza globale con capacità di 1 milione di tonnellate/anno"
+    },
+    "regions": {
+      "badge": "Mercati Target",
+      "title": "Focus Regionale Strategico",
+      "subtitle": "Mercati prioritari con alto volume di pneumatici OTR e operazioni minerarie consolidate"
+    },
+    "partnership": {
+      "badge": "Modello di Investimento",
+      "title": "Modello di Partnership",
+      "description": "Investiamo direttamente nell'installazione della fabbrica. Voi portate le fonti di pneumatici OTR, noi portiamo tecnologia e capitale.",
+      "jointVentures": "Joint Venture con partner locali",
+      "smartLineTech": "Tecnologia robotica Smart Line",
+      "jointOperation": "Operazione congiunta con condivisione dei ricavi",
+      "indicateOtr": "Indica Fonte OTR"
+    },
+    "cta": {
+      "title": "Avete Fonti di Pneumatici OTR?",
+      "description": "Aziende minerarie, rivenditori di pneumatici, porti. Noi investiamo nello stabilimento, voi portate le fonti.",
+      "indicateNow": "Indica Fonte OTR Ora",
+      "partnershipDetails": "Dettagli Partnership",
+      "knowTech": "Scopri la Tecnologia"
+    },
+    "metrics": {
+      "annualGoal": "Obiettivo Annuale",
+      "globalCapacity": "Capacità Globale",
+      "plannedFactories": "Stabilimenti Pianificati",
+      "targetCountries": "Paesi Target",
+      "tonsYear": "ton/anno",
+      "tonsHour": "ton/ora",
+      "units": "unità",
+      "markets": "mercati"
+    },
+    "timeline": {
+      "2026": {
+        "milestone": "Prima Smart Line in Australia",
+        "description": "Dimostrazione linea robotica smart con installazione completa",
+        "factories": "1-2",
+        "capacity": "10-20 ton/ora",
+        "location": "Australia"
+      },
+      "2027": {
+        "milestone": "Espansione Sud America & Europa",
+        "description": "Brasile (São Paulo/Minas Gerais) e Italia (Milano/Lombardia)",
+        "factories": "4-5",
+        "capacity": "40-50 ton/ora",
+        "location": "Brasile, Italia"
+      },
+      "2028": {
+        "milestone": "Africa & Medio Oriente",
+        "description": "Espansione in mercati minerari emergenti",
+        "factories": "8-10",
+        "capacity": "80-100 ton/ora",
+        "location": "Africa, Medio Oriente"
+      },
+      "2029-2031": {
+        "milestone": "Obiettivo Globale Completo",
+        "description": "1 milione di tonnellate/anno di capacità di riciclaggio",
+        "factories": "17-18",
+        "capacity": "175 ton/ora",
+        "location": "Globale"
+      }
+    },
+    "regions_data": {
+      "europe": {
+        "region": "Europa",
+        "countries": ["Italia (Milano)", "Germania", "Spagna"],
+        "advantages": ["Regolamentazione ESG rigorosa", "Partnership con Pirelli/Prometeon", "Infrastruttura logistica", "Finanziamenti EU Green Deal"]
+      },
+      "latam": {
+        "region": "America Latina",
+        "countries": ["Brasile (SP/MG/PA)", "Cile", "Perù"],
+        "advantages": ["Più grande mercato minerario", "Vale, CSN, Anglo American", "Brevetti INPI 6 classi", "Operazioni esistenti"]
+      },
+      "oceania": {
+        "region": "Oceania",
+        "countries": ["Australia", "Nuova Zelanda"],
+        "advantages": ["Prima Smart Line 2026", "BHP, Rio Tinto, Fortescue", "Regolamentazione ambientale", "Mercato premium"]
+      },
+      "asia": {
+        "region": "Asia-Pacifico",
+        "countries": ["Cina (HQ)", "Indonesia", "India"],
+        "advantages": ["Sede tecnologica", "Produzione attrezzature", "Mercato in crescita", "Catena di fornitura"]
+      }
+    },
+    "inProgress": "In corso",
+    "factories": "stabilimenti",
+    "goal2031": "Obiettivo 2031",
+    "millionTonsYear": "1 milione ton/anno"
+  },
+  "brazilLatam": {
+    "title": "Brasile & America Latina",
+    "subtitle": "Partnership Riciclaggio OTR",
+    "heroDescription": "Partnership strategica per il riciclaggio di pneumatici OTR nelle principali regioni minerarie del Brasile. Allineamento completo con PNRS e Reciclanip.",
+    "indicateInBrazil": "Indica in Brasile",
+    "knowTech": "Scopri la Tecnologia",
+    "miningRegions": {
+      "title": "Principali Regioni Minerarie del Brasile",
+      "subtitle": "Alto volume di pneumatici OTR nelle principali operazioni minerarie e industriali",
+      "north": {
+        "region": "Nord",
+        "states": ["Pará", "Amazonas", "Amapá"],
+        "description": "Maggiore concentrazione di miniere di ferro e bauxite in Brasile. Alto volume di pneumatici OTR in uso.",
+        "companies": "Vale (Carajás), Hydro Alunorte, MRN Mineração",
+        "volume": "Alto volume - migliaia di pneumatici/anno"
+      },
+      "southeast": {
+        "region": "Sud-Est",
+        "states": ["Minas Gerais", "São Paulo", "Rio de Janeiro"],
+        "description": "Tradizione mineraria e industriale pesante. Infrastruttura logistica sviluppata.",
+        "companies": "Vale, CSN, Usiminas, Gerdau",
+        "volume": "Volume molto alto - massima concentrazione industriale"
+      },
+      "midwest": {
+        "region": "Centro-Ovest",
+        "states": ["Goiás", "Mato Grosso"],
+        "description": "Agroindustria e attività mineraria in espansione. Crescente domanda di riciclaggio.",
+        "companies": "Anglo American, Kinross, Yamana Gold",
+        "volume": "Volume medio-alto"
+      },
+      "companiesInRegion": "Aziende nella Regione"
+    },
+    "map": {
+      "title": "Mappa Interattiva delle Miniere",
+      "subtitle": "Clicca sui punti per vedere i dettagli delle operazioni minerarie e volumi OTR",
+      "dataSource": "Dati: ANM (Agenzia Nazionale delle Miniere) e report pubblici delle aziende minerarie."
+    },
+    "legislation": {
+      "title": "PNRS & Reciclanip",
+      "subtitle": "Allineamento completo con la legislazione brasiliana e programmi di settore",
+      "pnrs": {
+        "title": "PNRS - Politica Nazionale dei Rifiuti Solidi",
+        "description": "Legge 12.305/2010 stabilisce la responsabilità condivisa per il ciclo di vita dei prodotti, inclusi i pneumatici."
+      },
+      "reciclanip": {
+        "title": "Reciclanip",
+        "description": "Programma ANIP per la raccolta e smaltimento di pneumatici usati. La nostra tecnologia integra questa catena con massima valorizzazione."
+      },
+      "conama": {
+        "title": "Risoluzione CONAMA 416/2009",
+        "description": "Regola lo smaltimento ambientalmente appropriato dei pneumatici usati. Piena conformità con la nostra tecnologia."
+      },
+      "esg": {
+        "title": "ESG & Economia Circolare",
+        "description": "Allineamento con gli obiettivi ESG aziendali e principi di economia circolare richiesti dagli investitori globali."
+      },
+      "destination": {
+        "title": "Destinazione Ambientale Certificata",
+        "description": "La nostra tecnologia trasforma i pneumatici usati in prodotti ad alto valore (rCB, olio, acciaio) con certificati per report ESG e crediti di carbonio."
+      }
+    },
+    "advantages": {
+      "title": "I Nostri Vantaggi in Brasile",
+      "subtitle": "Posizione competitiva unica con asset consolidati e partnership strategiche",
+      "spOperations": {
+        "title": "Operazioni a São Paulo",
+        "description": "Base operativa consolidata con asset e registrazione INPI in 6 classi."
+      },
+      "smartLine": {
+        "title": "Tecnologia Smart Line",
+        "description": "Robot automatizzati per il taglio di pneumatici OTR - maggiore efficienza e sicurezza."
+      },
+      "miningFocus": {
+        "title": "Focus Minerario",
+        "description": "Specializzazione in pneumatici giganti (OTR) usati nelle operazioni minerarie."
+      },
+      "logistics": {
+        "title": "Logistica Integrata",
+        "description": "Partnership per raccolta e lavorazione nelle regioni ad alto volume."
+      }
+    },
+    "cta": {
+      "title": "Diventiamo Partner in Brasile?",
+      "description": "Aziende minerarie, rivenditori di pneumatici, produttori. Noi investiamo nello stabilimento, voi portate le fonti OTR.",
+      "contactNote": "Contatto dopo revisione interna"
+    },
+    "expansion": {
+      "title": "Altri Paesi LATAM",
+      "subtitle": "Espansione in mercati minerari strategici nella regione",
+      "chile": { "country": "Cile", "focus": "Rame" },
+      "peru": { "country": "Perù", "focus": "Rame/Oro" },
+      "argentina": { "country": "Argentina", "focus": "Litio" },
+      "colombia": { "country": "Colombia", "focus": "Carbone" },
+      "mexico": { "country": "Messico", "focus": "Argento/Rame" },
+      "miningFocus": "Focus Minerario"
+    }
+  },
+  "login": {
+    "title": "Pannello Amministrativo",
+    "subtitle": "Accedi per continuare",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Accedi",
+    "loading": "Accesso in corso...",
+    "orContinueWith": "oppure continua con",
+    "googleSignIn": "Accedi con Google",
+    "connecting": "Connessione...",
+    "noAccount": "Non hai un account?",
+    "createAccount": "Crea account",
+    "backToSite": "← Torna al sito",
+    "errors": {
+      "googleError": "Errore di accesso con Google",
+      "googleErrorDesc": "Impossibile connettersi a Google.",
+      "accessDenied": "Accesso negato",
+      "accessDeniedDesc": "Questa email non è autorizzata ad accedere all'area riservata.",
+      "loginError": "Errore di accesso",
+      "invalidCredentials": "Credenziali non valide."
+    },
+    "success": {
+      "title": "Accesso effettuato con successo!",
+      "description": "Reindirizzamento al pannello..."
+    }
+  },
+  "signup": {
+    "title": "Crea Account",
+    "subtitle": "Registrati per accedere al pannello",
+    "name": "Nome completo",
+    "namePlaceholder": "Il tuo nome",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Conferma password",
+    "createAccount": "Crea account",
+    "creating": "Creazione account...",
+    "orContinue": "oppure continua con",
+    "connecting": "Connessione...",
+    "signupGoogle": "Registrati con Google",
+    "hasAccount": "Hai già un account?",
+    "login": "Accedi",
+    "backToSite": "Torna al sito",
+    "success": "Account creato con successo!",
+    "successDesc": "Ora puoi effettuare il login.",
+    "error": "Si è verificato un errore durante la creazione dell'account.",
+    "errorTitle": "Errore di registrazione",
+    "alreadyRegistered": "Questa email è già registrata. Prova ad accedere.",
+    "passwordMismatch": "Le password non corrispondono",
+    "passwordMismatchDesc": "Verifica che le password siano uguali.",
+    "passwordShort": "Password troppo corta",
+    "passwordShortDesc": "La password deve contenere almeno 6 caratteri.",
+    "googleError": "Errore di registrazione con Google",
+    "googleErrorDesc": "Impossibile connettersi a Google."
+  },
+  "admin": {
+    "title": "Pannello Admin",
+    "subtitle": "ELP Green Technology",
+    "viewSite": "Vedi Sito",
+    "logout": "Esci",
+    "updateApp": "Aggiorna app",
+    "updatingApp": "Aggiornamento…",
+    "updatingAppDesc": "Ricerca di una nuova versione e pulizia della cache locale.",
+    "updateFailed": "Aggiornamento non riuscito",
+    "updateFailedDesc": "Prova un hard refresh (Ctrl+Shift+R) o svuota la cache del browser.",
+    "nav": {
+      "principal": "Principale",
+      "leads": "Lead",
+      "content": "Contenuti",
+      "settings": "Impostazioni",
+      "tools": "Strumenti",
+      "crmPipeline": "Pipeline CRM",
+      "emailInbox": "Posta in Arrivo",
+      "partnerFolders": "Cartelle Partner",
+      "documents": "Genera Documenti",
+      "globalMap": "Mappa Globale",
+      "partnerLevels": "Livelli Partner",
+      "feasibility": "Studio di Fattibilità",
+      "otrLeads": "Lead OTR",
+      "marketplace": "Marketplace",
+      "contacts": "Contatti",
+      "newsletter": "Newsletter",
+      "articles": "Articoli",
+      "press": "Comunicati Stampa",
+      "counters": "Contatori",
+      "analytics": "Analytics"
+    },
+    "feasibility": {
+      "title": "Studio di Fattibilità",
+      "description": "Analisi finanziaria per l'implementazione di impianti di riciclaggio OTR",
+      "newStudy": "Nuovo Studio",
+      "editStudy": "Modifica Studio",
+      "editorDescription": "Configura i parametri dell'impianto e visualizza i risultati finanziari in tempo reale",
+      "noStudies": "Nessuno studio creato",
+      "noStudiesDesc": "Crea il tuo primo studio di fattibilità per analizzare gli investimenti",
+      "createFirst": "Crea Primo Studio",
+      "savedSuccess": "Studio salvato con successo!",
+      "saveError": "Errore nel salvataggio dello studio",
+      "deletedSuccess": "Studio eliminato",
+      "deleteTitle": "Eliminare lo studio?",
+      "deleteDescription": "Questa azione non può essere annullata.",
+      "pdfGenerated": "PDF generato con successo!",
+      "studyName": "Nome dello Studio",
+      "studyNamePlaceholder": "Es: Impianto Australia 2025",
+      "location": "Posizione",
+      "locationPlaceholder": "Es: Sydney",
+      "country": "Paese",
+      "selectCountry": "Seleziona paese",
+      "plantConfig": "Configurazione Impianto",
+      "dailyCapacity": "Capacità Giornaliera",
+      "operatingDays": "Giorni Operativi/Anno",
+      "utilizationRate": "Tasso di Utilizzo",
+      "tonsDay": "ton/giorno",
+      "capex": "Investimento (CAPEX)",
+      "equipmentCost": "Attrezzature",
+      "installationCost": "Installazione",
+      "infrastructureCost": "Infrastruttura",
+      "workingCapital": "Capitale Circolante",
+      "otherCapex": "Altri CAPEX",
+      "opex": "Costi Operativi (OPEX)",
+      "rawMaterialCost": "Materia Prima",
+      "laborCost": "Manodopera",
+      "energyCost": "Energia",
+      "maintenanceCost": "Manutenzione",
+      "logisticsCost": "Logistica",
+      "administrativeCost": "Amministrativo",
+      "otherOpex": "Altri OPEX",
+      "revenue": "Ricavi",
+      "rubberGranules": "Granuli di Gomma",
+      "steelWire": "Acciaio Verde",
+      "textileFiber": "Fibra Tessile",
+      "pricePerTon": "Prezzo/Ton (USD)",
+      "yieldPercent": "Resa (%)",
+      "financialParams": "Parametri Finanziari",
+      "taxRate": "Aliquota Fiscale",
+      "depreciationYears": "Anni di Ammortamento",
+      "discountRate": "Tasso di Sconto",
+      "inflationRate": "Tasso di Inflazione",
+      "results": "Risultati Calcolati",
+      "totalInvestment": "Investimento Totale",
+      "investment": "Investimento",
+      "annualEbitda": "EBITDA Annuale",
+      "paybackPeriod": "Payback",
+      "payback": "Payback",
+      "months": "mesi",
+      "roi": "ROI",
+      "irr": "TIR",
+      "npv10Years": "VAN (10 anni)",
+      "notes": "Note",
+      "notesPlaceholder": "Aggiungi note sullo studio...",
+      "checklistNotes": "Note Checklist Due Diligence per PDF",
+      "checklistNotesDesc": "Queste note appariranno nella checklist del PDF. Compila le osservazioni per ogni categoria.",
+      "ddNotesPlaceholder": "Aggiungi osservazioni...",
+      "ddCompanyInfo": "Informazioni Aziendali",
+      "ddFinancial": "Verifica Finanziaria",
+      "ddLegal": "Legale e Conformità",
+      "ddOperational": "Capacità Operativa",
+      "ddOtrSources": "Fonti Pneumatici OTR",
+      "ddPartnership": "Prontezza Partnership",
+      "studyStatus": "Stato",
+      "status": {
+        "draft": "Bozza",
+        "in_review": "In Revisione",
+        "approved": "Approvato",
+        "rejected": "Rifiutato"
+      },
+      "saveStudy": "Salva Studio",
+      "edit": "Modifica",
+      "duplicate": "Duplica",
+      "exportPdf": "Esporta PDF",
+      "tabs": {
+        "studies": "Studi",
+        "templates": "Modelli",
+        "compare": "Confronta",
+        "charts": "Grafici"
+      },
+      "charts": {
+        "selectStudy": "Seleziona Studio",
+        "selectStudyPlaceholder": "Scegli uno studio da visualizzare",
+        "cashFlow": "Flusso di Cassa",
+        "breakdown": "Composizione",
+        "sensitivity": "Sensibilità",
+        "metrics": "Metriche",
+        "cashFlowTitle": "Proiezione Flusso di Cassa (10 Anni)",
+        "year": "Anno",
+        "years": "anni",
+        "cumulativeCashFlow": "Flusso Cumulativo",
+        "annualProfit": "Profitto Annuale",
+        "breakeven": "Punto di Pareggio",
+        "totalReturn": "Rendimento Totale (10 Anni)",
+        "avgAnnualReturn": "Rendimento Medio Annuale",
+        "revenueBreakdown": "Composizione Ricavi",
+        "opexBreakdown": "Composizione OPEX",
+        "totalAnnualOpex": "OPEX Annuale Totale",
+        "sensitivityTitle": "Analisi di Sensibilità ROI",
+        "sensitivityDesc": "Impatto delle variazioni nei parametri chiave",
+        "priceVariation": "Variazione Prezzo",
+        "capacityVariation": "Variazione Capacità",
+        "opexVariation": "Variazione OPEX",
+        "keyMetrics": "Metriche Chiave",
+        "totalInvestmentMetric": "Investimento Totale",
+        "annualRevenueMetric": "Ricavi Annuali",
+        "annualOpexMetric": "OPEX Annuale",
+        "annualEbitdaMetric": "EBITDA Annuale",
+        "roiMetric": "ROI",
+        "paybackMetric": "Payback",
+        "npvMetric": "VAN (10 Anni)",
+        "irrMetric": "TIR"
+      },
+      "govPartnership": {
+        "title": "Modello di Partnership Governativa",
+        "description": "Configura royalties governative e bonus ambientale per raccoglitori di pneumatici OTR",
+        "collectionModel": "Modello di Raccolta",
+        "modelDirect": "Diretto (Società Minerarie)",
+        "modelGovernment": "Governativo (Municipale/Statale/Federale)",
+        "modelMining": "Partnership con Miniere",
+        "modelHybrid": "Ibrido (Gov + Miniere)",
+        "royalties": "Royalties per Governo",
+        "royaltiesHint": "% di ricavi destinata al governo",
+        "envBonus": "Bonus Ambientale",
+        "envBonusHint": "Bonus per tonnellata raccolta",
+        "impactTitle": "Impatto sul Progetto",
+        "annualRoyalties": "Royalties Annuali",
+        "annualEnvBonus": "Bonus Ambientale Annuale",
+        "netRevenue": "Ricavi Netti",
+        "adjustedRoi": "ROI Corretto",
+        "countryPrograms": "Programmi del Paese",
+        "typical": "tipico",
+        "market": "mercato",
+        "regulations": "Regolamenti",
+        "benefits": "Benefici",
+        "clickToApply": "Clicca per applicare i valori consigliati",
+        "netImpact": "Impatto Netto",
+        "perYear": "/anno",
+        "ofRevenue": "dei ricavi",
+        "ofOriginal": "dell'originale",
+        "vsBase": "vs base",
+        "adjustedPayback": "Payback Corretto",
+        "realTimeCalc": "Calcolo in Tempo Reale",
+        "positiveRecommendation": "Partnership governativa con impatto positivo! Il bonus ambientale supera le royalties.",
+        "neutralRecommendation": "Impatto neutro/leggermente negativo. Considera di negoziare bonus ambientali più alti.",
+        "models": {
+          "directMining": "Partnership Diretta Mineraria",
+          "ecopneus": "Consorzio Ecopneus",
+          "southZes": "ZES Sud Italia",
+          "grvSystem": "Sistema GRV"
+        }
+      },
+      "tireCategory": {
+        "title": "Categoria Pneumatici",
+        "description": "Seleziona il tipo di pneumatico per regolare automaticamente rese, OPEX e bonus ambientale",
+        "multiDescription": "Seleziona una o più categorie per analisi combinata di rese, OPEX e bonus ambientale",
+        "selected": "selezionate",
+        "categoriesCount": "categorie",
+        "combinedSummary": "Riepilogo Combinato",
+        "models": "modelli",
+        "types": {
+          "otrMining": "OTR Minerario",
+          "otrConstruction": "OTR Costruzione",
+          "agricultural": "Agricolo",
+          "truckBus": "Camion/Autobus"
+        },
+        "difficulty": {
+          "very_high": "Molto Alta",
+          "high": "Alta",
+          "medium": "Media",
+          "low": "Bassa"
+        },
+        "applications": {
+          "dumpTrucks100t": "Dumper 100t",
+          "dumpTrucks150t": "Dumper 150t",
+          "dumpTrucks200t": "Dumper 200t",
+          "giantLoaders": "Pale Caricatrici Giganti",
+          "ultraClass400t": "Ultra Class 400t",
+          "wheelLoaders": "Pale Gommate",
+          "graders": "Livellatrici",
+          "articDumpers": "Dumper Articolati",
+          "largeLoaders": "Pale Grandi",
+          "tractorFront": "Trattore Anteriore",
+          "tractorRear": "Trattore Posteriore",
+          "largeHarvester": "Mietitrebbia Grande",
+          "combineFront": "Combine Frontale",
+          "truckSteer": "Camion Sterzante",
+          "truckDrive": "Camion Motrice",
+          "trailerWide": "Rimorchio Largo",
+          "busUrban": "Autobus Urbano"
+        }
+      },
+      "composition": "Composizione",
+      "rubber": "Gomma",
+      "steel": "Acciaio",
+      "textile": "Tessile",
+      "capacity": "Capacità",
+      "typicalSources": "Fonti tipiche",
+      "avgWeight": "Peso Medio",
+      "tireModels": {
+        "title": "Modelli Specifici di Pneumatici",
+        "description": "Seleziona modelli individuali per calcoli più precisi",
+        "multiCategoryDescription": "Modelli da {{count}} categorie selezionate",
+        "modelsAvailable": "modelli",
+        "selected": "selezionati",
+        "selectAll": "Seleziona Tutto",
+        "deselectAll": "Deseleziona Tutto",
+        "summary": "Riepilogo Modelli Selezionati",
+        "summaryTooltip": "Medie calcolate in base ai modelli selezionati e ai prezzi di mercato Gen 2026",
+        "avgWeight": "Peso Medio",
+        "valuePerTire": "Valore/Pneumatico",
+        "rubberYield": "Resa Gomma",
+        "modelsCount": "Modelli"
+      },
+      "scenarioChart": {
+        "title": "Analisi Scenari di Partnership",
+        "interactive": "Interattivo",
+        "description": "Confronta l'impatto di diversi livelli di royalty vs bonus ambientale sul ROI",
+        "currentConfig": "Config. Attuale",
+        "currentRoi": "ROI Attuale",
+        "bestScenario": "Miglior Scenario",
+        "netImpact": "Impatto Netto",
+        "roiComparison": "Confronto ROI per Scenario",
+        "sensitivityAnalysis": "Analisi di Sensibilità: Bonus Ambientale vs ROI",
+        "recommendation": "Raccomandazione",
+        "noPartnership": "Senza Partnership",
+        "bonusOnly": "Solo Bonus",
+        "balanced": "Bilanciato",
+        "highPartnership": "Alta Partnership",
+        "current": "Attuale"
+      },
+      "comparison": {
+        "title": "Confronto Studi",
+        "description": "Confronta più studi fianco a fianco",
+        "selectStudies": "Seleziona Studi",
+        "selectToCompare": "Seleziona 2-4 studi da confrontare",
+        "metricsTable": "Tabella Metriche",
+        "chartsComparison": "Grafici Comparativi",
+        "recommendation": "Raccomandazione",
+        "bestRoi": "Miglior ROI",
+        "fastestPayback": "Payback Più Veloce",
+        "highestNpv": "VAN Più Alto",
+        "minStudies": "Minimo 2 Studi Richiesti",
+        "minStudiesDesc": "È necessario creare almeno 2 studi di fattibilità per utilizzare lo strumento di confronto.",
+        "investment": "Investimento",
+        "revenue": "Ricavi",
+        "ebitda": "EBITDA",
+        "metric": "Metrica",
+        "financialComparison": "Confronto Finanziario",
+        "performanceRadar": "Radar delle Prestazioni",
+        "selectedCount": "{{count}} studi selezionati",
+        "recommendationText": "Lo studio {{name}} mostra il miglior profilo complessivo con ROI del {{roi}}% e payback di {{payback}} mesi."
+      },
+      "pdfError": "Errore nella generazione del PDF",
+      "templates": {
+        "title": "Modelli Regionali",
+        "description": "Modelli preconfigurati per diverse regioni",
+        "useTemplate": "Usa Modello",
+        "australiaName": "Hub Minerario Australia",
+        "australiaDesc": "Riciclaggio OTR ad alto volume vicino alle principali operazioni minerarie nell'Australia occidentale",
+        "brazilNorthName": "Brasile Nord - SUDAM",
+        "brazilNorthDesc": "Incentivi fiscali SUDAM con riduzione del 75% dell'imposta societaria, partnership Reciclanip e logistica via Belém/Manaus",
+        "brazilMiningName": "Brasile Minerario - Vale/CSN",
+        "brazilMiningDesc": "Partnership diretta con grandi miniere (Vale, CSN, Anglo American) con entrate per ricevere pneumatici OTR",
+        "brazilSoutheastName": "Brasile Sud-Est - Industriale",
+        "brazilSoutheastDesc": "Mercato consumatore più grande, licenze CETESB facilitate, forte domanda industriale e infrastrutture complete",
+        "italyName": "Europa Mediterraneo",
+        "italyDesc": "Hub europeo centrale con accesso a pneumatici per costruzioni e attrezzature portuali",
+        "germanyName": "Germania Industriale",
+        "germanyDesc": "Impianto high-tech vicino ai principali centri automobilistici e industriali",
+        "chileName": "Cintura del Rame Cile",
+        "chileDesc": "Situato vicino alla regione mineraria del rame di Atacama con volumi massicci di pneumatici OTR",
+        "southAfricaName": "Miniere Sudafrica",
+        "southAfricaDesc": "Porta d'accesso ai mercati minerari africani con operazioni di platino e oro",
+        "mexicoName": "Messico - Partnership Governativa OTR",
+        "mexicoDesc": "Modello unico di raccolta via governi municipali/statali/federali con royalties del 20% e bonus ambientale per raccolta pneumatici OTR dalle miniere",
+        "regions": {
+          "oceania": "Oceania",
+          "southAmerica": "Sud America",
+          "europe": "Europa",
+          "africa": "Africa",
+          "northAmerica": "Nord America"
+        },
+        "highlights": {
+          "freeRawMaterial": "Materia prima gratis dalle miniere",
+          "highPrices": "Prezzi prodotti elevati",
+          "strongMiningDemand": "Forte domanda mineraria",
+          "abundantOtrSupply": "Abbondante fornitura OTR",
+          "lowLaborCosts": "Bassi costi manodopera",
+          "growingDemand": "Domanda locale crescente",
+          "premiumPrices": "Prezzi premium prodotti",
+          "strongEuRegulations": "Regolamenti UE rigorosi",
+          "gateFeePotential": "Potenziale tariffa d'ingresso",
+          "highestQuality": "Standard qualità più elevati",
+          "automotiveDemand": "Forte domanda automobilistica",
+          "excellentLogistics": "Eccellente logistica",
+          "largestCopperMines": "Maggiori miniere di rame al mondo",
+          "stableEconomy": "Economia stabile",
+          "freeTradeAgreements": "Accordi di libero scambio",
+          "lowOperatingCosts": "Bassi costi operativi",
+          "growingAfricanDemand": "Domanda africana crescente",
+          "miningHub": "Hub industria mineraria",
+          "govPartnership": "Partnership Governativa (Federale/Statale/Municipale)",
+          "royaltiesProgram": "Programma Royalties 20% per Governo",
+          "environmentalBonus": "Bonus Ambientale per Raccoglitori",
+          "miningPartnerships": "Partnership Dirette con Miniere",
+          "reciclanipPartner": "Partner Ufficiale Reciclanip",
+          "sudamIncentive": "Incentivo SUDAM 75%",
+          "valePartnership": "Partnership Vale/CSN/Anglo",
+          "pnrsCompliance": "Conformità PNRS 12.305",
+          "carbonCredits": "Crediti di Carbonio",
+          "largestMarket": "Mercato Consumatore Più Grande",
+          "cetesb": "Licenze CETESB",
+          "industrialDemand": "Forte Domanda Industriale"
+        }
+      },
+      "fiscalTable": {
+        "title": "Incentivi Fiscali per Regione",
+        "description": "Comparativo di incentivi fiscali e aliquote effettive per paese e regione",
+        "countriesCount": "paesi",
+        "tableView": "Tabella Comparativa",
+        "detailView": "Dettagli per Paese",
+        "country": "Paese",
+        "region": "Regione",
+        "baseTax": "Base",
+        "baseTaxTooltip": "Aliquota societaria standard del paese",
+        "effective": "Effettiva",
+        "effectiveTooltip": "Aliquota effettiva dopo incentivi",
+        "mainIncentives": "Incentivi Principali",
+        "regionsAvailable": "regioni disponibili",
+        "bestEffective": "Migliore Effettiva",
+        "regulations": "Regolamenti"
+      },
+      "ai": {
+        "title": "Analisi con IA",
+        "excellent": "Eccellente",
+        "good": "Buono",
+        "moderate": "Moderato",
+        "risky": "Rischioso",
+        "runAnalysis": "Esegui Analisi IA",
+        "analyzing": "Analizzando...",
+        "reanalyze": "Rianalizza",
+        "analysisComplete": "Analisi Completata",
+        "analysisCompleteDesc": "L'analisi di fattibilità è stata generata con successo.",
+        "analysisFailed": "Analisi Fallita",
+        "analysisReady": "Analisi Pronta",
+        "viabilityRating": "Valutazione Fattibilità",
+        "keyStrengths": "Punti di Forza",
+        "riskFactors": "Fattori di Rischio",
+        "recommendations": "Raccomandazioni"
+      },
+      "report": {
+        "rawMaterialComposition": "Composizione Materia Prima",
+        "material": "Materiale",
+        "percentage": "Percentuale",
+        "kgPerHour": "Kg/Ora",
+        "pricePerTon": "Prezzo/Ton",
+        "totalProduction": "Produzione Totale/Ora",
+        "investmentBreakdown": "Ripartizione Investimento",
+        "description": "Descrizione",
+        "value": "Valore (USD)",
+        "totalInvestment": "Investimento Totale",
+        "monthlySalesEstimates": "Stima Vendite Mensili",
+        "probable": "Scenario Probabile",
+        "pessimistic": "Scenario Pessimistico",
+        "optimistic": "Scenario Ottimistico",
+        "capacity": "Capacità",
+        "product": "Prodotto/Servizio",
+        "monthlyQty": "Qtà Mensile",
+        "monthlyRevenue": "Ricavo Mensile",
+        "total": "Totale",
+        "contributionMargin": "Margine di Contribuzione",
+        "fixedCosts": "Costi Fissi",
+        "operatingIncome": "Risultato Operativo",
+        "paybackAnalysis": "Analisi Payback",
+        "years": "Anni",
+        "viabilityIndicators": "Indicatori di Fattibilità (Riepilogo)",
+        "totalSalesRevenue": "Ricavi Totali da Vendite",
+        "fixedCostsPercent": "(-) Costi Fissi",
+        "annualProfit": "Profitto Annuale",
+        "strengths": "Punti di Forza",
+        "risks": "Fattori di Rischio",
+        "highRoi": "ROI alto superiore al 20%",
+        "quickPayback": "Payback rapido inferiore a 4 anni",
+        "positiveNpv": "VAN positivo indica investimento redditizio",
+        "irrAboveDiscount": "TIR superiore al tasso di sconto",
+        "lowRoi": "ROI inferiore al 15%",
+        "longPayback": "Periodo di payback lungo (>5 anni)",
+        "negativeNpv": "VAN negativo",
+        "marketVolatility": "Volatilità dei prezzi di mercato"
+      },
+      "savePdfWithCharts": "Salva PDF con Grafici",
+      "pdfWithChartsGenerated": "PDF completo generato con successo!",
+      "professionalReport": "Rapporto Professionale",
+      "generateProfessionalPdf": "Genera PDF Professionale",
+      "pdfLanguage": "Lingua del PDF",
+      "qrCodeConfig": "Configurazione Link QR Code",
+      "qrCodeConfigDesc": "Seleziona a quale modulo il QR Code nel PDF si collegherà. Il partner può scansionare e compilare il modulo direttamente.",
+      "qrFormSelect": "Modulo/Link per QR Code",
+      "customUrl": "URL Personalizzato",
+      "qrPreview": "Il QR Code si collegherà a",
+      "qrForms": {
+        "otrSources": "Indicazione Fonte OTR",
+        "marketplace": "Registrazione Marketplace",
+        "quote": "Richiedi Preventivo",
+        "contact": "Modulo di Contatto",
+        "dueDiligenceChecklist": "Checklist Due Diligence (KYC)",
+        "nda": "NDA - Accordo di Riservatezza",
+        "jointVenture": "Contratto Joint Venture",
+        "lgpdConsent": "Consenso LGPD/GDPR",
+        "customLink": "Link Personalizzato"
+      }
+    },
+    "otr": {
+      "compositionReference": "Riferimento Composizione Pneumatici OTR Giganti",
+      "realDataDate": "Dati reali - Gennaio 2026",
+      "avgRubber": "Gomma Media",
+      "weight": "Peso",
+      "valueCalculator": "Calcolatore Valore Pneumatici OTR",
+      "selectModel": "Seleziona Modello Pneumatico",
+      "quantity": "Quantità",
+      "tireWeight": "Peso Pneumatico",
+      "totalWeight": "Peso Totale",
+      "tons": "tonnellate",
+      "ton": "ton",
+      "adjustPrices": "Modifica Prezzi",
+      "resetPrices": "Ripristina",
+      "calculatedResults": "Risultati Calcolati",
+      "total": "Totale",
+      "valuePerTire": "Valore per Pneumatico",
+      "marketDate": "Mercato Gen 2026",
+      "compositionByModel": "Composizione per Modello OTR",
+      "model": "Modello",
+      "application": "Applicazione",
+      "value": "Valore",
+      "marketPrices": "Prezzi di Mercato",
+      "january2026": "Gennaio 2026",
+      "rubberGranules": "Granulato di Gomma",
+      "recoveredSteel": "Acciaio Recuperato",
+      "textileFiber": "Fibra Tessile",
+      "rcbCarbonBlack": "rCB (Nerofumo)",
+      "range": "Intervallo",
+      "materials": {
+        "rubber": "Gomma",
+        "steel": "Acciaio",
+        "textile": "Tessile",
+        "rcb": "rCB"
+      },
+      "applications": {
+        "dumpTrucks100t": "Dumper 100t",
+        "dumpTrucks150t": "Dumper 150t",
+        "dumpTrucks200t": "Dumper 200t+",
+        "giantLoaders": "Caricatori Giganti",
+        "ultraClass400t": "Ultra-classe 400t+"
+      }
+    },
+    "stats": {
+      "total": "Totale",
+      "pending": "In Attesa",
+      "approved": "Approvati",
+      "sent": "Inviati",
+      "signed": "Firmati"
+    },
+    "actions": {
+      "save": "Salva",
+      "cancel": "Annulla",
+      "delete": "Elimina",
+      "edit": "Modifica",
+      "view": "Visualizza",
+      "download": "Scarica",
+      "send": "Invia",
+      "reply": "Rispondi",
+      "archive": "Archivia",
+      "search": "Cerca",
+      "filter": "Filtra",
+      "newEmail": "Nuova Email",
+      "newTemplate": "Nuovo Modello",
+      "uploadFile": "Carica File",
+      "attachDocument": "Allega Documento",
+      "attachTemplate": "Allega Modello",
+      "shareForm": "Condividi Modulo"
+    },
+    "documentGenerator": {
+      "stats": {
+        "totalGenerated": "Totale Generati",
+        "signed": "Firmati",
+        "sent": "Inviati",
+        "templates": "Modelli",
+        "filled": "Compilati"
+      },
+      "tabs": {
+        "generate": "Genera",
+        "submissions": "Compilati",
+        "history": "Cronologia",
+        "templates": "Modelli"
+      },
+      "generate": {
+        "title": "Seleziona un Modello",
+        "description": "Scegli il tipo di documento che vuoi generare",
+        "customizableFields": "campi personalizzabili",
+        "generateDocument": "Genera",
+        "fillFieldsOrSelectLead": "Compila i campi o seleziona un lead esistente",
+        "manualFill": "Compilazione Manuale",
+        "selectLead": "Seleziona Lead",
+        "selectExistingLead": "Scegli un lead esistente",
+        "noneManual": "Nessuno (manuale)",
+        "language": "Lingua",
+        "preview": "Anteprima",
+        "previewDocument": "Anteprima",
+        "fillAndPreview": "Compila i campi e clicca su \"Anteprima\"",
+        "signatureOptional": "Firma Digitale (Opzionale)",
+        "simpleSignature": "Firma Semplice",
+        "icpBrasil": "ICP-Brasil",
+        "removeSignature": "Rimuovi Firma",
+        "generatePdf": "Genera PDF",
+        "generateSignedPdf": "Genera PDF Firmato"
+      },
+      "submissions": {
+        "title": "Modelli Compilati dai Clienti",
+        "description": "Documenti compilati e inviati da clienti/partner",
+        "signed": "firmati",
+        "pending": "in attesa",
+        "searchPlaceholder": "Cerca per nome, email o azienda...",
+        "signatureFilter": "Firma",
+        "all": "Tutti",
+        "signedFilter": "✓ Firmati",
+        "pendingFilter": "⏳ In attesa",
+        "typeFilter": "Tipo",
+        "noSubmissions": "Nessun modello compilato",
+        "noSubmissionsDesc": "Quando i clienti compileranno i modelli, appariranno qui.",
+        "signedBadge": "Firmato",
+        "pendingBadge": "In attesa"
+      },
+      "history": {
+        "title": "Documenti Generati",
+        "description": "Cronologia dei documenti creati",
+        "searchPlaceholder": "Cerca documento...",
+        "noDocuments": "Nessun documento trovato",
+        "sentBadge": "Inviato"
+      },
+      "templates": {
+        "title": "Modelli Disponibili",
+        "description": "Gestisci i modelli di documenti",
+        "newTemplate": "Nuovo Modello",
+        "inactive": "Inattivo",
+        "fields": "campi",
+        "use": "Usa",
+        "edit": "Modifica",
+        "delete": "Elimina",
+        "deleteConfirm": "Eliminare il modello?",
+        "deleteDescription": "Questa azione non può essere annullata."
+      },
+      "templateEditor": {
+        "editTemplate": "Modifica Modello",
+        "newTemplate": "Nuovo Modello",
+        "templateName": "Nome del Modello",
+        "templateNamePlaceholder": "Es: NDA Bilaterale",
+        "type": "Tipo",
+        "templateActive": "Modello Attivo",
+        "customizableFields": "Campi Personalizzabili",
+        "addField": "Aggiungi Campo",
+        "fieldName": "nome_campo",
+        "fieldLabel": "Etichetta",
+        "fieldTypes": {
+          "text": "Testo",
+          "textarea": "Area di Testo",
+          "number": "Numero",
+          "date": "Data",
+          "select": "Selezione"
+        },
+        "dynamicValuesHint": "Usa {{nome_campo}} nel contenuto del modello per inserire valori dinamici.",
+        "content": "Contenuto",
+        "contentPlaceholder": "Contenuto del documento in {{language}}...\n\nUsa {{campo}} per inserire valori dinamici.",
+        "saveTemplate": "Salva Modello"
+      },
+      "share": {
+        "title": "Condividi Documento",
+        "sendByEmail": "Invia per Email",
+        "emailPlaceholder": "email@esempio.com",
+        "or": "o",
+        "copyLink": "Copia Link"
+      },
+      "signature": {
+        "title": "Firma Digitale",
+        "icpRegistered": "Firma ICP-Brasil registrata!",
+        "captured": "Firma catturata!",
+        "capturedDesc": "Clicca su \"Genera PDF Firmato\" per terminare."
+      },
+      "submissionDetail": {
+        "title": "Dettagli del Modello Compilato",
+        "description": "Informazioni inviate dal cliente/partner",
+        "signedDocument": "Documento Firmato",
+        "pendingSignature": "Firma in Attesa",
+        "documentSection": "📄 Documento",
+        "name": "Nome",
+        "sentAt": "Inviato il",
+        "templateId": "ID Modello",
+        "signatureValidation": "Validazione Firma",
+        "signer": "Firmatario",
+        "email": "Email",
+        "type": "Tipo",
+        "drawnSignature": "Manoscritta Digitale",
+        "typedSignature": "Digitata",
+        "dateTime": "Data/Ora",
+        "sha256Hash": "Hash SHA-256",
+        "filledFields": "📝 Campi Compilati",
+        "noFields": "Nessun campo compilato",
+        "close": "Chiudi",
+        "reply": "Rispondi",
+        "downloadPdf": "Scarica PDF"
+      },
+      "documentTypes": {
+        "nda": "NDA",
+        "ndaDesc": "Accordo di Riservatezza",
+        "ndaUnilateral": "NDA Unilaterale",
+        "ndaUnilateralDesc": "Solo una parte divulga",
+        "ndaBilateral": "NDA Bilaterale",
+        "ndaBilateralDesc": "Entrambe le parti scambiano informazioni",
+        "ndaMultilateral": "NDA Multilaterale",
+        "ndaMultilateralDesc": "Partner multipli",
+        "formLevel1": "Modulo Livello 1",
+        "formLevel1Desc": "Raccolta iniziale di informazioni",
+        "formLevel2": "Registrazione Livello 2",
+        "formLevel2Desc": "Modulo di registrazione avanzato",
+        "kyc": "KYC / Due Diligence",
+        "kycDesc": "Questionario di conformità",
+        "jointVenture": "Joint Venture",
+        "jointVentureDesc": "Contratto di partnership strategica",
+        "contract": "Contratto",
+        "contractDesc": "Contratto generale",
+        "report": "Report ESG",
+        "reportDesc": "Impatto ambientale / sostenibilità",
+        "consent": "LGPD/GDPR",
+        "consentDesc": "Modulo di consenso dati",
+        "proposal": "Proposta Tecnica",
+        "proposalDesc": "Proposta tecnica del progetto",
+        "interactionLog": "Log Interazioni",
+        "interactionLogDesc": "Registro cronologico",
+        "autoReply": "Risposta Automatica",
+        "autoReplyDesc": "Conferma di ricezione",
+        "loi": "LOI",
+        "loiDesc": "Lettera di Intenti",
+        "mou": "MOU",
+        "mouDesc": "Memorandum di Intesa"
+      },
+      "toasts": {
+        "templateSaved": "Modello salvato con successo!",
+        "templateSaveError": "Errore nel salvataggio del modello",
+        "templateDeleted": "Modello eliminato!",
+        "documentGenerated": "Documento generato con successo!",
+        "signedDocumentGenerated": "Documento firmato e generato!",
+        "documentGenerateError": "Errore nella generazione del documento",
+        "documentSent": "Documento inviato per email!",
+        "linkCopied": "Link copiato!",
+        "linkCopiedDesc": "Il link è stato copiato negli appunti.",
+        "signatureCaptured": "Firma catturata!",
+        "clickToFinalize": "Clicca su \"Genera PDF Firmato\" per finalizzare.",
+        "icpSignatureRegistered": "Firma ICP-Brasil registrata!"
+      },
+      "pagination": {
+        "page": "Pagina",
+        "of": "di",
+        "previous": "Precedente",
+        "next": "Successivo"
+      },
+      "history": {
+        "title": "Documenti Generati",
+        "description": "Storico completo dei documenti",
+        "searchPlaceholder": "Cerca documenti...",
+        "typeFilter": "Tipo",
+        "noDocuments": "Nessun documento trovato",
+        "signed": "Firmato",
+        "sent": "Inviato",
+        "document": "Documento",
+        "generatedAt": "Documento generato il"
+      },
+      "signature": {
+        "digitalSignature": "Firma Digitale",
+        "sign": "Firma"
+      }
+    },
+    "statsGrid": {
+      "contacts": "Contatti",
+      "new": "nuovi",
+      "marketplace": "Marketplace",
+      "pending": "in attesa",
+      "newsletter": "Newsletter",
+      "subscribers": "iscritti",
+      "articles": "Articoli",
+      "published": "pubblicati",
+      "press": "Stampa",
+      "releases": "comunicati"
+    },
+    "crm": {
+      "total": "Totale",
+      "initial": "Iniziale",
+      "qualified": "Qualificati",
+      "projects": "Progetti",
+      "urgent": "Urgenti",
+      "overdue": "In ritardo",
+      "today": "Oggi",
+      "allTypes": "Tutti i Tipi",
+      "allPriorities": "Tutte",
+      "allReminders": "Tutti",
+      "pipeline": "Pipeline",
+      "list": "Lista",
+      "stages": {
+        "initial": {
+          "label": "Contatto Iniziale",
+          "description": "Primo contatto / Lead nuovo"
+        },
+        "qualified": {
+          "label": "Partner Qualificato",
+          "description": "Proposta inviata / Negoziazione"
+        },
+        "project": {
+          "label": "Progetto in Corso",
+          "description": "Contratto firmato / Esecuzione"
+        }
+      },
+      "priority": {
+        "low": "Bassa",
+        "medium": "Media",
+        "high": "Alta",
+        "urgent": "Urgente"
+      },
+      "types": {
+        "contact": "Contatto",
+        "marketplace": "Marketplace",
+        "otr": "OTR Lead"
+      },
+      "docTypes": {
+        "contract": "Contratto",
+        "proposal": "Proposta",
+        "businessPlan": "Business Plan",
+        "other": "Altro"
+      },
+      "reminders": {
+        "overdue": "In ritardo",
+        "today": "Oggi"
+      },
+      "noLeadsInStage": "Nessun lead in questa fase",
+      "leadUpdated": "Livello lead aggiornato!",
+      "priorityUpdated": "Priorità aggiornata!",
+      "followUpUpdated": "Follow-up aggiornato!",
+      "noteAdded": "Nota aggiunta!",
+      "documentUploaded": "Documento caricato con successo!",
+      "exportSuccess": "Esportazione avviata!",
+      "searchPlaceholder": "Cerca leads...",
+      "filterOverdue": "In ritardo",
+      "filterToday": "Oggi",
+      "filterNone": "Senza promemoria",
+      "urgentLeads": "Urgenti",
+      "overdueLeads": "In ritardo",
+      "todayReminders": "Oggi"
+    },
+    "emailInbox": {
+      "total": "Totale",
+      "unread": "Non Letti",
+      "replied": "Risposti",
+      "archived": "Archiviati",
+      "all": "Tutti",
+      "newEmail": "Nuova Email",
+      "inbox": "Posta",
+      "noEmailFound": "Nessuna email trovata",
+      "selectEmail": "Seleziona un'email da visualizzare"
+    },
+    "partnerFolders": {
+      "totalPartners": "Totale Partner",
+      "withDocuments": "Con Documenti",
+      "contacts": "Contatti",
+      "marketplace": "Marketplace",
+      "allTypes": "Tutti i Tipi",
+      "noPartnerFound": "Nessun partner trovato"
+    },
+    "globalMap": {
+      "title": "Mappa Globale dei Lead",
+      "description": "Clicca su un paese per vedere i lead di quella regione",
+      "contact": "Contatto",
+      "marketplace": "Marketplace",
+      "otrLead": "Lead OTR",
+      "topCountries": "Top Paesi",
+      "refresh": "Aggiorna"
+    },
+    "partnerLevels": {
+      "level1": {
+        "title": "Livello 1 - Base",
+        "description": "Contatto iniziale, raccolta informazioni base"
+      },
+      "level2": {
+        "title": "Livello 2 - Avanzato",
+        "description": "Profilo completo, informazioni aziendali dettagliate"
+      },
+      "level3": {
+        "title": "Livello 3 - Qualificato",
+        "description": "KYC approvato, NDA firmato, due diligence completa"
+      },
+      "noPartnerInLevel": "Nessun partner a questo livello",
+      "totalPartners": "Partner Totali",
+      "searchPlaceholder": "Cerca partner...",
+      "allLevels": "Tutti i Livelli",
+      "kyc": {
+        "pending": "In attesa",
+        "inReview": "In Revisione",
+        "approved": "Approvato",
+        "rejected": "Rifiutato"
+      },
+      "dueDiligence": {
+        "notStarted": "Non Iniziato",
+        "inProgress": "In Corso",
+        "completed": "Completato",
+        "failed": "Fallito"
+      }
+    },
+    "workflow": {
+      "progress": "Progresso del Workflow",
+      "leadLevel": "Livello del Lead",
+      "hot": "Caldo",
+      "warm": "Tiepido",
+      "cold": "Freddo",
+      "currentStep": "Passo attuale",
+      "vsPreviousMonth": "vs mese precedente",
+      "marketplace": {
+        "pending": "Nuovo Lead",
+        "pendingDesc": "Lead ricevuto tramite modulo",
+        "contacted": "Contatto Iniziale",
+        "contactedDesc": "Primo contatto effettuato",
+        "qualified": "Qualificato",
+        "qualifiedDesc": "Lead qualificato per la negoziazione",
+        "converted": "Convertito",
+        "convertedDesc": "Partnership stabilita"
+      },
+      "contact": {
+        "new": "Nuovo",
+        "newDesc": "Contatto ricevuto",
+        "inProgress": "In Analisi",
+        "inProgressDesc": "Analisi della richiesta",
+        "responded": "Risposto",
+        "respondedDesc": "Risposta inviata",
+        "closed": "Chiuso",
+        "closedDesc": "Caso chiuso"
+      },
+      "partner": {
+        "verificationStatus": "Stato di Verifica",
+        "completion": "Completamento",
+        "basicDesc": "Dati iniziali raccolti",
+        "advancedDesc": "Profilo completo",
+        "verifiedDesc": "KYC approvato + NDA firmato"
+      }
+    },
+    "status": {
+      "new": "Nuovo",
+      "pending": "In attesa",
+      "contacted": "Contattato",
+      "qualified": "Qualificato",
+      "converted": "Convertito",
+      "approved": "Approvato",
+      "rejected": "Rifiutato",
+      "replied": "Risposto"
+    },
+    "notifications": {
+      "title": "Notifiche",
+      "new": "nuove",
+      "newOtrLead": "Nuovo Lead OTR",
+      "newContact": "Nuovo Contatto",
+      "newB2BPreRegister": "Nuova Pre-Registrazione B2B",
+      "newEmail": "Nuova Email Ricevuta",
+      "noSubject": "Senza oggetto",
+      "disableSound": "Disattiva suono",
+      "enableSound": "Attiva suono",
+      "markAllRead": "Segna tutte come lette",
+      "clearAll": "Cancella tutte",
+      "noNotifications": "Nessuna notifica",
+      "willBeNotified": "Sarai avvisato sui nuovi eventi",
+      "viewDetails": "Vedi dettagli"
+    },
+    "otrLeads": {
+      "title": "Gestione Lead OTR",
+      "description": "Sistema di approvazione e monitoraggio delle indicazioni di fonti OTR",
+      "refresh": "Aggiorna",
+      "exportCsv": "Esporta CSV",
+      "allStatus": "Tutti gli Stati",
+      "noLeadFound": "Nessun lead trovato",
+      "searchPlaceholder": "Cerca lead...",
+      "tabs": {
+        "leads": "Lead",
+        "analytics": "Analytics",
+        "goals": "Obiettivi",
+        "webhooks": "Webhooks"
+      },
+      "stats": {
+        "total": "Totale",
+        "pending": "In attesa",
+        "approved": "Approvati",
+        "contacted": "Contattati",
+        "negotiating": "In negoziazione",
+        "converted": "Convertiti",
+        "conversion": "Conversione",
+        "rejected": "Rifiutati"
+      },
+      "status": {
+        "pending": "In attesa",
+        "approved": "Approvato",
+        "contacted": "Contattato",
+        "negotiating": "In negoziazione",
+        "converted": "Convertito",
+        "rejected": "Rifiutato"
+      },
+      "noteTypes": {
+        "note": "Nota",
+        "statusChange": "Stato",
+        "emailSent": "Email",
+        "call": "Chiamata",
+        "meeting": "Riunione"
+      },
+      "actions": {
+        "approve": "Approva",
+        "reject": "Rifiuta",
+        "sendEmail": "Invia Email",
+        "generatePdf": "Genera PDF",
+        "viewDetails": "Vedi Dettagli",
+        "addNote": "Aggiungi Nota",
+        "deleteNote": "Elimina Nota"
+      },
+      "analytics": {
+        "filterPeriod": "Filtra per Periodo",
+        "from": "Da:",
+        "to": "A:",
+        "clear": "Cancella",
+        "generateReport": "Genera Report",
+        "statusDistribution": "Distribuzione per Stato",
+        "regionDistribution": "Distribuzione per Regione",
+        "sourceTypes": "Tipi di Fonte",
+        "monthlyTrend": "Tendenza Mensile",
+        "conversionRate": "Tasso di Conversione"
+      },
+      "goals": {
+        "title": "Obiettivi di Conversione",
+        "currentMonth": "Mese Corrente",
+        "targetLeads": "Obiettivo Lead",
+        "targetConversions": "Obiettivo Conversioni",
+        "notes": "Note",
+        "save": "Salva Obiettivo",
+        "sendWeeklyReport": "Invia Report Settimanale"
+      },
+      "webhooks": {
+        "title": "Webhooks di Notifica",
+        "name": "Nome",
+        "url": "URL Webhook",
+        "type": "Tipo",
+        "events": "Eventi",
+        "add": "Aggiungi Webhook",
+        "active": "Attivo",
+        "inactive": "Inattivo"
+      },
+      "email": {
+        "subject": "Oggetto",
+        "message": "Messaggio",
+        "send": "Invia Email"
+      },
+      "pdf": {
+        "indicatorData": "DATI INDICATORE",
+        "sourceData": "DATI FONTE OTR",
+        "additionalDetails": "DETTAGLI AGGIUNTIVI",
+        "generatedAt": "Generato il",
+        "status": "Stato"
+      }
+    },
+    "marketplace": {
+      "title": "Marketplace B2B",
+      "description": "Pre-registrazioni del marketplace",
+      "exportCsv": "Esporta CSV",
+      "all": "Tutti",
+      "noRecordFound": "Nessun record trovato.",
+      "statusPending": "In attesa",
+      "statusContacted": "Contattato",
+      "statusQualified": "Qualificato",
+      "statusConverted": "Convertito"
+    },
+    "contacts": {
+      "title": "Messaggi di Contatto",
+      "description": "Gestisci i messaggi ricevuti",
+      "noMessages": "Nessun messaggio ricevuto."
+    },
+    "newsletter": {
+      "title": "Iscritti alla Newsletter",
+      "description": "Lista degli iscritti",
+      "noSubscribers": "Nessun iscritto ancora.",
+      "active": "Attivo",
+      "inactive": "Inattivo"
+    },
+    "articlesSection": {
+      "title": "Articoli del Blog",
+      "description": "Gestisci articoli e post",
+      "newArticle": "Nuovo Articolo",
+      "noArticles": "Nessun articolo registrato."
+    },
+    "pressSection": {
+      "title": "Comunicati Stampa",
+      "description": "Gestisci i comunicati stampa",
+      "newPress": "Nuovo Comunicato",
+      "noPress": "Nessun comunicato registrato."
+    },
+    "counters": {
+      "title": "Contatori di Impatto",
+      "description": "Modifica i valori della homepage",
+      "save": "Salva"
+    },
+    "analytics": {
+      "title": "Analytics",
+      "filterPeriod": "Filtra per Periodo",
+      "selectPeriod": "Seleziona un periodo per l'analisi",
+      "from": "Da:",
+      "to": "A:",
+      "clear": "Cancella",
+      "countries": "Paesi",
+      "conversion": "Conversione",
+      "qualified": "Qualificati",
+      "total": "Totale",
+      "registrationsByCountry": "Registrazioni per Paese",
+      "companyType": "Tipo di Azienda",
+      "mostWantedProducts": "Prodotti Più Richiesti",
+      "noData": "Nessun dato"
+    },
+    "users": "Utenti"
+  },
+  "templateViewer": {
+    "notFound": "Modello non trovato",
+    "notFoundDescription": "Il modello richiesto non è disponibile o è stato disattivato.",
+    "backHome": "Torna alla Home",
+    "instruction": "Compila i campi sottostanti per completare il documento",
+    "fillFields": "Compila Campi",
+    "requiredNote": "I campi con * sono obbligatori",
+    "preview": "Anteprima Documento",
+    "previewNote": "I campi compilati appariranno automaticamente",
+    "submit": "Invia Documento",
+    "submitSigned": "Invia Documento Firmato",
+    "downloadPreview": "Scarica Anteprima PDF",
+    "downloadCopy": "Scarica Copia",
+    "backToSite": "Torna al Sito",
+    "success": "Inviato con Successo!",
+    "successDescription": "Abbiamo ricevuto il tuo documento compilato. Il nostro team ti contatterà presto.",
+    "submitSuccess": "Modulo inviato con successo!",
+    "submitDescription": "Ti contatteremo presto.",
+    "submitError": "Errore durante l'invio",
+    "tryAgain": "Riprova.",
+    "fillRequired": "Compila i campi obbligatori",
+    "digitalSignature": "Firma Digitale",
+    "signed": "Firmato",
+    "signedBy": "Firmato da",
+    "dateTime": "Data/Ora",
+    "removeSignature": "Rimuovi Firma",
+    "addSignature": "Aggiungi Firma Digitale",
+    "signatureNote": "Firma con validazione crittografica (SHA-256)",
+    "signDocument": "Firma Documento",
+    "signDescription": "Aggiungi la tua firma digitale per validare il documento.",
+    "fullName": "Nome Completo",
+    "namePlaceholder": "Il tuo nome completo",
+    "signatureType": "Tipo di Firma",
+    "draw": "Disegna",
+    "type": "Digita",
+    "drawBelow": "Disegna la tua firma qui sotto",
+    "clear": "Cancella",
+    "typeSignature": "Digita la tua firma",
+    "yourName": "Il Tuo Nome",
+    "legalNotice": "Firmando, confermi di aver letto e accettato i termini di questo documento. La tua firma è protetta da crittografia SHA-256 e ha validità legale secondo la Legge 14.063/2020 (Brasile) e il Regolamento eIDAS (Unione Europea).",
+    "confirmSignature": "Conferma Firma",
+    "signatureRequired": "Compila nome ed email",
+    "drawSignature": "Disegna la tua firma",
+    "signatureCaptured": "Firma catturata!",
+    "clickSubmit": "Ora clicca su \"Invia Documento\"."
+  }
+}
