@@ -1,45 +1,27 @@
 
-
-# Brilho Pulsante nos Cards + Correcao de Botoes e Cores na Pagina About
-
-## Problemas Identificados
-
-1. **Cards sem efeito de brilho nas bordas** - Os GlassCards nao tem nenhum efeito visual ao passar o mouse que simule brilho metalico nas bordas.
-2. **Botoes "apagados" no hero da pagina About** - Os botoes `elp-white` e `elp-white-outline` no hero aparecem sem destaque, quase invisiveis sobre o fundo escuro.
-3. **Cores fora da paleta metalica** - Headquarters usa cores de bandeiras (verde, vermelho, amarelo) nos icones e gradientes dos cards, quebrando a identidade visual.
-4. **Valores com cores inconsistentes** - O array `values` usa `from-elp-teal to-cyan-400` (transparency) que foge do padrao azul metalico.
-5. **Marcadores do globo 3D no About** - Ainda usam cores de bandeiras (verde, amarelo, vermelho, laranja) em vez de tons de azul metalico.
-
----
+# Reflexo no Logo ELP + Header Auto-Hide no Scroll
 
 ## O que sera feito
 
-### 1. Efeito de brilho pulsante nas bordas dos cards (CSS global)
+### 1. Efeito de reflexo animado no logo da ELP (leao)
 
-Adicionar ao componente `GlassCard` um efeito de `box-shadow` animado que pulsa sutilmente ao hover, simulando uma borda metalica brilhante.
+O logo da ELP no header recebera um efeito de "luz passando" continuo, reutilizando a mesma keyframe `light-sweep` ja existente nos botoes metalicos. Sera aplicado via um wrapper com `position: relative` e `overflow: hidden`, com um pseudo-elemento `::after` que simula uma faixa de luz diagonal passando sobre o logo em loop.
 
-- Keyframe `border-glow-pulse` que alterna entre sombra sutil e sombra mais intensa
-- Ativado apenas no hover para nao poluir visualmente
-- Cor do brilho em azul metalico com toque dourado
+- A classe CSS `.logo-metal-sweep` sera criada em `src/index.css`
+- Pseudo-elemento `::after` com gradiente branco sutil diagonal
+- Animacao `light-sweep` com ciclo de ~5 segundos (um pouco mais lento que botoes)
+- No hover, acelera para ~2 segundos
 
-### 2. Correcao dos botoes do hero About
+### 2. Header auto-hide no scroll
 
-- Botao `elp-white`: Aumentar contraste, adicionar `shadow-2xl` e borda mais visivel
-- Botao `elp-white-outline`: Aumentar opacidade da borda e do texto para melhor visibilidade sobre fundo escuro
+O header (navbar) sera escondido quando o usuario rolar a pagina para baixo e reaparecera quando rolar para cima. Isso sera feito com logica de comparacao de `scrollY` anterior vs atual no `useEffect` existente.
 
-### 3. Padronizacao das cores dos headquarters
-
-- Substituir os gradientes `from-green-500 to-red-500`, `from-green-500 to-yellow-500`, etc. por gradientes de azul metalico com variacoes sutis para diferenciar cada escritorio
-- Manter as mini-bandeiras (flagColors) apenas nos labels flutuantes do globo (sao indicadores geograficos, aceitavel)
-- Remover as cores de bandeira dos icones dos cards de headquarters
-
-### 4. Padronizacao das cores dos valores
-
-- Substituir `from-elp-teal to-cyan-400` por `from-primary to-accent` (dentro da paleta azul)
-
-### 5. Marcadores do globo 3D (About)
-
-- Substituir cores verde/amarelo/vermelho/laranja por variacoes de azul metalico
+- Novo estado `hidden` no componente Header
+- Comparacao com `lastScrollY` via `useRef`
+- Quando `scrollY > lastScrollY` e `scrollY > 80`: header sobe (translate-Y negativo)
+- Quando `scrollY < lastScrollY`: header desce (aparece)
+- Transicao suave com `transition-transform duration-300`
+- O menu mobile aberto impede o auto-hide
 
 ---
 
@@ -47,39 +29,48 @@ Adicionar ao componente `GlassCard` um efeito de `box-shadow` animado que pulsa 
 
 ### Arquivo: `src/index.css`
 
-**Nova keyframe e regra para GlassCard hover glow:**
+Nova classe `.logo-metal-sweep`:
 ```css
-@keyframes border-glow-pulse {
-  0%, 100% { box-shadow: 0 0 8px hsl(210 50% 40% / 0.15), 0 0 20px hsl(42 60% 50% / 0.05); }
-  50% { box-shadow: 0 0 15px hsl(210 50% 40% / 0.25), 0 0 35px hsl(42 60% 50% / 0.1); }
+.logo-metal-sweep {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.logo-metal-sweep::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    105deg,
+    transparent 0%,
+    hsl(0 0% 100% / 0.15) 48%,
+    hsl(0 0% 100% / 0.2) 50%,
+    hsl(0 0% 100% / 0.15) 52%,
+    transparent 100%
+  );
+  transform: skewX(-15deg);
+  animation: light-sweep 5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.logo-metal-sweep:hover::after {
+  animation-duration: 2s;
 }
 ```
 
-**Melhorar visibilidade do `btn-metal-white`:**
-- Aumentar opacidade da borda
-- Adicionar sombra mais forte
+### Arquivo: `src/components/layout/Header.tsx`
 
-**Melhorar `elp-white-outline`:**
-- Aumentar opacidade do border e texto de `border-white/80` para `border-white` e adicionar shadow
-
-### Arquivo: `src/components/ui/glass-card.tsx`
-
-- Adicionar classe de hover glow pulsante no componente
-
-### Arquivo: `src/pages/About.tsx`
-
-- **Headquarters colors**: Trocar `from-green-500 to-red-500` (Italy) para `from-primary to-secondary`, `from-green-500 to-yellow-500` (Brazil) para `from-secondary to-accent`, etc.
-- **Values colors**: Trocar `from-elp-teal to-cyan-400` para `from-primary to-accent`
-- **Globe markers**: Trocar cores `#22c55e`, `#eab308`, `#ef4444`, `#f97316` para tons de azul metalico
-- **Hero buttons**: Adicionar classes de sombra e destaque extras
-
-### Arquivo: `src/components/ui/button.tsx`
-
-- Ajustar variante `elp-white-outline` para maior contraste
+- Adicionar `useRef` para `lastScrollY`
+- Adicionar estado `hidden` (boolean)
+- Modificar o `handleScroll` para comparar direcao do scroll
+- Adicionar classe condicional `-translate-y-full` quando `hidden` e true
+- Impedir hide quando `mobileMenuOpen` esta ativo
+- Envolver o `<img>` do logo com a classe `logo-metal-sweep`
 
 ### Arquivos a modificar
-1. `src/index.css` - Keyframe de glow pulsante, ajuste btn-metal-white
-2. `src/components/ui/glass-card.tsx` - Classe de hover glow
-3. `src/pages/About.tsx` - Cores padronizadas nos headquarters, valores e globo
-4. `src/components/ui/button.tsx` - Variante elp-white-outline mais visivel
-
+1. `src/index.css` - Classe `.logo-metal-sweep` com pseudo-elemento e animacao
+2. `src/components/layout/Header.tsx` - Logica de auto-hide + classe no logo
