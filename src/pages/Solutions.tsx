@@ -1,7 +1,7 @@
 import { useState, Suspense, lazy } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Factory, Cpu, Recycle, Flame, ArrowRight, X, ChevronLeft, ChevronRight, Images, Sparkles, Zap, TrendingUp, DollarSign, Clock, Settings, Package, Gauge, Truck } from 'lucide-react';
+import { Factory, Cpu, Recycle, Flame, ArrowRight, X, ChevronLeft, ChevronRight, Images, Sparkles, Zap, TrendingUp, DollarSign, Clock, Settings, Package, Gauge, Truck, Leaf } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Header } from '@/components/layout/Header';
@@ -43,10 +43,10 @@ const getGalleryImages = (t: (key: string) => string) => [
 
 // OTR Products with i18n
 const getOtrProducts = (t: (key: string) => string) => [
-  { name: t('solutionsPage.otrProducts.rubberBlocks.name'), description: t('solutionsPage.otrProducts.rubberBlocks.description'), icon: '🔲', gradient: 'from-gray-600 to-gray-800' },
-  { name: t('solutionsPage.otrProducts.steel.name'), description: t('solutionsPage.otrProducts.steel.description'), icon: '🔩', gradient: 'from-slate-500 to-slate-700' },
-  { name: t('solutionsPage.otrProducts.fibers.name'), description: t('solutionsPage.otrProducts.fibers.description'), icon: '🧵', gradient: 'from-amber-500 to-orange-600' },
-  { name: t('solutionsPage.otrProducts.powder.name'), description: t('solutionsPage.otrProducts.powder.description'), icon: '⚫', gradient: 'from-cyan-400 to-blue-500' },
+  { name: t('solutionsPage.otrProducts.rubberBlocks.name'), description: t('solutionsPage.otrProducts.rubberBlocks.description'), gradient: 'from-gray-600 to-gray-800' },
+  { name: t('solutionsPage.otrProducts.steel.name'), description: t('solutionsPage.otrProducts.steel.description'), gradient: 'from-slate-500 to-slate-700' },
+  { name: t('solutionsPage.otrProducts.fibers.name'), description: t('solutionsPage.otrProducts.fibers.description'), gradient: 'from-amber-500 to-orange-600' },
+  { name: t('solutionsPage.otrProducts.powder.name'), description: t('solutionsPage.otrProducts.powder.description'), gradient: 'from-cyan-400 to-blue-500' },
 ];
 
 // OTR Process Steps with i18n
@@ -323,12 +323,12 @@ export default function Solutions() {
               </p>
               <div className="grid grid-cols-3 gap-4 mb-8">
                 {[
-                  { label: t('common.zeroEmissions'), icon: '🌱' },
-                  { label: t('common.closedLoop'), icon: '♻️' },
-                  { label: t('common.recovery'), icon: '📈' },
+                  { label: t('common.zeroEmissions'), icon: Leaf },
+                  { label: t('common.closedLoop'), icon: Recycle },
+                  { label: t('common.recovery'), icon: TrendingUp },
                 ].map((item) => (
                   <div key={item.label} className="text-center p-4 rounded-xl bg-muted/50">
-                    <span className="text-2xl mb-2 block">{item.icon}</span>
+                    <item.icon className="h-6 w-6 mx-auto mb-2 text-primary" />
                     <span className="text-sm font-medium">{item.label}</span>
                   </div>
                 ))}
@@ -369,7 +369,6 @@ export default function Solutions() {
                         className={`p-3 rounded-lg bg-gradient-to-r ${product.gradient} text-white`}
                       >
                         <div className="flex items-center gap-2 mb-1">
-                          <span className="text-lg">{product.icon}</span>
                           <h4 className="font-semibold text-sm">{product.name.split(' ')[0]}</h4>
                         </div>
                       </div>
@@ -738,7 +737,7 @@ export default function Solutions() {
       </section>
 
       {/* Circular Economy */}
-      <section className="py-24 bg-gradient-to-br from-primary to-secondary text-white">
+      <section className="py-24 brushed-metal text-white relative overflow-hidden">
         <div className="container-wide">
           <div className="text-center max-w-3xl mx-auto">
             <motion.div

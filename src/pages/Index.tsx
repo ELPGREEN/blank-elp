@@ -228,7 +228,7 @@ export default function Index() {
             }} exit={{
               opacity: 0,
               y: -20
-            }} className="bg-gradient-to-r from-primary to-secondary text-white rounded-xl overflow-hidden max-w-2xl shadow-2xl">
+            }} className="brushed-metal text-white rounded-xl overflow-hidden max-w-2xl shadow-2xl">
                   <div className="px-5 py-4 flex items-center justify-between gap-4">
                     <div className="flex items-center gap-3 flex-1">
                       <Mountain className="h-5 w-5 flex-shrink-0" />
@@ -293,7 +293,7 @@ export default function Index() {
 
               <div className="bg-primary/10 border border-primary/30 rounded-xl p-4 mb-6">
                 <p className="text-primary font-medium">
-                  ⚠️ <strong>{t('smartOtr.disclaimer')}</strong> – {t('smartOtr.disclaimerDesc')}
+                  <strong>{t('smartOtr.disclaimer')}</strong> – {t('smartOtr.disclaimerDesc')}
                 </p>
               </div>
 
@@ -540,28 +540,28 @@ export default function Index() {
               
               <div className="space-y-4 mb-8">
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm">1</div>
+                  <div className="w-8 h-8 rounded-full btn-metal-blue text-white flex items-center justify-center font-bold text-sm">1</div>
                   <div>
                     <p className="font-medium">{t('indexPage.partnershipModel.step1.title')}</p>
                     <p className="text-sm text-muted-foreground">{t('indexPage.partnershipModel.step1.desc')}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm">2</div>
+                  <div className="w-8 h-8 rounded-full btn-metal-blue text-white flex items-center justify-center font-bold text-sm">2</div>
                   <div>
                     <p className="font-medium">{t('indexPage.partnershipModel.step2.title')}</p>
                     <p className="text-sm text-muted-foreground">{t('indexPage.partnershipModel.step2.desc')}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm">3</div>
+                  <div className="w-8 h-8 rounded-full btn-metal-blue text-white flex items-center justify-center font-bold text-sm">3</div>
                   <div>
                     <p className="font-medium">{t('indexPage.partnershipModel.step3.title')}</p>
                     <p className="text-sm text-muted-foreground">{t('indexPage.partnershipModel.step3.desc')}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm">4</div>
+                  <div className="w-8 h-8 rounded-full btn-metal-blue text-white flex items-center justify-center font-bold text-sm">4</div>
                   <div>
                     <p className="font-medium">{t('indexPage.partnershipModel.step4.title')}</p>
                     <p className="text-sm text-muted-foreground">{t('indexPage.partnershipModel.step4.desc')}</p>
@@ -816,14 +816,14 @@ export default function Index() {
       <section className="py-6 bg-muted/30 border-t border-border">
         <div className="container mx-auto px-4">
           <p className="text-xs text-center text-muted-foreground">
-            🔒 {t('indexPage.privacyNote')} <Link to="/privacy" className="underline hover:text-primary">{t('footer.privacy')}</Link>
+            {t('indexPage.privacyNote')} <Link to="/privacy" className="underline hover:text-primary">{t('footer.privacy')}</Link>
           </p>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-90" />
+        <div className="absolute inset-0 brushed-metal opacity-95" />
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div initial={{
           opacity: 0,
