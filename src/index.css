@@ -198,9 +198,24 @@
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
-  /* Typography */
+  /* Typography - Metallic blue headings */
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold tracking-tight;
+    background: linear-gradient(135deg, hsl(210 70% 12%) 0%, hsl(208 60% 22%) 25%, hsl(205 50% 38%) 50%, hsl(208 60% 22%) 75%, hsl(210 70% 12%) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Override: headings inside dark sections stay white */
+  .brushed-metal h1, .brushed-metal h2, .brushed-metal h3, .brushed-metal h4,
+  .section-metal h1, .section-metal h2, .section-metal h3, .section-metal h4,
+  .text-white h1, .text-white h2, .text-white h3, .text-white h4,
+  h1.text-white, h2.text-white, h3.text-white, h4.text-white {
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    -webkit-text-fill-color: white;
   }
 
   h1 {
