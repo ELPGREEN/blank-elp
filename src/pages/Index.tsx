@@ -634,10 +634,10 @@ export default function Index() {
           }} viewport={{
             once: true
           }}>
-              <GlassCard className="p-8 bg-gradient-to-br from-green-500/5 to-emerald-500/5 border-green-500/20">
+              <GlassCard className="p-8 bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/20">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center">
-                    <Leaf className="h-6 w-6 text-green-500" />
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <Leaf className="h-6 w-6 text-primary" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold">{t('indexPage.esgSection.title')}</h3>
@@ -651,24 +651,24 @@ export default function Index() {
                 
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="flex items-center gap-2">
-                    <Target className="h-4 w-4 text-green-500" />
+                    <Target className="h-4 w-4 text-primary" />
                     <span className="text-sm">{t('indexPage.esgSection.netZero')}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Recycle className="h-4 w-4 text-green-500" />
+                    <Recycle className="h-4 w-4 text-primary" />
                     <span className="text-sm">{t('indexPage.esgSection.zeroWaste')}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Shield className="h-4 w-4 text-green-500" />
+                    <Shield className="h-4 w-4 text-primary" />
                     <span className="text-sm">{t('indexPage.esgSection.bCorp')}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <BarChart3 className="h-4 w-4 text-green-500" />
+                    <BarChart3 className="h-4 w-4 text-primary" />
                     <span className="text-sm">{t('indexPage.esgSection.euTaxonomy')}</span>
                   </div>
                 </div>
 
-                <Button asChild variant="outline" className="w-full border-green-500/30 text-green-600 hover:bg-green-500/10">
+                <Button asChild variant="outline" className="w-full">
                   <Link to="/esg">
                     {t('indexPage.esgSection.learnMore')}
                     <ArrowRight className="ml-2 h-4 w-4" />
