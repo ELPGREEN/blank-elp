@@ -1,31 +1,4 @@
 {
-  "admin": {
-    "nav": {
-      "meetings": "Reuniones",
-      "reportGenerator": "Generador de Informes",
-      "aiHub": "Centro de IA",
-      "duoIntelligence": "Duo Intelligence BI",
-      "signedDocuments": "Documentos Firmados",
-      "passwordSettings": "Cambiar Contraseña"
-    },
-    "password": {
-      "title": "Cambiar Contraseña",
-      "description": "Actualiza tu contraseña de acceso al panel de administración.",
-      "new": "Nueva contraseña",
-      "confirm": "Confirmar nueva contraseña",
-      "requirements": "Requisitos de la contraseña:",
-      "minLength": "Mínimo 6 caracteres",
-      "match": "Las contraseñas coinciden",
-      "invalidForm": "Formulario inválido",
-      "checkRequirements": "Por favor verifica los requisitos de la contraseña.",
-      "success": "¡Contraseña cambiada!",
-      "successDesc": "Tu contraseña fue actualizada exitosamente.",
-      "error": "Error al cambiar contraseña",
-      "errorDesc": "No se pudo cambiar la contraseña.",
-      "updating": "Actualizando...",
-      "update": "Actualizar Contraseña"
-    }
-  },
   "pwa": {
     "installApp": "Instalar App",
     "enableNotifications": "Activar Notificaciones",
@@ -2629,7 +2602,32 @@
       "articles": "Artículos",
       "press": "Comunicados",
       "counters": "Contadores",
-      "analytics": "Analytics"
+      "analytics": "Analytics",
+      "reportGenerator": "Generador de Informes",
+      "aiHub": "Centro de IA",
+      "duoIntelligence": "Duo Intelligence BI",
+      "intelligenceDb": "Base de Inteligencia",
+      "amlScreening": "Screening AML",
+      "emailSettings": "Config. Email",
+      "passwordSettings": "Cambiar Contraseña",
+      "users": "Usuarios"
+    },
+    "password": {
+      "title": "Cambiar Contraseña",
+      "description": "Actualiza tu contraseña de acceso al panel de administración.",
+      "new": "Nueva contraseña",
+      "confirm": "Confirmar nueva contraseña",
+      "requirements": "Requisitos de la contraseña:",
+      "minLength": "Mínimo 6 caracteres",
+      "match": "Las contraseñas coinciden",
+      "invalidForm": "Formulario inválido",
+      "checkRequirements": "Por favor verifica los requisitos de la contraseña.",
+      "success": "¡Contraseña cambiada!",
+      "successDesc": "Tu contraseña fue actualizada exitosamente.",
+      "error": "Error al cambiar contraseña",
+      "errorDesc": "No se pudo cambiar la contraseña.",
+      "updating": "Actualizando...",
+      "update": "Actualizar Contraseña"
     },
     "feasibility": {
       "title": "Estudio de Viabilidad",

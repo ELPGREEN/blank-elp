@@ -1,32 +1,4 @@
 {
-  "admin": {
-    "nav": {
-      "meetings": "Reuniões",
-      "reportGenerator": "Gerador de Relatórios",
-      "aiHub": "Central de IA",
-      "duoIntelligence": "Duo Inteligência BI",
-      "intelligenceDb": "Banco de Inteligência",
-      "signedDocuments": "Documentos Assinados",
-      "passwordSettings": "Alterar Senha"
-    },
-    "password": {
-      "title": "Alterar Senha",
-      "description": "Atualize sua senha de acesso ao painel administrativo.",
-      "new": "Nova senha",
-      "confirm": "Confirmar nova senha",
-      "requirements": "Requisitos da senha:",
-      "minLength": "Mínimo 6 caracteres",
-      "match": "Senhas conferem",
-      "invalidForm": "Formulário inválido",
-      "checkRequirements": "Verifique os requisitos da senha.",
-      "success": "Senha alterada!",
-      "successDesc": "Sua senha foi atualizada com sucesso.",
-      "error": "Erro ao alterar senha",
-      "errorDesc": "Não foi possível alterar a senha.",
-      "updating": "Atualizando...",
-      "update": "Atualizar Senha"
-    }
-  },
   "pwa": {
     "installApp": "Instalar App",
     "enableNotifications": "Ativar Notificações",
@@ -2887,7 +2859,32 @@
       "articles": "Artigos",
       "press": "Press Releases",
       "counters": "Contadores",
-      "analytics": "Analytics"
+      "analytics": "Analytics",
+      "reportGenerator": "Gerador de Relatórios",
+      "aiHub": "Central de IA",
+      "duoIntelligence": "Duo Inteligência BI",
+      "intelligenceDb": "Banco de Inteligência",
+      "amlScreening": "Screening AML",
+      "emailSettings": "Config. Email",
+      "passwordSettings": "Alterar Senha",
+      "users": "Usuários"
+    },
+    "password": {
+      "title": "Alterar Senha",
+      "description": "Atualize sua senha de acesso ao painel administrativo.",
+      "new": "Nova senha",
+      "confirm": "Confirmar nova senha",
+      "requirements": "Requisitos da senha:",
+      "minLength": "Mínimo 6 caracteres",
+      "match": "Senhas conferem",
+      "invalidForm": "Formulário inválido",
+      "checkRequirements": "Verifique os requisitos da senha.",
+      "success": "Senha alterada!",
+      "successDesc": "Sua senha foi atualizada com sucesso.",
+      "error": "Erro ao alterar senha",
+      "errorDesc": "Não foi possível alterar a senha.",
+      "updating": "Atualizando...",
+      "update": "Atualizar Senha"
     },
     "feasibility": {
       "title": "Estudo de Viabilidade",
