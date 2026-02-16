@@ -1,1 +1,91 @@
 project_id = "dlwafedtlvbvuoaopvsl"
+
+[functions.ai-hub]
+verify_jwt = false
+
+[functions.aml-screening]
+verify_jwt = false
+
+[functions.analisar-com-claude]
+verify_jwt = false
+
+[functions.analisar-com-gemini]
+verify_jwt = false
+
+[functions.analisar-com-groq]
+verify_jwt = false
+
+[functions.analyze-feasibility]
+verify_jwt = false
+
+[functions.coletar-dados-concorrentes]
+verify_jwt = false
+
+[functions.complementar-com-gemini]
+verify_jwt = false
+
+[functions.discover-company-urls]
+verify_jwt = false
+
+[functions.fetch-youtube-videos]
+verify_jwt = false
+
+[functions.firecrawl-map]
+verify_jwt = false
+
+[functions.firecrawl-scrape]
+verify_jwt = false
+
+[functions.generate-collaborative-document]
+verify_jwt = false
+
+[functions.generate-document-ai]
+verify_jwt = false
+
+[functions.generate-meeting-document]
+verify_jwt = false
+
+[functions.get-vapid-key]
+verify_jwt = false
+
+[functions.notify-next-signer]
+verify_jwt = false
+
+[functions.notify-otr-approval]
+verify_jwt = false
+
+[functions.notify-template-submission]
+verify_jwt = false
+
+[functions.send-contact-email]
+verify_jwt = false
+
+[functions.send-document-signature-link]
+verify_jwt = false
+
+[functions.send-marketplace-email]
+verify_jwt = false
+
+[functions.send-meeting-convocation]
+verify_jwt = false
+
+[functions.send-push-notification]
+verify_jwt = false
+
+[functions.send-reply-email]
+verify_jwt = false
+
+[functions.send-signature-confirmation]
+verify_jwt = false
+
+[functions.send-signature-reminder]
+verify_jwt = false
+
+[functions.send-webhook-notification]
+verify_jwt = false
+
+[functions.send-weekly-report]
+verify_jwt = false
+
+[functions.serpapi-about]
+verify_jwt = false
