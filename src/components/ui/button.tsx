@@ -14,7 +14,7 @@ const buttonVariants = cva("inline-flex items-center justify-center gap-2 whites
       // ELP Premium variants
       "elp-solid": "btn-metal-blue text-white shadow-md hover:shadow-lg",
       "elp-outline": "border-2 border-primary text-primary bg-transparent hover:btn-metal-blue hover:text-white",
-      "elp-white": "btn-metal-white text-primary shadow-md hover:shadow-lg",
+      "elp-white": "btn-metal-white shadow-md hover:shadow-lg",
       "elp-white-outline": "border-2 border-white text-white bg-transparent hover:bg-white/10 hover:border-white shadow-[0_0_15px_hsl(0_0%_100%/0.15)]",
       // Premium gold variants
       "elp-gold": "bg-gradient-to-r from-gold-dark via-gold to-gold-light text-primary shadow-md hover:shadow-[0_4px_20px_hsl(42_65%_50%/0.25)]",
