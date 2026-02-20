@@ -209,7 +209,7 @@ export function Header() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-40 bg-background/80 backdrop-blur-sm"
+            className="fixed inset-0 z-40 backdrop-blur-sm bg-white/55"
             onClick={() => setMobileMenuOpen(false)} />
 
             
@@ -219,9 +219,9 @@ export function Header() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 100 }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed top-16 right-0 bottom-0 z-50 w-full max-w-sm bg-background bg-noise-subtle border-l border-gold/10 shadow-2xl overflow-y-auto">
+            className="fixed top-16 right-0 bottom-0 z-50 w-full max-w-sm bg-background bg-noise-subtle border-l shadow-2xl overflow-y-auto border-destructive-foreground">
 
-              <div className="p-6 space-y-2 rounded-sm shadow-sm opacity-85 border px-0">
+              <div className="p-6 space-y-2 rounded-sm shadow-sm opacity-85 bg-primary-foreground px-[24px] border-0 border-primary-foreground">
                 {/* Logo in Menu */}
                 <div className="flex items-center gap-3 pb-6 mb-6 border-b border-border">
                   <img
