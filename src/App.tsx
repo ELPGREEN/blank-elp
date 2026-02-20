@@ -11,6 +11,7 @@ import { ScrollToTopButton } from "@/components/ScrollToTopButton";
 import { I18nDebugProvider } from "@/components/I18nDebugProvider";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { useAntiCopy } from "@/hooks/useAntiCopy";
+import { CustomCursor } from "@/components/CustomCursor";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Solutions from "./pages/Solutions";
@@ -72,6 +73,7 @@ const AppContent = () => {
   
   return (
     <BrowserRouter>
+      <CustomCursor />
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Index />} />
