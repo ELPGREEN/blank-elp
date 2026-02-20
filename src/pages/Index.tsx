@@ -140,9 +140,17 @@ export default function Index() {
         transform: `translateY(${parallaxOffset}px)`
       }}>
           <img src={factoryBg} alt="ELP Green Technology Expanded Factory" className="w-full h-[120%] object-cover" />
-          {/* Enhanced overlay for better text contrast */}
+          {/* Primary overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/95 to-slate-900/90" />
           <div className="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-transparent to-slate-950/80" />
+        </div>
+        {/* Second parallax overlay layer — moves 50% slower */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{ transform: `translateY(${parallaxOffset * 0.5}px)` }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-secondary/10" />
+          <div className="absolute inset-0 bg-grid-premium opacity-30" />
         </div>
 
         {/* 3D Particle Background */}
@@ -162,24 +170,30 @@ export default function Index() {
           }} transition={{
             duration: 0.6,
             delay: 0.1
-          }} className="inline-flex items-center gap-2 bg-primary/30 backdrop-blur-md rounded-full px-4 py-2 mb-6 border border-primary/40 shadow-lg">
+          }} className="inline-flex items-center gap-2 bg-primary/30 backdrop-blur-md rounded-full px-4 py-2 mb-6 border border-gold/30 shadow-lg bg-grid-premium">
               <Handshake className="w-4 h-4 text-primary" />
               <span className="text-sm font-semibold text-primary-foreground">{t('hero.badge')}</span>
             </motion.div>
             
-            {/* Title with staggered animation */}
-            <motion.h1 initial={{
-            opacity: 0,
-            y: 30
-          }} animate={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.7,
-            delay: 0.2
-          }} className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
-              {t('hero.title')}
-            </motion.h1>
+            {/* Title with curtain-reveal cinematographic effect */}
+            <div className="overflow-hidden mb-6">
+              <motion.h1
+                initial={{ clipPath: 'inset(100% 0 0 0)', opacity: 0 }}
+                animate={{ clipPath: 'inset(0% 0 0 0)', opacity: 1 }}
+                transition={{ duration: 0.9, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
+                className="text-display font-bold text-white leading-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]"
+              >
+                {t('hero.title')}
+              </motion.h1>
+            </div>
+            {/* Gold accent line */}
+            <motion.div
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ duration: 0.6, delay: 0.9, ease: [0.16, 1, 0.3, 1] }}
+              className="h-0.5 w-32 mb-6 origin-left"
+              style={{ background: 'var(--gradient-gold)' }}
+            />
             
             {/* Subtitle with staggered animation */}
             <motion.p initial={{
@@ -250,7 +264,8 @@ export default function Index() {
       </section>
 
       {/* Smart OTR Line Section - Translated */}
-      <section className="py-20 bg-gradient-to-br from-primary/10 via-background to-background">
+      <section className="py-20 bg-gradient-to-br from-primary/10 via-background to-background section-divider-diagonal pb-32">
+
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <motion.div initial={{
@@ -456,7 +471,8 @@ export default function Index() {
       </section>
 
       {/* Global Presence Section - Translated */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20 bg-muted/30 section-light-premium section-divider-diagonal-reverse pt-24">
+
         <div className="container mx-auto px-4">
           <motion.div initial={{
           opacity: 0,
@@ -517,7 +533,8 @@ export default function Index() {
       </section>
 
       {/* Partnership Model Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-background bg-grid-premium">
+
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <motion.div initial={{
