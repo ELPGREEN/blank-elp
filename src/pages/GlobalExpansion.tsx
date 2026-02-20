@@ -150,7 +150,7 @@ export default function GlobalExpansion() {
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-white via-blue-200 to-white bg-clip-text text-transparent drop-shadow-sm">
                 {t('globalExpansion.title')}
               </span>
               <br />
