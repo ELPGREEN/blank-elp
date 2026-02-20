@@ -144,7 +144,7 @@ export default function GlobalExpansion() {
             </Badge>
             
             <div className="flex items-center gap-3 mb-4">
-              <Badge className="bg-secondary/20 text-secondary border-secondary/30">
+              <Badge className="bg-secondary/20 text-white border-secondary/30">
                 {t('globalExpansion.poweredByTops', 'Powered by TOPS Recycling Group')}
               </Badge>
             </div>
