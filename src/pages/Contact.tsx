@@ -171,9 +171,25 @@ export default function Contact() {
               <span className="text-white text-sm font-medium">{t('contact.badge', 'Fale Conosco')}</span>
             </motion.div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-lg">
-              {t('contact.title')}
-            </h1>
+            {/* Curtain reveal on H1 */}
+            <div className="overflow-hidden mb-4">
+              <motion.h1
+                initial={{ clipPath: 'inset(100% 0 0 0)', opacity: 0 }}
+                animate={{ clipPath: 'inset(0% 0 0 0)', opacity: 1 }}
+                transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                className="text-display font-bold text-white drop-shadow-lg"
+              >
+                {t('contact.title')}
+              </motion.h1>
+            </div>
+            {/* Gold accent line */}
+            <motion.div
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ duration: 0.5, delay: 1.0 }}
+              className="h-0.5 w-20 mx-auto mb-4 origin-left"
+              style={{ background: 'var(--gradient-gold)' }}
+            />
             <p className="text-xl text-white/80 leading-relaxed max-w-2xl mx-auto">
               {t('contact.subtitle')}
             </p>
@@ -205,8 +221,9 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Interactive 3D Globe Section - MOVED TO TOP */}
-      <section className="py-16 bg-background relative">
+      {/* Interactive 3D Globe Section */}
+      <section className="py-16 section-light-premium relative">
+
         <div className="container-wide relative z-10">
           <motion.div initial={{
           opacity: 0,
@@ -289,7 +306,8 @@ export default function Contact() {
       </section>
 
       {/* Contact Channels Section */}
-      <section className="py-16 bg-muted/30">
+      <section className="py-16 bg-muted/30 bg-grid-premium">
+
         <div className="container-wide">
           <motion.div initial={{
           opacity: 0,
@@ -333,7 +351,7 @@ export default function Contact() {
                   </div>
                   
                   <div className="flex items-center gap-4 p-4 bg-primary/10 rounded-xl">
-                    <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 border-2 border-primary/20 bg-white shadow-lg">
+                    <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 border-2 border-primary/30 bg-white shadow-lg ring-2 ring-gold/20 shadow-[0_0_12px_hsl(42_60%_50%/0.15)]">
                       <img src={ericsonPiccoliImg} alt="Ericson Piccoli" className="w-full h-full object-contain" />
                     </div>
                     <div>
@@ -401,7 +419,7 @@ export default function Contact() {
                   </div>
                   
                   <div className="flex items-center gap-4 p-4 bg-secondary/10 rounded-xl">
-                    <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 border-2 border-secondary/20 bg-white shadow-lg">
+                    <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 border-2 border-secondary/30 bg-white shadow-lg ring-2 ring-gold/20 shadow-[0_0_12px_hsl(42_60%_50%/0.15)]">
                       <img src={xuShiheImg} alt="Xu Shihe" className="w-full h-full object-contain" />
                     </div>
                     <div>
