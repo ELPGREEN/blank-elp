@@ -113,7 +113,7 @@ export function Header() {
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
           hidden && !mobileMenuOpen ? "-translate-y-full" : "translate-y-0",
           scrolled 
-            ? "glass-nav-premium" 
+            ? "bg-gradient-to-b from-background/98 via-background/95 to-background/90 backdrop-blur-xl border-b border-gold/10 shadow-lg shadow-black/5" 
             : "bg-gradient-to-b from-black/40 to-transparent"
         )}
       >
@@ -138,7 +138,7 @@ export function Header() {
                   <Button 
                     variant="ghost" 
                     size="sm" 
-                    className="gap-1.5 px-3 h-12 min-w-[48px] text-foreground/70 hover:text-foreground hover:bg-muted"
+                    className="gap-1.5 px-3 h-10 text-foreground/70 hover:text-foreground hover:bg-muted"
                   >
                     <span className="text-sm font-semibold">{currentLang.shortName}</span>
                     <ChevronDown className="h-3.5 w-3.5 opacity-50" />
@@ -181,11 +181,11 @@ export function Header() {
                 </Link>
               </Button>
 
-              {/* Hamburger Menu Button */}
+              {/* Hamburger Menu Button - All Screens */}
               <Button
                 variant="ghost"
                 size="icon"
-                className="h-12 w-12 min-h-[48px] hover:bg-muted"
+                className="h-10 w-10 hover:bg-muted"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               >
                 {mobileMenuOpen ? (
@@ -219,7 +219,7 @@ export function Header() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 100 }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-16 right-0 bottom-0 z-50 w-full max-w-sm bg-background bg-noise-subtle border-l border-gold/10 shadow-2xl overflow-y-auto"
+              className="fixed top-16 right-0 bottom-0 z-50 w-full max-w-sm bg-background border-l border-border shadow-2xl overflow-y-auto"
             >
               <div className="p-6 space-y-2">
                 {/* Logo in Menu */}
@@ -247,7 +247,7 @@ export function Header() {
                       to={item.href}
                       onClick={() => setMobileMenuOpen(false)}
                       className={cn(
-                        "flex items-center gap-3 px-4 py-3.5 min-h-[48px] text-base font-medium rounded-xl transition-all duration-200",
+                        "flex items-center gap-3 px-4 py-3 text-base font-medium rounded-xl transition-all duration-200",
                         location.pathname === item.href
                           ? "bg-primary/10 text-primary border-l-4 border-primary"
                           : "text-foreground/70 hover:text-foreground hover:bg-muted hover:translate-x-1"

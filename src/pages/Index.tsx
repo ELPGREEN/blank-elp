@@ -140,9 +140,9 @@ export default function Index() {
         transform: `translateY(${parallaxOffset}px)`
       }}>
           <img src={factoryBg} alt="ELP Green Technology Expanded Factory" className="w-full h-[120%] object-cover" />
-          {/* Primary overlay — uses design tokens */}
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, hsl(220 35% 6%), hsl(220 35% 8% / 0.95), hsl(220 30% 10% / 0.90))' }} />
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, hsl(220 35% 6% / 0.6), transparent, hsl(220 35% 6% / 0.8))' }} />
+          {/* Primary overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/95 to-slate-900/90" />
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-transparent to-slate-950/80" />
         </div>
         {/* Second parallax overlay layer — moves 50% slower */}
         <div
@@ -611,25 +611,25 @@ export default function Index() {
             once: true
           }}>
               <div className="grid grid-cols-2 gap-4">
-                <GlassCard className="p-5 text-center bg-noise-subtle">
+                <GlassCard className="p-5 text-center">
                   <Users className="h-8 w-8 text-primary mx-auto mb-2" />
-                  <p className="text-metric text-3xl">+60</p>
-                  <p className="text-xs text-muted-foreground mt-1">{t('indexPage.partnershipModel.stats.partnerCountries')}</p>
+                  <p className="text-2xl font-bold">+60</p>
+                  <p className="text-xs text-muted-foreground">{t('indexPage.partnershipModel.stats.partnerCountries')}</p>
                 </GlassCard>
-                <GlassCard className="p-5 text-center bg-noise-subtle">
+                <GlassCard className="p-5 text-center">
                   <TrendingUp className="h-8 w-8 text-primary mx-auto mb-2" />
-                  <p className="text-metric text-3xl">1M</p>
-                  <p className="text-xs text-muted-foreground mt-1">{t('indexPage.partnershipModel.stats.tonsYearGoal')}</p>
+                  <p className="text-2xl font-bold">1M</p>
+                  <p className="text-xs text-muted-foreground">{t('indexPage.partnershipModel.stats.tonsYearGoal')}</p>
                 </GlassCard>
-                <GlassCard className="p-5 text-center bg-noise-subtle">
+                <GlassCard className="p-5 text-center">
                   <Factory className="h-8 w-8 text-primary mx-auto mb-2" />
-                  <p className="text-metric text-3xl">17-18</p>
-                  <p className="text-xs text-muted-foreground mt-1">{t('indexPage.partnershipModel.stats.factoriesBy2030')}</p>
+                  <p className="text-2xl font-bold">17-18</p>
+                  <p className="text-xs text-muted-foreground">{t('indexPage.partnershipModel.stats.factoriesBy2030')}</p>
                 </GlassCard>
-                <GlassCard className="p-5 text-center bg-noise-subtle">
+                <GlassCard className="p-5 text-center">
                   <Briefcase className="h-8 w-8 text-primary mx-auto mb-2" />
-                  <p className="text-metric text-3xl">$0</p>
-                  <p className="text-xs text-muted-foreground mt-1">{t('indexPage.partnershipModel.stats.yourInvestment')}</p>
+                  <p className="text-2xl font-bold">$0</p>
+                  <p className="text-xs text-muted-foreground">{t('indexPage.partnershipModel.stats.yourInvestment')}</p>
                 </GlassCard>
               </div>
             </motion.div>
@@ -638,7 +638,7 @@ export default function Index() {
       </section>
 
       {/* ESG & Certifications Section */}
-      <section className="py-20 bg-muted/30 section-light-premium">
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             {/* ESG Card */}
@@ -746,7 +746,7 @@ export default function Index() {
       </section>
 
       {/* News Section */}
-      <section className="py-20 bg-background bg-grid-premium">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <motion.div initial={{
           opacity: 0,
@@ -839,10 +839,9 @@ export default function Index() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 relative overflow-hidden bg-noise-subtle">
+      <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 brushed-metal opacity-95" />
-        <div className="absolute inset-0 bg-grid-premium opacity-20 z-[1]" />
-        <div className="container mx-auto px-4 text-center relative z-20">
+        <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div initial={{
           opacity: 0,
           y: 20

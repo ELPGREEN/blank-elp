@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { forwardRef, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
@@ -11,14 +11,14 @@ interface GlassCardProps {
   tilt?: boolean;
 }
 
-export function GlassCard({
+export const GlassCard = forwardRef<HTMLDivElement, GlassCardProps>(({
   children,
   className,
   hoverEffect = true,
   glowColor = 'primary',
   onClick,
   tilt = true,
-}: GlassCardProps) {
+}, ref) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const [rotateX, setRotateX] = useState(0);
   const [rotateY, setRotateY] = useState(0);
@@ -41,6 +41,7 @@ export function GlassCard({
     const dx = e.clientX - cx;
     const dy = e.clientY - cy;
 
+    // Max ±7deg tilt
     const maxTilt = 7;
     const rX = (-dy / (rect.height / 2)) * maxTilt;
     const rY = (dx / (rect.width / 2)) * maxTilt;
@@ -48,6 +49,7 @@ export function GlassCard({
     setRotateX(rX);
     setRotateY(rY);
 
+    // Specular highlight moves opposite to tilt
     const sx = 50 - (dx / rect.width) * 60;
     const sy = 50 - (dy / rect.height) * 60;
     setSpecularX(sx);
@@ -66,7 +68,12 @@ export function GlassCard({
 
   return (
     <motion.div
-      ref={cardRef}
+      ref={(node) => {
+        // Merge refs
+        (cardRef as React.MutableRefObject<HTMLDivElement | null>).current = node;
+        if (typeof ref === 'function') ref(node);
+        else if (ref) (ref as React.MutableRefObject<HTMLDivElement | null>).current = node;
+      }}
       onClick={onClick}
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
@@ -107,8 +114,6 @@ export function GlassCard({
       </div>
     </motion.div>
   );
-}
+});
 
-// Keep backward compat alias
 GlassCard.displayName = 'GlassCard';
-

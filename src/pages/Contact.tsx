@@ -171,25 +171,9 @@ export default function Contact() {
               <span className="text-white text-sm font-medium">{t('contact.badge', 'Fale Conosco')}</span>
             </motion.div>
             
-            {/* Curtain reveal on H1 */}
-            <div className="overflow-hidden mb-4">
-              <motion.h1
-                initial={{ clipPath: 'inset(100% 0 0 0)', opacity: 0 }}
-                animate={{ clipPath: 'inset(0% 0 0 0)', opacity: 1 }}
-                transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="text-display font-bold text-white drop-shadow-lg"
-              >
-                {t('contact.title')}
-              </motion.h1>
-            </div>
-            {/* Gold accent line */}
-            <motion.div
-              initial={{ scaleX: 0 }}
-              animate={{ scaleX: 1 }}
-              transition={{ duration: 0.5, delay: 1.0 }}
-              className="h-0.5 w-20 mx-auto mb-4 origin-left"
-              style={{ background: 'var(--gradient-gold)' }}
-            />
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-lg">
+              {t('contact.title')}
+            </h1>
             <p className="text-xl text-white/80 leading-relaxed max-w-2xl mx-auto">
               {t('contact.subtitle')}
             </p>
@@ -221,9 +205,8 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Interactive 3D Globe Section */}
-      <section className="py-16 section-light-premium section-divider-diagonal relative pb-24">
-
+      {/* Interactive 3D Globe Section - MOVED TO TOP */}
+      <section className="py-16 bg-background relative">
         <div className="container-wide relative z-10">
           <motion.div initial={{
           opacity: 0,
@@ -290,13 +273,13 @@ export default function Contact() {
                 index
               }
             }));
-          }} className="bg-card/80 backdrop-blur-sm rounded-xl p-4 border border-border hover:border-[hsl(42_78%_55%/0.3)] hover:scale-[1.03] transition-all duration-300 group cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary/30">
+          }} className="bg-card/80 backdrop-blur-sm rounded-xl p-4 border border-border hover:border-primary/30 transition-all duration-300 group cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary/30">
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-primary/5 border border-primary/20 flex items-center justify-center group-hover:scale-110 group-hover:bg-[hsl(42_78%_55%/0.08)] transition-all duration-300">
-                    <Globe className="h-4 w-4 text-primary group-hover:text-[hsl(42_78%_55%)] transition-colors duration-300" />
+                  <div className="w-8 h-8 rounded-lg bg-primary/5 border border-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Globe className="h-4 w-4 text-primary" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="font-semibold text-sm truncate group-hover:text-primary transition-colors">{office.city}</h3>
+                    <h3 className="font-semibold text-sm truncate">{office.city}</h3>
                     <p className="text-xs text-muted-foreground">{office.country}</p>
                   </div>
                 </div>
@@ -306,8 +289,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Channels Section */}
-      <section className="py-16 bg-background bg-grid-premium section-divider-diagonal-reverse section-divider-diagonal pt-24 pb-28">
-
+      <section className="py-16 bg-muted/30">
         <div className="container-wide">
           <motion.div initial={{
           opacity: 0,
@@ -336,9 +318,9 @@ export default function Contact() {
           }} transition={{
             delay: 0.1
           }}>
-              <GlassCard tilt={true} className="p-8 h-full border-primary/30 animate-border-glow">
+              <GlassCard className="p-8 h-full border-primary/30">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-xl btn-metal-blue flex items-center justify-center shadow-md">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center">
                     <Building2 className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold">ELP GREEN TECHNOLOGY</h3>
@@ -351,7 +333,7 @@ export default function Contact() {
                   </div>
                   
                   <div className="flex items-center gap-4 p-4 bg-primary/10 rounded-xl">
-                    <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 border-2 border-primary/30 bg-white shadow-lg ring-[3px] ring-[hsl(42_70%_55%/0.35)] animate-pulse-gold">
+                    <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 border-2 border-primary/20 bg-white shadow-lg">
                       <img src={ericsonPiccoliImg} alt="Ericson Piccoli" className="w-full h-full object-contain" />
                     </div>
                     <div>
@@ -361,18 +343,18 @@ export default function Contact() {
                   </div>
                   
                   <div className="space-y-3 text-sm">
-                    <div className="flex items-start gap-3 group">
-                      <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0 text-primary group-hover:text-[hsl(42_78%_55%)] transition-colors" />
+                    <div className="flex items-start gap-3">
+                      <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0 text-primary" />
                       <span className="text-muted-foreground">{elpGreen.address}</span>
                     </div>
-                    <div className="flex items-center gap-3 group">
-                      <Phone className="h-4 w-4 text-primary flex-shrink-0 group-hover:text-[hsl(42_78%_55%)] transition-colors" />
+                    <div className="flex items-center gap-3">
+                      <Phone className="h-4 w-4 text-primary flex-shrink-0" />
                       <a href={`tel:${elpGreen.phone}`} className="hover:text-primary transition-colors">
                         {elpGreen.phone}
                       </a>
                     </div>
-                    <div className="flex items-center gap-3 group">
-                      <Mail className="h-4 w-4 text-primary flex-shrink-0 group-hover:text-[hsl(42_78%_55%)] transition-colors" />
+                    <div className="flex items-center gap-3">
+                      <Mail className="h-4 w-4 text-primary flex-shrink-0" />
                       <a href={`mailto:${elpGreen.email}`} className="hover:text-primary transition-colors">
                         {elpGreen.email}
                       </a>
@@ -380,7 +362,7 @@ export default function Contact() {
                   </div>
 
                   <div className="pt-4 border-t border-border flex items-center justify-between">
-                    <a href={elpGreen.website} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-primary hover:text-[hsl(42_78%_55%)] transition-colors font-semibold">
+                    <a href={elpGreen.website} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-primary hover:underline font-semibold">
                       <ExternalLink className="h-4 w-4" />
                       www.elpgreen.com
                     </a>
@@ -404,9 +386,9 @@ export default function Contact() {
           }} transition={{
             delay: 0.15
           }}>
-              <GlassCard tilt={true} className="p-8 h-full border-secondary/30 animate-border-glow">
+              <GlassCard className="p-8 h-full border-secondary/30">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-xl btn-metal-blue flex items-center justify-center shadow-md">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-secondary to-primary flex items-center justify-center">
                     <Handshake className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold">{t('contact.strategicPartner', 'Strategic Partner')}</h3>
@@ -419,7 +401,7 @@ export default function Contact() {
                   </div>
                   
                   <div className="flex items-center gap-4 p-4 bg-secondary/10 rounded-xl">
-                    <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 border-2 border-secondary/30 bg-white shadow-lg ring-[3px] ring-[hsl(42_70%_55%/0.35)] animate-pulse-gold">
+                    <div className="w-16 h-16 rounded-full overflow-hidden flex-shrink-0 border-2 border-secondary/20 bg-white shadow-lg">
                       <img src={xuShiheImg} alt="Xu Shihe" className="w-full h-full object-contain" />
                     </div>
                     <div>
@@ -429,18 +411,18 @@ export default function Contact() {
                   </div>
                   
                   <div className="space-y-3 text-sm">
-                    <div className="flex items-start gap-3 group">
-                      <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0 text-secondary group-hover:text-[hsl(42_78%_55%)] transition-colors" />
+                    <div className="flex items-start gap-3">
+                      <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0 text-secondary" />
                       <span className="text-muted-foreground">{strategicPartner.address}</span>
                     </div>
-                    <div className="flex items-center gap-3 group">
-                      <Phone className="h-4 w-4 text-secondary flex-shrink-0 group-hover:text-[hsl(42_78%_55%)] transition-colors" />
+                    <div className="flex items-center gap-3">
+                      <Phone className="h-4 w-4 text-secondary flex-shrink-0" />
                       <a href={`tel:${strategicPartner.phone}`} className="hover:text-primary transition-colors">
                         {strategicPartner.phone}
                       </a>
                     </div>
-                    <div className="flex items-center gap-3 group">
-                      <Mail className="h-4 w-4 text-secondary flex-shrink-0 group-hover:text-[hsl(42_78%_55%)] transition-colors" />
+                    <div className="flex items-center gap-3">
+                      <Mail className="h-4 w-4 text-secondary flex-shrink-0" />
                       <a href={`mailto:${strategicPartner.email}`} className="hover:text-primary transition-colors">
                         {strategicPartner.email}
                       </a>
@@ -448,7 +430,7 @@ export default function Contact() {
                   </div>
 
                   <div className="pt-4 border-t border-border flex items-center justify-between">
-                    <a href={strategicPartner.website} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-primary hover:text-[hsl(42_78%_55%)] transition-colors font-semibold">
+                    <a href={strategicPartner.website} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-primary hover:underline font-semibold">
                       <ExternalLink className="h-4 w-4" />
                       www.topsrecycling.com
                     </a>
@@ -473,7 +455,7 @@ export default function Contact() {
         }} transition={{
           delay: 0.2
         }} className="max-w-4xl mx-auto">
-            <GlassCard className="p-8 md:p-10 bg-grid-premium">
+            <GlassCard className="p-8 md:p-10">
               <div className="flex items-center gap-3 mb-8 justify-center">
                 <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center">
                   <Send className="h-6 w-6 text-primary" />
@@ -545,9 +527,6 @@ export default function Contact() {
             </GlassCard>
           </motion.div>
         </div>
-
-        {/* Decorative bottom gold line */}
-        <div className="h-px mx-auto max-w-2xl mt-12" style={{ background: 'var(--gradient-gold-subtle)' }} />
       </section>
 
       <Footer />

@@ -1285,6 +1285,143 @@ button:active, [role="button"]:active {
   background: var(--gradient-gold-subtle);
 }
 
+/* ===== PREMIUM NOISE TEXTURE & GRID ===== */
+
+/* Subtle grain noise — CSS only, zero perf cost */
+.bg-noise-subtle {
+  position: relative;
+}
+.bg-noise-subtle::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 120px 120px;
+  pointer-events: none;
+  opacity: 0.6;
+  z-index: 0;
+}
+.bg-noise-subtle > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Premium grid lines — 60px spacing */
+.bg-grid-premium {
+  background-image:
+    linear-gradient(hsl(215 40% 30% / 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(215 40% 30% / 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Combined premium light section */
+.section-light-premium {
+  position: relative;
+  background: linear-gradient(180deg, hsl(220 15% 98%) 0%, hsl(215 18% 96%) 100%);
+}
+.section-light-premium::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E"),
+    linear-gradient(hsl(215 40% 30% / 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(215 40% 30% / 0.035) 1px, transparent 1px);
+  background-size: 120px 120px, 60px 60px, 60px 60px;
+  pointer-events: none;
+  z-index: 0;
+}
+.section-light-premium > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== SECTION DIVIDERS PREMIUM ===== */
+
+/* Diagonal cut — separates sections with a subtle angle */
+.section-divider-diagonal {
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 40px), 0 100%);
+  margin-bottom: -40px;
+}
+.section-divider-diagonal-reverse {
+  position: relative;
+  clip-path: polygon(0 0, 100% 40px, 100% 100%, 0 100%);
+  margin-top: -40px;
+}
+
+/* Fade edge — soft gradient at section borders */
+.section-fade-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(to bottom, hsl(220 15% 98%), transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+.section-fade-bottom::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(to top, hsl(220 15% 98%), transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ===== PREMIUM TYPOGRAPHY CLASSES ===== */
+
+/* Display heading — Outfit Bold, tight tracking */
+.text-display {
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+/* Metric numbers — JetBrains Mono, gold accent */
+.text-metric {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  background: var(--gradient-gold);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: metal-shimmer 4s ease-in-out infinite;
+}
+
+/* Section heading — Outfit SemiBold, subtle shimmer */
+.heading-section {
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+}
+
+/* ===== BUTTON MICRO-ANIMATIONS ===== */
+
+/* Button active press feedback */
+button:active, [role="button"]:active {
+  transform: scale(0.97);
+  transition: transform 0.08s ease;
+}
+
+/* Icon slide on button hover */
+.btn-icon-slide svg {
+  transition: transform 0.2s ease;
+}
+.btn-icon-slide:hover svg {
+  transform: translateX(4px);
+}
+
 /* Input focus glow */
 input:focus, textarea:focus, select:focus {
   outline: none;
@@ -1293,7 +1430,42 @@ input:focus, textarea:focus, select:focus {
   transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-/* Scroll entrance / curtain-reveal already defined above — no duplicates */
+/* ===== SCROLL ENTRANCE ANIMATIONS ===== */
+
+/* Curtain reveal — clipPath from bottom */
+.curtain-reveal {
+  animation: curtain-reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes curtain-reveal {
+  from {
+    clip-path: inset(100% 0 0 0);
+    opacity: 0;
+  }
+  to {
+    clip-path: inset(0% 0 0 0);
+    opacity: 1;
+  }
+}
+
+/* Stagger fade-up for lists */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: stagger-fade-up 0.5s ease-out forwards;
+}
+.stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-children > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-children > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-children > *:nth-child(4) { animation-delay: 0.4s; }
+.stagger-children > *:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes stagger-fade-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 /* Logo Metal Sweep - reflexo animado no logo */
 .logo-metal-sweep {
