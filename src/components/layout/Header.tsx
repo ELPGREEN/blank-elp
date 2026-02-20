@@ -221,7 +221,7 @@ export function Header() {
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
             className="fixed top-16 right-0 bottom-0 z-50 w-full max-w-sm bg-background bg-noise-subtle border-l border-gold/10 shadow-2xl overflow-y-auto">
 
-              <div className="p-6 space-y-2 rounded-sm shadow-sm opacity-85 border">
+              <div className="p-6 space-y-2 rounded-sm shadow-sm opacity-85 border px-0">
                 {/* Logo in Menu */}
                 <div className="flex items-center gap-3 pb-6 mb-6 border-b border-border">
                   <img
