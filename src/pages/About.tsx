@@ -367,9 +367,9 @@ export default function About() {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Hero Section */}
+      {/* ═══ HERO — Cinematic Curtain Reveal ═══ */}
       <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
-        {/* Background image + overlays (same style as Index hero) */}
+        {/* Background image + overlays */}
         <div className="absolute inset-0">
           <img
             src={factoryBg}
@@ -377,8 +377,15 @@ export default function About() {
             className="w-full h-[120%] object-cover"
             loading="lazy"
           />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/95 to-slate-900/90" />
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-transparent to-slate-950/80" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/95 to-slate-900/85" />
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-transparent to-slate-950/90" />
+          {/* Premium noise layer */}
+          <div className="absolute inset-0 opacity-20"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E")`,
+              backgroundSize: '120px 120px',
+            }}
+          />
         </div>
 
         {/* Particle overlay */}
@@ -386,11 +393,11 @@ export default function About() {
           <ParticleField />
         </div>
         
-        {/* 3D Globe Background with Space */}
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[700px] h-[700px] opacity-50 pointer-events-none">
+        {/* 3D Globe — desktop right side */}
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[700px] h-[700px] opacity-45 pointer-events-none hidden lg:block">
           <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-primary/50 rounded-full" />
           <Suspense fallback={null}>
-            <Canvas 
+            <Canvas
               camera={{ position: [0, 0, 4], fov: 50 }}
               style={{ background: 'transparent' }}
               onError={() => null}
@@ -407,37 +414,66 @@ export default function About() {
 
         <div className="container-wide relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
             className="max-w-4xl"
           >
+            {/* Badge */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.85 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md border border-white/30 rounded-full px-5 py-2.5 mb-6 shadow-lg"
+              transition={{ delay: 0.15, duration: 0.5 }}
+              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/25 rounded-full px-5 py-2.5 mb-8 shadow-lg"
             >
-              <Sparkles className="h-4 w-4 text-white animate-pulse" />
-              <span className="text-white text-sm font-semibold">{t('about.heroSubtitle')}</span>
+              <Sparkles className="h-4 w-4 text-gold animate-pulse" style={{ color: 'hsl(42 78% 62%)' }} />
+              <span className="text-white/90 text-sm font-semibold tracking-wide">{t('about.heroSubtitle')}</span>
             </motion.div>
-            
-            <h1 className="text-white mb-6 drop-shadow-2xl text-5xl md:text-6xl font-bold leading-tight">
-              {t('about.title')}
-            </h1>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed max-w-3xl font-light">
-              {t('about.heroSubtitle')} 
-            </p>
-            <p className="text-lg text-white font-semibold mt-4 flex items-center gap-2">
-              <CheckCircle2 className="h-5 w-5 text-secondary" />
+
+            {/* Curtain-reveal title */}
+            <div className="overflow-hidden mb-6">
+              <motion.h1
+                initial={{ y: '100%', opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.25, duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
+                className="text-white text-display drop-shadow-2xl text-5xl md:text-6xl lg:text-7xl font-bold leading-tight"
+              >
+                {t('about.title')}
+              </motion.h1>
+            </div>
+
+            {/* Gold accent line */}
+            <motion.div
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ delay: 0.55, duration: 0.6, ease: 'easeOut' }}
+              className="w-24 h-0.5 mb-6 origin-left"
+              style={{ background: 'var(--gradient-gold)' }}
+            />
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.45, duration: 0.7 }}
+              className="text-xl md:text-2xl text-white/85 leading-relaxed max-w-3xl font-light"
+            >
+              {t('about.heroSubtitle')}
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.55 }}
+              className="text-lg text-white font-semibold mt-4 flex items-center gap-2"
+            >
+              <CheckCircle2 className="h-5 w-5" style={{ color: 'hsl(42 78% 55%)' }} />
               {t('about.noSellEquipment')}
-            </p>
-            
+            </motion.p>
+
             {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
+              transition={{ delay: 0.65 }}
               className="flex flex-wrap gap-4 mt-8"
             >
               <Button size="lg" variant="elp-white" asChild className="shadow-2xl border-white/30">
@@ -453,20 +489,15 @@ export default function About() {
                 </Link>
               </Button>
             </motion.div>
-            
-
-
           </motion.div>
         </div>
-        
-        {/* Enhanced decorative gradient */}
+
+        {/* Bottom fade */}
         <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-background via-background/50 to-transparent" />
       </section>
 
-      {/* Global Headquarters Section - NEW */}
-      <section className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-dot-pattern opacity-30" />
-        
+      {/* ═══ GLOBAL HEADQUARTERS — Premium section ═══ */}
+      <section className="py-24 relative overflow-hidden section-light-premium">
         <div className="container-wide relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -478,28 +509,31 @@ export default function About() {
               <Globe className="h-5 w-5 text-primary" />
               <span className="text-primary font-medium">{t('globalPresence.title')}</span>
             </div>
-            <h2 className="mb-4">{t('about.headquarters.title')}</h2>
+            <h2 className="heading-section mb-4">{t('about.headquarters.title')}</h2>
             <div className="section-divider mx-auto mb-6" />
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               {t('about.headquarters.subtitle')}
             </p>
           </motion.div>
 
-          {/* 3D Interactive Globe Section */}
+          {/* Logo + HQ cards */}
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="h-[400px] relative rounded-2xl overflow-hidden btn-metal-white flex items-center justify-center"
-              style={{ backgroundImage: `url('/textures/metal-white.png')`, backgroundSize: 'cover' }}
+              className="h-[400px] relative rounded-2xl overflow-hidden flex items-center justify-center"
+              style={{
+                background: 'url(/textures/metal-white.png) center/cover no-repeat, var(--gradient-metal-white)',
+                boxShadow: '0 20px 60px -10px hsl(220 30% 10% / 0.2)',
+              }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-white/80 via-white/60 to-white/80 backdrop-blur-sm" />
               <div className="relative z-10 logo-metal-sweep">
-                <img 
-                  src={logoElp} 
-                  alt="ELP Green Technology" 
-                  className="h-48 lg:h-56 w-auto drop-shadow-2xl" 
+                <img
+                  src={logoElp}
+                  alt="ELP Green Technology"
+                  className="h-48 lg:h-56 w-auto drop-shadow-2xl"
                 />
               </div>
             </motion.div>
@@ -538,21 +572,25 @@ export default function About() {
         </div>
       </section>
 
-      {/* OTR Focus Section - NEW */}
-      <section className="py-16 bg-gradient-to-r from-primary/10 via-secondary/5 to-primary/10 border-y border-primary/20">
-        <div className="container-wide">
+      {/* ═══ OTR STATS — Metric typography ═══ */}
+      <section className="py-16 relative overflow-hidden section-divider-diagonal-reverse" style={{ background: 'var(--gradient-metal)' }}>
+        <div className="absolute inset-0" style={{
+          background: 'repeating-linear-gradient(90deg, transparent, hsl(0 0% 100% / 0.012) 1px, transparent 2px)',
+          pointerEvents: 'none',
+        }} />
+        <div className="container-wide relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <div className="inline-flex items-center gap-2 bg-primary/20 border border-primary/30 rounded-full px-4 py-2 mb-4">
-              <Factory className="h-5 w-5 text-primary" />
-              <span className="text-primary font-medium">{t('aboutPage.otrFocus.badge')}</span>
+            <div className="inline-flex items-center gap-2 bg-white/15 border border-white/25 rounded-full px-4 py-2 mb-4">
+              <Factory className="h-5 w-5 text-white" />
+              <span className="text-white font-medium">{t('aboutPage.otrFocus.badge')}</span>
             </div>
-            <h2 className="text-3xl font-bold mb-4">{t('aboutPage.otrFocus.title')}</h2>
-            <p className="text-muted-foreground max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold mb-4 text-white heading-section">{t('aboutPage.otrFocus.title')}</h2>
+            <p className="text-white/70 max-w-3xl mx-auto">
               {t('aboutPage.otrFocus.description')}
             </p>
           </motion.div>
@@ -571,10 +609,10 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
               >
-                <GlassCard className="p-6 text-center border-primary/20 hover:border-primary/40 transition-colors">
-                  <p className="text-3xl font-bold text-primary mb-1">{stat.value}</p>
-                  <p className="font-medium text-foreground">{stat.label}</p>
-                  <p className="text-sm text-muted-foreground">{stat.desc}</p>
+                <GlassCard className="p-6 text-center border-white/15 bg-white/5 hover:border-white/30 transition-colors">
+                  <p className="text-metric text-3xl mb-1">{stat.value}</p>
+                  <p className="font-medium text-white">{stat.label}</p>
+                  <p className="text-sm text-white/60">{stat.desc}</p>
                 </GlassCard>
               </motion.div>
             ))}
