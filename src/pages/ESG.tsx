@@ -72,8 +72,8 @@ export default function ESG() {
               transition={{ delay: 0.2 }}
               className="inline-flex items-center gap-2 bg-primary/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-primary/30"
             >
-              <Sparkles className="w-4 h-4 text-primary" />
-              <span className="text-primary text-sm font-medium">{t('esg.sustainableCommitment')}</span>
+              <Sparkles className="w-4 h-4 text-white" />
+              <span className="text-white text-sm font-medium">{t('esg.sustainableCommitment')}</span>
             </motion.div>
             
             <h1 className="text-white mb-6 leading-tight text-4xl md:text-5xl lg:text-6xl font-bold">
