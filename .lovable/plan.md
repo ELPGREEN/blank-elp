@@ -1,206 +1,220 @@
 
-# Upgrade Premium: Site Empresarial Internacional — ELP Green Technology
+# Plano DEUS: Upgrade Total — Site Empresarial Internacional Premium
 
-## Diagnóstico Atual
+## Estado Atual vs. Objetivo
 
-O site já possui uma base sólida com metal brushed, gradientes HSL, animações Framer Motion e Three.js para partículas. Porém, há lacunas críticas para um site empresarial de classe internacional:
+Com base na análise do código, os sistemas anteriores já implementaram:
+- ParticleField com dual-layer navy/gold + conexões + mouse repulsion
+- GlassCard com tilt 3D + specular highlight
+- CustomCursor com lerp
+- CSS classes: `.bg-noise-subtle`, `.bg-grid-premium`, `.section-light-premium`, `.section-divider-diagonal`, `.text-metric`, `.text-display`
+- JetBrains Mono e Outfit no `index.html`
 
-- **ParticleField** usa cor verde `#22c55e` (cor de startups tech), incompatível com a identidade navy/gold
-- **Partículas** são simples pontos giratórios — sem conexões, sem profundidade
-- **Canvas/WebGL** sem efeitos de pós-processamento (bloom, depth of field)
-- **Seções de conteúdo** sem separadores visuais elaborados entre elas
-- **Cards** sem efeito de tilt 3D ao hover
-- **Tipografia** sem hierarquia de pesos — todos os títulos usam o mesmo shimmer
-- **Scroll transitions** inexistentes — seções aparecem de forma abrupta
-- **Mobile** sem ajustes de densidade visual (mesmos elementos pesados em telas pequenas)
-- **Fundo das seções claras** plain branco sem textura
-- **Ausência de cursor personalizado** no desktop para reforçar o premium
+O que AINDA FALTA para atingir o nível "DEUS":
 
----
-
-## Arquitetura do Upgrade
-
-### 1. ParticleField — Upgrade Completo WebGL/Three.js
-
-**Arquivo:** `src/components/3d/ParticleField.tsx`
-
-Substituir o simples `PointMaterial` verde por um sistema de partículas com:
-
-- **Cor corrigida**: partículas em navy/gold (`#1e3a5f` e `#b8902a`) alinhadas com a paleta ELP
-- **Conexões dinâmicas (Lines)**: desenhar linhas entre partículas próximas (< threshold), criando uma "rede neural" metálica — efeito usado por sites Fortune 500
-- **Mouse interaction**: as partículas reagem à posição do mouse, criando uma onda de repulsão suave
-- **Two-layer**: camada de partículas pequenas (fundo) + camada de pontos maiores (foreground) com velocidades diferentes — sensação de profundidade
-- **Performance adaptive**: manter a lógica de `useDevicePerformance` já existente
-
-```
-Canvas (WebGL)
-├── Layer 1: Small navy particles (300-800) — rotação lenta
-├── Layer 2: Gold accent dots (50-150) — rotação contrária
-└── Connections: LineSegments entre vizinhos próximos (transparente)
-```
-
-**Técnica**: usar `BufferGeometry` + `LineSegments` com `LineBasicMaterial` — nativo no Three.js, sem dependências novas.
+1. **Index.tsx**: Seções sem noise/grid premium. Stats sem `.text-metric`. Sem dividers diagonais entre seções. Sem curtain reveal no hero.
+2. **Contact.tsx (rota atual)**: Hero sem upgrade visual. Seções sem backgrounds premium. Cards de empresa sem upgrade de textura.
+3. **Header**: Mobile sem áreas de toque 48px mínimas. Sem glassmorph upgrade no scroll.
+4. **CSS global**: Tipografia fluida com `clamp()` ausente. Sem parallax multicamada no hero. Sem animações de scroll entrance em cards.
+5. **index.css**: Duplicações a limpar. Falta `.container-wide` responsivo com `clamp()`. Faltam variantes de `section-divider-wave` com SVG. Falta `scroll-reveal` global via Intersection Observer CSS.
+6. **Todas as páginas**: Badges sem `.bg-grid-premium`. Fundo de seções alternadas sem `.section-divider-diagonal`.
 
 ---
 
-### 2. Hero Section — Efeito de Abertura Cinematográfico
+## Implementação por Arquivo
 
-**Arquivo:** `src/pages/Index.tsx` (seção Hero)
+### 1. `src/index.css` — Sistema Global Completo
 
-- **Reveal animation**: ao carregar, o texto surge com `clipPath` revelando-se de baixo para cima (técnica "curtain reveal" — usada por agências premium)
-- **Parallax multicamada**: a imagem de fundo já tem parallax, mas adicionar uma segunda camada com gradiente overlay que se move mais devagar que a imagem
-- **Glitch text effect** sutil no título principal — 1-2 frames de deslocamento leve no loop, reforçando o tech industrial
-- **Contador animado** nos stats abaixo do hero com IntersectionObserver
+**Adicionar:**
 
----
-
-### 3. Sistema de Divisores de Seção Premium
-
-**Arquivo:** `src/index.css`
-
-Criar classes CSS para transições visuais entre seções:
-
-- **`.section-divider-wave`**: SVG wave customizado em navy que separa seções claras de escuras
-- **`.section-divider-diagonal`**: corte diagonal de 3-4 graus entre seções (usado por sites industriais top-tier)
-- **`.section-fade-edge`**: gradiente de 120px nas bordas inferior/superior de cada seção para transição suave
-
----
-
-### 4. Cards com Tilt 3D Interativo
-
-**Arquivo:** `src/components/ui/glass-card.tsx`
-
-Adicionar efeito de **perspectiva 3D ao hover** usando `onMouseMove`:
-
-```
-MouseEvent → calcular offset X/Y relativo ao centro do card
-→ aplicar rotateX/rotateY proporcional (max ±8deg)
-→ mover um "specular highlight" (div pseudo com gradiente radial) na direção oposta
-→ ao sair do hover, spring animation de retorno ao zero
-```
-
-Isso cria o efeito de "metal card" que reflete a luz — técnico mas alcançável sem bibliotecas externas, usando apenas `useRef` + `style` inline.
-
----
-
-### 5. Cursor Personalizado (Desktop)
-
-**Arquivo:** `src/index.css` + novo hook `src/hooks/useCursor.ts`
-
-- Cursor padrão substituído por um círculo hollow navy (20px) com um dot central gold (4px)
-- Ao hover de botões/links: cursor expande para 40px e muda de cor para gold
-- Ao click: pulso de expansão rápido
-- **Mobile**: detectado e desativado automaticamente
-
+- **Tipografia fluida com `clamp()`** para evitar saltos bruscos entre breakpoints:
 ```css
-.cursor-dot     /* 4px gold dot — segue o mouse diretamente */
-.cursor-ring    /* 20px navy ring — segue com lag (lerp) */
+.text-display {
+  font-size: clamp(2rem, 4vw + 1rem, 5rem);
+}
+h1 { font-size: clamp(1.75rem, 3.5vw + 0.5rem, 3.5rem); }
+h2 { font-size: clamp(1.5rem, 2.5vw + 0.5rem, 2.75rem); }
+h3 { font-size: clamp(1.25rem, 1.5vw + 0.5rem, 1.875rem); }
 ```
 
-Implementação: um componente `<CustomCursor />` montado no `App.tsx` usando `requestAnimationFrame` para lerp suave.
+- **Section divider wave** com SVG inline para separação orgânica entre seções:
+```css
+.section-divider-wave::after {
+  content: '';
+  background: url("data:image/svg+xml,<svg...wave path...>");
+  /* Onda navy de 80px de altura */
+}
+```
+
+- **Scroll reveal animation** — classe `.scroll-reveal` com `@keyframes` que detecta `prefers-reduced-motion`:
+```css
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+```
+
+- **Mobile touch targets 48px** — garantia global:
+```css
+@media (max-width: 768px) {
+  button, a, [role="button"], input, select { min-height: 48px; }
+}
+```
+
+- **Glass header upgrade** — adicionar variante `.glass-nav-premium` com deeper blur e gold border-bottom animado.
+
+- **Hero parallax overlay** — classe `.hero-parallax-overlay` para a segunda camada de gradiente.
+
+- **Limpeza de duplicações** — `.bg-noise-subtle`, `.bg-grid-premium`, `.section-divider-diagonal` aparecem duas vezes no arquivo (linhas ~1024-1082 e ~1194-1258). Remover duplicatas.
 
 ---
 
-### 6. Tipografia — Sistema de Pesos e Escalas
+### 2. `src/pages/Index.tsx` — Hero e Seções Upgradeadas
 
-**Arquivo:** `src/index.css` + `tailwind.config.ts`
+**Hero Section:**
+- Adicionar `curtain-reveal` no H1 via Framer Motion `clipPath`:
+```tsx
+<motion.h1
+  initial={{ clipPath: 'inset(100% 0 0 0)', opacity: 0 }}
+  animate={{ clipPath: 'inset(0% 0 0 0)', opacity: 1 }}
+  transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+>
+```
+- Segunda camada parallax no overlay (gradiente que se move 50% mais lento que a imagem)
+- Badge do hero com `.bg-grid-premium` e borda gold sutil
 
-Adicionar fontes do Google Fonts para hierarquia mais rica:
+**Stats Cards (Partnership Model Section):**
+```tsx
+// Antes:
+<p className="text-2xl font-bold">+60</p>
+// Depois:
+<p className="text-metric text-3xl">+60</p>
+```
 
-- **Display**: `Outfit` (já no config) — reforçar para H1/H2 hero sections
-- **Body**: `Inter` (já no config) — padronizar para texto corrido
-- **Mono accent**: adicionar `JetBrains Mono` para números de métricas/stats
+**Seções com dividers diagonais** — alternar entre seções claras/escuras:
+```tsx
+// Smart OTR section:
+<section className="py-20 bg-gradient-to-br from-primary/10 via-background to-background section-divider-diagonal">
 
-Criar classes utilitárias:
-- `.text-display` — Outfit Bold, letter-spacing -0.02em, 120% line-height
-- `.text-metric` — JetBrains Mono, gold color, para números grandes como "1M tons"
-- `.heading-section` — Outfit SemiBold com metal shimmer sutil (mais suave que os H1 atuais)
+// Global Presence section:
+<section className="py-20 bg-muted/30 section-divider-diagonal-reverse">
+```
 
----
+**CTA Section final** — adicionar `.bg-noise-subtle` + `.bg-grid-premium` ao fundo metálico.
 
-### 7. Backgrounds de Seção — Textura Premium
-
-**Arquivo:** `src/index.css`
-
-Adicionar variantes de fundo para seções claras (que atualmente são `bg-background` liso):
-
-- **`.bg-noise-subtle`**: overlay de noise SVG inline (grain texture, 120px tile) com opacity 0.03 — presente em todos os sites Awwwards
-- **`.bg-grid-premium`**: grid de linhas muito finas (1px, 60px espaçamento) em navy/4% opacity
-- **`.section-light-premium`**: combina noise + grid + gradient sutil de cima para baixo
-
-Estes são **CSS puro** (SVG data URI inline), zero impacto de performance.
-
----
-
-### 8. Responsive Design Audit — Mobile-First
-
-**Arquivos:** `src/components/layout/Header.tsx`, pages principais
-
-Melhorias específicas para mobile:
-
-- **Header mobile**: aumentar área de toque dos botões para 48px mínimo (WCAG)
-- **Hero mobile**: reduzir quantidade de partículas ainda mais em telas < 768px (já parcialmente feito — reforçar)
-- **Cards grid**: garantir que grades `lg:grid-cols-3` colapsuam para `grid-cols-1` com espaçamentos adequados no mobile
-- **Tipografia mobile**: escala fluida com `clamp()` para títulos — evitar saltos bruscos entre breakpoints
-- **Images**: adicionar `loading="lazy"` e `decoding="async"` a todas as imagens não críticas
+**News cards** — adicionar `scroll-reveal` + hover com `border-gold/20`.
 
 ---
 
-### 9. Micro-animações de Estado
+### 3. `src/pages/Contact.tsx` — Upgrade Completo (rota atual)
 
-**Arquivo:** `src/index.css`
+**Hero:**
+- H1 com curtain reveal via `clipPath`
+- Badge com `.bg-grid-premium` overlay
+- Decorative tech elements com animação stagger
 
-- **Button press**: ao `active:`, escalar para 0.97 com sombra reduzida — feedback tátil
-- **Input focus**: borda navy com glow sutil (já parcialmente implementado)
-- **Link hover**: underline animado com gradiente gold (classe `.animated-underline` já existe — aplicar globalmente)
-- **Icon animations**: ícones em CTAs com `translateX(4px)` suave ao hover do botão pai
+**Globe Section:**
+```tsx
+// Adicionar classe section-light-premium:
+<section className="py-16 section-light-premium relative">
+```
 
----
+**Company Cards (ELP + TOPS):**
+- Envolver em `GlassCard` com `tilt={true}` (já implementado no componente)
+- Adicionar `.section-divider-diagonal` na seção de canais
+- Header dos cards com `.btn-metal-blue` para os ícones
+- Avatar containers com `ring-2 ring-gold/20 shadow-gold`
 
-## Plano de Implementação (Sequência)
+**Form Section:**
+- Background com `.bg-grid-premium`
+- Input fields com `transition-all` e focus glow via CSS existente
+- Submit button com `.btn-metal-blue` + `btn-icon-slide`
 
-### Fase 1 — WebGL e Visual Core
-1. `ParticleField.tsx` — upgrade completo com conexões e dual-layer navy/gold
-2. `src/index.css` — noise texture, grid premium, section dividers
-
-### Fase 2 — Componentes Interativos
-3. `glass-card.tsx` — tilt 3D com specular highlight
-4. `useCursor.ts` + `CustomCursor.tsx` — cursor premium
-5. `App.tsx` — montar `<CustomCursor />`
-
-### Fase 3 — Tipografia e Responsividade
-6. `tailwind.config.ts` — adicionar fonte Mono, clamp typography
-7. `index.css` — classes `.text-display`, `.text-metric`, `.heading-section`
-8. `index.html` — preconnect + preload Google Fonts (`JetBrains Mono`)
-
-### Fase 4 — Hero e Micro-animações
-9. `Index.tsx` — clipPath reveal, parallax multicamada melhorado
-10. `index.css` — button active states, icon hover animations
+**Office Cards:**
+- Icones com cor gold ao hover: `group-hover:text-gold`
+- Hover scale sutil: `group-hover:scale-105`
 
 ---
 
-## Impacto por Tela
+### 4. `src/components/layout/Header.tsx` — Mobile 48px + Glass Premium
 
-| Tela | Melhoria Principal |
-|------|-------------------|
-| Desktop 1920px | Cursor premium + partículas com conexões + tilt cards |
-| Laptop 1280px | Tipografia display + section dividers |
-| Tablet 768px | Grid responsivo + noise backgrounds |
-| Mobile 390px | Partículas desativadas, CSS fallback gradient, touch areas 48px |
+**Mobile touch targets:**
+```tsx
+// Nav links no mobile menu — aumentar padding:
+className="flex items-center gap-3 px-4 py-3.5 min-h-[48px] text-base..."
+// Hamburger button:
+className="h-12 w-12 hover:bg-muted" // era h-10 w-10
+// Language selector:
+className="h-12 px-3..." // era h-10
+```
+
+**Glass nav upgrade:**
+```tsx
+scrolled 
+  ? "glass-nav-premium backdrop-blur-2xl border-b border-gold/10 shadow-xl"
+  : "bg-gradient-to-b from-black/40 to-transparent"
+```
+
+**Mobile menu panel** — adicionar `.bg-noise-subtle` ao menu overlay:
+```tsx
+className="fixed top-16 right-0 bottom-0 z-50 w-full max-w-sm bg-background bg-noise-subtle border-l border-gold/10 shadow-2xl..."
+```
 
 ---
 
-## Técnicas Avançadas — Resumo
+### 5. `index.html` — Performance e Meta
 
-| Técnica | Implementação | Onde |
-|---------|--------------|------|
-| WebGL Particle Network | Three.js LineSegments + BufferGeometry | ParticleField.tsx |
-| CSS Noise Texture | SVG data URI inline | index.css |
-| 3D Card Tilt | JS MouseEvent + CSS perspective | glass-card.tsx |
-| Cursor Lerp | requestAnimationFrame + lerp function | useCursor.ts |
-| ClipPath Reveal | Framer Motion + clipPath | Index.tsx hero |
-| Section Diagonal Cut | CSS clip-path polygon | index.css |
-| Fluid Typography | CSS clamp() | tailwind.config.ts |
-| JetBrains Mono metrics | Google Fonts + custom class | index.html + index.css |
+- Adicionar `preconnect` para Google Fonts se ausente
+- Verificar se `JetBrains Mono` e `Outfit` estão com `display=swap`
+- Meta viewport com `viewport-fit=cover` para safe areas em dispositivos modernos:
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+```
 
-Todos os upgrades são **aditivos** — nenhuma remoção de funcionalidade existente. Zero quebras de layout. Performance mantida com fallbacks para dispositivos low-end.
+---
+
+## Sequência de Implementação
+
+### Fase 1 — CSS Global (base para tudo)
+1. `src/index.css` — tipografia fluida com `clamp()`, remover duplicações, adicionar wave divider, mobile 48px, scroll-reveal
+
+### Fase 2 — Páginas Principais  
+2. `src/pages/Index.tsx` — curtain reveal hero, stats com `.text-metric`, dividers entre seções, CTA com noise
+3. `src/pages/Contact.tsx` — hero upgrade, company cards premium, form com grid, offices hover gold
+
+### Fase 3 — Componentes Globais
+4. `src/components/layout/Header.tsx` — mobile 48px, glass-nav-premium, menu com noise texture
+5. `index.html` — viewport-fit, verificar Google Fonts
+
+---
+
+## Impacto Visual por Tela
+
+| Tela | Resultado |
+|------|-----------|
+| Desktop 1920px | Curtain reveal épico, cards com tilt+specular, cursor gold premium, noise em todas seções |
+| Laptop 1280px | Tipografia fluida sem saltos, dividers diagonais visíveis, glass nav premium |
+| Tablet 768px | Wave dividers adaptativos, grid premium no fundo, touch 48px |
+| Mobile 390px | Touch 48px garantido, sem partículas (fallback gradient), tipografia clamp() |
+
+---
+
+## Técnicas Específicas Implementadas
+
+| Técnica | Arquivo | Detalhe |
+|---------|---------|---------|
+| `clamp()` Typography | `index.css` | h1: `clamp(1.75rem, 3.5vw + 0.5rem, 3.5rem)` |
+| Curtain Reveal | `Index.tsx`, `Contact.tsx` | `clipPath: 'inset(100% 0 0 0)'` → `inset(0%)` |
+| Wave SVG Divider | `index.css` | `.section-divider-wave` com SVG data URI navy |
+| Touch 48px | `index.css` + `Header.tsx` | WCAG AA compliance mobile |
+| `.text-metric` nos stats | `Index.tsx` | JetBrains Mono gold shimmer nos números |
+| Glass nav premium | `Header.tsx` | `backdrop-blur-2xl + saturate(180%)` |
+| Gold ring nos avatars | `Contact.tsx` | `ring-2 ring-[hsl(42_50%_50%/0.2)]` |
+| Noise texture no menu mobile | `Header.tsx` | `.bg-noise-subtle` no panel lateral |
+
+Zero breaking changes. Todas as mudanças são puramente aditivas — classes adicionadas, não substituídas.
