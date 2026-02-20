@@ -253,13 +253,13 @@ export default function Solutions() {
             </div>
             
             <div className="flex flex-wrap gap-3 justify-center">
-              <Button asChild size="lg" className="bg-white hover:bg-slate-100 text-slate-900 font-semibold">
+              <Button asChild size="lg" className="bg-white hover:bg-white/90 text-[hsl(215_55%_18%)] font-semibold border border-white/50 shadow-md">
                 <Link to="/otr-sources">
                   {t('solutionsPage.indicateSource')}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-slate-500 text-slate-200 hover:bg-slate-700">
+              <Button asChild size="lg" className="bg-white hover:bg-white/90 text-[hsl(215_55%_18%)] font-semibold border border-white/50 shadow-md">
                 <Link to="/partnership/otr">
                   {t('solutionsPage.knowSmartLine')}
                 </Link>
