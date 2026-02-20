@@ -171,13 +171,13 @@ export default function GlobalExpansion() {
             </div>
             
             <div className="flex flex-wrap gap-4">
-              <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+              <Button asChild size="lg" className="bg-white text-[hsl(215_55%_18%)] hover:bg-white/90 border border-white/50 shadow-md font-semibold">
                 <Link to="/otr-sources">
                   {t('globalExpansion.indicateSource')}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
+              <Button asChild size="lg" className="bg-white text-[hsl(215_55%_18%)] hover:bg-white/90 border border-white/50 shadow-md font-semibold">
                 <Link to="/partnership/otr">
                   {t('globalExpansion.knowSmartLine')}
                 </Link>
