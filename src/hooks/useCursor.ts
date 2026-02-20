@@ -59,8 +59,8 @@ export function useCursor() {
 
     // Animation loop with lerp for ring
     const animate = () => {
-      ringPos.current.x = lerp(ringPos.current.x, mouse.current.x, 0.12);
-      ringPos.current.y = lerp(ringPos.current.y, mouse.current.y, 0.12);
+      ringPos.current.x = lerp(ringPos.current.x, mouse.current.x, 0.28);
+      ringPos.current.y = lerp(ringPos.current.y, mouse.current.y, 0.28);
 
       if (dotEl.current) {
         dotEl.current.style.transform = `translate(${mouse.current.x}px, ${mouse.current.y}px) translate(-50%, -50%)`;
